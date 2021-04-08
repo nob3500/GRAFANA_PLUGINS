@@ -7,8 +7,6 @@ const generador = () => {
         
         <svg
         id="svg1181"
-        width={1920}
-        height={750}
         viewBox="0 0 508 198.44"
         
       >
