@@ -415,7 +415,17 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 
 
-var variables = function variables() {
+var variables = function variables(_a) {
+  var voltaje = _a.voltaje,
+      temp = _a.temp,
+      nivel = _a.nivel,
+      estado = _a.estado,
+      fase = _a.fase,
+      sistema = _a.sistema,
+      marca = _a.marca,
+      modelo = _a.modelo,
+      ubicacion = _a.ubicacion,
+      nombre_gen = _a.nombre_gen;
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("g", {
     id: "layer5"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("g", {
@@ -451,7 +461,7 @@ var variables = function variables() {
     fontFamily: "Franklin Gothic Medium",
     fontSize: "9.8778px",
     strokeWidth: 0.28918
-  }, "425.0")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("text", {
+  }, voltaje)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("text", {
     id: "fuel_level",
     x: 223.22559,
     y: 126.21124,
@@ -474,7 +484,7 @@ var variables = function variables() {
     fontFamily: "Franklin Gothic Medium",
     fontSize: "12.347px",
     strokeWidth: 0.26458
-  }, "100")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("text", {
+  }, nivel)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("text", {
     id: "cool_temp",
     transform: "scale(1.0508 .95161)",
     x: 212.24174,
@@ -498,7 +508,7 @@ var variables = function variables() {
     fontFamily: "Franklin Gothic Medium",
     fontSize: "12.347px",
     strokeWidth: 0.28918
-  }, "37")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("text", {
+  }, temp)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("text", {
     id: "st",
     x: 225.8596,
     y: 175.86026,
@@ -521,7 +531,7 @@ var variables = function variables() {
     fontFamily: "Franklin Gothic Medium",
     fontSize: "6.35px",
     strokeWidth: 0.26458
-  }, "ENCENDIDO")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("text", {
+  }, estado)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("text", {
     id: "fase",
     transform: "scale(.98529 1.0149)",
     x: 331.85886,
@@ -545,7 +555,7 @@ var variables = function variables() {
     fontFamily: "Franklin Gothic Medium",
     fontSize: "5.6444px",
     strokeWidth: 0.47057
-  }, "A")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("text", {
+  }, fase)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("text", {
     id: "sistema",
     transform: "scale(.98529 1.0149)",
     x: 331.64386,
@@ -569,7 +579,7 @@ var variables = function variables() {
     fontFamily: "Franklin Gothic Medium",
     fontSize: "5.6444px",
     strokeWidth: 0.47057
-  }, "1")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("text", {
+  }, sistema)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("text", {
     id: "marca",
     transform: "scale(.98529 1.0149)",
     x: 331.85886,
@@ -593,7 +603,7 @@ var variables = function variables() {
     fontFamily: "Franklin Gothic Medium",
     fontSize: "5.6444px",
     strokeWidth: 0.47057
-  }, "HIMOINSA")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("text", {
+  }, marca)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("text", {
     id: "modelo",
     transform: "scale(.98529 1.0149)",
     x: 331.85925,
@@ -617,7 +627,7 @@ var variables = function variables() {
     fontFamily: "Franklin Gothic Medium",
     fontSize: "5.6444px",
     strokeWidth: 0.47057
-  }, "HMW-810 T6")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("text", {
+  }, modelo)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("text", {
     id: "ubicacion",
     transform: "scale(.98529 1.0149)",
     x: 331.85886,
@@ -641,10 +651,10 @@ var variables = function variables() {
     fontFamily: "Franklin Gothic Medium",
     fontSize: "5.6444px",
     strokeWidth: 0.47057
-  }, "PATIO GEN")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("g", {
+  }, ubicacion)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("g", {
     id: "st2",
     transform: "translate(1.761 .066)",
-    fill: "#00990c",
+    fill: "red",
     opacity: 0.999
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("path", {
     id: "path15781",
@@ -2064,7 +2074,7 @@ var variables = function variables() {
     fontFamily: "Franklin Gothic Medium",
     fontSize: "11.289px",
     strokeWidth: 0.36412
-  }, "GEN-XX"))));
+  }, nombre_gen))));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (variables);

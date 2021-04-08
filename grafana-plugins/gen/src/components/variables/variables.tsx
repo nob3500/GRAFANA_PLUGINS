@@ -1,6 +1,42 @@
 import React from 'react'
 
-const variables = () =>{
+type Estados_alarmas = {
+    on: string;
+    off: string;
+    trip: string;
+}
+
+type botones_Alarmas = {
+    ParoEmergencia: Estados_alarmas
+}
+
+type data_gen = {
+    voltaje: number;
+    temp: number;
+    nivel: number;
+    estado: string;
+    //boton_estado: boolean; su id=st2
+    fase: string;
+    sistema: string;
+    marca: string;
+    modelo: string;
+    ubicacion: string;
+    nombre_gen: string;
+    //boton_gen: boolean; su id=estado_eq
+
+
+      
+
+
+  }
+
+const variables = (
+    {
+        voltaje,temp,nivel,estado,fase,sistema,marca,modelo,ubicacion, nombre_gen,  
+        //boton_estado,boton_gen          
+
+
+    }: data_gen) =>{
     return (
         <g id="layer5">
         <g id="g1695">
@@ -36,7 +72,7 @@ const variables = () =>{
               fontSize="9.8778px"
               strokeWidth={0.28918}
             >
-              {"425.0"}
+              { voltaje }
             </tspan>
           </text>
           <text
@@ -62,7 +98,7 @@ const variables = () =>{
               fontSize="12.347px"
               strokeWidth={0.26458}
             >
-              {"100"}
+              {nivel}
             </tspan>
           </text>
           <text
@@ -89,7 +125,7 @@ const variables = () =>{
               fontSize="12.347px"
               strokeWidth={0.28918}
             >
-              {"37"}
+              {temp}
             </tspan>
           </text>
           <text
@@ -115,7 +151,7 @@ const variables = () =>{
               fontSize="6.35px"
               strokeWidth={0.26458}
             >
-              {"ENCENDIDO"}
+              {estado}
             </tspan>
           </text>
           <text
@@ -142,7 +178,7 @@ const variables = () =>{
               fontSize="5.6444px"
               strokeWidth={0.47057}
             >
-              {"A"}
+              {fase}
             </tspan>
           </text>
           <text
@@ -169,7 +205,7 @@ const variables = () =>{
               fontSize="5.6444px"
               strokeWidth={0.47057}
             >
-              {"1"}
+              {sistema}
             </tspan>
           </text>
           <text
@@ -196,7 +232,7 @@ const variables = () =>{
               fontSize="5.6444px"
               strokeWidth={0.47057}
             >
-              {"HIMOINSA"}
+              {marca}
             </tspan>
           </text>
           <text
@@ -223,7 +259,7 @@ const variables = () =>{
               fontSize="5.6444px"
               strokeWidth={0.47057}
             >
-              {"HMW-810 T6"}
+              {modelo}
             </tspan>
           </text>
           <text
@@ -250,13 +286,14 @@ const variables = () =>{
               fontSize="5.6444px"
               strokeWidth={0.47057}
             >
-              {"PATIO GEN"}
+              {ubicacion}
             </tspan>
           </text>
+          
           <g
             id="st2"
             transform="translate(1.761 .066)"
-            fill="#00990c"
+            fill="red"
             opacity={0.999}
           >
             <path
@@ -276,6 +313,7 @@ const variables = () =>{
               filter="url(#filter2663)"
             />
           </g>
+          
           <g
             id="gen_lop_shutd_alm"
             transform="matrix(.11617 0 0 .10952 344.4 74.353)"
@@ -1895,7 +1933,7 @@ const variables = () =>{
               fontSize="11.289px"
               strokeWidth={0.36412}
             >
-              {"GEN-XX"}
+              {nombre_gen}
             </tspan>
           </text>
         </g>
