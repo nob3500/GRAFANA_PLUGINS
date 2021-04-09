@@ -1,47 +1,88 @@
 import React from 'react'
 
+type Motor ={
+    voltaje_bat: number;
+    temp: number;
+    pres_aceite: number;
+    horas_uso: number;
+    frecuencia: number;
+}
+
+type Alternador ={
+    voltaje_ff: number;
+    corriente: number;
+    pot_kw:number;
+    pot_kva: number;
+    factor_pot: number;
+}
+
+type Modo_control ={
+    modo_manual: string; // gen_stop_mod
+    modo_auto: string; // gen_auto_mod
+    modo_apagado: string; // gen_manual
+    modo_encendido:string; // gen_off_mode
+}
+
 type Estados_alarmas = {
     on: string;
     off: string;
     trip: string;
 }
 
-type botones_Alarmas = {
-    ParoEmergencia: Estados_alarmas
+type Botones_Alarmas = {
+    paro_emergencia: Estados_alarmas; //gen_es_warn_alm ,gen_es_shutd_alm ,gen_es_eltrip_alm
+    baja_pres_aceite: Estados_alarmas; //gen_lop_warn_alm, gen_lop_shutd_alm, gen_lop_eltrip_alm
+    baja_temp: Estados_alarmas; //gen_hct_warn_alm, gen_hct_shutd_alm, gen_hct_eltrip_alm
+    bajas_revol: Estados_alarmas; //gen_us_warn_alm,gen_us_shutd_alm,gen_us_eltrip_alm
+    altas_revol: Estados_alarmas; //gen_os_warn_alm,gen_os_shutd_alm,gen_os_eltrip_alm
+    falla_arranque: Estados_alarmas; //gen_fs_warn_alm,gen_fs_shutd_alm,gen_fs_eltrip_alm
+    bajo_volt_gen:Estados_alarmas; //gen_glv_warn_alm,gen_glv_shutd_alm,gen_glv_eltrip_alm
+    alto_volt_gen: Estados_alarmas; //gen_ghv_warn_alm,gen_ghv_shutd_alm,gen_ghv_eltrip_alm
 }
 
-type data_gen = {
-    voltaje: number;
-    temp: number;
-    nivel: number;
-    estado: string;
-    //boton_estado: boolean; su id=st2
+type Data_general ={
     fase: string;
     sistema: string;
     marca: string;
     modelo: string;
     ubicacion: string;
+}
+
+export interface DataGenerador {
+    voltaje: number;
+    temp: number;
+    nivel: number;
+    estado: string;
+    boton_estado: string; // su id=st2
     nombre_gen: string;
-    //boton_gen: boolean; su id=estado_eq
+    boton_gen: string; // su id=estado_eq
+    motor: Motor;
+    alternador: Alternador;
+    modoControl: Modo_control;  
+    botones_Alarmas: Botones_Alarmas;
+    dataGeneral: Data_general
+}
 
-
-      
-
-
-  }
-
-const variables = (
-    {
-        voltaje,temp,nivel,estado,fase,sistema,marca,modelo,ubicacion, nombre_gen,  
-        //boton_estado,boton_gen          
-
-
-    }: data_gen) =>{
+export const Variables = ({
+        voltaje,
+        temp,
+        nivel,
+        estado,
+        nombre_gen,
+        boton_estado,
+        boton_gen,
+        motor,
+        alternador,
+        botones_Alarmas,
+        dataGeneral,
+        modoControl
+    }: DataGenerador) =>{
     return (
         <g id="layer5">
         <g id="g1695">
           <path
             id="estado_eq"
+            className= {boton_gen}
             fillRule="evenodd"
             fill="url(#linearGradient4474)"
             opacity={0.999}
@@ -178,7 +219,7 @@ const variables = (
               fontSize="5.6444px"
               strokeWidth={0.47057}
             >
-              {fase}
+              { dataGeneral.fase }
             </tspan>
           </text>
           <text
@@ -205,7 +246,7 @@ const variables = (
               fontSize="5.6444px"
               strokeWidth={0.47057}
             >
-              {sistema}
+              { dataGeneral.sistema }
             </tspan>
           </text>
           <text
@@ -232,7 +273,7 @@ const variables = (
               fontSize="5.6444px"
               strokeWidth={0.47057}
             >
-              {marca}
+              { dataGeneral.marca }
             </tspan>
           </text>
           <text
@@ -259,7 +300,7 @@ const variables = (
               fontSize="5.6444px"
               strokeWidth={0.47057}
             >
-              {modelo}
+              { dataGeneral.modelo }
             </tspan>
           </text>
           <text
@@ -286,12 +327,13 @@ const variables = (
               fontSize="5.6444px"
               strokeWidth={0.47057}
             >
-              {ubicacion}
+              { dataGeneral.ubicacion }
             </tspan>
           </text>
           
           <g
             id="st2"
+            className = {boton_estado}
             transform="translate(1.761 .066)"
             fill="red"
             opacity={0.999}
@@ -546,6 +588,7 @@ const variables = (
             id="gen_es_warn_alm"
             transform="matrix(.11617 0 0 .10952 331.4 66.778)"
             fill="#999"
+            className= { botones_Alarmas.paro_emergencia.on }
             opacity={0.999}
           >
             <ellipse
@@ -824,6 +867,7 @@ const variables = (
           <g
             id="gen_es_shutd_alm"
             transform="matrix(.11617 0 0 .10952 344.4 66.778)"
+            className = { botones_Alarmas.paro_emergencia.off }
             fill="#999"
             opacity={0.999}
           >
@@ -1561,7 +1605,7 @@ const variables = (
               fontSize="6.35px"
               strokeWidth={0.26458}
             >
-              {"425.5"}
+              {alternador.voltaje_ff}
             </tspan>
           </text>
           <text
@@ -1587,7 +1631,7 @@ const variables = (
               fontSize="6.35px"
               strokeWidth={0.26458}
             >
-              {"300.5"}
+              {alternador.corriente}
             </tspan>
           </text>
           <text
@@ -1613,7 +1657,7 @@ const variables = (
               fontSize="6.35px"
               strokeWidth={0.26458}
             >
-              {"200.5"}
+              {alternador.pot_kw}
             </tspan>
           </text>
           <text
@@ -1639,7 +1683,7 @@ const variables = (
               fontSize="6.35px"
               strokeWidth={0.26458}
             >
-              {"230.5"}
+              {alternador.pot_kva}
             </tspan>
           </text>
           <text
@@ -1665,7 +1709,7 @@ const variables = (
               fontSize="6.35px"
               strokeWidth={0.26458}
             >
-              {"0.90"}
+              {alternador.factor_pot}
             </tspan>
           </text>
           <text
@@ -1691,7 +1735,7 @@ const variables = (
               fontSize="6.35px"
               strokeWidth={0.26458}
             >
-              {"281.5"}
+              {motor.voltaje_bat}
             </tspan>
           </text>
           <text
@@ -1717,7 +1761,7 @@ const variables = (
               fontSize="6.35px"
               strokeWidth={0.26458}
             >
-              {"515.3"}
+              {temp}
             </tspan>
           </text>
           <text
@@ -1743,7 +1787,7 @@ const variables = (
               fontSize="6.35px"
               strokeWidth={0.26458}
             >
-              {"100.3"}
+              {motor.pres_aceite}
             </tspan>
           </text>
           <text
@@ -1769,7 +1813,7 @@ const variables = (
               fontSize="6.35px"
               strokeWidth={0.26458}
             >
-              {"230.5"}
+              {motor.horas_uso}
             </tspan>
           </text>
           <text
@@ -1795,7 +1839,7 @@ const variables = (
               fontSize="6.35px"
               strokeWidth={0.26458}
             >
-              {"60"}
+              { motor.frecuencia }
             </tspan>
           </text>
           <g
@@ -1811,6 +1855,7 @@ const variables = (
               cy={48.336}
               rx={2.3902}
               ry={2.6075}
+              className = { modoControl.modo_manual }
               fill="#1bea77"
               opacity={0.88}
             />
@@ -1942,4 +1987,3 @@ const variables = (
     )
 }
 
-export default variables
