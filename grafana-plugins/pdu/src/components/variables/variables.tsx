@@ -84,11 +84,12 @@ export const Variables = ({
               fontWeight={700}
               strokeWidth={0.28918}
             >
-              {"444.0"}
+              {volt_corr.in_volt}
             </tspan>
           </text>
           <path
             id="estado_eq"
+            className= {volt_corr.boton_pdu}
             fillRule="evenodd"
             fill="url(#linearGradient4474)"
             strokeWidth={0.26219}
@@ -117,7 +118,7 @@ export const Variables = ({
               fontWeight={700}
               strokeWidth={0.26458}
             >
-              {"486.0"}
+              {volt_corr.out_volt}
             </tspan>
           </text>
           <text
@@ -143,7 +144,7 @@ export const Variables = ({
               fontWeight={700}
               strokeWidth={0.26458}
             >
-              {"353"}
+              {volt_corr.corr_total}
             </tspan>
           </text>
           <text
@@ -169,7 +170,7 @@ export const Variables = ({
               fontSize="5.6444px"
               strokeWidth={0.47057}
             >
-              {"B"}
+              {datos_generales.fase}
             </tspan>
           </text>
           <text
@@ -195,7 +196,7 @@ export const Variables = ({
               fontSize="5.6444px"
               strokeWidth={0.47057}
             >
-              {"2"}
+              {datos_generales.sistema}
             </tspan>
           </text>
           <text
@@ -221,7 +222,7 @@ export const Variables = ({
               fontSize="5.6444px"
               strokeWidth={0.47057}
             >
-              {"G.E WAVESTAR"}
+              {datos_generales.marca}
             </tspan>
           </text>
           <text
@@ -247,7 +248,7 @@ export const Variables = ({
               fontSize="5.6444px"
               strokeWidth={0.47057}
             >
-              {"PP12-WS-150-G-541"}
+              {datos_generales.modelo}
             </tspan>
           </text>
           <text
@@ -273,7 +274,7 @@ export const Variables = ({
               fontSize="5.6444px"
               strokeWidth={0.47057}
             >
-              {"PA - TI"}
+              {datos_generales.ubicacion}
             </tspan>
           </text>
           <ellipse
@@ -343,7 +344,7 @@ export const Variables = ({
               fontSize="4.9389px"
               strokeWidth={0.26458}
             >
-              {"413.80"}
+              {fases.in1_AB}
             </tspan>
           </text>
           <text
@@ -369,7 +370,7 @@ export const Variables = ({
               fontSize="4.9389px"
               strokeWidth={0.26458}
             >
-              {"413.00 "}
+              {fases.in1_BC}
             </tspan>
           </text>
           <text
@@ -395,7 +396,7 @@ export const Variables = ({
               fontSize="4.9389px"
               strokeWidth={0.26458}
             >
-              {"414.40"}
+              {fases.in1_CA}
             </tspan>
           </text>
           <text
@@ -421,7 +422,7 @@ export const Variables = ({
               fontSize="4.9389px"
               strokeWidth={0.26458}
             >
-              {"216.50 "}
+              {fases.out1_A}
             </tspan>
           </text>
           <text
@@ -447,7 +448,7 @@ export const Variables = ({
               fontSize="4.9389px"
               strokeWidth={0.26458}
             >
-              {"214.30 "}
+              {fases.out1_BC}
             </tspan>
           </text>
           <text
@@ -473,7 +474,7 @@ export const Variables = ({
               fontSize="4.9389px"
               strokeWidth={0.26458}
             >
-              {"216.30 "}
+              {fases.out1_CA}
             </tspan>
           </text>
           <text
@@ -499,7 +500,7 @@ export const Variables = ({
               fontSize="4.9389px"
               strokeWidth={0.26458}
             >
-              {"6.30 "}
+              {fases.corriente_N}
             </tspan>
           </text>
           <text
@@ -525,7 +526,7 @@ export const Variables = ({
               fontSize="4.9389px"
               strokeWidth={0.26458}
             >
-              {"31.60 "}
+              {fases.out1_B}
             </tspan>
           </text>
           <text
@@ -551,7 +552,7 @@ export const Variables = ({
               fontSize="4.9389px"
               strokeWidth={0.26458}
             >
-              {"31.50 "}
+              {fases.out1_C}
             </tspan>
           </text>
           <text
@@ -576,10 +577,14 @@ export const Variables = ({
               fontSize="6.35px"
               strokeWidth={0.26458}
             >
-              {"ENCENDIDO"}
+              {volt_corr.estado}
             </tspan>
           </text>
-          <g id="st2" transform="translate(-7.11 3.577)" fill="#00990c">
+          <g 
+          id="st2" 
+          className={volt_corr.boton_estado}
+          transform="translate(-7.11 3.577)" 
+          fill="#00990c">
             <path
               id="path15781"
               d="M213.68 169.15a5.861 5.861 0 00-4.066 1.662 5.7 5.7 0 00-1.684 4.01c0 1.484.62 2.96 1.684 4.01a5.86 5.86 0 004.066 1.662 5.861 5.861 0 004.066-1.662 5.7 5.7 0 001.684-4.01 5.7 5.7 0 00-1.684-4.01 5.86 5.86 0 00-4.066-1.662zm0 .835a5.03 5.03 0 013.475 1.42c.904.891 1.435 2.158 1.435 3.417s-.531 2.525-1.435 3.417a5.03 5.03 0 01-3.475 1.42 5.03 5.03 0 01-3.475-1.42c-.904-.892-1.435-2.159-1.435-3.417s.531-2.526 1.435-3.418a5.03 5.03 0 013.475-1.42z"
@@ -597,6 +602,8 @@ export const Variables = ({
               filter="url(#filter2663)"
             />
           </g>
+          
+          
           <text
             id="out1_a_cur-1"
             transform="scale(.8204 1.2189)"
@@ -620,7 +627,7 @@ export const Variables = ({
               fontSize="4.9389px"
               strokeWidth={0.26458}
             >
-              {"39.90 "}
+              {fases.out1_A}
             </tspan>
           </text>
           <text
@@ -652,7 +659,7 @@ export const Variables = ({
                 fontSize="11.289px"
                 strokeWidth={0.25953}
               >
-                {"PDU-0X-FX"}
+                {volt_corr.nombre_pdu}
               </tspan>
             </tspan>
           </text>

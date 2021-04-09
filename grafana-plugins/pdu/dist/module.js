@@ -451,8 +451,9 @@ var Variables = function Variables(_a) {
     fontSize: "9.8778px",
     fontWeight: 700,
     strokeWidth: 0.28918
-  }, "444.0")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("path", {
+  }, volt_corr.in_volt)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("path", {
     id: "estado_eq",
+    className: volt_corr.boton_pdu,
     fillRule: "evenodd",
     fill: "url(#linearGradient4474)",
     strokeWidth: 0.26219,
@@ -480,7 +481,7 @@ var Variables = function Variables(_a) {
     fontSize: "9.8778px",
     fontWeight: 700,
     strokeWidth: 0.26458
-  }, "486.0")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("text", {
+  }, volt_corr.out_volt)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("text", {
     id: "out1_tot",
     x: 217.73564,
     y: 128.04333,
@@ -503,7 +504,7 @@ var Variables = function Variables(_a) {
     fontSize: "9.8778px",
     fontWeight: 700,
     strokeWidth: 0.26458
-  }, "353")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("text", {
+  }, volt_corr.corr_total)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("text", {
     id: "fase",
     transform: "scale(.98529 1.0149)",
     x: 322.01138,
@@ -526,7 +527,7 @@ var Variables = function Variables(_a) {
     fontFamily: "Franklin Gothic Medium",
     fontSize: "5.6444px",
     strokeWidth: 0.47057
-  }, "B")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("text", {
+  }, datos_generales.fase)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("text", {
     id: "sistema",
     transform: "scale(.98529 1.0149)",
     x: 321.79639,
@@ -549,7 +550,7 @@ var Variables = function Variables(_a) {
     fontFamily: "Franklin Gothic Medium",
     fontSize: "5.6444px",
     strokeWidth: 0.47057
-  }, "2")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("text", {
+  }, datos_generales.sistema)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("text", {
     id: "marca",
     transform: "scale(.98529 1.0149)",
     x: 322.01138,
@@ -572,7 +573,7 @@ var Variables = function Variables(_a) {
     fontFamily: "Franklin Gothic Medium",
     fontSize: "5.6444px",
     strokeWidth: 0.47057
-  }, "G.E WAVESTAR")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("text", {
+  }, datos_generales.marca)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("text", {
     id: "modelo",
     transform: "scale(.98529 1.0149)",
     x: 322.01178,
@@ -595,7 +596,7 @@ var Variables = function Variables(_a) {
     fontFamily: "Franklin Gothic Medium",
     fontSize: "5.6444px",
     strokeWidth: 0.47057
-  }, "PP12-WS-150-G-541")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("text", {
+  }, datos_generales.modelo)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("text", {
     id: "ubicacion",
     transform: "scale(.98529 1.0149)",
     x: 322.01138,
@@ -618,7 +619,7 @@ var Variables = function Variables(_a) {
     fontFamily: "Franklin Gothic Medium",
     fontSize: "5.6444px",
     strokeWidth: 0.47057
-  }, "PA - TI")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ellipse", {
+  }, datos_generales.ubicacion)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ellipse", {
     id: "door_alm",
     cx: 363.57,
     cy: 139.94,
@@ -681,7 +682,7 @@ var Variables = function Variables(_a) {
     fontFamily: "Franklin Gothic Medium",
     fontSize: "4.9389px",
     strokeWidth: 0.26458
-  }, "413.80")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("text", {
+  }, fases.in1_AB)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("text", {
     id: "in1_bc_vol",
     transform: "scale(.8204 1.2189)",
     x: 564.67438,
@@ -704,7 +705,7 @@ var Variables = function Variables(_a) {
     fontFamily: "Franklin Gothic Medium",
     fontSize: "4.9389px",
     strokeWidth: 0.26458
-  }, "413.00 ")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("text", {
+  }, fases.in1_BC)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("text", {
     id: "in1_ca_vol",
     transform: "scale(.8204 1.2189)",
     x: 564.64783,
@@ -727,7 +728,7 @@ var Variables = function Variables(_a) {
     fontFamily: "Franklin Gothic Medium",
     fontSize: "4.9389px",
     strokeWidth: 0.26458
-  }, "414.40")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("text", {
+  }, fases.in1_CA)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("text", {
     id: "out1_ab_vol",
     transform: "scale(.8204 1.2189)",
     x: 564.4718,
@@ -750,7 +751,7 @@ var Variables = function Variables(_a) {
     fontFamily: "Franklin Gothic Medium",
     fontSize: "4.9389px",
     strokeWidth: 0.26458
-  }, "216.50 ")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("text", {
+  }, fases.out1_A)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("text", {
     id: "out1_bc_vol",
     transform: "scale(.8204 1.2189)",
     x: 564.4718,
@@ -773,7 +774,7 @@ var Variables = function Variables(_a) {
     fontFamily: "Franklin Gothic Medium",
     fontSize: "4.9389px",
     strokeWidth: 0.26458
-  }, "214.30 ")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("text", {
+  }, fases.out1_BC)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("text", {
     id: "out1_ca_vol",
     transform: "scale(.8204 1.2189)",
     x: 564.4718,
@@ -796,7 +797,7 @@ var Variables = function Variables(_a) {
     fontFamily: "Franklin Gothic Medium",
     fontSize: "4.9389px",
     strokeWidth: 0.26458
-  }, "216.30 ")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("text", {
+  }, fases.out1_CA)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("text", {
     id: "neut_cur",
     transform: "scale(.8204 1.2189)",
     x: 570.33478,
@@ -819,7 +820,7 @@ var Variables = function Variables(_a) {
     fontFamily: "Franklin Gothic Medium",
     fontSize: "4.9389px",
     strokeWidth: 0.26458
-  }, "6.30 ")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("text", {
+  }, fases.corriente_N)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("text", {
     id: "out1_b_cur",
     transform: "scale(.8204 1.2189)",
     x: 567.63635,
@@ -842,7 +843,7 @@ var Variables = function Variables(_a) {
     fontFamily: "Franklin Gothic Medium",
     fontSize: "4.9389px",
     strokeWidth: 0.26458
-  }, "31.60 ")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("text", {
+  }, fases.out1_B)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("text", {
     id: "out1_c_cur",
     transform: "scale(.8204 1.2189)",
     x: 567.63635,
@@ -865,7 +866,7 @@ var Variables = function Variables(_a) {
     fontFamily: "Franklin Gothic Medium",
     fontSize: "4.9389px",
     strokeWidth: 0.26458
-  }, "31.50 ")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("text", {
+  }, fases.out1_C)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("text", {
     id: "estado",
     x: 217.1003,
     y: 179.8784,
@@ -887,8 +888,9 @@ var Variables = function Variables(_a) {
     fontFamily: "Franklin Gothic Medium",
     fontSize: "6.35px",
     strokeWidth: 0.26458
-  }, "ENCENDIDO")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("g", {
+  }, volt_corr.estado)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("g", {
     id: "st2",
+    className: volt_corr.boton_estado,
     transform: "translate(-7.11 3.577)",
     fill: "#00990c"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("path", {
@@ -927,7 +929,7 @@ var Variables = function Variables(_a) {
     fontFamily: "Franklin Gothic Medium",
     fontSize: "4.9389px",
     strokeWidth: 0.26458
-  }, "39.90 ")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("text", {
+  }, fases.out1_A)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("text", {
     id: "pdu_nombre_on",
     transform: "scale(.83112 1.2032)",
     x: 126.49335,
@@ -955,7 +957,7 @@ var Variables = function Variables(_a) {
     fill: "#fff",
     fontSize: "11.289px",
     strokeWidth: 0.25953
-  }, "PDU-0X-FX"))))));
+  }, volt_corr.nombre_pdu))))));
 };
 
 /***/ }),
