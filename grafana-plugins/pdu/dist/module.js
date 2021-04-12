@@ -626,7 +626,8 @@ var Variables = function Variables(_a) {
     rx: 2.5726,
     ry: 2.4137,
     fillRule: "evenodd",
-    fill: "#1bea77",
+    fill: "#3a3d3d",
+    className: botones_alarmas.puerta_abierta.off,
     opacity: 0.88,
     paintOrder: "markers stroke fill"
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ellipse", {
@@ -636,7 +637,8 @@ var Variables = function Variables(_a) {
     rx: 2.5726,
     ry: 2.4137,
     fillRule: "evenodd",
-    fill: "#1bea77",
+    fill: "#3a3d3d",
+    className: botones_alarmas.falla_breaker.off,
     opacity: 0.88,
     paintOrder: "markers stroke fill"
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ellipse", {
@@ -646,7 +648,8 @@ var Variables = function Variables(_a) {
     rx: 2.5726,
     ry: 2.4137,
     fillRule: "evenodd",
-    fill: "#1bea77",
+    fill: "#3a3d3d",
+    className: botones_alarmas.red_modbus.off,
     opacity: 0.88,
     paintOrder: "markers stroke fill"
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ellipse", {
@@ -656,7 +659,8 @@ var Variables = function Variables(_a) {
     rx: 2.5726,
     ry: 2.4137,
     fillRule: "evenodd",
-    fill: "#1bea77",
+    fill: "#3a3d3d",
+    className: botones_alarmas.alarma_general.off,
     opacity: 0.88,
     paintOrder: "markers stroke fill"
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("text", {
