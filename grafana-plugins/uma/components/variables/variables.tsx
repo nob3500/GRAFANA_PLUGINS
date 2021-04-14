@@ -24,11 +24,36 @@ type Botones_alarmas = {
     perdida_flujo: Estados_alarmas;
     humo_fuego: Estados_alarmas;
 }
+type Datos_generales ={
+    fase: string;
+    sistema: string;
+    marca: string;
+    modelo: string;
+    ubicacion: string;
 
+}
+type Datos_principales ={
+    t_suministro: number; // id = tspan5844
+    t_retorno: number; // id = tspan1960-4
+    humedad_relativa: number; // id = tspan5927
+    boton_uma: string; // rectangulo id=estado_eq
+    nombre_uma: string;//nombre del equipo id= tspan6769
+    boton_estado: string;// power id = st2 (path2649,path15781,path2489)
+    estado: string; //encendido - apagado id = sys_on
+    
+}
+
+export interface DataUma{
+    estados: Estados;
+    botones_alarmas: Botones_alarmas;
+    datos_generales: Datos_generales;
+    datos_principales: Datos_principales;
+}
 
 export const Variables = ({
+    estados, botones_alarmas, datos_generales, datos_principales
 
-}) =>{
+}: DataUma) =>{
     return(
         <g id="layer5">
       <text
@@ -50,6 +75,7 @@ export const Variables = ({
       <g id="g1973">
         <path
           id="estado_eq"
+          className= {datos_principales.boton_uma}
           fillRule="evenodd"
           fill="url(#linearGradient1680)"
           strokeWidth={0.26219}
@@ -257,7 +283,7 @@ export const Variables = ({
             fontSize="7.0556px"
             strokeWidth={0.26458}
           >
-            {"ENCENDIDO"}
+            {datos_principales.estado}
           </tspan>
         </text>
         <text
@@ -286,7 +312,7 @@ export const Variables = ({
             fontWeight={700}
             strokeWidth={0.28918}
           >
-            {"18"}
+            {datos_principales.humedad_relativa}
           </tspan>
         </text>
         <g id="g15358" transform="matrix(.52638 0 0 .48302 174.52 162.75)">
@@ -335,7 +361,7 @@ export const Variables = ({
             fontWeight={700}
             strokeWidth={0.28918}
           >
-            {"20"}
+            {datos_principales.t_retorno}
           </tspan>
         </text>
         <text
@@ -665,19 +691,12 @@ export const Variables = ({
           strokeWidth={0.36412}
           wordSpacing={0}
         >
-          <tspan
-            id="tspan1938-4"
-            x={105.55671}
-            y={24.007139}
-            fill="#000"
-            fontFamily="Franklin Gothic Medium"
-            fontSize="11.289px"
-            strokeWidth={0.36412}
-          >
-            {"2/UMA-XX"}
-          </tspan>
+         
         </text>
-        <g id="st2" transform="translate(.258 .023)" fill="#00990c">
+        <g id="st2" 
+        className={datos_principales.boton_estado} //power
+        transform="translate(.258 .023)" 
+        fill="#00990c">
           <path
             id="path15781"
             d="M213.68 169.15a5.861 5.861 0 00-4.066 1.662 5.7 5.7 0 00-1.684 4.01c0 1.484.62 2.96 1.684 4.01a5.86 5.86 0 004.066 1.662 5.861 5.861 0 004.066-1.662 5.7 5.7 0 001.684-4.01 5.7 5.7 0 00-1.684-4.01 5.86 5.86 0 00-4.066-1.662zm0 .835a5.03 5.03 0 013.475 1.42c.904.891 1.435 2.158 1.435 3.417s-.531 2.525-1.435 3.417a5.03 5.03 0 01-3.475 1.42 5.03 5.03 0 01-3.475-1.42c-.904-.892-1.435-2.159-1.435-3.417s.531-2.526 1.435-3.418a5.03 5.03 0 013.475-1.42z"
@@ -722,7 +741,7 @@ export const Variables = ({
             fontWeight={700}
             strokeWidth={0.28918}
           >
-            {"20"}
+            {datos_principales.t_suministro}
           </tspan>
         </text>
         <text
@@ -749,7 +768,7 @@ export const Variables = ({
             fontSize="11.289px"
             strokeWidth={0.36412}
           >
-            {"2/UMA-XX"}
+            {datos_principales.nombre_uma}
           </tspan>
         </text>
         <text

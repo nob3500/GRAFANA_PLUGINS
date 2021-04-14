@@ -1,9 +1,67 @@
 import React from 'react'
-import{Variables} from './variables/variables';
+import{Variables, DataUma} from './variables/variables';
 
 
 const uma = () =>{
     let uma: DataUma={
+
+      estados:{
+        modo: '',
+        ventilador: '',
+        valvulas: '',
+        temp_cuarto: 0,
+        humedad_relativa: 0,
+        t_suministro: 0,
+        t_retorno: 0,
+        h_funcionamiento: 0,
+        
+    },
+    botones_alarmas:{
+        general:{
+            on:'',
+            off:''
+        },
+        filtro_aire:{
+            on:'',
+            off:''
+        },
+        inundacion:{
+            on:'',
+            off:''
+        },
+        sobrecalentamiento:{
+            on:'',
+            off:''
+        },
+        perdida_flujo:{
+          on:'',
+          off:''
+        },
+        humo_fuego:{
+          on:'',
+          off:''
+        },
+      
+    },
+    datos_generales: {
+        fase: '1',
+        marca: '',
+        modelo: '',
+        sistema: '',
+        ubicacion: ''
+
+    },
+    volt_corr:{
+        in_volt: 0,
+        out_volt: 0,
+        corr_total: 0,
+        boton_estado: '',
+        boton_pdu:'',
+        nombre_pdu:'',
+        estado: ''
+    
+
+    } 
         
     }
     return (

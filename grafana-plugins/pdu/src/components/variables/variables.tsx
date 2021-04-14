@@ -38,8 +38,8 @@ type Volt_corr ={
     in_volt: number;
     out_volt: number;
     corr_total: number;
-    boton_pdu: string; //rectangulo
-    nombre_pdu: string;//nombre del equipo
+    boton_pdu: string; //rectangulo id= estado_eq
+    nombre_pdu: string;//nombre del equipo id=tspan4559
     boton_estado: string;// power
     estado: string;// encendido - apagado
     
@@ -586,7 +586,7 @@ export const Variables = ({
           </text>
           <g 
           id="st2" 
-          className={volt_corr.boton_estado}
+          className={volt_corr.boton_estado}//power
           transform="translate(-7.11 3.577)" 
           fill="#00990c">
             <path

@@ -102,7 +102,60 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var uma = function uma() {
-  var uma = {};
+  var uma = {
+    estados: {
+      modo: '',
+      ventilador: '',
+      valvulas: '',
+      temp_cuarto: 0,
+      humedad_relativa: 0,
+      t_suministro: 0,
+      t_retorno: 0,
+      h_funcionamiento: 0
+    },
+    botones_alarmas: {
+      general: {
+        on: '',
+        off: ''
+      },
+      filtro_aire: {
+        on: '',
+        off: ''
+      },
+      inundacion: {
+        on: '',
+        off: ''
+      },
+      sobrecalentamiento: {
+        on: '',
+        off: ''
+      },
+      perdida_flujo: {
+        on: '',
+        off: ''
+      },
+      humo_fuego: {
+        on: '',
+        off: ''
+      }
+    },
+    datos_generales: {
+      fase: '1',
+      marca: '',
+      modelo: '',
+      sistema: '',
+      ubicacion: ''
+    },
+    volt_corr: {
+      in_volt: 0,
+      out_volt: 0,
+      corr_total: 0,
+      boton_estado: '',
+      boton_pdu: '',
+      nombre_pdu: '',
+      estado: ''
+    }
+  };
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("svg", {
     id: "svg8",
     viewBox: "0 0 508 198.44"
@@ -2165,6 +2218,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 
 var Variables = function Variables(_a) {
+  var estados = _a.estados,
+      botones_alarmas = _a.botones_alarmas,
+      datos_generales = _a.datos_generales,
+      datos_principales = _a.datos_principales;
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("g", {
     id: "layer5"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("text", {
@@ -2186,6 +2243,7 @@ var Variables = function Variables(_a) {
     id: "g1973"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("path", {
     id: "estado_eq",
+    className: datos_principales.boton_uma,
     fillRule: "evenodd",
     fill: "url(#linearGradient1680)",
     strokeWidth: 0.26219,
@@ -2372,7 +2430,7 @@ var Variables = function Variables(_a) {
     fontFamily: "Franklin Gothic Medium",
     fontSize: "7.0556px",
     strokeWidth: 0.26458
-  }, "ENCENDIDO")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("text", {
+  }, datos_principales.estado)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("text", {
     id: "humedad",
     transform: "scale(1.0508 .95161)",
     x: 212.52034,
@@ -2396,7 +2454,7 @@ var Variables = function Variables(_a) {
     fontSize: "12.491px",
     fontWeight: 700,
     strokeWidth: 0.28918
-  }, "18")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("g", {
+  }, datos_principales.humedad_relativa)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("g", {
     id: "g15358",
     transform: "matrix(.52638 0 0 .48302 174.52 162.75)"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("path", {
@@ -2438,7 +2496,7 @@ var Variables = function Variables(_a) {
     fontSize: "12.347px",
     fontWeight: 700,
     strokeWidth: 0.28918
-  }, "20")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("text", {
+  }, datos_principales.t_retorno)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("text", {
     id: "room_temp",
     transform: "scale(.8204 1.2189)",
     x: 580.0434,
@@ -2708,16 +2766,9 @@ var Variables = function Variables(_a) {
     letterSpacing: 0,
     strokeWidth: 0.36412,
     wordSpacing: 0
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tspan", {
-    id: "tspan1938-4",
-    x: 105.55671,
-    y: 24.007139,
-    fill: "#000",
-    fontFamily: "Franklin Gothic Medium",
-    fontSize: "11.289px",
-    strokeWidth: 0.36412
-  }, "2/UMA-XX")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("g", {
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("g", {
     id: "st2",
+    className: datos_principales.boton_estado,
     transform: "translate(.258 .023)",
     fill: "#00990c"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("path", {
@@ -2758,7 +2809,7 @@ var Variables = function Variables(_a) {
     fontSize: "12.347px",
     fontWeight: 700,
     strokeWidth: 0.28918
-  }, "20")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("text", {
+  }, datos_principales.t_suministro)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("text", {
     id: "nom_on",
     x: 105.35529,
     y: 24.536306,
@@ -2780,7 +2831,7 @@ var Variables = function Variables(_a) {
     fontFamily: "Franklin Gothic Medium",
     fontSize: "11.289px",
     strokeWidth: 0.36412
-  }, "2/UMA-XX")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("text", {
+  }, datos_principales.nombre_uma)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("text", {
     id: "unit_run_alarm",
     transform: "scale(.8204 1.2189)",
     x: 580.72345,
