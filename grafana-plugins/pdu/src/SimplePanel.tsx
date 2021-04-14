@@ -9,8 +9,6 @@ import Pdu from './components/pdu';
 
 interface Props extends PanelProps<SimpleOptions> {}
 
-
-
 export const SimplePanel: React.FC<Props> = ({ options, data, width, height }) => {
   //const theme = useTheme();
   const styles = getStyles();
