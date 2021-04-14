@@ -14,7 +14,7 @@ const OUT_TOTAL = () => {
           id="text5947"
           x="216.962"
           y="117.3"
-          style={{ lineHeight: "1.25" }}
+          style={{ lineHeight: '1.25' }}
           fill="#000"
           strokeWidth="0.265"
           fontFamily="sans-serif"
@@ -43,12 +43,7 @@ const OUT_TOTAL = () => {
           opacity="0.8"
           transform="translate(8.6 19.759) scale(.26458)"
         ></path>
-        <g
-          id="g8978"
-          strokeWidth="1.049"
-          opacity="0.75"
-          transform="matrix(-1.0948 0 0 .99131 324.25 66.266)"
-        >
+        <g id="g8978" strokeWidth="1.049" opacity="0.75" transform="matrix(-1.0948 0 0 .99131 324.25 66.266)">
           <path
             id="path8972"
             fill="none"
@@ -56,31 +51,11 @@ const OUT_TOTAL = () => {
             strokeWidth="0.278"
             d="M55.846 66.713L74.839 45.83l30.144-.094 4.158 4.063v1.89l-4.063 3.59v24.663l1.7 1.89v2.363l-6.236 6.709v3.59l2.457 2.552v4.158h-14.93l-2.93-2.457-5.102 5.197h-18.71l-5.198-5.386z"
           ></path>
-          <path
-            id="path8974"
-            fill="#0cedf7"
-            d="M62.555 59.437l-.094-4.536 8.22-9.171 4.159-.017z"
-          ></path>
-          <path
-            id="path8976"
-            fill="#0cedf7"
-            d="M106.64 53.909l.267 27.915-1.826-1.881V55.278z"
-          ></path>
+          <path id="path8974" fill="#0cedf7" d="M62.555 59.437l-.094-4.536 8.22-9.171 4.159-.017z"></path>
+          <path id="path8976" fill="#0cedf7" d="M106.64 53.909l.267 27.915-1.826-1.881V55.278z"></path>
         </g>
-        <path
-          id="path8980"
-          fill="#168498"
-          stroke="#0deff7"
-          strokeWidth="0.492"
-          d="M261.45 157.87l-10.695 9.223"
-        ></path>
-        <path
-          id="path8982"
-          fill="#168498"
-          stroke="#0deff7"
-          strokeWidth="0.23"
-          d="M259.07 162.57l-3.77 3.18"
-        ></path>
+        <path id="path8980" fill="#168498" stroke="#0deff7" strokeWidth="0.492" d="M261.45 157.87l-10.695 9.223"></path>
+        <path id="path8982" fill="#168498" stroke="#0deff7" strokeWidth="0.23" d="M259.07 162.57l-3.77 3.18"></path>
         <path
           id="rect8988"
           fill="#10677d"
@@ -153,13 +128,7 @@ const OUT_TOTAL = () => {
           opacity="0.75"
           paintOrder="markers stroke fill"
         ></path>
-        <path
-          id="path9043"
-          fill="#168498"
-          stroke="#0deff7"
-          strokeWidth="0.23"
-          d="M256.83 159.39l-3.77 3.18"
-        ></path>
+        <path id="path9043" fill="#168498" stroke="#0deff7" strokeWidth="0.23" d="M256.83 159.39l-3.77 3.18"></path>
         <path
           id="path9167"
           fill="#cb8f03"
@@ -210,7 +179,7 @@ const OUT_TOTAL = () => {
           id="pdu2b_f5_out1_total_kva"
           x="228.224"
           y="142.029"
-          style={{ lineHeight: "1.25" }}
+          style={{ lineHeight: '1.25' }}
           fill="#00aad4"
           strokeWidth="0.265"
           fontFamily="sans-serif"
@@ -245,7 +214,7 @@ const OUT_TOTAL = () => {
           id="text6940"
           x="236.656"
           y="146.119"
-          style={{ lineHeight: "1.25" }}
+          style={{ lineHeight: '1.25' }}
           fill="#00aad4"
           strokeWidth="0.265"
           fontFamily="sans-serif"
@@ -269,7 +238,7 @@ const OUT_TOTAL = () => {
         </text>
       </g>
     </g>
-  )
-}
+  );
+};
 
-export default OUT_TOTAL
+export default OUT_TOTAL;

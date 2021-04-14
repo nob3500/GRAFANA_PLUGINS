@@ -3,12 +3,7 @@ import React from 'react';
 const ESTADOS = () => {
   return (
     <g id="g2255">
-      <g
-        id="g15245"
-        fill="#168498"
-        opacity="0.3"
-        transform="matrix(-2.141 0 0 1.9123 698.89 -18.499)"
-      >
+      <g id="g15245" fill="#168498" opacity="0.3" transform="matrix(-2.141 0 0 1.9123 698.89 -18.499)">
         <path
           id="path15243"
           fill="url(#linearGradient15241)"
@@ -27,22 +22,14 @@ const ESTADOS = () => {
           fill="none"
           d="M55.846 66.713L74.839 45.83l30.144-.094 4.158 4.063v1.89l-4.063 3.59v24.663l1.7 1.89v2.363l-6.236 6.709v3.59l2.457 2.552v4.158h-14.93l-2.93-2.457-5.102 5.197h-18.71l-5.198-5.386z"
         ></path>
-        <path
-          id="path5717"
-          fill="#0cedf7"
-          d="M62.555 59.437l-.094-4.536 8.22-9.171 4.159-.017z"
-        ></path>
-        <path
-          id="path5719"
-          fill="#0cedf7"
-          d="M106.64 53.909l.267 27.915-1.826-1.881V55.278z"
-        ></path>
+        <path id="path5717" fill="#0cedf7" d="M62.555 59.437l-.094-4.536 8.22-9.171 4.159-.017z"></path>
+        <path id="path5719" fill="#0cedf7" d="M106.64 53.909l.267 27.915-1.826-1.881V55.278z"></path>
       </g>
       <text
         id="text5731"
         x="421.83"
         y="50.835"
-        style={{ lineHeight: "1.25" }}
+        style={{ lineHeight: '1.25' }}
         fill="#000"
         strokeWidth="0.265"
         fontFamily="sans-serif"
@@ -71,7 +58,7 @@ const ESTADOS = () => {
         strokeWidth="0.265"
         fontSize="6.085"
         transform="scale(.8204 1.2189)"
-        style={{ lineHeight: "1.25" }}
+        style={{ lineHeight: '1.25' }}
         fontFamily="sans-serif"
         letterSpacing="0"
         wordSpacing="0"
@@ -99,7 +86,7 @@ const ESTADOS = () => {
           fontSize="5.644"
           fontStretch="semi-expanded"
         >
-          IN1 BC:{" "}
+          IN1 BC:{' '}
         </tspan>
         <tspan
           id="tspan1157"
@@ -206,7 +193,7 @@ const ESTADOS = () => {
         strokeWidth="0.265"
         fontSize="6.085"
         transform="scale(.8204 1.2189)"
-        style={{ lineHeight: "1.25" }}
+        style={{ lineHeight: '1.25' }}
         fontFamily="sans-serif"
         letterSpacing="0"
         wordSpacing="0"
@@ -225,49 +212,15 @@ const ESTADOS = () => {
           413.80 V
         </tspan>
       </text>
-      <g
-        id="g6111"
-        fill="#168498"
-        stroke="#0deff7"
-        transform="translate(240 49.902)"
-      >
-        <path
-          id="path6105"
-          strokeWidth="0.618"
-          d="M260.44 88.374l-12.621 12.459"
-        ></path>
-        <path
-          id="path6107"
-          strokeWidth="0.289"
-          d="M255.17 89.828l-6.212 5.99"
-        ></path>
-        <path
-          id="path6109"
-          strokeWidth="0.289"
-          d="M257.86 94.466l-4.455 4.302"
-        ></path>
+      <g id="g6111" fill="#168498" stroke="#0deff7" transform="translate(240 49.902)">
+        <path id="path6105" strokeWidth="0.618" d="M260.44 88.374l-12.621 12.459"></path>
+        <path id="path6107" strokeWidth="0.289" d="M255.17 89.828l-6.212 5.99"></path>
+        <path id="path6109" strokeWidth="0.289" d="M257.86 94.466l-4.455 4.302"></path>
       </g>
-      <g
-        id="g6203"
-        fill="#168498"
-        stroke="#0deff7"
-        transform="rotate(2.974 867.508 3681.785) scale(.8315)"
-      >
-        <path
-          id="path6197"
-          strokeWidth="0.618"
-          d="M260.44 88.374l-12.621 12.459"
-        ></path>
-        <path
-          id="path6199"
-          strokeWidth="0.289"
-          d="M255.17 89.828l-6.212 5.99"
-        ></path>
-        <path
-          id="path6201"
-          strokeWidth="0.289"
-          d="M257.86 94.466l-4.455 4.302"
-        ></path>
+      <g id="g6203" fill="#168498" stroke="#0deff7" transform="rotate(2.974 867.508 3681.785) scale(.8315)">
+        <path id="path6197" strokeWidth="0.618" d="M260.44 88.374l-12.621 12.459"></path>
+        <path id="path6199" strokeWidth="0.289" d="M255.17 89.828l-6.212 5.99"></path>
+        <path id="path6201" strokeWidth="0.289" d="M257.86 94.466l-4.455 4.302"></path>
       </g>
       <path
         id="path6170-7-8"
@@ -284,7 +237,7 @@ const ESTADOS = () => {
         strokeWidth="0.265"
         fontSize="6.085"
         transform="scale(.8204 1.2189)"
-        style={{ lineHeight: "1.25" }}
+        style={{ lineHeight: '1.25' }}
         fontFamily="sans-serif"
         letterSpacing="0"
         wordSpacing="0"
@@ -311,7 +264,7 @@ const ESTADOS = () => {
         strokeWidth="0.265"
         fontSize="6.085"
         transform="scale(.8204 1.2189)"
-        style={{ lineHeight: "1.25" }}
+        style={{ lineHeight: '1.25' }}
         fontFamily="sans-serif"
         letterSpacing="0"
         wordSpacing="0"
@@ -338,7 +291,7 @@ const ESTADOS = () => {
         strokeWidth="0.265"
         fontSize="6.085"
         transform="scale(.8204 1.2189)"
-        style={{ lineHeight: "1.25" }}
+        style={{ lineHeight: '1.25' }}
         fontFamily="sans-serif"
         letterSpacing="0"
         wordSpacing="0"
@@ -365,7 +318,7 @@ const ESTADOS = () => {
         strokeWidth="0.265"
         fontSize="6.085"
         transform="scale(.8204 1.2189)"
-        style={{ lineHeight: "1.25" }}
+        style={{ lineHeight: '1.25' }}
         fontFamily="sans-serif"
         letterSpacing="0"
         wordSpacing="0"
@@ -392,7 +345,7 @@ const ESTADOS = () => {
         strokeWidth="0.265"
         fontSize="6.085"
         transform="scale(.8204 1.2189)"
-        style={{ lineHeight: "1.25" }}
+        style={{ lineHeight: '1.25' }}
         fontFamily="sans-serif"
         letterSpacing="0"
         wordSpacing="0"
@@ -419,7 +372,7 @@ const ESTADOS = () => {
         strokeWidth="0.265"
         fontSize="6.085"
         transform="scale(.8204 1.2189)"
-        style={{ lineHeight: "1.25" }}
+        style={{ lineHeight: '1.25' }}
         fontFamily="sans-serif"
         letterSpacing="0"
         wordSpacing="0"
@@ -446,7 +399,7 @@ const ESTADOS = () => {
         strokeWidth="0.265"
         fontSize="6.085"
         transform="scale(.8204 1.2189)"
-        style={{ lineHeight: "1.25" }}
+        style={{ lineHeight: '1.25' }}
         fontFamily="sans-serif"
         letterSpacing="0"
         wordSpacing="0"
@@ -473,7 +426,7 @@ const ESTADOS = () => {
         strokeWidth="0.265"
         fontSize="6.085"
         transform="scale(.8204 1.2189)"
-        style={{ lineHeight: "1.25" }}
+        style={{ lineHeight: '1.25' }}
         fontFamily="sans-serif"
         letterSpacing="0"
         wordSpacing="0"
@@ -500,7 +453,7 @@ const ESTADOS = () => {
         strokeWidth="0.265"
         fontSize="6.085"
         transform="scale(.8204 1.2189)"
-        style={{ lineHeight: "1.25" }}
+        style={{ lineHeight: '1.25' }}
         fontFamily="sans-serif"
         letterSpacing="0"
         wordSpacing="0"
@@ -520,7 +473,7 @@ const ESTADOS = () => {
         </tspan>
       </text>
     </g>
-  )
-}
+  );
+};
 
-export default ESTADOS
+export default ESTADOS;

@@ -23,12 +23,7 @@ const OUT_TOT_KW = () => {
         paintOrder="markers stroke fill"
         transform="matrix(.69053 0 0 .62532 -30.539 24.506)"
       ></path>
-      <g
-        id="g1170-0"
-        strokeWidth="1.049"
-        opacity="0.75"
-        transform="matrix(-1.0948 0 0 .99131 324.9 -11.727)"
-      >
+      <g id="g1170-0" strokeWidth="1.049" opacity="0.75" transform="matrix(-1.0948 0 0 .99131 324.9 -11.727)">
         <path
           id="path829-0"
           fill="none"
@@ -36,38 +31,13 @@ const OUT_TOT_KW = () => {
           strokeWidth="0.278"
           d="M55.846 66.713L74.839 45.83l30.144-.094 4.158 4.063v1.89l-4.063 3.59v24.663l1.7 1.89v2.363l-6.236 6.709v3.59l2.457 2.552v4.158h-14.93l-2.93-2.457-5.102 5.197h-18.71l-5.198-5.386z"
         ></path>
-        <path
-          id="path831-8"
-          fill="#0cedf7"
-          d="M62.555 59.437l-.094-4.536 8.22-9.171 4.159-.017z"
-        ></path>
-        <path
-          id="path833-1"
-          fill="#0cedf7"
-          d="M106.64 53.909l.267 27.915-1.826-1.881V55.278z"
-        ></path>
+        <path id="path831-8" fill="#0cedf7" d="M62.555 59.437l-.094-4.536 8.22-9.171 4.159-.017z"></path>
+        <path id="path833-1" fill="#0cedf7" d="M106.64 53.909l.267 27.915-1.826-1.881V55.278z"></path>
       </g>
-      <g
-        id="g6103"
-        fill="#168498"
-        stroke="#0deff7"
-        transform="translate(-1.111 -12.535)"
-      >
-        <path
-          id="path852-9"
-          strokeWidth="0.618"
-          d="M260.44 88.374l-12.621 12.459"
-        ></path>
-        <path
-          id="path852-0-1"
-          strokeWidth="0.289"
-          d="M255.17 89.828l-6.212 5.99"
-        ></path>
-        <path
-          id="path852-0-7-2"
-          strokeWidth="0.289"
-          d="M257.86 94.466l-4.455 4.302"
-        ></path>
+      <g id="g6103" fill="#168498" stroke="#0deff7" transform="translate(-1.111 -12.535)">
+        <path id="path852-9" strokeWidth="0.618" d="M260.44 88.374l-12.621 12.459"></path>
+        <path id="path852-0-1" strokeWidth="0.289" d="M255.17 89.828l-6.212 5.99"></path>
+        <path id="path852-0-7-2" strokeWidth="0.289" d="M257.86 94.466l-4.455 4.302"></path>
       </g>
       <path
         id="path2051"
@@ -168,7 +138,7 @@ const OUT_TOT_KW = () => {
         id="text9223-7"
         x="224.992"
         y="65.193"
-        style={{ lineHeight: "1.25" }}
+        style={{ lineHeight: '1.25' }}
         fill="#00aad4"
         strokeWidth="0.265"
         fontFamily="sans-serif"
@@ -194,7 +164,7 @@ const OUT_TOT_KW = () => {
         id="text6940-6"
         x="232.647"
         y="69.527"
-        style={{ lineHeight: "1.25" }}
+        style={{ lineHeight: '1.25' }}
         fill="#00aad4"
         strokeWidth="0.265"
         fontFamily="sans-serif"
@@ -220,7 +190,7 @@ const OUT_TOT_KW = () => {
         id="text3573"
         x="211.001"
         y="38.817"
-        style={{ lineHeight: "1.25" }}
+        style={{ lineHeight: '1.25' }}
         fill="#000"
         strokeWidth="0.265"
         fontFamily="sans-serif"
@@ -242,7 +212,7 @@ const OUT_TOT_KW = () => {
         </tspan>
       </text>
     </g>
-  )
-}
+  );
+};
 
-export default OUT_TOT_KW
+export default OUT_TOT_KW;

@@ -3,12 +3,7 @@ import React from 'react';
 const ALARMAS = () => {
   return (
     <g>
-      <g
-        id="g14775"
-        fill="#168498"
-        opacity="0.3"
-        transform="matrix(2.0963 0 0 1.4941 84.837 67.845)"
-      >
+      <g id="g14775" fill="#168498" opacity="0.3" transform="matrix(2.0963 0 0 1.4941 84.837 67.845)">
         <path
           id="path14769"
           fill="url(#linearGradient15241)"
@@ -23,7 +18,7 @@ const ALARMAS = () => {
         strokeWidth="0.471"
         fontSize="6.274"
         transform="scale(.98529 1.0149)"
-        style={{ lineHeight: "1.25" }}
+        style={{ lineHeight: '1.25' }}
         fontFamily="sans-serif"
         letterSpacing="0"
         wordSpacing="0"
@@ -97,22 +92,14 @@ const ALARMAS = () => {
           fill="none"
           d="M55.846 66.713L74.839 45.83l30.144-.094 4.158 4.063v1.89l-4.063 3.59v24.663l1.7 1.89v2.363l-6.236 6.709v3.59l2.457 2.552v4.158h-14.93l-2.93-2.457-5.102 5.197h-18.71l-5.198-5.386z"
         ></path>
-        <path
-          id="path3693"
-          fill="#0cedf7"
-          d="M62.555 59.437l-.094-4.536 8.22-9.171 4.159-.017z"
-        ></path>
-        <path
-          id="path3695"
-          fill="#0cedf7"
-          d="M106.64 53.909l.267 27.915-1.826-1.881V55.278z"
-        ></path>
+        <path id="path3693" fill="#0cedf7" d="M62.555 59.437l-.094-4.536 8.22-9.171 4.159-.017z"></path>
+        <path id="path3695" fill="#0cedf7" d="M106.64 53.909l.267 27.915-1.826-1.881V55.278z"></path>
       </g>
       <text
         id="text3705"
         x="319.971"
         y="124.437"
-        style={{ lineHeight: "1.25" }}
+        style={{ lineHeight: '1.25' }}
         fill="#000"
         strokeWidth="0.265"
         fontFamily="sans-serif"
@@ -254,7 +241,7 @@ const ALARMAS = () => {
         transform="matrix(.74208 0 0 .6085 32.072 158.83)"
       ></ellipse>
     </g>
-  )
-}
+  );
+};
 
-export default ALARMAS
+export default ALARMAS;

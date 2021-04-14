@@ -7,7 +7,7 @@ const ESTADO_PRINCIPAL = () => {
         id="text5850-8"
         x="213.752"
         y="192.096"
-        style={{ lineHeight: "1.25" }}
+        style={{ lineHeight: '1.25' }}
         fill="#000"
         strokeWidth="0.265"
         fontFamily="sans-serif"
@@ -28,13 +28,7 @@ const ESTADO_PRINCIPAL = () => {
           STAND-BY
         </tspan>
       </text>
-      <path
-        id="path6140-5"
-        fill="none"
-        stroke="#00aad4"
-        strokeWidth="0.599"
-        d="M197.46 202.85h58.746"
-      ></path>
+      <path id="path6140-5" fill="none" stroke="#00aad4" strokeWidth="0.599" d="M197.46 202.85h58.746"></path>
       <path
         id="path6144-0"
         fill="#e3ff00"
@@ -47,7 +41,7 @@ const ESTADO_PRINCIPAL = () => {
         id="text3705-8"
         x="213.331"
         y="200.126"
-        style={{ lineHeight: "1.25" }}
+        style={{ lineHeight: '1.25' }}
         fill="#000"
         strokeWidth="0.265"
         fontFamily="sans-serif"
@@ -84,11 +78,7 @@ const ESTADO_PRINCIPAL = () => {
         d="M197.42 199.07h14.784"
       ></path>
       <g id="g15358" transform="matrix(.52638 0 0 .48302 166.31 178.02)">
-        <path
-          id="path15352"
-          fill="#17d8fb"
-          d="M88.487 12.957l7.519.05-7.356 4.114z"
-        ></path>
+        <path id="path15352" fill="#17d8fb" d="M88.487 12.957l7.519.05-7.356 4.114z"></path>
         <path
           id="path15354"
           fill="none"
@@ -173,7 +163,7 @@ const ESTADO_PRINCIPAL = () => {
         transform="translate(115.53 140.77) scale(.14885)"
       ></path>
     </g>
-  )
-}
+  );
+};
 
-export default ESTADO_PRINCIPAL
+export default ESTADO_PRINCIPAL;

@@ -368,6 +368,8 @@ __webpack_require__.r(__webpack_exports__);
 
  // import { stylesFactory, useTheme } from '@grafana/ui';
 
+ // import elasticClient from 'services/elastic';
+// import axios from 'services/axios'
 
 
 
@@ -381,8 +383,27 @@ var SimplePanel = function SimplePanel(_a) {
   var options = _a.options,
       data = _a.data,
       width = _a.width,
-      height = _a.height;
-  console.log('data');
+      height = _a.height; // useEffect(() => {
+  //   elasticClient.sql.query({
+  //     body: {
+  //       query: `SELECT "@timestamp", DATA.IN1_AB_VOL.VALUE AS VOL FROM "dc_gye_pdu_gw2a_data*"
+  //       WHERE EQUIPO='PDU_1A_F1' AND VOL>=0
+  //       ORDER BY "@timestamp" DESC
+  //       LIMIT 1`
+  //     }
+  //   })
+  //   .then(data => console.log(data))
+  //   .catch(error => console.log(error))
+  // })
+  // useEffect(() => {
+  //   axios.post('/_sql', {
+  //     query: `SELECT "@timestamp", DATA.IN1_AB_VOL.VALUE AS VOL FROM "dc_gye_pdu_gw2a_data*" WHERE EQUIPO='PDU_1A_F1' AND VOL>=0 ORDER BY "@timestamp" DESC LIMIT 1`
+  //   })
+  //   .then((datos: any) => console.log(datos))
+  //   .catch((error: any) => console.log(error))
+  // })
+
+  console.log(data);
   var styles = getStyles();
   return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
     className: Object(emotion__WEBPACK_IMPORTED_MODULE_2__["cx"])(styles.wrapper, Object(emotion__WEBPACK_IMPORTED_MODULE_2__["css"])(templateObject_1 || (templateObject_1 = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__makeTemplateObject"])(["\n          width: ", "px;\n          height: ", "px;\n        "], ["\n          width: ", "px;\n          height: ", "px;\n        "])), width, height))
@@ -1054,7 +1075,7 @@ var SimplePanel = function SimplePanel(_a) {
     x: "7.842",
     y: "35.66",
     style: {
-      lineHeight: "1.25"
+      lineHeight: '1.25'
     },
     fill: "#f9f9f9",
     strokeWidth: "0.364",
@@ -1151,7 +1172,7 @@ var SimplePanel = function SimplePanel(_a) {
     x: "412.842",
     y: "34.673",
     style: {
-      lineHeight: "1.25"
+      lineHeight: '1.25'
     },
     fill: "#fff",
     strokeWidth: "0.339",
@@ -1165,10 +1186,10 @@ var SimplePanel = function SimplePanel(_a) {
     x: "412.842",
     y: "34.673",
     style: {
-      fontFeatureSettings: "normal",
-      fontVariantCaps: "normal",
-      fontVariantLigatures: "normal",
-      fontVariantNumeric: "normal"
+      fontFeatureSettings: 'normal',
+      fontVariantCaps: 'normal',
+      fontVariantLigatures: 'normal',
+      fontVariantNumeric: 'normal'
     },
     strokeWidth: "0.339",
     fontFamily: "BankGothic Lt BT",
@@ -1329,7 +1350,7 @@ var ALARMAS = function ALARMAS() {
     fontSize: "6.274",
     transform: "scale(.98529 1.0149)",
     style: {
-      lineHeight: "1.25"
+      lineHeight: '1.25'
     },
     fontFamily: "sans-serif",
     letterSpacing: "0",
@@ -1398,7 +1419,7 @@ var ALARMAS = function ALARMAS() {
     x: "319.971",
     y: "124.437",
     style: {
-      lineHeight: "1.25"
+      lineHeight: '1.25'
     },
     fill: "#000",
     strokeWidth: "0.265",
@@ -1580,7 +1601,7 @@ var DATOS_GENERALES = function DATOS_GENERALES() {
     x: "314.091",
     y: "35.969",
     style: {
-      lineHeight: "1.25"
+      lineHeight: '1.25'
     },
     fill: "#000",
     strokeWidth: "0.265",
@@ -1650,7 +1671,7 @@ var DATOS_GENERALES = function DATOS_GENERALES() {
     fontSize: "6.274",
     transform: "scale(.98529 1.0149)",
     style: {
-      lineHeight: "1.25"
+      lineHeight: '1.25'
     },
     fontFamily: "sans-serif",
     letterSpacing: "0",
@@ -1705,7 +1726,7 @@ var DATOS_GENERALES = function DATOS_GENERALES() {
     fontSize: "6.274",
     transform: "scale(.98529 1.0149)",
     style: {
-      lineHeight: "1.25"
+      lineHeight: '1.25'
     },
     fontFamily: "sans-serif",
     letterSpacing: "0",
@@ -1728,7 +1749,7 @@ var DATOS_GENERALES = function DATOS_GENERALES() {
     fontSize: "6.274",
     transform: "scale(.98529 1.0149)",
     style: {
-      lineHeight: "1.25"
+      lineHeight: '1.25'
     },
     fontFamily: "sans-serif",
     letterSpacing: "0",
@@ -1751,7 +1772,7 @@ var DATOS_GENERALES = function DATOS_GENERALES() {
     fontSize: "6.274",
     transform: "scale(.98529 1.0149)",
     style: {
-      lineHeight: "1.25"
+      lineHeight: '1.25'
     },
     fontFamily: "sans-serif",
     letterSpacing: "0",
@@ -1774,7 +1795,7 @@ var DATOS_GENERALES = function DATOS_GENERALES() {
     fontSize: "6.274",
     transform: "scale(.98529 1.0149)",
     style: {
-      lineHeight: "1.25"
+      lineHeight: '1.25'
     },
     fontFamily: "sans-serif",
     letterSpacing: "0",
@@ -1797,7 +1818,7 @@ var DATOS_GENERALES = function DATOS_GENERALES() {
     fontSize: "6.274",
     transform: "scale(.98529 1.0149)",
     style: {
-      lineHeight: "1.25"
+      lineHeight: '1.25'
     },
     fontFamily: "sans-serif",
     letterSpacing: "0",
@@ -1866,7 +1887,7 @@ var ESTADOS = function ESTADOS() {
     x: "421.83",
     y: "50.835",
     style: {
-      lineHeight: "1.25"
+      lineHeight: '1.25'
     },
     fill: "#000",
     strokeWidth: "0.265",
@@ -1892,7 +1913,7 @@ var ESTADOS = function ESTADOS() {
     fontSize: "6.085",
     transform: "scale(.8204 1.2189)",
     style: {
-      lineHeight: "1.25"
+      lineHeight: '1.25'
     },
     fontFamily: "sans-serif",
     letterSpacing: "0",
@@ -1916,7 +1937,7 @@ var ESTADOS = function ESTADOS() {
     fontFamily: "BankGothic Lt BT",
     fontSize: "5.644",
     fontStretch: "semi-expanded"
-  }, "IN1 BC:", " "), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tspan", {
+  }, "IN1 BC:", ' '), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tspan", {
     id: "tspan1157",
     x: "498.007",
     y: "66.475",
@@ -1997,7 +2018,7 @@ var ESTADOS = function ESTADOS() {
     fontSize: "6.085",
     transform: "scale(.8204 1.2189)",
     style: {
-      lineHeight: "1.25"
+      lineHeight: '1.25'
     },
     fontFamily: "sans-serif",
     letterSpacing: "0",
@@ -2061,7 +2082,7 @@ var ESTADOS = function ESTADOS() {
     fontSize: "6.085",
     transform: "scale(.8204 1.2189)",
     style: {
-      lineHeight: "1.25"
+      lineHeight: '1.25'
     },
     fontFamily: "sans-serif",
     letterSpacing: "0",
@@ -2085,7 +2106,7 @@ var ESTADOS = function ESTADOS() {
     fontSize: "6.085",
     transform: "scale(.8204 1.2189)",
     style: {
-      lineHeight: "1.25"
+      lineHeight: '1.25'
     },
     fontFamily: "sans-serif",
     letterSpacing: "0",
@@ -2109,7 +2130,7 @@ var ESTADOS = function ESTADOS() {
     fontSize: "6.085",
     transform: "scale(.8204 1.2189)",
     style: {
-      lineHeight: "1.25"
+      lineHeight: '1.25'
     },
     fontFamily: "sans-serif",
     letterSpacing: "0",
@@ -2133,7 +2154,7 @@ var ESTADOS = function ESTADOS() {
     fontSize: "6.085",
     transform: "scale(.8204 1.2189)",
     style: {
-      lineHeight: "1.25"
+      lineHeight: '1.25'
     },
     fontFamily: "sans-serif",
     letterSpacing: "0",
@@ -2157,7 +2178,7 @@ var ESTADOS = function ESTADOS() {
     fontSize: "6.085",
     transform: "scale(.8204 1.2189)",
     style: {
-      lineHeight: "1.25"
+      lineHeight: '1.25'
     },
     fontFamily: "sans-serif",
     letterSpacing: "0",
@@ -2181,7 +2202,7 @@ var ESTADOS = function ESTADOS() {
     fontSize: "6.085",
     transform: "scale(.8204 1.2189)",
     style: {
-      lineHeight: "1.25"
+      lineHeight: '1.25'
     },
     fontFamily: "sans-serif",
     letterSpacing: "0",
@@ -2205,7 +2226,7 @@ var ESTADOS = function ESTADOS() {
     fontSize: "6.085",
     transform: "scale(.8204 1.2189)",
     style: {
-      lineHeight: "1.25"
+      lineHeight: '1.25'
     },
     fontFamily: "sans-serif",
     letterSpacing: "0",
@@ -2229,7 +2250,7 @@ var ESTADOS = function ESTADOS() {
     fontSize: "6.085",
     transform: "scale(.8204 1.2189)",
     style: {
-      lineHeight: "1.25"
+      lineHeight: '1.25'
     },
     fontFamily: "sans-serif",
     letterSpacing: "0",
@@ -2253,7 +2274,7 @@ var ESTADOS = function ESTADOS() {
     fontSize: "6.085",
     transform: "scale(.8204 1.2189)",
     style: {
-      lineHeight: "1.25"
+      lineHeight: '1.25'
     },
     fontFamily: "sans-serif",
     letterSpacing: "0",
@@ -2296,7 +2317,7 @@ var ESTADO_PRINCIPAL = function ESTADO_PRINCIPAL() {
     x: "213.752",
     y: "192.096",
     style: {
-      lineHeight: "1.25"
+      lineHeight: '1.25'
     },
     fill: "#000",
     strokeWidth: "0.265",
@@ -2331,7 +2352,7 @@ var ESTADO_PRINCIPAL = function ESTADO_PRINCIPAL() {
     x: "213.331",
     y: "200.126",
     style: {
-      lineHeight: "1.25"
+      lineHeight: '1.25'
     },
     fill: "#000",
     strokeWidth: "0.265",
@@ -2595,7 +2616,7 @@ var IN_VOL_MAX = function IN_VOL_MAX() {
     x: "25.037",
     y: "47.92",
     style: {
-      lineHeight: "1.25"
+      lineHeight: '1.25'
     },
     fill: "#000",
     strokeWidth: "0.265",
@@ -2621,7 +2642,7 @@ var IN_VOL_MAX = function IN_VOL_MAX() {
     fontSize: "5.895",
     transform: "scale(1.0508 .95161)",
     style: {
-      lineHeight: "1.25"
+      lineHeight: '1.25'
     },
     fontFamily: "sans-serif",
     letterSpacing: "0",
@@ -2641,7 +2662,7 @@ var IN_VOL_MAX = function IN_VOL_MAX() {
     x: "31.516",
     y: "77.504",
     style: {
-      lineHeight: "1.25"
+      lineHeight: '1.25'
     },
     fill: "#000",
     strokeWidth: "0.265",
@@ -2711,7 +2732,7 @@ var OUT_TOTAL = function OUT_TOTAL() {
     x: "216.962",
     y: "117.3",
     style: {
-      lineHeight: "1.25"
+      lineHeight: '1.25'
     },
     fill: "#000",
     strokeWidth: "0.265",
@@ -2883,7 +2904,7 @@ var OUT_TOTAL = function OUT_TOTAL() {
     x: "228.224",
     y: "142.029",
     style: {
-      lineHeight: "1.25"
+      lineHeight: '1.25'
     },
     fill: "#00aad4",
     strokeWidth: "0.265",
@@ -2914,7 +2935,7 @@ var OUT_TOTAL = function OUT_TOTAL() {
     x: "236.656",
     y: "146.119",
     style: {
-      lineHeight: "1.25"
+      lineHeight: '1.25'
     },
     fill: "#00aad4",
     strokeWidth: "0.265",
@@ -3101,7 +3122,7 @@ var OUT_TOT_KW = function OUT_TOT_KW() {
     x: "224.992",
     y: "65.193",
     style: {
-      lineHeight: "1.25"
+      lineHeight: '1.25'
     },
     fill: "#00aad4",
     strokeWidth: "0.265",
@@ -3124,7 +3145,7 @@ var OUT_TOT_KW = function OUT_TOT_KW() {
     x: "232.647",
     y: "69.527",
     style: {
-      lineHeight: "1.25"
+      lineHeight: '1.25'
     },
     fill: "#00aad4",
     strokeWidth: "0.265",
@@ -3147,7 +3168,7 @@ var OUT_TOT_KW = function OUT_TOT_KW() {
     x: "211.001",
     y: "38.817",
     style: {
-      lineHeight: "1.25"
+      lineHeight: '1.25'
     },
     fill: "#000",
     strokeWidth: "0.265",
