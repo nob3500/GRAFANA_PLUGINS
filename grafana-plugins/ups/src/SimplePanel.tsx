@@ -2,27 +2,26 @@ import React from 'react';
 import { PanelProps } from '@grafana/data';
 import { SimpleOptions } from 'types';
 import { css, cx } from 'emotion';
-// import { stylesFactory, useTheme } from '@grafana/ui';
+//import { stylesFactory, useTheme } from '@grafana/ui';
 import { stylesFactory } from '@grafana/ui';
-
-import Chiller from './components/chiller'
+import Ups from './components/ups';
 
 interface Props extends PanelProps<SimpleOptions> {}
 
 export const SimplePanel: React.FC<Props> = ({ options, data, width, height }) => {
-  // const theme = useTheme();
+  //const theme = useTheme();
   const styles = getStyles();
   return (
     <div
       className={cx(
         styles.wrapper,
         css`
-          width: ${width}px;
-          height: ${height}px;
+          
         `
       )}
     >
-      <Chiller />
+      
+    <Ups/>
     </div>
   );
 };
