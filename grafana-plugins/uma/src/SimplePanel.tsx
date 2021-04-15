@@ -4,7 +4,7 @@ import { SimpleOptions } from 'types';
 import { css, cx } from 'emotion';
 //import { stylesFactory, useTheme } from '@grafana/ui';
 import { stylesFactory } from '@grafana/ui';
-import Uma from '../components/uma';
+import Uma from 'components/uma';
 
 interface Props extends PanelProps<SimpleOptions> {}
 

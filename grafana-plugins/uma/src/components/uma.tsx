@@ -2433,4 +2433,4 @@ const uma = () =>{
     )
 }
 
-export default uma;
+export default uma
