@@ -5,7 +5,7 @@ import{Variables, DataUma} from './variables/variables';
 const uma = () =>{
     let uma: DataUma={
 
-      estados:{
+    estados:{
         modo: '',
         ventilador: '',
         valvulas: '',
@@ -13,36 +13,21 @@ const uma = () =>{
         humedad_relativa: 0,
         t_suministro: 0,
         t_retorno: 0,
-        h_funcionamiento: 0,
+        h_funcionamiento: 0
         
     },
+
     botones_alarmas:{
-        general:{
-            on:'',
-            off:''
-        },
-        filtro_aire:{
-            on:'',
-            off:''
-        },
-        inundacion:{
-            on:'',
-            off:''
-        },
-        sobrecalentamiento:{
-            on:'',
-            off:''
-        },
-        perdida_flujo:{
-          on:'',
-          off:''
-        },
-        humo_fuego:{
-          on:'',
-          off:''
-        },
-      
+
+      general : '',
+      filtro_aire: '',
+      inundacion: '',
+      sobrecalentamiento:'',
+      perdida_flujo: '',
+      humo_fuego: ''
+
     },
+   
     datos_generales: {
         fase: '1',
         marca: '',
@@ -51,17 +36,15 @@ const uma = () =>{
         ubicacion: ''
 
     },
-    volt_corr:{
-        in_volt: 0,
-        out_volt: 0,
-        corr_total: 0,
-        boton_estado: '',
-        boton_pdu:'',
-        nombre_pdu:'',
-        estado: ''
-    
-
-    } 
+    datos_principales: {
+      t_suministro: 0,
+      t_retorno: 0,
+      humedad_relativa:  0,
+      boton_uma: '',
+      nombre_uma: '',
+      boton_estado:'',
+      estado:'',
+    }
         
     }
     return (
@@ -2432,7 +2415,12 @@ const uma = () =>{
         </tspan>
       </text>
     </g>
-    <Variables/>
+    <Variables 
+      estados = {uma.estados}
+      botones_alarmas = {uma.botones_alarmas}
+      datos_generales = {uma.datos_generales}
+      datos_principales = {uma.datos_principales}
+    />
   </svg>
 
 

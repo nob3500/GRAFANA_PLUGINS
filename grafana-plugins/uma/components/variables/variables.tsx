@@ -1,35 +1,30 @@
 import React from 'react'
 
 type Estados ={
-    modo: string;
-    ventilador: string;
-    valvulas: string;
-    temp_cuarto: number;
-    humedad_relativa:number;
-    t_suministro: number;
-    t_retorno:number;
-    h_funcionamiento: number;
-}
-
-type Estados_alarmas ={
-    on: string;
-    off: string;
+    modo: string;// id = tspan1165-7
+    ventilador: string;// id = tspan15552
+    valvulas: string;// id = tspan15579
+    temp_cuarto: number;// id = tspan15444
+    humedad_relativa:number;// id = tspan15488
+    t_suministro: number;// id = tspan15522
+    t_retorno:number;// id = tspan15530
+    h_funcionamiento: number;// id = tspan15409
 }
 
 type Botones_alarmas = {
-    general : Estados_alarmas;
-    filtro_aire: Estados_alarmas;
-    inundacion: Estados_alarmas;
-    sobrecalentamiento: Estados_alarmas;
-    perdida_flujo: Estados_alarmas;
-    humo_fuego: Estados_alarmas;
+    general : string; // id = alarm_gen
+    filtro_aire: string;// id = alm_filtro
+    inundacion: string;// id = alm_inundacion
+    sobrecalentamiento: string;// id =alm_sobrecalentamiento
+    perdida_flujo: string;// id = alm_perdida
+    humo_fuego: string;// id = alm_humo
 }
 type Datos_generales ={
-    fase: string;
-    sistema: string;
-    marca: string;
-    modelo: string;
-    ubicacion: string;
+    fase: string; // id = tspan3618
+    sistema: string;// id = tspan3618-0
+    marca: string;// id = tspan3614-4
+    modelo: string;// id = tspan3614-5
+    ubicacion: string;// id = tspan3614-8
 
 }
 type Datos_principales ={
@@ -93,6 +88,7 @@ export const Variables = ({
           cy={124.55}
           rx={2.5726}
           ry={2.4137}
+          className = {botones_alarmas.general}
           fillRule="evenodd"
           fill="#1bea77"
           opacity={0.88}
@@ -105,6 +101,7 @@ export const Variables = ({
           rx={2.5726}
           ry={2.4137}
           fillRule="evenodd"
+          className = {botones_alarmas.filtro_aire}
           fill="#1bea77"
           opacity={0.88}
           paintOrder="markers stroke fill"
@@ -116,6 +113,7 @@ export const Variables = ({
           rx={2.5726}
           ry={2.4137}
           fillRule="evenodd"
+          className = {botones_alarmas.inundacion}
           fill="#1bea77"
           opacity={0.88}
           paintOrder="markers stroke fill"
@@ -127,6 +125,7 @@ export const Variables = ({
           rx={2.5726}
           ry={2.4137}
           fillRule="evenodd"
+          className = {botones_alarmas.sobrecalentamiento}
           fill="#1bea77"
           opacity={0.88}
           paintOrder="markers stroke fill"
@@ -138,6 +137,7 @@ export const Variables = ({
           rx={2.5726}
           ry={2.4137}
           fillRule="evenodd"
+          className = {botones_alarmas.perdida_flujo}
           fill="#1bea77"
           opacity={0.88}
           paintOrder="markers stroke fill"
@@ -149,6 +149,7 @@ export const Variables = ({
           rx={2.5726}
           ry={2.4137}
           fillRule="evenodd"
+          className = {botones_alarmas.humo_fuego}
           fill="#1bea77"
           opacity={0.88}
           paintOrder="markers stroke fill"
@@ -256,7 +257,7 @@ export const Variables = ({
             fontSize="4.9389px"
             strokeWidth={0.26458}
           >
-            {"MAN"}
+            {estados.modo}
           </tspan>
         </text>
         <text
@@ -389,7 +390,7 @@ export const Variables = ({
             fontSize="4.9389px"
             strokeWidth={0.26458}
           >
-            {"17"}
+            {estados.temp_cuarto}
           </tspan>
         </text>
         <text
@@ -417,7 +418,7 @@ export const Variables = ({
             fontSize="4.9389px"
             strokeWidth={0.26458}
           >
-            {"21"}
+            {estados.humedad_relativa}
           </tspan>
         </text>
         <text
@@ -445,7 +446,7 @@ export const Variables = ({
             fontSize="4.9389px"
             strokeWidth={0.26458}
           >
-            {"22"}
+            {estados.t_suministro}
           </tspan>
         </text>
         <text
@@ -473,7 +474,7 @@ export const Variables = ({
             fontSize="4.9389px"
             strokeWidth={0.26458}
           >
-            {"23"}
+            {estados.t_retorno}
           </tspan>
         </text>
         <text
@@ -501,7 +502,7 @@ export const Variables = ({
             fontSize="4.9389px"
             strokeWidth={0.26458}
           >
-            {"ON"}
+            {estados.ventilador}
           </tspan>
         </text>
         <text
@@ -529,7 +530,7 @@ export const Variables = ({
             fontSize="4.9389px"
             strokeWidth={0.26458}
           >
-            {"ON"}
+            {estados.valvulas}
           </tspan>
         </text>
         <text
@@ -556,7 +557,7 @@ export const Variables = ({
             fontFamily="Franklin Gothic Medium"
             strokeWidth={0.47057}
           >
-            {"B"}
+            {datos_generales.fase}
           </tspan>
         </text>
         <text
@@ -584,7 +585,7 @@ export const Variables = ({
             fontSize="5.6444px"
             strokeWidth={0.47057}
           >
-            {"1 &amp; 2"}
+            {datos_generales.sistema}
           </tspan>
         </text>
         <text
@@ -612,7 +613,7 @@ export const Variables = ({
             fontSize="5.6444px"
             strokeWidth={0.47057}
           >
-            {"UNIFLAIR"}
+            {datos_generales.marca}
           </tspan>
         </text>
         <text
@@ -640,7 +641,7 @@ export const Variables = ({
             fontSize="5.6444px"
             strokeWidth={0.47057}
           >
-            {"TDCV4300A"}
+            {datos_generales.modelo}
           </tspan>
         </text>
         <text
@@ -668,7 +669,7 @@ export const Variables = ({
             fontSize="5.6444px"
             strokeWidth={0.47057}
           >
-            {"PA - TI"}
+            {datos_generales.ubicacion}
           </tspan>
         </text>
         <path
@@ -796,7 +797,7 @@ export const Variables = ({
             fontSize="4.9389px"
             strokeWidth={0.26458}
           >
-            {"800 "}
+            {estados.h_funcionamiento}
           </tspan>
         </text>
       </g>
