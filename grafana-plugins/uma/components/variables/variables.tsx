@@ -31,7 +31,7 @@ type Datos_principales ={
     t_suministro: number; // id = tspan5844
     t_retorno: number; // id = tspan1960-4
     humedad_relativa: number; // id = tspan5927 
-    boton_uma: string; // rectangulo id=estado_eq
+   // boton_uma: string; // rectangulo id=estado_eq
     nombre_uma: string;//nombre del equipo id= tspan6769
     boton_estado: string;// power id = st2 (path2649,path15781,path2489)
     estado: string; //encendido - apagado id = sys_on
@@ -43,10 +43,11 @@ export interface DataUma{
     botones_alarmas: Botones_alarmas;
     datos_generales: Datos_generales;
     datos_principales: Datos_principales;
+    boton_uma: string;
 }
 
 export const Variables = ({
-    estados, botones_alarmas, datos_generales, datos_principales
+    boton_uma,estados, botones_alarmas, datos_generales, datos_principales
 
 }: DataUma) =>{
     return(
@@ -70,7 +71,7 @@ export const Variables = ({
       <g id="g1973">
         <path
           id="estado_eq"
-          className= {datos_principales.boton_uma}
+          className= {boton_uma}
           fillRule="evenodd"
           fill="url(#linearGradient1680)"
           strokeWidth={0.26219}

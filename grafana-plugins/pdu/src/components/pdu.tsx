@@ -3,6 +3,7 @@ import { Variables, DataPdu } from './variables/variables';
 
 const pdu = () =>{
     let pdu: DataPdu ={
+      
     fases:{
         in1_AB: 0,
         in1_BC: 0,

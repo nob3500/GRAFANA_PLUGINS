@@ -35,17 +35,20 @@ const uma = () =>{
         sistema: '',
         ubicacion: ''
 
+    
     },
+    boton_uma:'',
+    
     datos_principales: {
       t_suministro: 0,
       t_retorno: 0,
       humedad_relativa:  0,
-      boton_uma: '',
       nombre_uma: '',
       boton_estado:'',
       estado:'',
-    }
-        
+    },
+    
+    
     }
     return (
         
@@ -2418,6 +2421,7 @@ const uma = () =>{
     <Variables 
       estados = {uma.estados}
       botones_alarmas = {uma.botones_alarmas}
+      boton_uma= {uma.boton_uma}
       datos_generales = {uma.datos_generales}
       datos_principales = {uma.datos_principales}
     />
