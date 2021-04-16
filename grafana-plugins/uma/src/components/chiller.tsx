@@ -1,44 +1,9 @@
 import React from 'react'
 
-import { Variables, Chiller } from './variables'
+import { Variables, DataChiller } from './variables'
 
-const Chiller = () => {
-  let dataChiller: Chiller
-
-  dataChiller = {
-    Compresor1: {
-      Estado: '',
-      TemperaturaAceite: 0,
-      PresionSuccion: 0,
-      PresionDescarga: 0,
-      HorasFunc: 0      
-    },
-    Compresor2: {
-      Estado: '',
-      TemperaturaAceite: 0,
-      PresionSuccion: 0,
-      PresionDescarga: 0,
-      HorasFunc: 0  
-    },
-    DatosGenerales: {
-      Etapa: 'A',
-      Sistema: '1',
-      Marca: 'YORK',
-      Modelo: 'YVAA0263',
-      Ubicacion: 'EXTERIORES'
-    },
-    Alarmas: {
-      AlarmaGeneral: '',
-      CodAlarmaS1: '',
-      CodAlarmaS2: ''
-    },
-    ID: '',
-    Estado: '',
-    TemperaturaRetorno: 0,
-    TemperaturaSuministro: 0,
-    Corriente: 0
-  }
-
+const Chiller = ({ ID, Estado, TemperaturaSuministro, TemperaturaRetorno, Corriente, DatosGenerales, Compresor1, Compresor2, Alarmas }: DataChiller) => {
+ 
   return (
     <svg
       id="svg8"
@@ -2521,15 +2486,15 @@ const Chiller = () => {
       </g>
 
       <Variables 
-        ID= {dataChiller.ID}
-        Estado={dataChiller.Estado}
-        Compresor1={dataChiller.Compresor1}
-        Compresor2={dataChiller.Compresor2}
-        DatosGenerales={dataChiller.DatosGenerales}
-        TemperaturaRetorno={dataChiller.TemperaturaRetorno}
-        TemperaturaSuministro={dataChiller.TemperaturaSuministro}
-        Corriente={dataChiller.Corriente}
-        Alarmas={dataChiller.Alarmas}
+        ID= {ID}
+        Estado={Estado}
+        Compresor1={Compresor1}
+        Compresor2={Compresor2}
+        DatosGenerales={DatosGenerales}
+        TemperaturaRetorno={TemperaturaRetorno}
+        TemperaturaSuministro={TemperaturaSuministro}
+        Corriente={Corriente}
+        Alarmas={Alarmas}
       />
     </svg>
   )

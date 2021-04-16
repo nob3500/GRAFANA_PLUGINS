@@ -22,7 +22,7 @@ type Alarmas = {
   CodAlarmaS2: string;
 }
 
-export interface Chiller  {
+export interface DataChiller  {
   ID: string;
   Estado: string;
   TemperaturaSuministro: number;
@@ -38,7 +38,7 @@ export interface Chiller  {
 //  Data: Chiller
 //}
 
-export const Variables = ({ ID, Estado, TemperaturaSuministro, TemperaturaRetorno, Corriente, DatosGenerales, Compresor1, Compresor2, Alarmas }: Chiller) => {
+export const Variables = ({ ID, Estado, TemperaturaSuministro, TemperaturaRetorno, Corriente, DatosGenerales, Compresor1, Compresor2, Alarmas }: DataChiller) => {
   return (
     <g id="layer4">
       <g id="g2057">
