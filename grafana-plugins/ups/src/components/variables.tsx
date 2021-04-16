@@ -1,39 +1,39 @@
 import React from 'react'
 
-type DatosGenerales ={
-    Fase: string;
-    Sistema: string;
-    Marca: string;
-    Modelo: string;
-    Ubicacion: string;
+type DatosGenerales = {
+  Fase: string;
+  Sistema: string;
+  Marca: string;
+  Modelo: string;
+  Ubicacion: string;
 }
 
 type Parametros ={
-    VBateria: number;
-    MinEstimados: number;
-    CargaEstimada: number;
-    InVoltmin: number;
-    InVoltmax: number;
-    CorrienteOut: number;
-    PotenciaOut: number;
-    PorcenCarga1: number;
-    PorcenCarga2: number;
-    PorcenCarga3: number;
+  VBateria: number;
+  MinEstimados: number;
+  CargaEstimada: number;
+  InVoltmin: number;
+  InVoltmax: number;
+  CorrienteOut: number;
+  PotenciaOut: number;
+  PorcenCarga1: number;
+  PorcenCarga2: number;
+  PorcenCarga3: number;
 }
 
 type Alarmas ={
-    Presente: string;
-    Inversor: string;
-    Bypass: string;
-    Rectificador: string;
+  Presente: string;
+  Inversor: string;
+  Bypass: string;
+  Rectificador: string;
 }
 
 type Principal ={
-    ID: string;
-    Estado: string;
-    InVolmax: number;
-    OutVolt: number;
-    VBateria: number;
+  ID: string;
+  Estado: string;
+  InVolmax: number;
+  OutVolt: number;
+  VBateria: number;
 }
 
 export interface Ups {
@@ -47,8 +47,8 @@ Principal: Principal;
 //  Data: Ups
 //}
 export const Variables = ({ DatosGenerales, Parametros, Alarmas, Principal }: Ups) => {
-    return (
-      <g id="layer2">
+  return (
+    <g id="layer2">
       <path
         id="estado_eq"
         fillRule="evenodd"
@@ -105,7 +105,7 @@ export const Variables = ({ DatosGenerales, Parametros, Alarmas, Principal }: Up
           fontWeight={700}
           strokeWidth={0.28918}
         >
-          {"999.9"}
+          { Principal.InVolmax }
         </tspan>
       </text>
       <text
@@ -130,7 +130,7 @@ export const Variables = ({ DatosGenerales, Parametros, Alarmas, Principal }: Up
           fontSize="11.289px"
           strokeWidth={0.36412}
         >
-          {"UPS-X-XB"}
+          { Principal.ID }
         </tspan>
       </text>
       <text
@@ -157,7 +157,7 @@ export const Variables = ({ DatosGenerales, Parametros, Alarmas, Principal }: Up
           fontWeight={700}
           strokeWidth={0.28917}
         >
-          {"999.9"}
+          { Principal.VBateria }
         </tspan>
       </text>
       <text
@@ -184,7 +184,7 @@ export const Variables = ({ DatosGenerales, Parametros, Alarmas, Principal }: Up
           fontWeight={700}
           strokeWidth={0.28918}
         >
-          {"999.9"}
+          { Principal.OutVolt }
         </tspan>
       </text>
       <g id="st2" transform="translate(-1.433 3.249)" fill="#0f0">
@@ -227,7 +227,7 @@ export const Variables = ({ DatosGenerales, Parametros, Alarmas, Principal }: Up
           fontSize="7.0556px"
           strokeWidth={0.26458}
         >
-          {"ENCENDIDO"}
+          { Principal.Estado }
         </tspan>
       </text>
       <text
@@ -304,7 +304,7 @@ export const Variables = ({ DatosGenerales, Parametros, Alarmas, Principal }: Up
           fontFamily="Franklin Gothic Medium"
           strokeWidth={0.47057}
         >
-          {"GENERAL ELECTRIC"}
+          { DatosGenerales.Marca }
         </tspan>
       </text>
       <text
@@ -329,7 +329,7 @@ export const Variables = ({ DatosGenerales, Parametros, Alarmas, Principal }: Up
           fontFamily="Franklin Gothic Medium"
           strokeWidth={0.47057}
         >
-          {"SG-CE-SERIES 160"}
+          { DatosGenerales.Modelo }
         </tspan>
       </text>
       <text
@@ -355,7 +355,7 @@ export const Variables = ({ DatosGenerales, Parametros, Alarmas, Principal }: Up
           fontSize="5.6444px"
           strokeWidth={0.47057}
         >
-          {"CUARTO UPS SIS. 2"}
+          { DatosGenerales.Ubicacion }
         </tspan>
       </text>
       <text
@@ -728,7 +728,5 @@ export const Variables = ({ DatosGenerales, Parametros, Alarmas, Principal }: Up
         />
       </g>
     </g>
-     )
-}
-
-        
+  )
+}     
