@@ -6,8 +6,8 @@ import { css, cx } from 'emotion';
 import { stylesFactory} from '@grafana/ui';
 import Generador from './components/generador';
 
-import { DataGenerador } from 'components/variables/variables'
-
+// import { DataGenerador } from 'components/variables/variables'
+import dataGenerador from 'modules/dataGenerador'
 
 interface Props extends PanelProps<SimpleOptions> {}
 
@@ -15,84 +15,7 @@ export const SimplePanel: React.FC<Props> = ({ options, data, width, height }) =
   //const theme = useTheme();
   const styles = getStyles();
 
-  let generador: DataGenerador = {
-    alternador: {
-        corriente: 0,
-        factor_pot: 0,
-        pot_kva: 0,
-        pot_kw: 0,
-        voltaje_ff: 0
-    },
-    boton_estado: '',
-    boton_gen: '',
-    botones_Alarmas: {
-        altas_revol: {
-            off: '',
-            on: '',
-            trip: ''
-        },
-        alto_volt_gen: {
-            off: '',
-            on: '',
-            trip: ''
-        },
-        baja_pres_aceite: {
-            off: '',
-            on: '',
-            trip: ''
-        },
-        baja_temp: {
-            off: '',
-            on: '',
-            trip: ''
-        },
-        bajas_revol: {
-            off: '',
-            on: '',
-            trip: ''
-        },
-        bajo_volt_gen: {
-            off: '',
-            on: '',
-            trip: ''
-        },
-        falla_arranque: {
-            off: '',
-            on: '',
-            trip: ''
-        },
-        paro_emergencia: {
-            off: '',
-            on: '',
-            trip: ''
-        },
-    },
-    dataGeneral: {
-        fase: '1',
-        marca: '',
-        modelo: '',
-        sistema: '',
-        ubicacion: ''
-    },
-    estado: '',
-    modoControl: {
-        modo_apagado: '',
-        modo_auto: '',
-        modo_encendido: '',
-        modo_manual: ''
-    },
-    motor: {
-        frecuencia: 60,
-        horas_uso: 0,
-        pres_aceite: 0,
-        temp: 0,
-        voltaje_bat: 0
-    },
-    nivel: 0,
-    nombre_gen: '',
-    temp: 0,
-    voltaje: 0
-  }
+  let generador = dataGenerador(data, options)
 
   return (
     <div

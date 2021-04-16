@@ -2060,7 +2060,7 @@ const Generador = ({
               fontSize="3.5278px"
               strokeWidth={0.26458}
             >
-              {"OFF"}
+              {"SHT"}
             </tspan>
           </text>
           <text
@@ -2085,7 +2085,7 @@ const Generador = ({
               fontSize="3.5278px"
               strokeWidth={0.26458}
             >
-              {"ON"}
+              {"WRN"}
             </tspan>
           </text>
           <text

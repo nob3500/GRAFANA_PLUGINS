@@ -24,14 +24,14 @@ type Modo_control ={
 }
 
 type Estados_alarmas = {
-    on: string;
-    off: string;
+    war: string;
+    sht: string;
     trip: string;
 }
 
 type Botones_Alarmas = {
-    paro_emergencia: Estados_alarmas; //gen_es_warn_alm ,gen_es_shutd_alm ,gen_es_eltrip_alm
-    baja_pres_aceite: Estados_alarmas; //gen_lop_warn_alm, gen_lop_shutd_alm, gen_lop_eltrip_alm
+    paro_emergencia: Estados_alarmas; //gen_es_warn_alm ,gen_es_shutd_alm ,gen_es_eltrip_alm //
+    baja_pres_aceite: Estados_alarmas; //gen_lop_warn_alm, gen_lop_shutd_alm, gen_lop_eltrip_alm //
     baja_temp: Estados_alarmas; //gen_hct_warn_alm, gen_hct_shutd_alm, gen_hct_eltrip_alm
     bajas_revol: Estados_alarmas; //gen_us_warn_alm,gen_us_shutd_alm,gen_us_eltrip_alm
     altas_revol: Estados_alarmas; //gen_os_warn_alm,gen_os_shutd_alm,gen_os_eltrip_alm
@@ -359,7 +359,7 @@ export const Variables = ({
           <g
             id="gen_lop_shutd_alm"
             transform="matrix(.11617 0 0 .10952 344.4 74.353)"
-            fill="#999"
+            className={ botones_Alarmas.baja_pres_aceite.sht }
             opacity={0.999}
           >
             <ellipse
@@ -397,7 +397,7 @@ export const Variables = ({
           <g
             id="gen_us_warn_alm"
             transform="matrix(.11617 0 0 .10952 331.4 90.548)"
-            fill="#999"
+            className={ botones_Alarmas.bajas_revol.war }
             opacity={0.999}
           >
             <ellipse
@@ -435,7 +435,7 @@ export const Variables = ({
           <g
             id="gen_hct_warn_alm"
             transform="matrix(.11617 0 0 .10952 331.4 82.995)"
-            fill="#999"
+            className={ botones_Alarmas.baja_temp.war }
             opacity={0.999}
           >
             <ellipse
@@ -473,7 +473,7 @@ export const Variables = ({
           <g
             id="gen_lop_warn_alm"
             transform="matrix(.11617 0 0 .10952 331.4 74.353)"
-            fill="#999"
+            className={ botones_Alarmas.baja_pres_aceite.war }
             opacity={0.999}
           >
             <ellipse
@@ -511,7 +511,7 @@ export const Variables = ({
           <g
             id="gen_os_warn_alm"
             transform="matrix(.11617 0 0 .10952 331.4 97.749)"
-            fill="#999"
+            className={ botones_Alarmas.altas_revol.war }
             opacity={0.999}
           >
             <ellipse
@@ -549,7 +549,7 @@ export const Variables = ({
           <g
             id="gen_fs_warn_alm"
             transform="matrix(.11617 0 0 .10952 331.4 106.92)"
-            fill="#999"
+            className={botones_Alarmas.falla_arranque.war}
             opacity={0.999}
           >
             <ellipse
@@ -587,8 +587,7 @@ export const Variables = ({
           <g
             id="gen_es_warn_alm"
             transform="matrix(.11617 0 0 .10952 331.4 66.778)"
-            fill="#999"
-            className= { botones_Alarmas.paro_emergencia.on }
+            className= { botones_Alarmas.paro_emergencia.war }
             opacity={0.999}
           >
             <ellipse
@@ -626,7 +625,7 @@ export const Variables = ({
           <g
             id="gen_ghv_warn_alm"
             transform="matrix(.11617 0 0 .10952 331.4 122.81)"
-            fill="#999"
+            className={botones_Alarmas.alto_volt_gen.war}
             opacity={0.999}
           >
             <ellipse
@@ -677,7 +676,7 @@ export const Variables = ({
           <g
             id="gen_glv_warn_alm"
             transform="matrix(.11617 0 0 .10952 331.4 115.35)"
-            fill="#999"
+            className={botones_Alarmas.bajo_volt_gen.war}
             opacity={0.999}
           >
             <ellipse
@@ -715,7 +714,7 @@ export const Variables = ({
           <g
             id="gen_hct_shutd_alm"
             transform="matrix(.11617 0 0 .10952 344.4 82.995)"
-            fill="#999"
+            className={ botones_Alarmas.baja_temp.sht }
             opacity={0.999}
           >
             <ellipse
@@ -753,7 +752,7 @@ export const Variables = ({
           <g
             id="gen_us_shutd_alm"
             transform="matrix(.11617 0 0 .10952 344.4 90.548)"
-            fill="#999"
+            className={ botones_Alarmas.bajas_revol.sht }
             opacity={0.999}
           >
             <ellipse
@@ -791,7 +790,7 @@ export const Variables = ({
           <g
             id="gen_os_shutd_alm"
             transform="matrix(.11617 0 0 .10952 344.4 97.749)"
-            fill="#999"
+            className={botones_Alarmas.altas_revol.sht}
             opacity={0.999}
           >
             <ellipse
@@ -829,7 +828,7 @@ export const Variables = ({
           <g
             id="gen_fs_shutd_alm"
             transform="matrix(.11617 0 0 .10952 344.4 106.92)"
-            fill="#999"
+            className={botones_Alarmas.falla_arranque.sht}
             opacity={0.999}
           >
             <ellipse
@@ -867,8 +866,7 @@ export const Variables = ({
           <g
             id="gen_es_shutd_alm"
             transform="matrix(.11617 0 0 .10952 344.4 66.778)"
-            className = { botones_Alarmas.paro_emergencia.off }
-            fill="#999"
+            className = { botones_Alarmas.paro_emergencia.sht }
             opacity={0.999}
           >
             <ellipse
@@ -906,7 +904,7 @@ export const Variables = ({
           <g
             id="gen_ghv_shutd_alm"
             transform="matrix(.11617 0 0 .10952 344.4 122.81)"
-            fill="#999"
+            className={botones_Alarmas.alto_volt_gen.sht}
             opacity={0.999}
           >
             <ellipse
@@ -957,7 +955,7 @@ export const Variables = ({
           <g
             id="gen_glv_shutd_alm"
             transform="matrix(.11617 0 0 .10952 344.4 115.35)"
-            fill="#999"
+            className={botones_Alarmas.bajo_volt_gen.sht}
             opacity={0.999}
           >
             <ellipse
@@ -995,7 +993,7 @@ export const Variables = ({
           <g
             id="gen_hct_eltrip_alm"
             transform="matrix(.11617 0 0 .10952 357.33 82.994)"
-            fill="#999"
+            className={ botones_Alarmas.baja_temp.trip }
             opacity={0.999}
           >
             <ellipse
@@ -1032,8 +1030,8 @@ export const Variables = ({
           </g>
           <g
             id="gen_lop_eltrip_alm"
+            className={ botones_Alarmas.baja_pres_aceite.trip }
             transform="matrix(.11617 0 0 .10952 357.33 74.353)"
-            fill="#999"
             opacity={0.999}
           >
             <ellipse
@@ -1071,7 +1069,7 @@ export const Variables = ({
           <g
             id="gen_us_eltrip_alm"
             transform="matrix(.11617 0 0 .10952 357.47 90.548)"
-            fill="#999"
+            className={ botones_Alarmas.bajas_revol.trip }
             opacity={0.999}
           >
             <ellipse
@@ -1109,7 +1107,7 @@ export const Variables = ({
           <g
             id="gen_os_eltrip_alm"
             transform="matrix(.11617 0 0 .10952 357.22 97.749)"
-            fill="#999"
+            className={ botones_Alarmas.altas_revol.trip }
             opacity={0.999}
           >
             <ellipse
@@ -1147,7 +1145,7 @@ export const Variables = ({
           <g
             id="gen_es_eltrip_alm"
             transform="matrix(.11617 0 0 .10952 357.33 66.778)"
-            fill="#999"
+            className={ botones_Alarmas.paro_emergencia.trip }
             opacity={0.999}
           >
             <ellipse
@@ -1185,7 +1183,7 @@ export const Variables = ({
           <g
             id="gen_ghv_eltrip_alm"
             transform="matrix(.11617 0 0 .10952 357.33 122.81)"
-            fill="#999"
+            className={botones_Alarmas.alto_volt_gen.trip}
             opacity={0.999}
           >
             <ellipse
@@ -1223,7 +1221,7 @@ export const Variables = ({
           <g
             id="gen_fs_eltrip_alm"
             transform="matrix(.11617 0 0 .10952 357.1 106.92)"
-            fill="#999"
+            className={botones_Alarmas.falla_arranque.trip}
             opacity={0.999}
           >
             <ellipse
@@ -1274,7 +1272,7 @@ export const Variables = ({
           <g
             id="gen_glv_eltrip_alm"
             transform="matrix(.11617 0 0 .10952 357.33 115.35)"
-            fill="#999"
+            className={botones_Alarmas.bajo_volt_gen.trip}
             opacity={0.999}
           >
             <ellipse
@@ -1856,7 +1854,6 @@ export const Variables = ({
               rx={2.3902}
               ry={2.6075}
               className = { modoControl.modo_manual }
-              fill="#1bea77"
               opacity={0.88}
             />
             <ellipse
@@ -1884,7 +1881,7 @@ export const Variables = ({
               cy={56.197}
               rx={2.3902}
               ry={2.6075}
-              fill="#1bea77"
+              className={ modoControl.modo_auto }
               opacity={0.88}
             />
             <ellipse
@@ -1912,7 +1909,7 @@ export const Variables = ({
               cy={67.171}
               rx={2.3902}
               ry={2.6075}
-              fill="#1bea77"
+              className={ modoControl.modo_manual }
               opacity={0.88}
             />
             <ellipse
@@ -1940,7 +1937,7 @@ export const Variables = ({
               cy={77.784}
               rx={2.3902}
               ry={2.6075}
-              fill="#1bea77"
+              className={ modoControl.modo_apagado }
               opacity={0.88}
             />
             <ellipse
@@ -1971,7 +1968,7 @@ export const Variables = ({
           >
             <tspan
               id="tspan6769"
-              x={113.51382}
+              x={105}
               y={23.889875}
               fill="#fff"
               fontFamily="Franklin Gothic Medium"
