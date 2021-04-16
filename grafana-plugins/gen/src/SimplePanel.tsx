@@ -3,11 +3,11 @@ import { PanelProps } from '@grafana/data';
 import { SimpleOptions } from 'types';
 import { css, cx } from 'emotion';
 //import { stylesFactory, useTheme } from '@grafana/ui';
-import { stylesFactory} from '@grafana/ui';
+import { stylesFactory } from '@grafana/ui';
 import Generador from './components/generador';
 
 // import { DataGenerador } from 'components/variables/variables'
-import dataGenerador from 'modules/dataGenerador'
+import dataGenerador from 'modules/dataGenerador';
 
 interface Props extends PanelProps<SimpleOptions> {}
 
@@ -15,7 +15,7 @@ export const SimplePanel: React.FC<Props> = ({ options, data, width, height }) =
   //const theme = useTheme();
   const styles = getStyles();
 
-  let generador = dataGenerador(data, options)
+  let generador = dataGenerador(data, options);
 
   return (
     <div
@@ -27,19 +27,19 @@ export const SimplePanel: React.FC<Props> = ({ options, data, width, height }) =
         `
       )}
     >
-      <Generador 
-        alternador = { generador.alternador }
-        boton_estado = { generador.boton_estado }
-        boton_gen = { generador.boton_gen }
-        botones_Alarmas = { generador.botones_Alarmas }
-        dataGeneral = { generador.dataGeneral }
-        estado = { generador.estado }
-        modoControl = { generador.modoControl }
-        motor = { generador.motor }
-        nivel = { generador.nivel }
-        nombre_gen = { generador.nombre_gen }
-        temp = { generador.temp }
-        voltaje = { generador.voltaje }
+      <Generador
+        alternador={generador.alternador}
+        boton_estado={generador.boton_estado}
+        boton_gen={generador.boton_gen}
+        botones_Alarmas={generador.botones_Alarmas}
+        dataGeneral={generador.dataGeneral}
+        estado={generador.estado}
+        modoControl={generador.modoControl}
+        motor={generador.motor}
+        nivel={generador.nivel}
+        nombre_gen={generador.nombre_gen}
+        temp={generador.temp}
+        voltaje={generador.voltaje}
       />
     </div>
   );

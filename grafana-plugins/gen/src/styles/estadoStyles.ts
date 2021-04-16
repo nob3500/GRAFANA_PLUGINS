@@ -17,7 +17,7 @@ const getStyles = stylesFactory(() => {
     `,
     ok: css`
       fill: green;
-    `
+    `,
   };
 });
 

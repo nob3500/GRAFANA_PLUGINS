@@ -11,7 +11,7 @@ const getStyles = stylesFactory(() => {
     `,
     Off: css`
       fill: yellow;
-    `
+    `,
   };
 });
 
