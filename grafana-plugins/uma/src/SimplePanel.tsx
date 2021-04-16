@@ -5,7 +5,7 @@ import { css, cx } from 'emotion';
 // import { stylesFactory, useTheme } from '@grafana/ui';
 import { stylesFactory } from '@grafana/ui';
 
-import Chiller from './components/chiller'
+import Chiller from 'components/chiller'
 
 interface Props extends PanelProps<SimpleOptions> {}
 
