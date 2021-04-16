@@ -1,15 +1,51 @@
 import React from 'react'
 
-const ups = () => {
-    return (
-        
+import { Variables, Ups } from './variables'
 
+const Ups = () => {
+  let dataUps: Ups
+
+  dataUps = {
+    Parametros:{
+      VBateria: 0,
+      MinEstimados: 0,
+      CargaEstimada: 0,
+      InVoltmin: 0,
+      InVoltmax: 0,
+      CorrienteOut: 0,
+      PotenciaOut: 0,
+      PorcenCarga1: 0,
+      PorcenCarga2: 0,
+      PorcenCarga3: 0
+    },
+    DatosGenerales: {
+      Fase: 'A',
+      Sistema: '1',
+      Marca: 'GENERAL ELECTRIC',
+      Modelo: 'SG-CE-SERIES 200KVA',
+      Ubicacion: 'CUARTO UPS SIST. 1'
+    },
+    Alarmas: {
+      Presente:'',
+      Inversor:'',
+      Bypass:'',
+      Rectificador:''
+    },
+    Principal: {
+      ID: '',
+      Estado:'',
+      InVolmax: 0,
+      OutVolt: 0,
+      VBateria: 0,
+    }
+  }
+
+  return (
     <svg
     id="svg6191"
     width={1920}
     height={750}
     viewBox="0 0 508 198.44"
-    
   >
     <defs id="defs6185">
       <filter
@@ -385,6 +421,49 @@ const ups = () => {
         <stop id="stop922" offset={0} stopColor="#162d50" />
         <stop id="stop924" offset={1} stopColor="#162d50" stopOpacity={0} />
       </linearGradient>
+      <filter
+        id="filter2963"
+        x={-0.10655}
+        y={-0.13087}
+        width={1.2131}
+        height={1.2617}
+        colorInterpolationFilters="sRGB"
+      >
+        <feGaussianBlur id="feGaussianBlur2965" stdDeviation={0.16760617} />
+      </filter>
+      <filter
+        id="filter2963-1"
+        x={-0.10655}
+        y={-0.13087}
+        width={1.2131}
+        height={1.2617}
+        colorInterpolationFilters="sRGB"
+      >
+        <feGaussianBlur id="feGaussianBlur2965-1" stdDeviation={0.16760617} />
+      </filter>
+      <filter
+        id="filter2963-14"
+        x={-0.10655}
+        y={-0.13087}
+        width={1.2131}
+        height={1.2617}
+        colorInterpolationFilters="sRGB"
+      >
+        <feGaussianBlur id="feGaussianBlur2965-5" stdDeviation={0.16760617} />
+      </filter>
+      <filter
+        id="filter2963-1-3"
+        x={-0.10655}
+        y={-0.13087}
+        width={1.2131}
+        height={1.2617}
+        colorInterpolationFilters="sRGB"
+      >
+        <feGaussianBlur
+          id="feGaussianBlur2965-1-1"
+          stdDeviation={0.16760617}
+        />
+      </filter>
     </defs>
     <g id="layer5">
       <g id="g1656">
@@ -473,6 +552,31 @@ const ups = () => {
         d="M99.569 15.178H157.60399999999998V33.229H99.569z"
       />
       <text
+        id="nom_on-5"
+        x={106.2076}
+        y={27.098461}
+        style={{ lineHeight: 1.25 }}
+        xmlSpace="preserve"
+        fill="#000"
+        fontFamily="sans-serif"
+        fontSize="11.289px"
+        letterSpacing={0}
+        strokeWidth={0.36412}
+        wordSpacing={0}
+      >
+        <tspan
+          id="tspan6769-5"
+          x={106.2076}
+          y={27.098461}
+          fill="#000"
+          fontFamily="Franklin Gothic Medium"
+          fontSize="11.289px"
+          strokeWidth={0.36412}
+        >
+          {"UPS-X-XB"}
+        </tspan>
+      </text>
+      <text
         id="volt"
         transform="scale(1.0508 .95161)"
         x={22.302074}
@@ -496,29 +600,29 @@ const ups = () => {
           fontWeight={700}
           strokeWidth={0.28918}
         >
-          {"315"}
+          {"999.9"}
         </tspan>
       </text>
       <text
         id="nom_on"
-        x={108.73929}
+        x={106.09341}
         y={27.49506}
         style={{ lineHeight: 1.25 }}
         xmlSpace="preserve"
         fill="#fff"
         fontFamily="sans-serif"
-        fontSize="9.71px"
+        fontSize="11.289px"
         letterSpacing={0}
         strokeWidth={0.36412}
         wordSpacing={0}
       >
         <tspan
           id="tspan6769"
-          x={108.73929}
+          x={106.09341}
           y={27.49506}
           fill="#fff"
           fontFamily="Franklin Gothic Medium"
-          fontSize="9.8778px"
+          fontSize="11.289px"
           strokeWidth={0.36412}
         >
           {"UPS-X-XB"}
@@ -526,29 +630,29 @@ const ups = () => {
       </text>
       <text
         id="vol_batt"
-        transform="scale(1.0508 .95161)"
-        x={204.22884}
-        y={137.22377}
+        transform="scale(1.0508 .95163)"
+        x={207.15372}
+        y={136.66438}
         style={{ lineHeight: 1.25 }}
         xmlSpace="preserve"
         fill="#fff"
         fontFamily="sans-serif"
-        fontSize="12.491px"
+        fontSize="9.8779px"
         letterSpacing={0}
-        strokeWidth={0.28918}
+        strokeWidth={0.28917}
         wordSpacing={0}
       >
         <tspan
           id="tspan5927"
-          x={204.22884}
-          y={137.22377}
+          x={207.15372}
+          y={136.66438}
           fill="#fff"
           fontFamily="Franklin Gothic Medium"
-          fontSize="12.491px"
+          fontSize="9.8779px"
           fontWeight={700}
-          strokeWidth={0.28918}
+          strokeWidth={0.28917}
         >
-          {"125.4"}
+          {"999.9"}
         </tspan>
       </text>
       <text
@@ -575,7 +679,7 @@ const ups = () => {
           fontWeight={700}
           strokeWidth={0.28918}
         >
-          {"245.0"}
+          {"999.9"}
         </tspan>
       </text>
       <g id="st2" transform="translate(-1.433 3.249)" fill="#0f0">
@@ -598,8 +702,8 @@ const ups = () => {
       </g>
       <text
         id="st"
-        x={234.48621}
-        y={178.8298}
+        x={220.72766}
+        y={179.35898}
         style={{ lineHeight: 1.25 }}
         xmlSpace="preserve"
         fill="#000"
@@ -611,15 +715,14 @@ const ups = () => {
       >
         <tspan
           id="tspan5848"
-          x={234.48621}
-          y={178.8298}
-          dy={0}
+          x={220.72766}
+          y={179.35898}
           fill="#fff"
           fontFamily="Franklin Gothic Medium"
           fontSize="7.0556px"
           strokeWidth={0.26458}
         >
-          {"ON"}
+          {"ENCENDIDO"}
         </tspan>
       </text>
       <text
@@ -750,55 +853,11 @@ const ups = () => {
           {"CUARTO UPS SIS. 2"}
         </tspan>
       </text>
-      <ellipse
-        id="alam_pres"
-        cx={365.06}
-        cy={131.59}
-        rx={2.5726}
-        ry={2.4137}
-        fillRule="evenodd"
-        fill="#1bea77"
-        opacity={0.88}
-        paintOrder="markers stroke fill"
-      />
-      <ellipse
-        id="alm_bypass"
-        cx={365.06}
-        cy={146.84}
-        rx={2.5726}
-        ry={2.4137}
-        fillRule="evenodd"
-        fill="#1bea77"
-        opacity={0.88}
-        paintOrder="markers stroke fill"
-      />
-      <ellipse
-        id="alm_inv"
-        cx={365.06}
-        cy={139.48}
-        rx={2.5726}
-        ry={2.4137}
-        fillRule="evenodd"
-        fill="#1bea77"
-        opacity={0.88}
-        paintOrder="markers stroke fill"
-      />
-      <ellipse
-        id="alm_rect"
-        cx={365.06}
-        cy={154.73}
-        rx={2.5726}
-        ry={2.4137}
-        fillRule="evenodd"
-        fill="#1bea77"
-        opacity={0.88}
-        paintOrder="markers stroke fill"
-      />
       <text
         id="out_cur"
-        transform="scale(.8204 1.2189)"
-        x={570.39667}
-        y={95.810715}
+        transform="scale(.82041 1.2189)"
+        x={574.50806}
+        y={95.938545}
         style={{ lineHeight: 1.25 }}
         xmlSpace="preserve"
         fill="#fff"
@@ -810,21 +869,21 @@ const ups = () => {
       >
         <tspan
           id="tspan15409"
-          x={570.39667}
-          y={95.810715}
+          x={574.50806}
+          y={95.938545}
           fill="#fff"
           fontFamily="Franklin Gothic Medium"
           fontSize="5.6444px"
           strokeWidth={0.26458}
         >
-          {"408.3"}
+          {"999.9"}
         </tspan>
       </text>
       <text
         id="load"
-        transform="scale(.8204 1.2189)"
-        x={576.89655}
-        y={110.86337}
+        transform="scale(.82041 1.2189)"
+        x={577.81805}
+        y={111.36677}
         style={{ lineHeight: 1.25 }}
         xmlSpace="preserve"
         fill="#fff"
@@ -836,21 +895,21 @@ const ups = () => {
       >
         <tspan
           id="tspan6736"
-          x={576.89655}
-          y={110.86337}
+          x={577.81805}
+          y={111.36677}
           fill="#fff"
           fontFamily="Franklin Gothic Medium"
           fontSize="5.6444px"
           strokeWidth={0.26458}
         >
-          {"0.0"}
+          {"99.9"}
         </tspan>
       </text>
       <text
         id="out_pow"
-        transform="scale(.8204 1.2189)"
-        x={568.51129}
-        y={103.33703}
+        transform="scale(.82041 1.2189)"
+        x={564.3493}
+        y={103.65266}
         style={{ lineHeight: 1.25 }}
         xmlSpace="preserve"
         fill="#fff"
@@ -862,21 +921,21 @@ const ups = () => {
       >
         <tspan
           id="tspan6736-3"
-          x={568.51129}
-          y={103.33703}
+          x={564.3493}
+          y={103.65266}
           fill="#fff"
           fontFamily="Franklin Gothic Medium"
           fontSize="5.6444px"
           strokeWidth={0.26458}
         >
-          {"31840 "}
+          {"999999.9 "}
         </tspan>
       </text>
       <text
         id="volt_max"
-        transform="scale(.8204 1.2189)"
-        x={574.9118}
-        y={87.850098}
+        transform="scale(.82041 1.2189)"
+        x={574.50806}
+        y={88.224426}
         style={{ lineHeight: 1.25 }}
         xmlSpace="preserve"
         fill="#fff"
@@ -888,21 +947,21 @@ const ups = () => {
       >
         <tspan
           id="tspan15409-5"
-          x={574.9118}
-          y={87.850098}
+          x={574.50806}
+          y={88.224426}
           fill="#fff"
           fontFamily="Franklin Gothic Medium"
           fontSize="5.6444px"
           strokeWidth={0.26458}
         >
-          {"410"}
+          {"999.9"}
         </tspan>
       </text>
       <text
         id="volt_min"
-        transform="scale(.8204 1.2189)"
-        x={574.9118}
-        y={80.381577}
+        transform="scale(.82041 1.2189)"
+        x={574.50806}
+        y={80.510307}
         style={{ lineHeight: 1.25 }}
         xmlSpace="preserve"
         fill="#fff"
@@ -914,21 +973,21 @@ const ups = () => {
       >
         <tspan
           id="tspan15409-5-4"
-          x={574.9118}
-          y={80.381577}
+          x={574.50806}
+          y={80.510307}
           fill="#fff"
           fontFamily="Franklin Gothic Medium"
           fontSize="5.6444px"
           strokeWidth={0.26458}
         >
-          {"414"}
+          {"999.9"}
         </tspan>
       </text>
       <text
         id="batt_volt"
-        transform="scale(.8204 1.2189)"
-        x={574.9118}
-        y={56.934242}
+        transform="scale(.82041 1.2189)"
+        x={574.50806}
+        y={57.802101}
         style={{ lineHeight: 1.25 }}
         xmlSpace="preserve"
         fill="#fff"
@@ -940,21 +999,21 @@ const ups = () => {
       >
         <tspan
           id="tspan15409-5-4-2"
-          x={574.9118}
-          y={56.934242}
+          x={574.50806}
+          y={57.802101}
           fill="#fff"
           fontFamily="Franklin Gothic Medium"
           fontSize="5.6444px"
           strokeWidth={0.26458}
         >
-          {"422"}
+          {"999.9"}
         </tspan>
       </text>
       <text
         id="min"
-        transform="scale(.8204 1.2189)"
-        x={576.84686}
-        y={64.836845}
+        transform="scale(.82041 1.2189)"
+        x={574.50806}
+        y={65.082085}
         style={{ lineHeight: 1.25 }}
         xmlSpace="preserve"
         fill="#fff"
@@ -966,21 +1025,21 @@ const ups = () => {
       >
         <tspan
           id="tspan1765"
-          x={576.84686}
-          y={64.836845}
+          x={574.50806}
+          y={65.082085}
           fill="#fff"
           fontFamily="Franklin Gothic Medium"
           fontSize="5.6444px"
           strokeWidth={0.26458}
         >
-          {"0.0"}
+          {"999.9"}
         </tspan>
       </text>
       <text
         id="carga"
-        transform="scale(.8204 1.2189)"
-        x={576.84686}
-        y={72.797348}
+        transform="scale(.82041 1.2189)"
+        x={574.47772}
+        y={72.796196}
         style={{ lineHeight: 1.25 }}
         xmlSpace="preserve"
         fill="#fff"
@@ -992,21 +1051,21 @@ const ups = () => {
       >
         <tspan
           id="tspan1765-8"
-          x={576.84686}
-          y={72.797348}
+          x={574.47772}
+          y={72.796196}
           fill="#fff"
           fontFamily="Franklin Gothic Medium"
           fontSize="5.6444px"
           strokeWidth={0.26458}
         >
-          {"0.0"}
+          {"100.0"}
         </tspan>
       </text>
       <text
         id="load2"
-        transform="scale(.8204 1.2189)"
-        x={576.89612}
-        y={118.5475}
+        transform="scale(.82041 1.2189)"
+        x={577.81805}
+        y={119.08089}
         style={{ lineHeight: 1.25 }}
         xmlSpace="preserve"
         fill="#fff"
@@ -1018,21 +1077,21 @@ const ups = () => {
       >
         <tspan
           id="tspan6736-8"
-          x={576.89612}
-          y={118.5475}
+          x={577.81805}
+          y={119.08089}
           fill="#fff"
           fontFamily="Franklin Gothic Medium"
           fontSize="5.6444px"
           strokeWidth={0.26458}
         >
-          {"0.0"}
+          {"99.9"}
         </tspan>
       </text>
       <text
         id="load3"
-        transform="scale(.8204 1.2189)"
-        x={576.89612}
-        y={126.36179}
+        transform="scale(.82041 1.2189)"
+        x={577.81805}
+        y={126.79501}
         style={{ lineHeight: 1.25 }}
         xmlSpace="preserve"
         fill="#fff"
@@ -1044,16 +1103,124 @@ const ups = () => {
       >
         <tspan
           id="tspan6957"
-          x={576.89612}
-          y={126.36179}
+          x={577.81805}
+          y={126.79501}
           fill="#fff"
           fontFamily="Franklin Gothic Medium"
           fontSize="5.6444px"
           strokeWidth={0.26458}
         >
-          {"0.0"}
+          {"99.9"}
         </tspan>
       </text>
+      <g
+        id="g1414"
+        transform="translate(-1.654 20.242) scale(.99999)"
+        fillRule="evenodd"
+        paintOrder="markers stroke fill"
+      >
+        <ellipse
+          id="alm_gen"
+          cx={366.69}
+          cy={111.49}
+          rx={2.5726}
+          ry={2.4137}
+          fill="#1bea77"
+          opacity={0.88}
+        />
+        <ellipse
+          id="path2448-1"
+          transform="matrix(.74208 0 0 .6085 37.099 89.015)"
+          cx={444.15}
+          cy={34.583}
+          rx={1.8876}
+          ry={1.5368}
+          fill="#fff"
+          filter="url(#filter2963)"
+          opacity={0.592}
+        />
+      </g>
+      <g
+        id="g1414-2"
+        transform="translate(-1.72 28.222) scale(.99999)"
+        fillRule="evenodd"
+        paintOrder="markers stroke fill"
+      >
+        <ellipse
+          id="alm_gen-9"
+          cx={366.69}
+          cy={111.49}
+          rx={2.5726}
+          ry={2.4137}
+          fill="#1bea77"
+          opacity={0.88}
+        />
+        <ellipse
+          id="path2448-1-6"
+          transform="matrix(.74208 0 0 .6085 37.099 89.015)"
+          cx={444.15}
+          cy={34.583}
+          rx={1.8876}
+          ry={1.5368}
+          fill="#fff"
+          filter="url(#filter2963-1)"
+          opacity={0.592}
+        />
+      </g>
+      <g
+        id="g1414-8"
+        transform="translate(-1.787 35.373) scale(.99999)"
+        fillRule="evenodd"
+        paintOrder="markers stroke fill"
+      >
+        <ellipse
+          id="alm_gen-95"
+          cx={366.69}
+          cy={111.49}
+          rx={2.5726}
+          ry={2.4137}
+          fill="#1bea77"
+          opacity={0.88}
+        />
+        <ellipse
+          id="path2448-1-4"
+          transform="matrix(.74208 0 0 .6085 37.099 89.015)"
+          cx={444.15}
+          cy={34.583}
+          rx={1.8876}
+          ry={1.5368}
+          fill="#fff"
+          filter="url(#filter2963-14)"
+          opacity={0.592}
+        />
+      </g>
+      <g
+        id="g1414-2-8"
+        transform="translate(-1.853 43.353) scale(.99999)"
+        fillRule="evenodd"
+        paintOrder="markers stroke fill"
+      >
+        <ellipse
+          id="alm_gen-9-3"
+          cx={366.69}
+          cy={111.49}
+          rx={2.5726}
+          ry={2.4137}
+          fill="#1bea77"
+          opacity={0.88}
+        />
+        <ellipse
+          id="path2448-1-6-9"
+          transform="matrix(.74208 0 0 .6085 37.099 89.015)"
+          cx={444.15}
+          cy={34.583}
+          rx={1.8876}
+          ry={1.5368}
+          fill="#fff"
+          filter="url(#filter2963-1-3)"
+          opacity={0.592}
+        />
+      </g>
     </g>
     <g id="layer4">
       <path
@@ -1872,12 +2039,11 @@ const ups = () => {
           strokeWidth={0.565}
           stroke="#fc0"
         />
-        <ellipse
+        <circle
           id="path843-5-8"
           cx={219.91}
           cy={243.27}
-          rx={25.274}
-          ry={25.274}
+          r={25.274}
           fill="none"
           paintOrder="markers stroke fill"
           strokeLinecap="square"
@@ -2223,7 +2389,7 @@ const ups = () => {
     <g id="layer6" letterSpacing={0} wordSpacing={0}>
       <text
         id="text21801"
-        x={19.878826}
+        x={23.053864}
         y={27.706881}
         style={{ lineHeight: 1.25 }}
         xmlSpace="preserve"
@@ -2234,34 +2400,34 @@ const ups = () => {
       >
         <tspan
           id="tspan21799"
-          x={19.878826}
+          x={23.053864}
           y={27.706881}
           fill="#00aad4"
           fontFamily="Franklin Gothic Medium"
           fontSize="4.5861px"
           strokeWidth={0.26458}
         >
-          {"IN VOLTAGE MAX"}
+          {"IN VOLT MAX"}
         </tspan>
       </text>
       <text
         id="text9359"
-        x={31.236439}
-        y={57.572914}
+        x={41.819931}
+        y={59.689613}
         style={{ lineHeight: 1.25 }}
         xmlSpace="preserve"
         fill="#fff"
         fontFamily="sans-serif"
-        fontSize="6.35px"
+        fontSize="9.8779px"
         strokeWidth={0.26458}
       >
         <tspan
           id="tspan9357"
-          x={31.236439}
-          y={57.572914}
+          x={41.819931}
+          y={59.689613}
           fill="#fff"
           fontFamily="Franklin Gothic Medium"
-          fontSize="6.35px"
+          fontSize="9.8779px"
           fontWeight={700}
           strokeWidth={0.26458}
         >
@@ -2270,7 +2436,7 @@ const ups = () => {
       </text>
       <text
         id="text21805"
-        x={205.82195}
+        x={209.52617}
         y={27.012739}
         style={{ lineHeight: 1.25 }}
         xmlSpace="preserve"
@@ -2281,20 +2447,20 @@ const ups = () => {
       >
         <tspan
           id="tspan21803"
-          x={205.82195}
+          x={209.52617}
           y={27.012739}
           fill="#00aad4"
           fontFamily="Franklin Gothic Medium"
           fontSize="4.5861px"
           strokeWidth={0.26458}
         >
-          {"OUTPUT VOLTAGE"}
+          {"OUTPUT VOLT"}
         </tspan>
       </text>
       <text
         id="text375"
         x={229.37163}
-        y={58.404823}
+        y={60.521523}
         style={{ lineHeight: 1.25 }}
         xmlSpace="preserve"
         fill="#fff"
@@ -2305,10 +2471,10 @@ const ups = () => {
         <tspan
           id="tspan373"
           x={229.37163}
-          y={58.404823}
+          y={60.521523}
           fill="#fff"
           fontFamily="Franklin Gothic Medium"
-          fontSize="6.35px"
+          fontSize="9.8779px"
           fontWeight={700}
           strokeWidth={0.26458}
         >
@@ -2317,22 +2483,22 @@ const ups = () => {
       </text>
       <text
         id="text2997"
-        x={230.42995}
-        y={138.83804}
+        x={228.84242}
+        y={140.42557}
         style={{ lineHeight: 1.25 }}
         xmlSpace="preserve"
         fill="#fff"
         fontFamily="sans-serif"
-        fontSize="6.35px"
+        fontSize="9.8779px"
         strokeWidth={0.26458}
       >
         <tspan
           id="tspan2995"
-          x={230.42995}
-          y={138.83804}
+          x={228.84242}
+          y={140.42557}
           fill="#fff"
           fontFamily="Franklin Gothic Medium"
-          fontSize="6.35px"
+          fontSize="9.8779px"
           fontWeight={700}
           strokeWidth={0.26458}
         >
@@ -2677,7 +2843,7 @@ const ups = () => {
           fontSize="6.35px"
           strokeWidth={0.27199}
         >
-          {"OUT PERCENT LOAD:"}
+          {"OUT PERCENT LOAD 1:"}
         </tspan>
         <tspan
           id="tspan6932"
@@ -2732,9 +2898,9 @@ const ups = () => {
       </text>
       <text
         id="text407"
-        transform="scale(.8204 1.2189)"
-        x={587.81219}
-        y={95.810715}
+        transform="scale(.82041 1.2189)"
+        x={594.67987}
+        y={96.244156}
         style={{ lineHeight: 1.25 }}
         xmlSpace="preserve"
         fill="#fff"
@@ -2744,8 +2910,8 @@ const ups = () => {
       >
         <tspan
           id="tspan403"
-          x={587.81219}
-          y={95.810715}
+          x={594.67987}
+          y={96.244156}
           fill="#fff"
           fontFamily="Franklin Gothic Medium"
           fontSize="5.6444px"
@@ -2756,9 +2922,9 @@ const ups = () => {
       </text>
       <text
         id="text413"
-        transform="scale(.8204 1.2189)"
-        x={587.86188}
-        y={110.86337}
+        transform="scale(.82041 1.2189)"
+        x={594.52002}
+        y={111.29671}
         style={{ lineHeight: 1.25 }}
         xmlSpace="preserve"
         fill="#fff"
@@ -2768,8 +2934,8 @@ const ups = () => {
       >
         <tspan
           id="tspan409"
-          x={587.86188}
-          y={110.86337}
+          x={594.52002}
+          y={111.29671}
           fill="#fff"
           fontFamily="Franklin Gothic Medium"
           fontSize="5.6444px"
@@ -2780,9 +2946,9 @@ const ups = () => {
       </text>
       <text
         id="text419"
-        transform="scale(.8204 1.2189)"
-        x={587.21686}
-        y={103.33703}
+        transform="scale(.82041 1.2189)"
+        x={594.28577}
+        y={103.77042}
         style={{ lineHeight: 1.25 }}
         xmlSpace="preserve"
         fill="#fff"
@@ -2792,8 +2958,8 @@ const ups = () => {
       >
         <tspan
           id="tspan415"
-          x={587.21686}
-          y={103.33703}
+          x={594.28577}
+          y={103.77042}
           fill="#fff"
           fontFamily="Franklin Gothic Medium"
           fontSize="5.6444px"
@@ -2804,9 +2970,9 @@ const ups = () => {
       </text>
       <text
         id="text425"
-        transform="scale(.8204 1.2189)"
-        x={587.81219}
-        y={87.850098}
+        transform="scale(.82041 1.2189)"
+        x={594.68811}
+        y={88.2836}
         style={{ lineHeight: 1.25 }}
         xmlSpace="preserve"
         fill="#fff"
@@ -2816,8 +2982,8 @@ const ups = () => {
       >
         <tspan
           id="tspan421"
-          x={587.81219}
-          y={87.850098}
+          x={594.68811}
+          y={88.2836}
           fill="#fff"
           fontFamily="Franklin Gothic Medium"
           fontSize="5.6444px"
@@ -2828,9 +2994,9 @@ const ups = () => {
       </text>
       <text
         id="text431"
-        transform="scale(.8204 1.2189)"
-        x={587.81219}
-        y={80.381577}
+        transform="scale(.82041 1.2189)"
+        x={594.68811}
+        y={80.815132}
         style={{ lineHeight: 1.25 }}
         xmlSpace="preserve"
         fill="#fff"
@@ -2840,8 +3006,8 @@ const ups = () => {
       >
         <tspan
           id="tspan427"
-          x={587.81219}
-          y={80.381577}
+          x={594.68811}
+          y={80.815132}
           fill="#fff"
           fontFamily="Franklin Gothic Medium"
           fontSize="5.6444px"
@@ -2852,9 +3018,9 @@ const ups = () => {
       </text>
       <text
         id="text437"
-        transform="scale(.8204 1.2189)"
-        x={587.81219}
-        y={56.934242}
+        transform="scale(.82041 1.2189)"
+        x={594.68811}
+        y={57.367966}
         style={{ lineHeight: 1.25 }}
         xmlSpace="preserve"
         fill="#fff"
@@ -2864,8 +3030,8 @@ const ups = () => {
       >
         <tspan
           id="tspan433"
-          x={587.81219}
-          y={56.934242}
+          x={594.68811}
+          y={57.367966}
           fill="#fff"
           fontFamily="Franklin Gothic Medium"
           fontSize="5.6444px"
@@ -2876,9 +3042,9 @@ const ups = () => {
       </text>
       <text
         id="text443"
-        transform="scale(.8204 1.2189)"
-        x={587.81219}
-        y={64.836845}
+        transform="scale(.82041 1.2189)"
+        x={594.28577}
+        y={65.270515}
         style={{ lineHeight: 1.25 }}
         xmlSpace="preserve"
         fill="#fff"
@@ -2888,8 +3054,8 @@ const ups = () => {
       >
         <tspan
           id="tspan439"
-          x={587.81219}
-          y={64.836845}
+          x={594.28577}
+          y={65.270515}
           fill="#fff"
           fontFamily="Franklin Gothic Medium"
           fontSize="5.6444px"
@@ -2900,9 +3066,9 @@ const ups = () => {
       </text>
       <text
         id="text449"
-        transform="scale(.8204 1.2189)"
-        x={587.81219}
-        y={72.797348}
+        transform="scale(.82041 1.2189)"
+        x={594.52002}
+        y={73.230957}
         style={{ lineHeight: 1.25 }}
         xmlSpace="preserve"
         fill="#fff"
@@ -2912,8 +3078,8 @@ const ups = () => {
       >
         <tspan
           id="tspan445"
-          x={587.81219}
-          y={72.797348}
+          x={594.52002}
+          y={73.230957}
           fill="#fff"
           fontFamily="Franklin Gothic Medium"
           fontSize="5.6444px"
@@ -2924,9 +3090,9 @@ const ups = () => {
       </text>
       <text
         id="text455"
-        transform="scale(.8204 1.2189)"
-        x={587.86145}
-        y={118.5475}
+        transform="scale(.82041 1.2189)"
+        x={594.52002}
+        y={118.98079}
         style={{ lineHeight: 1.25 }}
         xmlSpace="preserve"
         fill="#fff"
@@ -2936,8 +3102,8 @@ const ups = () => {
       >
         <tspan
           id="tspan451"
-          x={587.86145}
-          y={118.5475}
+          x={594.52002}
+          y={118.98079}
           fill="#fff"
           fontFamily="Franklin Gothic Medium"
           fontSize="5.6444px"
@@ -2948,9 +3114,9 @@ const ups = () => {
       </text>
       <text
         id="text461"
-        transform="scale(.8204 1.2189)"
-        x={587.86145}
-        y={126.36179}
+        transform="scale(.82041 1.2189)"
+        x={594.52002}
+        y={126.79501}
         style={{ lineHeight: 1.25 }}
         xmlSpace="preserve"
         fill="#fff"
@@ -2960,8 +3126,8 @@ const ups = () => {
       >
         <tspan
           id="tspan457"
-          x={587.86145}
-          y={126.36179}
+          x={594.52002}
+          y={126.79501}
           fill="#fff"
           fontFamily="Franklin Gothic Medium"
           fontSize="5.6444px"
@@ -2983,9 +3149,8 @@ const ups = () => {
       />
     </g>
   </svg>
+)
+}
 
 
-    )
-} 
-
-export default ups;
+export default Ups
