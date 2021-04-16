@@ -1,5 +1,22 @@
 import React from 'react'
+/*
+type Estados ={
+  volt_an: number; // id = tspan1165-7
+  volt.bn: number; //id = tspan1165-7-4
+}
 
+type Botones_alarmas = {
+  
+}
+type Datos_generales ={
+  
+
+}
+type Datos_principales ={
+  
+  
+}
+*/
 const Variables = () => {
     return (
         <g id="layer6">

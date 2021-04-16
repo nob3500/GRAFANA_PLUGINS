@@ -414,6 +414,24 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 
+/*
+type Estados ={
+  volt_an: number; // id = tspan1165-7
+  volt.bn: number; //id = tspan1165-7-4
+}
+
+type Botones_alarmas = {
+  
+}
+type Datos_generales ={
+  
+
+}
+type Datos_principales ={
+  
+  
+}
+*/
 
 var Variables = function Variables() {
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("g", {
