@@ -8,6 +8,7 @@ services:
     volumes:
       - ./grafana-data:/var/lib/grafana
       - ./grafana-plugins:/var/lib/grafana/plugins
+      - ./grafana.ini:/etc/grafana/grafana.ini
     logging:
       driver: "json-file"
       options:
