@@ -5,36 +5,33 @@ import { SimplePanel } from './SimplePanel';
 export const plugin = new PanelPlugin<SimpleOptions>(SimplePanel).setPanelOptions(builder => {
   return builder
     .addTextInput({
-      path: 'text',
-      name: 'Simple text option',
-      description: 'Description of panel option',
-      defaultValue: 'Default value of text input option',
+      path: 'idequipo',
+      name: 'ID EQUIPO',
+      description: 'Nombre del ups',
     })
-    .addBooleanSwitch({
-      path: 'showSeriesCount',
-      name: 'Show series counter',
-      defaultValue: false,
+    .addTextInput({
+      path: 'fase',
+      name: 'FASE',
+      description: 'Fase en donde está el ups',
     })
-    .addRadio({
-      path: 'seriesCountSize',
-      defaultValue: 'sm',
-      name: 'Series counter size',
-      settings: {
-        options: [
-          {
-            value: 'sm',
-            label: 'Small',
-          },
-          {
-            value: 'md',
-            label: 'Medium',
-          },
-          {
-            value: 'lg',
-            label: 'Large',
-          },
-        ],
-      },
-      showIf: config => config.showSeriesCount,
+    .addTextInput({
+      path: 'sistema',
+      name: 'SISTEMA',
+      description: 'Sistema en donde está el ups',
+    })
+    .addTextInput({
+      path: 'marca',
+      name: 'MARCA',
+      description: 'Marca del ups',
+    })
+    .addTextInput({
+      path: 'modelo',
+      name: 'MODELO',
+      description: 'Modelo del ups',
+    })
+    .addTextInput({
+      path: 'ubicacion',
+      name: 'UBICACION',
+      description: 'Ubicación del ups',
     });
 });

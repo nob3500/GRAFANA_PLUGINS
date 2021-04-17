@@ -2,13 +2,58 @@ import React from 'react';
 import { PanelProps } from '@grafana/data';
 import { SimpleOptions } from 'types';
 import { css, cx } from 'emotion';
-import { stylesFactory, useTheme } from '@grafana/ui';
+//import { stylesFactory, useTheme } from '@grafana/ui';
+import { stylesFactory } from '@grafana/ui';
+import Ups from './components/ups1';
+import { DataUps } from 'components/variables';
+
+// import { DataUps } from 'components/variables'
+//import dataUps from 'modules/dataUps';
 
 interface Props extends PanelProps<SimpleOptions> {}
 
 export const SimplePanel: React.FC<Props> = ({ options, data, width, height }) => {
-  const theme = useTheme();
+  //const theme = useTheme();
   const styles = getStyles();
+
+  console.log("data: ", data)
+  console.log("options: ", options)
+
+  let dataUps : DataUps
+  dataUps={
+    DatosGenerales: {
+      Fase: 'A',
+      Sistema: '1',
+      Marca: 'YORK',
+      Modelo: 'YVAA0263',
+      Ubicacion: 'EXTERIORES'
+    },
+    Parametros: {
+      VBateria: 0,
+      MinEstimados: 0,
+      CargaEstimada: 0,
+      InVoltmin: 0,
+      InVoltmax: 0,
+      CorrienteOut: 0,
+      PotenciaOut: 0,
+      PorcenCarga1: 0,
+      PorcenCarga2: 0,
+      PorcenCarga3: 0
+    },
+    Alarmas: {
+      Presente: '',
+      Inversor: '',
+      Bypass: '',
+      Rectificador: ''
+    },
+    Principal: {
+      ID: '',
+      Estado: '',
+      InVolmax: 0,
+      OutVolt: 0,
+      VBateria: 0
+    }
+  }
   return (
     <div
       className={cx(
@@ -19,35 +64,16 @@ export const SimplePanel: React.FC<Props> = ({ options, data, width, height }) =
         `
       )}
     >
-      <svg
-        className={styles.svg}
-        width={width}
-        height={height}
-        xmlns="http://www.w3.org/2000/svg"
-        xmlnsXlink="http://www.w3.org/1999/xlink"
-        viewBox={`-${width / 2} -${height / 2} ${width} ${height}`}
-      >
-        <g>
-          <circle style={{ fill: `${theme.isLight ? theme.palette.greenBase : theme.palette.blue95}` }} r={100} />
-        </g>
-      </svg>
-
-      <div className={styles.textBox}>
-        {options.showSeriesCount && (
-          <div
-            className={css`
-              font-size: ${theme.typography.size[options.seriesCountSize]};
-            `}
-          >
-            Number of series: {data.series.length}
-          </div>
-        )}
-        <div>Text option value: {options.text}</div>
-      </div>
+      <Ups
+        Parametros={dataUps.Parametros}
+        Principal={dataUps.Principal}
+        DatosGenerales={dataUps.DatosGenerales}
+        Alarmas={dataUps.Alarmas}    
+      />
     </div>
   );
 };
-
+     
 const getStyles = stylesFactory(() => {
   return {
     wrapper: css`
