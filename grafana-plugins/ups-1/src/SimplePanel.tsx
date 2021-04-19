@@ -5,10 +5,9 @@ import { css, cx } from 'emotion';
 //import { stylesFactory, useTheme } from '@grafana/ui';
 import { stylesFactory } from '@grafana/ui';
 import Ups from './components/ups1';
-import { DataUps } from 'components/variables';
 
-// import { DataUps } from 'components/variables'
-//import dataUps from 'modules/dataUps';
+//import { DataUps } from 'components/variables';
+import dataUps from 'modules/dataUps';
 
 interface Props extends PanelProps<SimpleOptions> {}
 
@@ -16,44 +15,11 @@ export const SimplePanel: React.FC<Props> = ({ options, data, width, height }) =
   //const theme = useTheme();
   const styles = getStyles();
 
-  console.log("data: ", data)
-  console.log("options: ", options)
+  //console.log("data: ", data)
+  //console.log("options: ", options)
 
-  let dataUps : DataUps
-  dataUps={
-    DatosGenerales: {
-      Fase: 'A',
-      Sistema: '1',
-      Marca: 'YORK',
-      Modelo: 'YVAA0263',
-      Ubicacion: 'EXTERIORES'
-    },
-    Parametros: {
-      VBateria: 0,
-      MinEstimados: 0,
-      CargaEstimada: 0,
-      InVoltmin: 0,
-      InVoltmax: 0,
-      CorrienteOut: 0,
-      PotenciaOut: 0,
-      PorcenCarga1: 0,
-      PorcenCarga2: 0,
-      PorcenCarga3: 0
-    },
-    Alarmas: {
-      Presente: '',
-      Inversor: '',
-      Bypass: '',
-      Rectificador: ''
-    },
-    Principal: {
-      ID: '',
-      Estado: '',
-      InVolmax: 0,
-      OutVolt: 0,
-      VBateria: 0
-    }
-  }
+  let ups = dataUps(data, options);
+    
   return (
     <div
       className={cx(
@@ -65,10 +31,10 @@ export const SimplePanel: React.FC<Props> = ({ options, data, width, height }) =
       )}
     >
       <Ups
-        Parametros={dataUps.Parametros}
-        Principal={dataUps.Principal}
-        DatosGenerales={dataUps.DatosGenerales}
-        Alarmas={dataUps.Alarmas}    
+        Parametros={ups.Parametros}
+        Principal={ups.Principal}
+        DatosGenerales={ups.DatosGenerales}
+        Alarmas={ups.Alarmas}    
       />
     </div>
   );

@@ -1,6 +1,7 @@
 import React from 'react';
 
 type DatosGenerales = {
+  Nombre: string;
   Fase: string;
   Sistema: string;
   Marca: string;
@@ -29,7 +30,6 @@ type Alarmas ={
 };
 
 type Principal ={
-  ID: string;
   Estado: string;
   InVolmax: number;
   OutVolt: number;
@@ -78,7 +78,7 @@ export const Variables = ({ DatosGenerales, Parametros, Alarmas, Principal }: Da
           fontSize="11.289px"
           strokeWidth={0.36412}
         >
-          { Principal.ID }
+          { DatosGenerales.Nombre }
         </tspan>
       </text>
       <text
@@ -130,7 +130,7 @@ export const Variables = ({ DatosGenerales, Parametros, Alarmas, Principal }: Da
           fontSize="11.289px"
           strokeWidth={0.36412}
         >
-          { Principal.ID }
+          { DatosGenerales.Nombre }
         </tspan>
       </text>
       <text
@@ -381,7 +381,7 @@ export const Variables = ({ DatosGenerales, Parametros, Alarmas, Principal }: Da
           fontSize="5.6444px"
           strokeWidth={0.26458}
         >
-          {"999.9"}
+          { Parametros.CorrienteOut }
         </tspan>
       </text>
       <text
@@ -407,7 +407,7 @@ export const Variables = ({ DatosGenerales, Parametros, Alarmas, Principal }: Da
           fontSize="5.6444px"
           strokeWidth={0.26458}
         >
-          {"99.9"}
+          { Parametros.PorcenCarga1 }
         </tspan>
       </text>
       <text
@@ -433,7 +433,7 @@ export const Variables = ({ DatosGenerales, Parametros, Alarmas, Principal }: Da
           fontSize="5.6444px"
           strokeWidth={0.26458}
         >
-          {"999999.9 "}
+          { Parametros.PotenciaOut }
         </tspan>
       </text>
       <text
@@ -459,7 +459,7 @@ export const Variables = ({ DatosGenerales, Parametros, Alarmas, Principal }: Da
           fontSize="5.6444px"
           strokeWidth={0.26458}
         >
-          {"999.9"}
+          { Parametros.InVoltmax }
         </tspan>
       </text>
       <text
@@ -485,7 +485,7 @@ export const Variables = ({ DatosGenerales, Parametros, Alarmas, Principal }: Da
           fontSize="5.6444px"
           strokeWidth={0.26458}
         >
-          {"999.9"}
+          { Parametros.InVoltmin }
         </tspan>
       </text>
       <text
@@ -537,7 +537,7 @@ export const Variables = ({ DatosGenerales, Parametros, Alarmas, Principal }: Da
           fontSize="5.6444px"
           strokeWidth={0.26458}
         >
-          {"999.9"}
+          { Parametros.MinEstimados }
         </tspan>
       </text>
       <text
@@ -563,7 +563,7 @@ export const Variables = ({ DatosGenerales, Parametros, Alarmas, Principal }: Da
           fontSize="5.6444px"
           strokeWidth={0.26458}
         >
-          {"100.0"}
+          { Parametros.CargaEstimada }
         </tspan>
       </text>
       <text
@@ -589,7 +589,7 @@ export const Variables = ({ DatosGenerales, Parametros, Alarmas, Principal }: Da
           fontSize="5.6444px"
           strokeWidth={0.26458}
         >
-          {"99.9"}
+          { Parametros.PorcenCarga2 }
         </tspan>
       </text>
       <text
@@ -615,7 +615,7 @@ export const Variables = ({ DatosGenerales, Parametros, Alarmas, Principal }: Da
           fontSize="5.6444px"
           strokeWidth={0.26458}
         >
-          {"99.9"}
+          { Parametros.PorcenCarga3 }
         </tspan>
       </text>
       <g
@@ -630,7 +630,7 @@ export const Variables = ({ DatosGenerales, Parametros, Alarmas, Principal }: Da
           cy={111.49}
           rx={2.5726}
           ry={2.4137}
-          className= { Alarmas.Presente }
+          className= { Alarmas.Presente } 
           fill="#1bea77"
           opacity={0.88}
         />
@@ -658,6 +658,7 @@ export const Variables = ({ DatosGenerales, Parametros, Alarmas, Principal }: Da
           cy={111.49}
           rx={2.5726}
           ry={2.4137}
+          className={ Alarmas.Inversor }
           fill="#1bea77"
           opacity={0.88}
         />
@@ -685,6 +686,7 @@ export const Variables = ({ DatosGenerales, Parametros, Alarmas, Principal }: Da
           cy={111.49}
           rx={2.5726}
           ry={2.4137}
+          className={ Alarmas.Bypass }
           fill="#1bea77"
           opacity={0.88}
         />
@@ -712,6 +714,7 @@ export const Variables = ({ DatosGenerales, Parametros, Alarmas, Principal }: Da
           cy={111.49}
           rx={2.5726}
           ry={2.4137}
+          className={ Alarmas.Rectificador }
           fill="#1bea77"
           opacity={0.88}
         />

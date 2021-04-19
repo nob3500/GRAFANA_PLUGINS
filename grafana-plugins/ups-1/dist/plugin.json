@@ -1,10 +1,10 @@
 {
   "$schema": "https://raw.githubusercontent.com/grafana/grafana/master/docs/sources/developers/plugins/plugin.schema.json",
   "type": "panel",
-  "name": "ups",
-  "id": "telconet-ups",
+  "name": "ups1",
+  "id": "telconet-ups-1",
   "info": {
-    "description": "Software de monitoreo",
+    "description": "Monitoreo Ups",
     "author": {
       "name": "Mario",
       "url": ""
@@ -26,7 +26,7 @@
     ],
     "screenshots": [],
     "version": "1.0.0",
-    "updated": "2021-04-15"
+    "updated": "2021-04-19"
   },
   "dependencies": {
     "grafanaDependency": ">=7.0.0",
