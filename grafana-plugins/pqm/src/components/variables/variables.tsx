@@ -1,29 +1,64 @@
 import React from 'react'
-/*
+
 type Estados ={
-  volt_an: number; // id = tspan1165-7
-  volt.bn: number; //id = tspan1165-7-4
+  volt_an: number;// id = tspan1165-7
+  volt_bn: number;//id = tspan1165-7-4
+  volt_cn: number;//id= tspan1165-7-4-4
+  volt_ab: number;//id= tspan15409-5-4-2
+  volt_bc: number;//id= tspan1765
+  volt_ca: number;//id = tspan1765-8
+  cur_a: number;// id= tspan15409-5-4
+  cur_b: number;// id = tspan15409-5
+  cur_c: number;//id = tspan15409
+  p_real_t: number; //id = tspan6736-3
+  p_apt_t: number;// id = tspan6736
+
+
 }
 
 type Botones_alarmas = {
-  
+  red_modbus: string;// id = pqm_modbus
+  volt_max: string;//id = pqm_voltmax
+  corr_max: string ;//id = pqm_corrmax
 }
 type Datos_generales ={
-  
+    fase: string; // id = tspan3614
+    sistema: string;// id = tspan3614-0
+    marca: string;// id = tspan3614-4
+    modelo: string;// id = tspan3614-5
+    ubicacion: string;// id = tspan3614-8
 
 }
+
 type Datos_principales ={
-  
-  
+  pot_real: number; //id = tspan5844
+  frecuencia: number; //id = tspan1960-4
+  factor_p: number; //id = tspan5927
+  boton_pqm: string; // rectangulo id= estado_eq
+  nombre_pqm: string;//nombre del equipo id= tspan6769
+  boton_estado: string;// power id = g876
+  text_estado: string ;// texto id= tspan5848
 }
-*/
-const Variables = () => {
+export interface DataPqm{
+  estados: Estados;
+  botones_alarmas: Botones_alarmas;
+  datos_generales: Datos_generales;
+  datos_principales: Datos_principales;
+
+}
+
+export const Variables = ({
+  estados,botones_alarmas,datos_generales,datos_principales
+
+}: DataPqm) =>{  
+
     return (
         <g id="layer6">
           <g id="g1103">
             <g id="g889">
               <path
                 id="estado_eq"
+                className = {datos_principales.boton_pqm}
                 fillRule="evenodd"
                 fill="url(#linearGradient4474)"
                 strokeWidth={0.26219}
@@ -51,7 +86,7 @@ const Variables = () => {
                   fontSize="11.289px"
                   strokeWidth={0.36412}
                 >
-                  {"PQM II"}
+                  {datos_principales.nombre_pqm}
                 </tspan>
               </text>
             </g>
@@ -79,7 +114,7 @@ const Variables = () => {
                 fontWeight={700}
                 strokeWidth={0.28918}
               >
-                {"315"}
+                {datos_principales.pot_real}
               </tspan>
             </text>
             <text
@@ -104,7 +139,7 @@ const Variables = () => {
                 fontSize="6.35px"
                 strokeWidth={0.26458}
               >
-                {"ENCENDIDO"}
+                {datos_principales.text_estado}
               </tspan>
             </text>
             <text
@@ -131,7 +166,7 @@ const Variables = () => {
                 fontWeight={700}
                 strokeWidth={0.28918}
               >
-                {"0.99"}
+                {datos_principales.factor_p}
               </tspan>
             </text>
             <text
@@ -158,10 +193,12 @@ const Variables = () => {
                 fontWeight={700}
                 strokeWidth={0.28918}
               >
-                {"59.9"}
+                {datos_principales.frecuencia}
               </tspan>
             </text>
-            <g id="g876" fill="#00990c">
+            <g id="g876" 
+            className = {datos_principales.boton_estado}
+            fill="#00990c">
               <path
                 id="path15781"
                 d="M212.92 170.54a5.861 5.861 0 00-4.066 1.662 5.7 5.7 0 00-1.685 4.01c0 1.484.62 2.96 1.685 4.01a5.86 5.86 0 004.066 1.661 5.861 5.861 0 004.066-1.661 5.7 5.7 0 001.684-4.01 5.7 5.7 0 00-1.684-4.01 5.86 5.86 0 00-4.066-1.662zm0 .835a5.03 5.03 0 013.475 1.42c.904.891 1.435 2.158 1.435 3.417s-.531 2.525-1.435 3.417a5.03 5.03 0 01-3.475 1.42 5.03 5.03 0 01-3.475-1.42c-.904-.892-1.435-2.159-1.435-3.417s.531-2.526 1.435-3.418a5.03 5.03 0 013.475-1.42z"
@@ -202,7 +239,7 @@ const Variables = () => {
                 fontSize="5.6444px"
                 strokeWidth={0.47057}
               >
-                {"B"}
+                {datos_generales.fase}
               </tspan>
             </text>
             <text
@@ -228,7 +265,7 @@ const Variables = () => {
                 fontSize="5.6444px"
                 strokeWidth={0.47057}
               >
-                {"1 &amp; 2"}
+                {datos_generales.sistema}
               </tspan>
             </text>
             <text
@@ -254,7 +291,7 @@ const Variables = () => {
                 fontSize="5.6444px"
                 strokeWidth={0.47057}
               >
-                {"GENERAL ELECTRIC"}
+                {datos_generales.marca}
               </tspan>
             </text>
             <text
@@ -280,7 +317,7 @@ const Variables = () => {
                 fontSize="5.6444px"
                 strokeWidth={0.47057}
               >
-                {"POWER QUALITY METER"}
+                {datos_generales.modelo}
               </tspan>
             </text>
             <text
@@ -306,7 +343,7 @@ const Variables = () => {
                 fontSize="5.6444px"
                 strokeWidth={0.47057}
               >
-                {"TABLEROS -1A"}
+                {datos_generales.ubicacion}
               </tspan>
             </text>
             <ellipse
@@ -315,6 +352,7 @@ const Variables = () => {
               cy={132.21}
               rx={2.5726}
               ry={2.4137}
+              className = {botones_alarmas.red_modbus}
               fillRule="evenodd"
               fill="red"
               opacity={0.88}
@@ -343,7 +381,7 @@ const Variables = () => {
                 fontSize="5.6444px"
                 strokeWidth={0.26458}
               >
-                {"242"}
+                {estados.volt_an}
               </tspan>
             </text>
             <text
@@ -369,7 +407,7 @@ const Variables = () => {
                 fontSize="5.6444px"
                 strokeWidth={0.26458}
               >
-                {"408.3 "}
+                {estados.cur_c}
               </tspan>
             </text>
             <text
@@ -395,7 +433,7 @@ const Variables = () => {
                 fontSize="5.6444px"
                 strokeWidth={0.26458}
               >
-                {"31916"}
+                {estados.p_apt_t}
               </tspan>
             </text>
             <text
@@ -421,7 +459,7 @@ const Variables = () => {
                 fontSize="5.6444px"
                 strokeWidth={0.26458}
               >
-                {"249"}
+                {estados.volt_bn}
               </tspan>
             </text>
             <text
@@ -447,7 +485,7 @@ const Variables = () => {
                 fontSize="5.6444px"
                 strokeWidth={0.26458}
               >
-                {"31840"}
+                {estados.p_real_t}
               </tspan>
             </text>
             <text
@@ -473,7 +511,7 @@ const Variables = () => {
                 fontSize="5.6444px"
                 strokeWidth={0.26458}
               >
-                {"410"}
+                {estados.cur_b}
               </tspan>
             </text>
             <text
@@ -499,7 +537,7 @@ const Variables = () => {
                 fontSize="5.6444px"
                 strokeWidth={0.26458}
               >
-                {"414"}
+                {estados.cur_a}
               </tspan>
             </text>
             <text
@@ -525,7 +563,7 @@ const Variables = () => {
                 fontSize="5.6444px"
                 strokeWidth={0.26458}
               >
-                {"245"}
+                {estados.volt_cn}
               </tspan>
             </text>
             <text
@@ -551,7 +589,7 @@ const Variables = () => {
                 fontSize="5.6444px"
                 strokeWidth={0.26458}
               >
-                {"422"}
+                {estados.volt_ab}
               </tspan>
             </text>
             <text
@@ -577,7 +615,7 @@ const Variables = () => {
                 fontSize="5.6444px"
                 strokeWidth={0.26458}
               >
-                {"418"}
+                {estados.volt_bc}
               </tspan>
             </text>
             <text
@@ -603,26 +641,28 @@ const Variables = () => {
                 fontSize="5.6444px"
                 strokeWidth={0.26458}
               >
-                {"419"}
+                {estados.volt_ca}
               </tspan>
             </text>
             <ellipse
-              id="pqm_modbus-2"
+              id="pqm_voltmax-2"
               cx={362.56}
               cy={145.43}
               rx={2.5726}
               ry={2.4137}
+              className = {botones_alarmas.volt_max}
               fillRule="evenodd"
               fill="red"
               opacity={0.88}
               paintOrder="markers stroke fill"
             />
             <ellipse
-              id="pqm_modbus-2-5"
+              id="pqm_corrmax"
               cx={362.56}
               cy={158.66}
               rx={2.5726}
               ry={2.4137}
+              className = {botones_alarmas.corr_max}
               fillRule="evenodd"
               fill="red"
               opacity={0.88}
@@ -634,4 +674,3 @@ const Variables = () => {
     )
 }
 
-export default Variables;
