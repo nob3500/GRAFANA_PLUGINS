@@ -1,8 +1,7 @@
 import React from 'react'
+import { Variables, DataChiller } from './variables';
 
-import { Variables, DataChiller } from './variables'
-
-const Chiller = ({ ID, Estado, TemperaturaSuministro, TemperaturaRetorno, Corriente, DatosGenerales, Compresor1, Compresor2, Alarmas }: DataChiller) => {
+const Chiller = ({ DatosGenerales,Compresor1, Compresor2, Alarmas, Principal }: DataChiller) => {
  
   return (
     <svg
@@ -2486,18 +2485,14 @@ const Chiller = ({ ID, Estado, TemperaturaSuministro, TemperaturaRetorno, Corrie
       </g>
 
       <Variables 
-        ID= {ID}
-        Estado={Estado}
-        Compresor1={Compresor1}
-        Compresor2={Compresor2}
-        DatosGenerales={DatosGenerales}
-        TemperaturaRetorno={TemperaturaRetorno}
-        TemperaturaSuministro={TemperaturaSuministro}
-        Corriente={Corriente}
-        Alarmas={Alarmas}
+        DatosGenerales = {DatosGenerales}
+        Compresor1= {Compresor1}
+        Compresor2= {Compresor2}
+        Principal= {Principal}
+        Alarmas= {Alarmas}
       />
     </svg>
   )
 }
 
-export default Chiller
+export default Chiller;

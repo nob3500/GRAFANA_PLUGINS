@@ -1,12 +1,13 @@
 import React from 'react'
 
 type DatosGenerales = {
-  Etapa: string;
+  Nombre: string;
+  Fase: string;
   Sistema: string;
   Marca: string;
   Modelo: string;
   Ubicacion: string;
-}
+};
 
 type Compresor = {
   Estado: string;
@@ -14,31 +15,34 @@ type Compresor = {
   PresionSuccion: number;
   PresionDescarga: number;
   HorasFunc: number;
-}
+};
 
 type Alarmas = {
   AlarmaGeneral: string;
   CodAlarmaS1: string;
   CodAlarmaS2: string;
-}
+};
 
-export interface DataChiller  {
-  ID: string;
+type Principal = {
   Estado: string;
   TemperaturaSuministro: number;
   TemperaturaRetorno: number;
   Corriente: number;
+};
+
+export interface DataChiller  {
   DatosGenerales: DatosGenerales;
   Compresor1: Compresor;
   Compresor2: Compresor;
   Alarmas: Alarmas;
+  Principal: Principal;
 }
 
 //export interface DataChiller {
 //  Data: Chiller
 //}
 
-export const Variables = ({ ID, Estado, TemperaturaSuministro, TemperaturaRetorno, Corriente, DatosGenerales, Compresor1, Compresor2, Alarmas }: DataChiller) => {
+export const Variables = ({ DatosGenerales,Compresor1, Compresor2, Alarmas, Principal }: DataChiller) => {
   return (
     <g id="layer4">
       <g id="g2057">
@@ -64,7 +68,7 @@ export const Variables = ({ ID, Estado, TemperaturaSuministro, TemperaturaRetorn
             fontFamily="Franklin Gothic Medium"
             strokeWidth={0.47057}
           >
-            { DatosGenerales.Etapa }
+            { DatosGenerales.Fase }
           </tspan>
         </text>
         <text
@@ -424,7 +428,7 @@ export const Variables = ({ ID, Estado, TemperaturaSuministro, TemperaturaRetorn
           wordSpacing={0}
         >
           <tspan id="tspan1328" x={22.56381} y={50.691143}>
-            { TemperaturaSuministro }
+            { Principal.TemperaturaSuministro }
           </tspan>
         </text>
         <text
@@ -449,7 +453,7 @@ export const Variables = ({ ID, Estado, TemperaturaSuministro, TemperaturaRetorn
           wordSpacing={0}
         >
           <tspan id="tspan1352" x={211.39882} y={50.691143}>
-            { TemperaturaRetorno }
+            { Principal.TemperaturaRetorno }
           </tspan>
         </text>
         <text
@@ -474,7 +478,7 @@ export const Variables = ({ ID, Estado, TemperaturaSuministro, TemperaturaRetorn
           wordSpacing={0}
         >
           <tspan id="tspan1384" x={209.29778} y={132.56357}>
-            { Corriente }
+            { Principal.Corriente }
           </tspan>
         </text>
         <text
@@ -496,10 +500,10 @@ export const Variables = ({ ID, Estado, TemperaturaSuministro, TemperaturaRetorn
             y={175.06361}
             fill="#fff"
             fontFamily="Franklin Gothic Medium"
-            fontSize="7.0556px"
+            fontSize="6.0556px"
             strokeWidth={0.26458}
           >
-            { Estado }
+            { Principal.Estado }
           </tspan>
         </text>
         <g id="st2" transform="translate(.173 -1.422)" fill="#00990c">
@@ -549,7 +553,7 @@ export const Variables = ({ ID, Estado, TemperaturaSuministro, TemperaturaRetorn
             fontSize="11.289px"
             strokeWidth={0.36412}
           >
-            { ID }
+            { DatosGenerales.Nombre }
           </tspan>
         </text>
         <text
@@ -574,7 +578,7 @@ export const Variables = ({ ID, Estado, TemperaturaSuministro, TemperaturaRetorn
             fontSize="11.289px"
             strokeWidth={0.36412}
           >
-            { ID }
+            { DatosGenerales.Nombre }
           </tspan>
         </text>
         <g id="g1414" fillRule="evenodd" paintOrder="markers stroke fill">
