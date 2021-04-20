@@ -402,6 +402,42 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var ats = function ats() {
+  var ats = {
+    estados: {
+      est_equipo: '',
+      pres_f1: '',
+      pres_f2: '',
+      pos_f1: '',
+      pos_f2: '',
+      transf_f1: 0,
+      transf_f2: 0,
+      volt_f1: 0,
+      volt_f2: 0
+    },
+    botones_alarmas: {
+      rele_trans_auto: '',
+      falla_auto: '',
+      pos_f1: '',
+      pos_f2: '',
+      red_modbus: ''
+    },
+    datos_generales: {
+      fase: '1',
+      marca: '',
+      modelo: '',
+      sistema: '',
+      ubicacion: ''
+    },
+    datos_principales: {
+      volt_f1: 0,
+      volt_f2: 0,
+      total_transf: 0,
+      boton_ats: '',
+      nombre_ats: '',
+      boton_estado: '',
+      text_estado: ''
+    }
+  };
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("svg", {
     id: "svg8",
     viewBox: "0 0 508 198.44"
@@ -861,7 +897,7 @@ var ats = function ats() {
     fill: "#00abd6",
     fontSize: "5.6444px",
     strokeWidth: 0.15101
-  })))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(components_variables_variables__WEBPACK_IMPORTED_MODULE_1__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("g", {
+  })))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("g", {
     id: "layer8"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("image", {
     id: "image894",
@@ -2172,7 +2208,7 @@ var ats = function ats() {
     fontFamily: "Franklin Gothic Medium",
     fontSize: "5.6444px",
     strokeWidth: 0.47057
-  }, "AUTO TRANS RELAY:"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tspan", {
+  }, "RELE TRANSFERENCIA AUTO. :"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tspan", {
     id: "tspan3679",
     x: 290.61584,
     y: 135.81032,
@@ -2180,7 +2216,7 @@ var ats = function ats() {
     fontFamily: "Franklin Gothic Medium",
     fontSize: "5.6444px",
     strokeWidth: 0.47057
-  }, "ATS NOT IN AUTO:"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tspan", {
+  }, "FALL AUTOMATICO:"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tspan", {
     id: "tspan3683",
     x: 290.61584,
     y: 143.65309,
@@ -2204,7 +2240,7 @@ var ats = function ats() {
     fontFamily: "Franklin Gothic Medium",
     fontSize: "5.6444px",
     strokeWidth: 0.47057
-  }, "MODBUS STATUS:")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("text", {
+  }, "RED MODBUS :")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("text", {
     id: "text5731",
     x: 435.8075,
     y: 49.327187,
@@ -2334,7 +2370,12 @@ var ats = function ats() {
     fontFamily: "Franklin Gothic Medium",
     fontSize: "9.8778px",
     strokeWidth: 0.33875
-  }, "DC-GYE")))));
+  }, "DC-GYE"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(components_variables_variables__WEBPACK_IMPORTED_MODULE_1__["Variables"], {
+    estados: ats.estados,
+    botones_alarmas: ats.botones_alarmas,
+    datos_generales: ats.datos_generales,
+    datos_principales: ats.datos_principales
+  })));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (ats);
@@ -2345,22 +2386,27 @@ var ats = function ats() {
 /*!********************************************!*\
   !*** ./components/variables/variables.tsx ***!
   \********************************************/
-/*! exports provided: default */
+/*! exports provided: Variables */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Variables", function() { return Variables; });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 
-
-var variables = function variables() {
+var Variables = function Variables(_a) {
+  var estados = _a.estados,
+      botones_alarmas = _a.botones_alarmas,
+      datos_generales = _a.datos_generales,
+      datos_principales = _a.datos_principales;
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("g", {
     id: "layer7"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("g", {
     id: "g1591"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("path", {
     id: "estado_eq",
+    className: datos_principales.boton_ats,
     fillRule: "evenodd",
     fill: "url(#linearGradient4474)",
     strokeWidth: 0.26219,
@@ -2389,7 +2435,7 @@ var variables = function variables() {
     fontSize: "9.8778px",
     fontWeight: 700,
     strokeWidth: 0.28918
-  }, "207")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("text", {
+  }, datos_principales.volt_f1)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("text", {
     id: "ats_trans",
     transform: "scale(1.0508 .95161)",
     x: 210.39435,
@@ -2413,7 +2459,7 @@ var variables = function variables() {
     fontSize: "12.491px",
     fontWeight: 700,
     strokeWidth: 0.28918
-  }, "201")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("text", {
+  }, datos_principales.total_transf)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("text", {
     id: "ats_trnsf2",
     transform: "scale(1.0508 .95161)",
     x: 204.53853,
@@ -2437,8 +2483,9 @@ var variables = function variables() {
     fontSize: "9.8778px",
     fontWeight: 700,
     strokeWidth: 0.28918
-  }, "212.0")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("g", {
+  }, datos_principales.volt_f2)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("g", {
     id: "ats_st2",
+    className: datos_principales.boton_estado,
     transform: "translate(.283 .201)",
     fill: "#00990c"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("path", {
@@ -2476,7 +2523,7 @@ var variables = function variables() {
     fontFamily: "Franklin Gothic Medium",
     fontSize: "11.289px",
     strokeWidth: 0.36412
-  }, "ATS-0XB")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("text", {
+  }, datos_principales.nombre_ats)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("text", {
     id: "ats_st",
     x: 236.20271,
     y: 175.78246,
@@ -2499,7 +2546,7 @@ var variables = function variables() {
     fontFamily: "Franklin Gothic Medium",
     fontSize: "7.0556px",
     strokeWidth: 0.26458
-  }, "ON")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("text", {
+  }, datos_principales.text_estado)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("text", {
     id: "fase",
     transform: "scale(.98529 1.0149)",
     x: 337.99048,
@@ -2522,7 +2569,7 @@ var variables = function variables() {
     fontFamily: "Franklin Gothic Medium",
     fontSize: "5.6444px",
     strokeWidth: 0.47057
-  }, "B")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("text", {
+  }, datos_generales.fase)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("text", {
     id: "sistema",
     transform: "scale(.98529 1.0149)",
     x: 337.99048,
@@ -2545,7 +2592,7 @@ var variables = function variables() {
     fontFamily: "Franklin Gothic Medium",
     fontSize: "5.6444px",
     strokeWidth: 0.47057
-  }, "1")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("text", {
+  }, datos_generales.sistema)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("text", {
     id: "marca",
     transform: "scale(.98529 1.0149)",
     x: 337.99048,
@@ -2568,7 +2615,7 @@ var variables = function variables() {
     fontFamily: "Franklin Gothic Medium",
     fontSize: "5.6444px",
     strokeWidth: 0.47057
-  }, "GENERAL ELECTRIC")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("text", {
+  }, datos_generales.marca)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("text", {
     id: "modelo",
     transform: "scale(.98529 1.0149)",
     x: 337.99048,
@@ -2591,7 +2638,7 @@ var variables = function variables() {
     fontFamily: "Franklin Gothic Medium",
     fontSize: "5.6444px",
     strokeWidth: 0.47057
-  }, "MX 150")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("text", {
+  }, datos_generales.modelo)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("text", {
     id: "ubicacion",
     transform: "scale(.98529 1.0149)",
     x: 337.99048,
@@ -2614,12 +2661,13 @@ var variables = function variables() {
     fontFamily: "Franklin Gothic Medium",
     fontSize: "5.6444px",
     strokeWidth: 0.47057
-  }, "TABLEROS -2B")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ellipse", {
+  }, datos_generales.ubicacion)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ellipse", {
     id: "ats_autotran",
     cx: 369.95,
     cy: 127.34,
     rx: 2.5726,
     ry: 2.4137,
+    className: botones_alarmas.rele_trans_auto,
     fillRule: "evenodd",
     fill: "#1bea77",
     opacity: 0.88,
@@ -2630,6 +2678,7 @@ var variables = function variables() {
     cy: 135.45,
     rx: 2.5726,
     ry: 2.4137,
+    className: botones_alarmas.falla_auto,
     fillRule: "evenodd",
     fill: "#1bea77",
     opacity: 0.88,
@@ -2640,6 +2689,7 @@ var variables = function variables() {
     cy: 143.55,
     rx: 2.5726,
     ry: 2.4137,
+    className: botones_alarmas.pos_f1,
     fillRule: "evenodd",
     fill: "#1bea77",
     opacity: 0.88,
@@ -2650,6 +2700,7 @@ var variables = function variables() {
     cy: 151.65,
     rx: 2.5726,
     ry: 2.4137,
+    className: botones_alarmas.pos_f2,
     fillRule: "evenodd",
     fill: "#1bea77",
     opacity: 0.88,
@@ -2660,6 +2711,7 @@ var variables = function variables() {
     cy: 160.65,
     rx: 2.5726,
     ry: 2.4137,
+    className: botones_alarmas.red_modbus,
     fillRule: "evenodd",
     fill: "#1bea77",
     opacity: 0.88,
@@ -2687,7 +2739,7 @@ var variables = function variables() {
     fontFamily: "Franklin Gothic Medium",
     fontSize: "5.6444px",
     strokeWidth: 0.26458
-  }, "ON")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("text", {
+  }, estados.est_equipo)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("text", {
     id: "ats_volf1",
     transform: "scale(.8204 1.2189)",
     x: 579.90662,
@@ -2710,7 +2762,7 @@ var variables = function variables() {
     fontFamily: "Franklin Gothic Medium",
     fontSize: "5.6444px",
     strokeWidth: 0.26458
-  }, "408.3")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("text", {
+  }, estados.volt_f1)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("text", {
     id: "ats_presf1",
     transform: "scale(.8204 1.2189)",
     x: 579.22656,
@@ -2733,7 +2785,7 @@ var variables = function variables() {
     fontFamily: "Franklin Gothic Medium",
     fontSize: "5.6444px",
     strokeWidth: 0.26458
-  }, "ON")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("text", {
+  }, estados.pres_f1)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("text", {
     id: "ats_presf2",
     transform: "scale(.8204 1.2189)",
     x: 579.77399,
@@ -2756,7 +2808,7 @@ var variables = function variables() {
     fontFamily: "Franklin Gothic Medium",
     fontSize: "5.6444px",
     strokeWidth: 0.26458
-  }, "OFF")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("text", {
+  }, estados.pres_f2)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("text", {
     id: "ats_posf1",
     transform: "scale(.8204 1.2189)",
     x: 579.77399,
@@ -2779,7 +2831,7 @@ var variables = function variables() {
     fontFamily: "Franklin Gothic Medium",
     fontSize: "5.6444px",
     strokeWidth: 0.26458
-  }, "ON")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("text", {
+  }, estados.pos_f1)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("text", {
     id: "ats_posf2",
     transform: "scale(.8204 1.2189)",
     x: 579.77399,
@@ -2802,7 +2854,7 @@ var variables = function variables() {
     fontFamily: "Franklin Gothic Medium",
     fontSize: "5.6444px",
     strokeWidth: 0.26458
-  }, "ON")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("text", {
+  }, estados.pos_f2)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("text", {
     id: "ats_totf1",
     transform: "scale(.8204 1.2189)",
     x: 579.77881,
@@ -2825,7 +2877,7 @@ var variables = function variables() {
     fontFamily: "Franklin Gothic Medium",
     fontSize: "5.6444px",
     strokeWidth: 0.26458
-  }, "244")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("text", {
+  }, estados.transf_f1)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("text", {
     id: "ats_totf2",
     transform: "scale(.8204 1.2189)",
     x: 579.77881,
@@ -2848,7 +2900,7 @@ var variables = function variables() {
     fontFamily: "Franklin Gothic Medium",
     fontSize: "5.6444px",
     strokeWidth: 0.26458
-  }, "249")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("text", {
+  }, estados.transf_f2)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("text", {
     id: "text556",
     transform: "scale(.8204 1.2189)",
     x: 579.90662,
@@ -2894,10 +2946,8 @@ var variables = function variables() {
     fontFamily: "Franklin Gothic Medium",
     fontSize: "5.6444px",
     strokeWidth: 0.26458
-  }, "408.3 "))));
+  }, estados.volt_f2))));
 };
-
-/* harmony default export */ __webpack_exports__["default"] = (variables);
 
 /***/ }),
 

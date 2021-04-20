@@ -1,11 +1,62 @@
 import React from 'react'
 
-const variables = () => {
+type Estados ={
+  est_equipo: String;// id = tspan1165-7
+  pres_f1: String;//id = tspan15444
+  pres_f2: String;//id= tspan15488
+  pos_f1: String;//id= tspan15522
+  pos_f2: String;//id= tspan15532
+  transf_f1: number;//id = tspan15552
+  transf_f2: number;// id= tspan15579
+  volt_f1: number;// id = tspan15409
+  volt_f2: number;//id = tspan6736
+  
+}
+
+type Botones_alarmas = {
+  rele_trans_auto: string;// id = ats_autotran
+  falla_auto: string;//id = ats_noauto
+  pos_f1: string ;//id = ats_st_posf1
+  pos_f2: string ;//id = ats_st_posf2
+  red_modbus: string; // id = ats_modbus
+}
+type Datos_generales ={
+    fase: string; // id = tspan3614
+    sistema: string;// id = tspan3614-0
+    marca: string;// id = tspan3614-4
+    modelo: string;// id = tspan3614-5
+    ubicacion: string;// id = tspan3614-8
+
+}
+
+type Datos_principales ={
+  volt_f1: number; //id = ats_trnsf1
+  volt_f2: number; //id = ats_trnsf2
+  total_transf: number; //id = tspan5927
+  boton_ats: string; // rectangulo id= estado_eq
+  nombre_ats: string;//nombre del equipo id= tspan6769
+  boton_estado: string;// power id = ats_st2
+  text_estado: string ;// texto id= tspan5848
+}
+export interface DataAts{
+  estados: Estados;
+  botones_alarmas: Botones_alarmas;
+  datos_generales: Datos_generales;
+  datos_principales: Datos_principales;
+
+}
+
+export const Variables = ({
+  estados,botones_alarmas,datos_generales,datos_principales
+
+}: DataAts) =>{ 
+
     return (
         <g id="layer7">
       <g id="g1591">
         <path
           id="estado_eq"
+          className = {datos_principales.boton_ats}
           fillRule="evenodd"
           fill="url(#linearGradient4474)"
           strokeWidth={0.26219}
@@ -37,7 +88,7 @@ const variables = () => {
             fontWeight={700}
             strokeWidth={0.28918}
           >
-            {"207"}
+            {datos_principales.volt_f1}
           </tspan>
         </text>
         <text
@@ -66,7 +117,7 @@ const variables = () => {
             fontWeight={700}
             strokeWidth={0.28918}
           >
-            {"201"}
+            {datos_principales.total_transf}
           </tspan>
         </text>
         <text
@@ -95,10 +146,13 @@ const variables = () => {
             fontWeight={700}
             strokeWidth={0.28918}
           >
-            {"212.0"}
+            {datos_principales.volt_f2}
           </tspan>
         </text>
-        <g id="ats_st2" transform="translate(.283 .201)" fill="#00990c">
+        <g id="ats_st2" 
+        className = {datos_principales.boton_estado}
+        transform="translate(.283 .201)" 
+        fill="#00990c">
           <path
             id="path15781"
             d="M213.68 169.15a5.861 5.861 0 00-4.066 1.662 5.7 5.7 0 00-1.684 4.01c0 1.484.62 2.96 1.684 4.01a5.86 5.86 0 004.066 1.662 5.861 5.861 0 004.066-1.662 5.7 5.7 0 001.684-4.01 5.7 5.7 0 00-1.684-4.01 5.86 5.86 0 00-4.066-1.662zm0 .835a5.03 5.03 0 013.475 1.42c.904.891 1.435 2.158 1.435 3.417s-.531 2.525-1.435 3.417a5.03 5.03 0 01-3.475 1.42 5.03 5.03 0 01-3.475-1.42c-.904-.892-1.435-2.159-1.435-3.417s.531-2.526 1.435-3.418a5.03 5.03 0 013.475-1.42z"
@@ -140,7 +194,7 @@ const variables = () => {
             fontSize="11.289px"
             strokeWidth={0.36412}
           >
-            {"ATS-0XB"}
+            {datos_principales.nombre_ats}
           </tspan>
         </text>
         <text
@@ -168,7 +222,7 @@ const variables = () => {
             fontSize="7.0556px"
             strokeWidth={0.26458}
           >
-            {"ON"}
+            {datos_principales.text_estado}
           </tspan>
         </text>
         <text
@@ -196,7 +250,7 @@ const variables = () => {
             fontSize="5.6444px"
             strokeWidth={0.47057}
           >
-            {"B"}
+            {datos_generales.fase}
           </tspan>
         </text>
         <text
@@ -224,7 +278,7 @@ const variables = () => {
             fontSize="5.6444px"
             strokeWidth={0.47057}
           >
-            {"1"}
+            {datos_generales.sistema}
           </tspan>
         </text>
         <text
@@ -252,7 +306,7 @@ const variables = () => {
             fontSize="5.6444px"
             strokeWidth={0.47057}
           >
-            {"GENERAL ELECTRIC"}
+            {datos_generales.marca}
           </tspan>
         </text>
         <text
@@ -280,7 +334,7 @@ const variables = () => {
             fontSize="5.6444px"
             strokeWidth={0.47057}
           >
-            {"MX 150"}
+            {datos_generales.modelo}
           </tspan>
         </text>
         <text
@@ -308,7 +362,7 @@ const variables = () => {
             fontSize="5.6444px"
             strokeWidth={0.47057}
           >
-            {"TABLEROS -2B"}
+            {datos_generales.ubicacion}
           </tspan>
         </text>
         <ellipse
@@ -317,6 +371,7 @@ const variables = () => {
           cy={127.34}
           rx={2.5726}
           ry={2.4137}
+          className = {botones_alarmas.rele_trans_auto}
           fillRule="evenodd"
           fill="#1bea77"
           opacity={0.88}
@@ -328,6 +383,7 @@ const variables = () => {
           cy={135.45}
           rx={2.5726}
           ry={2.4137}
+          className = {botones_alarmas.falla_auto}
           fillRule="evenodd"
           fill="#1bea77"
           opacity={0.88}
@@ -339,6 +395,7 @@ const variables = () => {
           cy={143.55}
           rx={2.5726}
           ry={2.4137}
+          className = {botones_alarmas.pos_f1}
           fillRule="evenodd"
           fill="#1bea77"
           opacity={0.88}
@@ -350,6 +407,7 @@ const variables = () => {
           cy={151.65}
           rx={2.5726}
           ry={2.4137}
+          className = {botones_alarmas.pos_f2}
           fillRule="evenodd"
           fill="#1bea77"
           opacity={0.88}
@@ -361,6 +419,7 @@ const variables = () => {
           cy={160.65}
           rx={2.5726}
           ry={2.4137}
+          className = {botones_alarmas.red_modbus}
           fillRule="evenodd"
           fill="#1bea77"
           opacity={0.88}
@@ -391,7 +450,7 @@ const variables = () => {
             fontSize="5.6444px"
             strokeWidth={0.26458}
           >
-            {"ON"}
+            {estados.est_equipo}
           </tspan>
         </text>
         <text
@@ -419,7 +478,7 @@ const variables = () => {
             fontSize="5.6444px"
             strokeWidth={0.26458}
           >
-            {"408.3"}
+            {estados.volt_f1}
           </tspan>
         </text>
         <text
@@ -447,7 +506,7 @@ const variables = () => {
             fontSize="5.6444px"
             strokeWidth={0.26458}
           >
-            {"ON"}
+            {estados.pres_f1}
           </tspan>
         </text>
         <text
@@ -475,7 +534,7 @@ const variables = () => {
             fontSize="5.6444px"
             strokeWidth={0.26458}
           >
-            {"OFF"}
+            {estados.pres_f2}
           </tspan>
         </text>
         <text
@@ -503,7 +562,7 @@ const variables = () => {
             fontSize="5.6444px"
             strokeWidth={0.26458}
           >
-            {"ON"}
+            {estados.pos_f1}
           </tspan>
         </text>
         <text
@@ -531,7 +590,7 @@ const variables = () => {
             fontSize="5.6444px"
             strokeWidth={0.26458}
           >
-            {"ON"}
+            {estados.pos_f2}
           </tspan>
         </text>
         <text
@@ -559,7 +618,7 @@ const variables = () => {
             fontSize="5.6444px"
             strokeWidth={0.26458}
           >
-            {"244"}
+            {estados.transf_f1}
           </tspan>
         </text>
         <text
@@ -587,7 +646,7 @@ const variables = () => {
             fontSize="5.6444px"
             strokeWidth={0.26458}
           >
-            {"249"}
+            {estados.transf_f2}
           </tspan>
         </text>
         <text
@@ -641,7 +700,7 @@ const variables = () => {
             fontSize="5.6444px"
             strokeWidth={0.26458}
           >
-            {"408.3 "}
+            {estados.volt_f2}
           </tspan>
         </text>
       </g>
@@ -650,4 +709,3 @@ const variables = () => {
     )
 }
 
-export default variables;

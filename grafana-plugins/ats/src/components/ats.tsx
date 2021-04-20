@@ -1,7 +1,48 @@
 import React from 'react'
-import Variables from 'components/variables/variables'
+import {Variables, DataAts} from 'components/variables/variables';
 
 const ats = () => {
+
+  let ats: DataAts = {
+
+    estados: {
+      est_equipo: '',
+      pres_f1: '',
+      pres_f2:'',
+      pos_f1: '',
+      pos_f2: '',
+      transf_f1: 0,
+      transf_f2: 0,
+      volt_f1: 0,
+      volt_f2: 0
+    },
+    botones_alarmas:{
+      rele_trans_auto:'',
+      falla_auto: '',
+      pos_f1: '',
+      pos_f2: '',
+      red_modbus: ''
+    },
+    datos_generales: {
+      fase: '1',
+      marca: '',
+      modelo: '',
+      sistema: '',
+      ubicacion: ''
+    },
+    datos_principales: {
+      volt_f1: 0,
+      volt_f2: 0,
+      total_transf: 0,
+      boton_ats: '',
+      nombre_ats:'',
+      boton_estado: '',
+      text_estado: '',
+    },
+
+
+  }
+
     return (
 
         
@@ -481,7 +522,7 @@ const ats = () => {
       </g>
     </g>
 
-    <Variables/>
+    
 
     <g id="layer8">
       <image
@@ -2014,7 +2055,7 @@ const ats = () => {
             fontSize="5.6444px"
             strokeWidth={0.47057}
           >
-            {"AUTO TRANS RELAY:"}
+            {"RELE TRANSFERENCIA AUTO. :"}
           </tspan>
           <tspan
             id="tspan3679"
@@ -2025,7 +2066,7 @@ const ats = () => {
             fontSize="5.6444px"
             strokeWidth={0.47057}
           >
-            {"ATS NOT IN AUTO:"}
+            {"FALL AUTOMATICO:"}
           </tspan>
           <tspan
             id="tspan3683"
@@ -2058,7 +2099,7 @@ const ats = () => {
             fontSize="5.6444px"
             strokeWidth={0.47057}
           >
-            {"MODBUS STATUS:"}
+            {"RED MODBUS :"}
           </tspan>
         </text>
         <text
@@ -2231,7 +2272,15 @@ const ats = () => {
           </tspan>
         </text>
       </g>
+      <Variables
+      estados = {ats.estados}
+      botones_alarmas = {ats.botones_alarmas}
+      datos_generales = {ats.datos_generales}
+      datos_principales = {ats.datos_principales}
+    
+    />
     </g>
+
   </svg>
 
 
