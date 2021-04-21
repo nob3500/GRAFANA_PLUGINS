@@ -1500,7 +1500,7 @@ const pqm = ({
               paintOrder="markers stroke fill"
             />
             <path
-              id="rect2077"
+              /*id="rect2077"
               fillRule="evenodd"
               fill="#10677d"
               opacity={0.75}
@@ -1545,7 +1545,7 @@ const pqm = ({
               fill="#10677d"
               opacity={0.75}
               paintOrder="markers stroke fill"
-              d="M208.9 33.995H216.29240000000001V37.1828H208.9z"
+              d="M208.9 33.995H216.29240000000001V37.1828H208.9z"*/
             />
             <path
               id="path15126"
@@ -1872,8 +1872,8 @@ const pqm = ({
           >
             <tspan
               id="tspan6726"
-              x={292.78668}
-              y={132.75732}
+              x={292.68375}
+              y={145.40952}
               fill="#00aad4"
               fontFamily="Franklin Gothic Medium"
               fontSize="5.6444px"
@@ -2100,7 +2100,7 @@ const pqm = ({
               fontSize="6.5278px"
               strokeWidth={0.27199}
             >
-              {"POTENCIA REAL TOT:"}
+              {"ENERGIA TOT:"}
             </tspan>
             <tspan
               id="tspan1631"
@@ -2111,7 +2111,7 @@ const pqm = ({
               fontSize="6.5278px"
               strokeWidth={0.27199}
             >
-              {"POTENCIA APPT TOT:"}
+              {"POTENCIA APPT:"}
             </tspan>
           </text>
           <text
@@ -2391,15 +2391,17 @@ const pqm = ({
             strokeWidth={0.47057}
           >
             <tspan
-              id="tspan6726-8"
+              /*id="tspan6726-8"
               x={292.68375}
               y={145.40952}
               fill="#00aad4"
               fontFamily="Franklin Gothic Medium"
               fontSize="5.6444px"
               strokeWidth={0.47057}
+              VOLTAJE MAXIMO*/
+              
             >
-              {"VOLTAJE MAX. "}
+              {""}
             </tspan>
           </text>
           <text
@@ -2415,15 +2417,16 @@ const pqm = ({
             strokeWidth={0.47057}
           >
             <tspan
-              id="tspan6726-8-4"
+              /*id="tspan6726-8-4"
               x={292.58734}
               y={158.59866}
               fill="#00aad4"
               fontFamily="Franklin Gothic Medium"
               fontSize="5.6444px"
               strokeWidth={0.47057}
+              CORRIENTE MAX.*/
             >
-              {"CORRIENTE MAX."}
+              {""}
             </tspan>
           </text>
         </g>

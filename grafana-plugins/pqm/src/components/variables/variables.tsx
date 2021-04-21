@@ -110,8 +110,8 @@ export const Variables = ({
                 y={52.108124}
                 fill="#fff"
                 fontFamily="Franklin Gothic Medium"
-                fontSize="9.8778px"
-                fontWeight={700}
+                fontSize="8.8778px"
+                fontWeight={525}
                 strokeWidth={0.28918}
               >
                 {datos_principales.pot_real}
@@ -185,12 +185,12 @@ export const Variables = ({
             >
               <tspan
                 id="tspan1960-4"
-                x={208.58806}
+                x={203.58806}
                 y={52.141777}
                 fill="#fff"
                 fontFamily="Franklin Gothic Medium"
-                fontSize="9.8778px"
-                fontWeight={700}
+                fontSize="8.8778px"
+                fontWeight={525}
                 strokeWidth={0.28918}
               >
                 {datos_principales.frecuencia}
@@ -349,7 +349,7 @@ export const Variables = ({
             <ellipse
               id="pqm_modbus"
               cx={362.56}
-              cy={132.21}
+              cy={145.43}
               rx={2.5726}
               ry={2.4137}
               className = {botones_alarmas.red_modbus}
@@ -426,7 +426,7 @@ export const Variables = ({
             >
               <tspan
                 id="tspan6736"
-                x={569.34058}
+                x={565.34058}
                 y={129.71672}
                 fill="#fff"
                 fontFamily="Franklin Gothic Medium"
@@ -478,7 +478,8 @@ export const Variables = ({
             >
               <tspan
                 id="tspan6736-3"
-                x={569.34058}
+                x={555.34058}
+                //x={569.34058}
                 y={121.75623}
                 fill="#fff"
                 fontFamily="Franklin Gothic Medium"
@@ -645,7 +646,7 @@ export const Variables = ({
               </tspan>
             </text>
             <ellipse
-              id="pqm_voltmax-2"
+              /*id="pqm_voltmax-2"
               cx={362.56}
               cy={145.43}
               rx={2.5726}
@@ -654,10 +655,10 @@ export const Variables = ({
               fillRule="evenodd"
               fill="red"
               opacity={0.88}
-              paintOrder="markers stroke fill"
+              paintOrder="markers stroke fill"*/
             />
             <ellipse
-              id="pqm_corrmax"
+              /*id="pqm_corrmax"
               cx={362.56}
               cy={158.66}
               rx={2.5726}
@@ -666,7 +667,7 @@ export const Variables = ({
               fillRule="evenodd"
               fill="red"
               opacity={0.88}
-              paintOrder="markers stroke fill"
+              paintOrder="markers stroke fill"*/
             />
           </g>
         </g>
