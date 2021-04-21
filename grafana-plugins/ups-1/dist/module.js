@@ -1184,6 +1184,7 @@ var dataUps = function dataUps(data, options) {
     Principal: {
       Estado: '',
       Estado_class: styles_modoControlStyles__WEBPACK_IMPORTED_MODULE_0__["default"].SinConexion,
+      Botón: styles_modoControlStyles__WEBPACK_IMPORTED_MODULE_0__["default"].SinConexion,
       InVolmax: 0,
       OutVolt: 0,
       VBateria: 0
@@ -1229,7 +1230,8 @@ var dataUps = function dataUps(data, options) {
   ups.Alarmas.Bypass = BYPASS_ON_OFF === 1 ? styles_alarmsStyles__WEBPACK_IMPORTED_MODULE_1__["default"].on : styles_alarmsStyles__WEBPACK_IMPORTED_MODULE_1__["default"].off;
   ups.Alarmas.Inversor = INVERTER_ON_OFF === 1 ? styles_modoControlStyles__WEBPACK_IMPORTED_MODULE_0__["default"].On : styles_modoControlStyles__WEBPACK_IMPORTED_MODULE_0__["default"].SinConexion;
   ups.Alarmas.Rectificador = RECTIFIER_ON_OFF === 1 ? styles_modoControlStyles__WEBPACK_IMPORTED_MODULE_0__["default"].On : styles_modoControlStyles__WEBPACK_IMPORTED_MODULE_0__["default"].SinConexion;
-  ups.Principal.Estado_class = INVERTER_ON_OFF === 1 ? styles_estadoStyles__WEBPACK_IMPORTED_MODULE_2__["default"].ok : styles_estadoStyles__WEBPACK_IMPORTED_MODULE_2__["default"].alarma;
+  ups.Principal.Estado_class = INVERTER_ON_OFF === 1 ? styles_estadoStyles__WEBPACK_IMPORTED_MODULE_2__["default"].ok : styles_estadoStyles__WEBPACK_IMPORTED_MODULE_2__["default"].sinConexion;
+  ups.Principal.Botón = INVERTER_ON_OFF === 1 ? styles_modoControlStyles__WEBPACK_IMPORTED_MODULE_0__["default"].On : styles_estadoStyles__WEBPACK_IMPORTED_MODULE_2__["default"].sinConexion;
   console.log(ups);
   return ups;
 };
