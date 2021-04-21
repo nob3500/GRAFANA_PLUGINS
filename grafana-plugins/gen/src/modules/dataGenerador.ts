@@ -1,4 +1,4 @@
-import { PanelData } from '@grafana/data';
+import { PanelData, InterpolateFunction } from '@grafana/data';
 import { SimpleOptions } from 'types';
 
 import { DataGenerador } from 'components/variables/variables';
@@ -6,9 +6,9 @@ import modoControlStyles from 'styles/modoControlStyles';
 import alarmasStyles from 'styles/alarmsStyles';
 import estadoStyles from 'styles/estadoStyles';
 
-const dataGenerador = (data: PanelData, options: SimpleOptions): DataGenerador => {
-  console.log('data: ', data);
-  console.log('options: ', options);
+const dataGenerador = (data: PanelData, options: SimpleOptions, replaceVariables: InterpolateFunction): DataGenerador => {
+  // console.log('data: ', data);
+  // console.log('options: ', options);
 
   let MANUAL_MODE = data.series.find(({ name }) => name?.includes('DATA.MANUAL_MODE.VALUE'))?.fields[1].state?.calcs
     ?.lastNotNull;
@@ -100,7 +100,7 @@ const dataGenerador = (data: PanelData, options: SimpleOptions): DataGenerador =
   let US_WARN_ALM = data.series.find(({ name }) => name?.includes('DATA.US_WARN_ALM.VALUE'))?.fields[1].state?.calcs
     ?.lastNotNull;
 
-  // ---------------------------------------------------------------
+  // -------------------------------------------------------------
   let generador: DataGenerador = {
     alternador: {
       corriente: 0,
@@ -179,6 +179,11 @@ const dataGenerador = (data: PanelData, options: SimpleOptions): DataGenerador =
     temp: COOL_TEMP,
     voltaje: 0,
   };
+
+  // ------------------------INTERPOLACION DE VARIABLES-------------
+  let variableNombre = replaceVariables('$EQUIPO')
+
+  generador.nombre_gen = variableNombre !== '$NOMBRE' ? variableNombre : options.nombre
 
   // ---------------------------------------------------------------
   let corriente = (L1_CUR + L2_CUR + L3_CUR) / 3;
@@ -263,7 +268,7 @@ const dataGenerador = (data: PanelData, options: SimpleOptions): DataGenerador =
   generador.botones_Alarmas.baja_temp.war = HCT_WARN_ALM === 1 ? alarmasStyles.on : alarmasStyles.off;
   generador.botones_Alarmas.baja_temp.sht = HCT_SHUTD_ALM === 1 ? alarmasStyles.on : alarmasStyles.off;
 
-  console.log(generador);
+  // console.log(generador);
 
   return generador;
 };

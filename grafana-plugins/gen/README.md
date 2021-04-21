@@ -1,4 +1,22 @@
-# Variables Generador
+# Indices a aplicar
+
+- dc_gye_gen_gw1a_data
+- dc_gye_gen_gw5a_data
+
+# Equipos
+
+- GEN_1A_1
+- GEN_1A_2
+- GEN_1A_3
+- GEN_2A_1
+- GEN_2A_2
+- GEN_2A_3
+
+# Variables de Interpolacion Plugin
+
+- EQUIPO
+
+# Variables Datasouse Generador
 
 DATA.MANUAL_MODE.VALUE
 DATA.STOP_MODE.VALUE

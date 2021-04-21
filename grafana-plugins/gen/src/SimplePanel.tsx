@@ -11,11 +11,11 @@ import dataGenerador from 'modules/dataGenerador';
 
 interface Props extends PanelProps<SimpleOptions> {}
 
-export const SimplePanel: React.FC<Props> = ({ options, data, width, height }) => {
+export const SimplePanel: React.FC<Props> = ({ options, data, width, height, replaceVariables }) => {
   //const theme = useTheme();
   const styles = getStyles();
 
-  let generador = dataGenerador(data, options);
+  let generador = dataGenerador(data, options, replaceVariables);
 
   return (
     <div
