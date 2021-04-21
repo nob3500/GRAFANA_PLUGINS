@@ -440,6 +440,7 @@ var Variables = function Variables(_a) {
     id: "estado_eq",
     fillRule: "evenodd",
     fill: "url(#linearGradient4474)",
+    className: Principal.Estado_class,
     strokeWidth: 0.26219,
     d: "M99.569 15.178H157.60399999999998V33.229H99.569z"
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("text", {
@@ -564,17 +565,20 @@ var Variables = function Variables(_a) {
     fill: "#0f0"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("path", {
     id: "path15781",
-    d: "M213.68 169.15a5.861 5.861 0 00-4.066 1.662 5.7 5.7 0 00-1.684 4.01c0 1.484.62 2.96 1.684 4.01a5.86 5.86 0 004.066 1.662 5.861 5.861 0 004.066-1.662 5.7 5.7 0 001.684-4.01 5.7 5.7 0 00-1.684-4.01 5.86 5.86 0 00-4.066-1.662zm0 .835a5.03 5.03 0 013.475 1.42c.904.891 1.435 2.158 1.435 3.417s-.531 2.525-1.435 3.417a5.03 5.03 0 01-3.475 1.42 5.03 5.03 0 01-3.475-1.42c-.904-.892-1.435-2.159-1.435-3.417s.531-2.526 1.435-3.418a5.03 5.03 0 013.475-1.42z"
+    d: "M213.68 169.15a5.861 5.861 0 00-4.066 1.662 5.7 5.7 0 00-1.684 4.01c0 1.484.62 2.96 1.684 4.01a5.86 5.86 0 004.066 1.662 5.861 5.861 0 004.066-1.662 5.7 5.7 0 001.684-4.01 5.7 5.7 0 00-1.684-4.01 5.86 5.86 0 00-4.066-1.662zm0 .835a5.03 5.03 0 013.475 1.42c.904.891 1.435 2.158 1.435 3.417s-.531 2.525-1.435 3.417a5.03 5.03 0 01-3.475 1.42 5.03 5.03 0 01-3.475-1.42c-.904-.892-1.435-2.159-1.435-3.417s.531-2.526 1.435-3.418a5.03 5.03 0 013.475-1.42z",
+    className: Principal.Estado_class
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("path", {
     id: "path2489",
     transform: "translate(123.93 125.48) scale(.14885)",
     d: "M601.87 320.96c.063-1.312 2.784-1.358 2.69.07-.033.121 0 9.401 0 9.401-.347 1.078-2.153 1.292-2.713 0z",
-    filter: "url(#filter2703)"
+    filter: "url(#filter2703)",
+    className: Principal.Estado_class
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("path", {
     id: "path2649",
     transform: "translate(123.93 125.48) scale(.14885)",
     d: "M597.57 325.63c1.697.335 1.59 1.335 1.404 2.364-1.343 1.49-2.998 2.762-2.868 5.287.434 2.218.972 4.389 3.417 5.673 2.376 1.244 4.814 1.155 6.562.177 1.888-1.079 3.769-3.085 3.728-5.85-.088-2.4-1.275-4.226-3.313-5.607.084-.983-.099-2.122 2.022-1.917 2.273 1.96 4.04 4.21 3.95 7.536 0 3.557-1.8 6.427-5.653 8.51-2.77 1.344-5.445.865-8.09-.167-2.57-1.48-5.569-3.356-5.217-9.529.748-3.306 2.154-5.363 4.058-6.477z",
-    filter: "url(#filter2663)"
+    filter: "url(#filter2663)",
+    className: Principal.Estado_class
   })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("text", {
     id: "st",
     x: 220.72766,
@@ -591,11 +595,11 @@ var Variables = function Variables(_a) {
     wordSpacing: 0
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tspan", {
     id: "tspan5848",
-    x: 220.72766,
+    x: 222.72766,
     y: 179.35898,
     fill: "#fff",
     fontFamily: "Franklin Gothic Medium",
-    fontSize: "7.0556px",
+    fontSize: "6.0556px",
     strokeWidth: 0.26458
   }, Principal.Estado)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("text", {
     id: "fase",
@@ -986,7 +990,8 @@ var Variables = function Variables(_a) {
     rx: 1.8876,
     ry: 1.5368,
     fill: "#fff",
-    filter: "url(#filter2963-1)",
+    //className= { Alarmas.Inversor }
+    filter: "url(#filter2963-1-3)",
     opacity: 0.592
   })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("g", {
     id: "g1414-8",
@@ -1010,7 +1015,7 @@ var Variables = function Variables(_a) {
     rx: 1.8876,
     ry: 1.5368,
     fill: "#fff",
-    filter: "url(#filter2963-14)",
+    filter: "url(#filter2963-1-3)",
     opacity: 0.592
   })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("g", {
     id: "g1414-2-8",
@@ -1095,9 +1100,12 @@ var plugin = new _grafana_data__WEBPACK_IMPORTED_MODULE_0__["PanelPlugin"](_Simp
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var styles_alarmsStyles__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! styles/alarmsStyles */ "./styles/alarmsStyles.ts");
-//import modoControlStyles from 'styles/modoControlStyles';
- //import estadoStyles from 'styles/estadoStyles';
+/* harmony import */ var styles_modoControlStyles__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! styles/modoControlStyles */ "./styles/modoControlStyles.ts");
+/* harmony import */ var styles_alarmsStyles__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! styles/alarmsStyles */ "./styles/alarmsStyles.ts");
+/* harmony import */ var styles_estadoStyles__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! styles/estadoStyles */ "./styles/estadoStyles.ts");
+
+
+
 
 var dataUps = function dataUps(data, options) {
   var _a, _b, _c, _d, _e, _f, _g, _h, _j, _k, _l, _m, _o, _p, _q, _r, _s, _t, _u, _v, _w, _x, _y, _z, _0, _1, _2, _3, _4, _5, _6, _7, _8, _9, _10, _11, _12, _13, _14, _15, _16, _17, _18, _19, _20;
@@ -1175,15 +1183,16 @@ var dataUps = function dataUps(data, options) {
     },
     Principal: {
       Estado: '',
+      Estado_class: styles_modoControlStyles__WEBPACK_IMPORTED_MODULE_0__["default"].SinConexion,
       InVolmax: 0,
       OutVolt: 0,
       VBateria: 0
     },
     Alarmas: {
-      Presente: '',
-      Inversor: '',
-      Bypass: '',
-      Rectificador: ''
+      Presente: styles_estadoStyles__WEBPACK_IMPORTED_MODULE_2__["default"].sinConexion,
+      Inversor: styles_modoControlStyles__WEBPACK_IMPORTED_MODULE_0__["default"].SinConexion,
+      Bypass: styles_modoControlStyles__WEBPACK_IMPORTED_MODULE_0__["default"].SinConexion,
+      Rectificador: styles_modoControlStyles__WEBPACK_IMPORTED_MODULE_0__["default"].SinConexion
     },
     Parametros: {
       VBateria: 0,
@@ -1216,9 +1225,11 @@ var dataUps = function dataUps(data, options) {
   ups.Parametros.PorcenCarga2 = Number.parseFloat(OUTPUT_PERCENT_LOAD_2 === null || OUTPUT_PERCENT_LOAD_2 === void 0 ? void 0 : OUTPUT_PERCENT_LOAD_2.toFixed(2));
   ups.Parametros.PorcenCarga3 = Number.parseFloat(OUTPUT_PERCENT_LOAD_3 === null || OUTPUT_PERCENT_LOAD_3 === void 0 ? void 0 : OUTPUT_PERCENT_LOAD_3.toFixed(2)); //ALARMAS
 
-  ups.Alarmas.Presente = ALARMS_PRESENT === 1 ? styles_alarmsStyles__WEBPACK_IMPORTED_MODULE_0__["default"].on : styles_alarmsStyles__WEBPACK_IMPORTED_MODULE_0__["default"].off;
-  ups.Alarmas.Bypass = BYPASS_ON_OFF === 1 ? styles_alarmsStyles__WEBPACK_IMPORTED_MODULE_0__["default"].on : styles_alarmsStyles__WEBPACK_IMPORTED_MODULE_0__["default"].off;
-  ups.Alarmas.Rectificador = RECTIFIER_ON_OFF === 1 ? styles_alarmsStyles__WEBPACK_IMPORTED_MODULE_0__["default"].on : styles_alarmsStyles__WEBPACK_IMPORTED_MODULE_0__["default"].off;
+  ups.Alarmas.Presente = ALARMS_PRESENT === 1 ? styles_alarmsStyles__WEBPACK_IMPORTED_MODULE_1__["default"].on : styles_alarmsStyles__WEBPACK_IMPORTED_MODULE_1__["default"].off;
+  ups.Alarmas.Bypass = BYPASS_ON_OFF === 1 ? styles_alarmsStyles__WEBPACK_IMPORTED_MODULE_1__["default"].on : styles_alarmsStyles__WEBPACK_IMPORTED_MODULE_1__["default"].off;
+  ups.Alarmas.Inversor = INVERTER_ON_OFF === 1 ? styles_modoControlStyles__WEBPACK_IMPORTED_MODULE_0__["default"].On : styles_modoControlStyles__WEBPACK_IMPORTED_MODULE_0__["default"].SinConexion;
+  ups.Alarmas.Rectificador = RECTIFIER_ON_OFF === 1 ? styles_modoControlStyles__WEBPACK_IMPORTED_MODULE_0__["default"].On : styles_modoControlStyles__WEBPACK_IMPORTED_MODULE_0__["default"].SinConexion;
+  ups.Principal.Estado_class = INVERTER_ON_OFF === 1 ? styles_estadoStyles__WEBPACK_IMPORTED_MODULE_2__["default"].ok : styles_estadoStyles__WEBPACK_IMPORTED_MODULE_2__["default"].alarma;
   console.log(ups);
   return ups;
 };
@@ -1249,6 +1260,67 @@ var getStyles = Object(_grafana_ui__WEBPACK_IMPORTED_MODULE_1__["stylesFactory"]
   return {
     off: Object(emotion__WEBPACK_IMPORTED_MODULE_2__["css"])(templateObject_2 || (templateObject_2 = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__makeTemplateObject"])(["\n      fill: #999;\n    "], ["\n      fill: #999;\n    "]))),
     on: Object(emotion__WEBPACK_IMPORTED_MODULE_2__["css"])(templateObject_3 || (templateObject_3 = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__makeTemplateObject"])(["\n      fill: red;\n      animation: ", " 1s ease infinite;\n    "], ["\n      fill: red;\n      animation: ", " 1s ease infinite;\n    "])), parpadeo)
+  };
+});
+var styles = getStyles();
+/* harmony default export */ __webpack_exports__["default"] = (styles);
+var templateObject_1, templateObject_2, templateObject_3;
+
+/***/ }),
+
+/***/ "./styles/estadoStyles.ts":
+/*!********************************!*\
+  !*** ./styles/estadoStyles.ts ***!
+  \********************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "../node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _grafana_ui__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @grafana/ui */ "@grafana/ui");
+/* harmony import */ var _grafana_ui__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_grafana_ui__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var emotion__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! emotion */ "emotion");
+/* harmony import */ var emotion__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(emotion__WEBPACK_IMPORTED_MODULE_2__);
+
+
+
+var parpadeo = Object(emotion__WEBPACK_IMPORTED_MODULE_2__["keyframes"])(templateObject_1 || (templateObject_1 = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__makeTemplateObject"])(["\n  0% { opacity: 1.0; };\n  100% { opacity: 0.0; };\n"], ["\n  0% { opacity: 1.0; };\n  100% { opacity: 0.0; };\n"])));
+var getStyles = Object(_grafana_ui__WEBPACK_IMPORTED_MODULE_1__["stylesFactory"])(function () {
+  return {
+    sinConexion: Object(emotion__WEBPACK_IMPORTED_MODULE_2__["css"])(templateObject_2 || (templateObject_2 = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__makeTemplateObject"])(["\n      fill: #999;\n    "], ["\n      fill: #999;\n    "]))),
+    alarma: Object(emotion__WEBPACK_IMPORTED_MODULE_2__["css"])(templateObject_3 || (templateObject_3 = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__makeTemplateObject"])(["\n      fill: red;\n      animation: ", " 1s ease infinite;\n    "], ["\n      fill: red;\n      animation: ", " 1s ease infinite;\n    "])), parpadeo),
+    ok: Object(emotion__WEBPACK_IMPORTED_MODULE_2__["css"])(templateObject_4 || (templateObject_4 = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__makeTemplateObject"])(["\n      fill: url(#linearGradient4474);\n    "], ["\n      fill: url(#linearGradient4474);\n    "])))
+  };
+});
+var styles = getStyles();
+/* harmony default export */ __webpack_exports__["default"] = (styles);
+var templateObject_1, templateObject_2, templateObject_3, templateObject_4;
+
+/***/ }),
+
+/***/ "./styles/modoControlStyles.ts":
+/*!*************************************!*\
+  !*** ./styles/modoControlStyles.ts ***!
+  \*************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "../node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _grafana_ui__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @grafana/ui */ "@grafana/ui");
+/* harmony import */ var _grafana_ui__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_grafana_ui__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var emotion__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! emotion */ "emotion");
+/* harmony import */ var emotion__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(emotion__WEBPACK_IMPORTED_MODULE_2__);
+
+
+
+var getStyles = Object(_grafana_ui__WEBPACK_IMPORTED_MODULE_1__["stylesFactory"])(function () {
+  return {
+    SinConexion: Object(emotion__WEBPACK_IMPORTED_MODULE_2__["css"])(templateObject_1 || (templateObject_1 = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__makeTemplateObject"])(["\n      fill: #999;\n    "], ["\n      fill: #999;\n    "]))),
+    On: Object(emotion__WEBPACK_IMPORTED_MODULE_2__["css"])(templateObject_2 || (templateObject_2 = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__makeTemplateObject"])(["\n      fill: green;\n    "], ["\n      fill: green;\n    "]))),
+    Off: Object(emotion__WEBPACK_IMPORTED_MODULE_2__["css"])(templateObject_3 || (templateObject_3 = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__makeTemplateObject"])(["\n      fill: yellow;\n    "], ["\n      fill: yellow;\n    "])))
   };
 });
 var styles = getStyles();

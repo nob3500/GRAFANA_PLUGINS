@@ -9,8 +9,8 @@ type DatosGenerales = {
   Ubicacion: string;
 };
 
-type Compresor = {
-  Estado: string;
+type Compresor= {
+  EstadoComp: string;
   TemperaturaAceite: number;
   PresionSuccion: number;
   PresionDescarga: number;
@@ -25,6 +25,8 @@ type Alarmas = {
 
 type Principal = {
   Estado: string;
+  Estado_class: string;
+  Botón: string;
   TemperaturaSuministro: number;
   TemperaturaRetorno: number;
   Corriente: number;
@@ -387,7 +389,7 @@ export const Variables = ({ DatosGenerales,Compresor1, Compresor2, Alarmas, Prin
           cy={55.365}
           rx={2.5726}
           ry={2.4137}
-          className={ Compresor1.Estado }
+          className={ Compresor1.EstadoComp }
           fillRule="evenodd"
           fill="#1bea77"
           opacity={0.88}
@@ -510,24 +512,28 @@ export const Variables = ({ DatosGenerales,Compresor1, Compresor2, Alarmas, Prin
           <path
             id="path15781"
             d="M213.68 169.15a5.861 5.861 0 00-4.066 1.662 5.7 5.7 0 00-1.684 4.01c0 1.484.62 2.96 1.684 4.01a5.86 5.86 0 004.066 1.662 5.861 5.861 0 004.066-1.662 5.7 5.7 0 001.684-4.01 5.7 5.7 0 00-1.684-4.01 5.86 5.86 0 00-4.066-1.662zm0 .835a5.03 5.03 0 013.475 1.42c.904.891 1.435 2.158 1.435 3.417s-.531 2.525-1.435 3.417a5.03 5.03 0 01-3.475 1.42 5.03 5.03 0 01-3.475-1.42c-.904-.892-1.435-2.159-1.435-3.417s.531-2.526 1.435-3.418a5.03 5.03 0 013.475-1.42z"
+            className = {Principal.Botón}
           />
           <path
             id="path2489"
             transform="translate(123.93 125.48) scale(.14885)"
             d="M601.87 320.96c.063-1.312 2.784-1.358 2.69.07-.033.121 0 9.401 0 9.401-.347 1.078-2.153 1.292-2.713 0z"
-            filter="url(#filter2703)"
+            filter= "url(#filter2703)"
+            className = {Principal.Botón}
           />
           <path
             id="path2649"
             transform="translate(123.93 125.48) scale(.14885)"
             d="M597.57 325.63c1.697.335 1.59 1.335 1.404 2.364-1.343 1.49-2.998 2.762-2.868 5.287.434 2.218.972 4.389 3.417 5.673 2.376 1.244 4.814 1.155 6.562.177 1.888-1.079 3.769-3.085 3.728-5.85-.088-2.4-1.275-4.226-3.313-5.607.084-.983-.099-2.122 2.022-1.917 2.273 1.96 4.04 4.21 3.95 7.536 0 3.557-1.8 6.427-5.653 8.51-2.77 1.344-5.445.865-8.09-.167-2.57-1.48-5.569-3.356-5.217-9.529.748-3.306 2.154-5.363 4.058-6.477z"
-            filter="url(#filter2663)"
+            filter= "url(#filter2663)"
+            className = {Principal.Botón}
           />
         </g>
         <path
           id="estado_eq"
           fillRule="evenodd"
           fill="url(#linearGradient4474)"
+          className = {Principal.Estado_class}
           strokeWidth={0.26219}
           d="M101.52 11.121H159.555V29.171999999999997H101.52z"
         />
@@ -663,7 +669,7 @@ export const Variables = ({ DatosGenerales,Compresor1, Compresor2, Alarmas, Prin
           cy={119.42}
           rx={2.5726}
           ry={2.4137}
-          className={ Compresor2.Estado }
+          className={ Compresor2.EstadoComp }
           fillRule="evenodd"
           fill="#1bea77"
           opacity={0.88}

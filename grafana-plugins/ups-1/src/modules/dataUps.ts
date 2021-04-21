@@ -2,9 +2,9 @@ import { PanelData } from '@grafana/data';
 import { SimpleOptions } from 'types';
 
 import { DataUps } from 'components/variables';
-//import modoControlStyles from 'styles/modoControlStyles';
+import modoControlStyles from 'styles/modoControlStyles';
 import alarmsStyles from 'styles/alarmsStyles';
-//import estadoStyles from 'styles/estadoStyles';
+import estadoStyles from 'styles/estadoStyles';
 
 const dataUps = (data: PanelData, options: SimpleOptions): DataUps => {  
     console.log('data: ', data);
@@ -53,15 +53,16 @@ let ups: DataUps ={
     },
     Principal: {
         Estado: '',
+        Estado_class: modoControlStyles.SinConexion,
         InVolmax: 0,
         OutVolt: 0,
         VBateria: 0,
     },
     Alarmas: {
-        Presente: '',
-        Inversor: '',
-        Bypass: '',
-        Rectificador: '',
+        Presente: estadoStyles.sinConexion,
+        Inversor: modoControlStyles.SinConexion,
+        Bypass: modoControlStyles.SinConexion,
+        Rectificador: modoControlStyles.SinConexion
     },
     Parametros: {
         VBateria: 0,
@@ -96,8 +97,9 @@ ups.Parametros.PorcenCarga3 = Number.parseFloat(OUTPUT_PERCENT_LOAD_3?.toFixed(2
 //ALARMAS
 ups.Alarmas.Presente = ALARMS_PRESENT === 1? alarmsStyles.on : alarmsStyles.off;
 ups.Alarmas.Bypass = BYPASS_ON_OFF === 1? alarmsStyles.on : alarmsStyles.off;
-ups.Alarmas.Rectificador = RECTIFIER_ON_OFF === 1? alarmsStyles.on : alarmsStyles.off;
-
+ups.Alarmas.Inversor = INVERTER_ON_OFF === 1? modoControlStyles.On : modoControlStyles.SinConexion;
+ups.Alarmas.Rectificador = RECTIFIER_ON_OFF === 1? modoControlStyles.On : modoControlStyles.SinConexion;
+ups.Principal.Estado_class = INVERTER_ON_OFF === 1? estadoStyles.ok : estadoStyles.alarma
 
     console.log(ups);
 
