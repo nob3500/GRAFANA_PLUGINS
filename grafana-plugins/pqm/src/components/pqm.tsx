@@ -1,45 +1,9 @@
-import React from 'react'
+import React from 'react';
 import {Variables, DataPqm} from 'components/variables/variables';
 
-const pqm = () => {
-  let pqm: DataPqm = {
-
-    estados:{
-      volt_an: 0,
-      volt_bn: 0,
-      volt_cn: 0,
-      volt_ab: 0,
-      volt_bc: 0,
-      volt_ca: 0,
-      cur_a: 0,
-      cur_b: 0,
-      cur_c: 0,
-      p_real_t: 0,
-      p_apt_t:0
-
-    },
-    botones_alarmas:{
-      red_modbus: '',
-      volt_max: '',
-      corr_max: ''
-    },
-    datos_generales: {
-      fase: '1',
-      marca: '',
-      modelo: '',
-      sistema: '',
-      ubicacion: ''
-    },
-    datos_principales: {
-      pot_real: 0,
-      frecuencia: 0,
-      factor_p: 0,
-      boton_pqm: '',
-      nombre_pqm:'', 
-      boton_estado: '',
-      text_estado:''
-    }
-  }
+const pqm = ({
+  estados,botones_alarmas,datos_generales,datos_principales
+}: DataPqm) => {
     return (
         <svg
         id="svg8"
@@ -2465,10 +2429,10 @@ const pqm = () => {
         </g>
         
         <Variables
-          estados = {pqm.estados}
-          botones_alarmas = {pqm.botones_alarmas}
-          datos_generales = {pqm.datos_generales}
-          datos_principales = {pqm.datos_principales}
+          estados = {estados}
+          botones_alarmas = {botones_alarmas}
+          datos_generales = {datos_generales}
+          datos_principales = {datos_principales}
         />      
       </svg>
   

@@ -5,12 +5,17 @@ import { css, cx } from 'emotion';
 //import { stylesFactory, useTheme } from '@grafana/ui';
 import { stylesFactory } from '@grafana/ui';
 import Pqm from './components/pqm';
+import { DataPqm } from 'components/variables/variables'
+import dataPQM from 'modules/dataPQM'
 
 interface Props extends PanelProps<SimpleOptions> {}
 
 export const SimplePanel: React.FC<Props> = ({ options, data, width, height }) => {
   //const theme = useTheme();
   const styles = getStyles();
+
+  let pqm: DataPqm = dataPQM(data, options)
+
   return (
     <div
       className={cx(
@@ -21,9 +26,12 @@ export const SimplePanel: React.FC<Props> = ({ options, data, width, height }) =
         `
       )}
     >
-      
-  <Pqm/>
-      
+      <Pqm
+        estados = {pqm.estados}
+        botones_alarmas = {pqm.botones_alarmas}
+        datos_generales = {pqm.datos_generales}
+        datos_principales = {pqm.datos_principales}
+      />
     </div>
   );
 };
