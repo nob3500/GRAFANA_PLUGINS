@@ -1090,7 +1090,7 @@ var dataPQM = function dataPQM(data, options) {
   var VOL_VCN = (_20 = (_19 = (_18 = data.series.find(function (_a) {
     var name = _a.name;
     return name === null || name === void 0 ? void 0 : name.includes('DATA.VOL_VCN.VALUE');
-  })) === null || _18 === void 0 ? void 0 : _18.fields[1].state) === null || _19 === void 0 ? void 0 : _19.calcs) === null || _20 === void 0 ? void 0 : _20.lastNotNull; //------------------
+  })) === null || _18 === void 0 ? void 0 : _18.fields[1].state) === null || _19 === void 0 ? void 0 : _19.calcs) === null || _20 === void 0 ? void 0 : _20.lastNotNull; //-------------------------------------------------------------------------------------------//
 
   var pqm = {
     estados: {
@@ -1128,79 +1128,24 @@ var dataPQM = function dataPQM(data, options) {
       text_estado: ''
     }
   }; // --------------------------ESTADOS----------------------------------//
-  // let volt_an = VOL_VAN ; //pqm.estados.volt_an = VOL_VAN
 
-  if (VOL_VAN !== undefined) {
-    pqm.estados.volt_an = Number.parseFloat(VOL_VAN.toFixed(2));
-  } // pqm.estados.volt_an = Number.parseFloat(VOL_VAN?.toFixed(2));
-
-
-  var volt_bn = VOL_VBN; //pqm.estados.volt_bn = VOL_VBN
-
-  if (VOL_VBN !== undefined) {
-    pqm.estados.volt_bn = Number.parseFloat(volt_bn.toFixed(2));
-  }
-
-  var volt_cn = VOL_VCN; // pqm.estados.volt_cn = VOL_VCN
-
-  if (VOL_VCN !== undefined) {
-    pqm.estados.volt_cn = Number.parseFloat(volt_cn.toFixed(2));
-  }
-
-  var volt_ab = VOL_VAB; //pqm.estados.volt_ab = VOL_VAB
-
-  if (VOL_VAB !== undefined) {
-    pqm.estados.volt_ab = Number.parseFloat(volt_ab.toFixed(2));
-  }
-
-  var volt_bc = VOL_VBC; //pqm.estados.volt_bc = VOL_VBC
-
-  if (VOL_VBC !== undefined) {
-    pqm.estados.volt_bc = Number.parseFloat(volt_bc.toFixed(2));
-  }
-
-  var volt_ca = VOL_VCA; //pqm.estados.volt_ca = VOL_VCA
-
-  if (VOL_VCA) {
-    pqm.estados.volt_ca = Number.parseFloat(volt_ca.toFixed(2));
-  }
-
-  var cur_a = CURR_A; //pqm.estados.cur_a = CURR_A
-
-  if (CURR_A !== undefined) {
-    pqm.estados.cur_a = Number.parseFloat(cur_a.toFixed(2));
-  }
-
-  var cur_b = CURR_B; //pqm.estados.cur_b = CURR_B
-
-  if (CURR_B !== undefined) {
-    pqm.estados.cur_b = Number.parseFloat(cur_b.toFixed(2));
-  }
-
-  var cur_c = CURR_C; //pqm.estados.cur_c = CURR_C
-
-  if (CURR_C !== undefined) {
-    pqm.estados.cur_c = Number.parseFloat(cur_c.toFixed(2));
-  }
+  pqm.estados.volt_an = Number.parseFloat(VOL_VAN === null || VOL_VAN === void 0 ? void 0 : VOL_VAN.toFixed(2));
+  pqm.estados.volt_bn = Number.parseFloat(VOL_VBN === null || VOL_VBN === void 0 ? void 0 : VOL_VBN.toFixed(2));
+  pqm.estados.volt_cn = Number.parseFloat(VOL_VCN === null || VOL_VCN === void 0 ? void 0 : VOL_VCN.toFixed(2));
+  pqm.estados.volt_ab = Number.parseFloat(VOL_VAB === null || VOL_VAB === void 0 ? void 0 : VOL_VAB.toFixed(2));
+  pqm.estados.volt_bc = Number.parseFloat(VOL_VBC === null || VOL_VBC === void 0 ? void 0 : VOL_VBC.toFixed(2));
+  pqm.estados.volt_ca = Number.parseFloat(VOL_VCA === null || VOL_VCA === void 0 ? void 0 : VOL_VCA.toFixed(2));
+  pqm.estados.cur_a = Number.parseFloat(CURR_A === null || CURR_A === void 0 ? void 0 : CURR_A.toFixed(2));
+  pqm.estados.cur_b = Number.parseFloat(CURR_B === null || CURR_B === void 0 ? void 0 : CURR_B.toFixed(2));
+  pqm.estados.cur_c = Number.parseFloat(CURR_C === null || CURR_C === void 0 ? void 0 : CURR_C.toFixed(2));
+  pqm.estados.p_real_t = Number.parseFloat(ENY_APP === null || ENY_APP === void 0 ? void 0 : ENY_APP.toFixed(2));
+  pqm.estados.p_apt_t = Number.parseFloat(APPPOW_3PHAS === null || APPPOW_3PHAS === void 0 ? void 0 : APPPOW_3PHAS.toFixed(2));
   /*
    let p_apt_t = APPPOW_3PHAS ; //pqm.estados.p_apt_t = APPPOW_3PHAS
    if (APPPOW_3PHAS !== undefined) {
      pqm.estados.p_apt_t = Number.parseFloat(p_apt_t.toFixed(2));
    }*/
-
-
-  var p_real_t = ENY_APP; //pqm.estados.p_apt_t = APPPOW_3PHAS
-
-  if (ENY_APP !== undefined) {
-    pqm.estados.p_real_t = Number.parseFloat(p_real_t.toFixed(2));
-  } //pqm.datos_principales.pot_reaL_ = Number.parseFloat(ENY_APP?.toFixed(2));
-
-  /*let text_estado = (VOL_VAB  + VOL_VAB  + VOL_VAB ) / 3;
-  if (VOL_VAB  !== undefined && VOL_VAB  !== undefined && VOL_VAB  !== undefined) {
-    pqm.datos_principales.text_estado = text_estado toString ('ALARMADO')
-  }*/
   // --------------------------DATOS GENERALES-------------------------//
-
 
   pqm.datos_generales.fase = options.fase;
   pqm.datos_generales.sistema = options.sistema;
@@ -1213,10 +1158,10 @@ var dataPQM = function dataPQM(data, options) {
   pqm.datos_principales.frecuencia = Number.parseFloat(FREQ === null || FREQ === void 0 ? void 0 : FREQ.toFixed(2));
   pqm.datos_principales.pot_real = Number.parseFloat(REALPOW_3PHAS === null || REALPOW_3PHAS === void 0 ? void 0 : REALPOW_3PHAS.toFixed(2));
   pqm.datos_principales.factor_p = Number.parseFloat(POWFAC_3PHAS === null || POWFAC_3PHAS === void 0 ? void 0 : POWFAC_3PHAS.toFixed(2));
-  pqm.estados.p_apt_t = Number.parseFloat(APPPOW_3PHAS === null || APPPOW_3PHAS === void 0 ? void 0 : APPPOW_3PHAS.toFixed(2));
   pqm.datos_principales.boton_estado = MODBUS_ST === 1 ? styles_estadoStyles__WEBPACK_IMPORTED_MODULE_0__["default"].sinConexion : styles_estadoStyles__WEBPACK_IMPORTED_MODULE_0__["default"].ok;
   pqm.datos_principales.boton_pqm = MODBUS_ST === 1 ? styles_estadoStyles__WEBPACK_IMPORTED_MODULE_0__["default"].sinConexion : styles_estadoStyles__WEBPACK_IMPORTED_MODULE_0__["default"].ok;
-  pqm.datos_principales.text_estado = // Disponible , Alarmado
+  pqm.datos_principales.text_estado = MODBUS_ST === 1 ? 'ALARMADO' : 'DISPONIBLE'; // Disponible , Alarmado
+
   pqm.datos_principales.nombre_pqm = options.nombre;
   return pqm;
 };

@@ -35,7 +35,7 @@ const dataPQM = (data: PanelData, options: SimpleOptions): DataPqm => {
     let VOL_VCA = data.series.find(({ name }) => name?.includes('VOL_VCA'))?.fields[1].state?.calcs?.lastNotNull
     let VOL_VCN = data.series.find(({ name }) => name?.includes('DATA.VOL_VCN.VALUE'))?.fields[1].state?.calcs?.lastNotNull
     
-  //------------------
+  //-------------------------------------------------------------------------------------------//
   
   let pqm: DataPqm = {
     estados:{
@@ -77,70 +77,33 @@ const dataPQM = (data: PanelData, options: SimpleOptions): DataPqm => {
 
   // --------------------------ESTADOS----------------------------------//
   
-  // let volt_an = VOL_VAN ; //pqm.estados.volt_an = VOL_VAN
-  if (VOL_VAN !== undefined ) {
-    pqm.estados.volt_an = Number.parseFloat(VOL_VAN.toFixed(2));
-  }
+  pqm.estados.volt_an = Number.parseFloat (VOL_VAN?.toFixed(2));
 
-  // pqm.estados.volt_an = Number.parseFloat(VOL_VAN?.toFixed(2));
+  pqm.estados.volt_bn = Number.parseFloat (VOL_VBN?.toFixed(2));
 
-  let volt_bn = VOL_VBN ; //pqm.estados.volt_bn = VOL_VBN
-  if (VOL_VBN !== undefined ) {
-    pqm.estados.volt_bn = Number.parseFloat(volt_bn.toFixed(2));
-  }
-  let volt_cn = VOL_VCN ; // pqm.estados.volt_cn = VOL_VCN
-  if (VOL_VCN !== undefined ) {
-    pqm.estados.volt_cn = Number.parseFloat(volt_cn.toFixed(2));
-  }
+  pqm.estados.volt_cn = Number.parseFloat (VOL_VCN?.toFixed(2));
+ 
+  pqm.estados.volt_ab = Number.parseFloat (VOL_VAB?.toFixed(2));
 
-  let volt_ab = (VOL_VAB  ) ;//pqm.estados.volt_ab = VOL_VAB
-  if (VOL_VAB !== undefined ) {
-    pqm.estados.volt_ab = Number.parseFloat(volt_ab.toFixed(2));
-  }
+  pqm.estados.volt_bc = Number.parseFloat (VOL_VBC?.toFixed(2));
 
-  let volt_bc = (VOL_VBC ) ;//pqm.estados.volt_bc = VOL_VBC
-  if (VOL_VBC !== undefined ) {
-    pqm.estados.volt_bc = Number.parseFloat(volt_bc.toFixed(2));
-  }
+  pqm.estados.volt_ca = Number.parseFloat (VOL_VCA?.toFixed(2));
 
-  let volt_ca = (VOL_VCA ) ;//pqm.estados.volt_ca = VOL_VCA
-  if (VOL_VCA ) {
-    pqm.estados.volt_ca = Number.parseFloat(volt_ca.toFixed(2));
-  }
+  pqm.estados.cur_a = Number.parseFloat (CURR_A?.toFixed(2));
+
+  pqm.estados.cur_b = Number.parseFloat (CURR_B?.toFixed(2));
+
+  pqm.estados.cur_c = Number.parseFloat (CURR_C?.toFixed(2));
   
-  let cur_a = (CURR_A) ;//pqm.estados.cur_a = CURR_A
-  if (CURR_A !== undefined ) {
-    pqm.estados.cur_a = Number.parseFloat(cur_a.toFixed(2));
-  }
+  pqm.estados.p_real_t = Number.parseFloat (ENY_APP?.toFixed(2));
+
+  pqm.estados.p_apt_t = Number.parseFloat (APPPOW_3PHAS?.toFixed(2));
   
-  let cur_b = (CURR_B) ;//pqm.estados.cur_b = CURR_B
-  if (CURR_B !== undefined ) {
-    pqm.estados.cur_b = Number.parseFloat(cur_b.toFixed(2));
-  }
-  
-  let cur_c = (CURR_C) ;//pqm.estados.cur_c = CURR_C
-  if (CURR_C !== undefined ) {
-    pqm.estados.cur_c = Number.parseFloat(cur_c.toFixed(2));
-  } 
  /*
   let p_apt_t = APPPOW_3PHAS ; //pqm.estados.p_apt_t = APPPOW_3PHAS
   if (APPPOW_3PHAS !== undefined) {
     pqm.estados.p_apt_t = Number.parseFloat(p_apt_t.toFixed(2));
   }*/
-
-  let p_real_t = ENY_APP ; //pqm.estados.p_apt_t = APPPOW_3PHAS
-  if (ENY_APP !== undefined) {
-    pqm.estados.p_real_t = Number.parseFloat(p_real_t.toFixed(2));
-  }
-
-  //pqm.datos_principales.pot_reaL_ = Number.parseFloat(ENY_APP?.toFixed(2));
-  
-  /*let text_estado = (VOL_VAB  + VOL_VAB  + VOL_VAB ) / 3;
-  if (VOL_VAB  !== undefined && VOL_VAB  !== undefined && VOL_VAB  !== undefined) {
-    pqm.datos_principales.text_estado = text_estado toString ('ALARMADO')
-  }*/
-  
-  
 
   // --------------------------DATOS GENERALES-------------------------//
 
@@ -158,14 +121,10 @@ const dataPQM = (data: PanelData, options: SimpleOptions): DataPqm => {
   pqm.datos_principales.frecuencia = Number.parseFloat(FREQ?.toFixed(2));
   pqm.datos_principales.pot_real = Number.parseFloat(REALPOW_3PHAS?.toFixed(2));
   pqm.datos_principales.factor_p = Number.parseFloat(POWFAC_3PHAS?.toFixed(2));
-  pqm.estados.p_apt_t = Number.parseFloat (APPPOW_3PHAS?.toFixed(2));
   pqm.datos_principales.boton_estado = MODBUS_ST === 1? estadoStyles.sinConexion : estadoStyles.ok;
   pqm.datos_principales.boton_pqm = MODBUS_ST === 1? estadoStyles.sinConexion : estadoStyles.ok;
-  pqm.datos_principales.text_estado =  // Disponible , Alarmado
+  pqm.datos_principales.text_estado = MODBUS_ST === 1? 'ALARMADO':'DISPONIBLE' // Disponible , Alarmado
   pqm.datos_principales.nombre_pqm = options.nombre
-
- 
-  
   
   
   return pqm
