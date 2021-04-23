@@ -2,54 +2,12 @@ import React from 'react'
 import{Variables, DataUma} from './variables/variables';
 
 
-const uma = () =>{
-    let uma: DataUma={
-
-    estados:{
-        modo: '',
-        ventilador: '',
-        valvulas: '',
-        temp_cuarto: 0,
-        humedad_relativa: 0,
-        t_suministro: 0,
-        t_retorno: 0,
-        h_funcionamiento: 0
-        
-    },
-
-    botones_alarmas:{
-
-      general : '',
-      filtro_aire: '',
-      inundacion: '',
-      sobrecalentamiento:'',
-      perdida_flujo: '',
-      humo_fuego: ''
-
-    },
-   
-    datos_generales: {
-        fase: '1',
-        marca: '',
-        modelo: '',
-        sistema: '',
-        ubicacion: ''
-
+const uma = ({
     
-    },
-    boton_uma:'',
+
+    estados, botones_alarmas, datos_generales, boton_uma, datos_principales
     
-    datos_principales: {
-      t_suministro: 0,
-      t_retorno: 0,
-      humedad_relativa:  0,
-      nombre_uma: '',
-      boton_estado:'',
-      estado:'',
-    },
-    
-    
-    }
+    }: DataUma) =>{
     return (
         
   
@@ -2419,18 +2377,16 @@ const uma = () =>{
       </text>
     </g>
     <Variables 
-      estados = {uma.estados}
-      botones_alarmas = {uma.botones_alarmas}
-      boton_uma= {uma.boton_uma}
-      datos_generales = {uma.datos_generales}
-      datos_principales = {uma.datos_principales}
+      estados = {estados}
+      botones_alarmas = {botones_alarmas}
+      boton_uma= {boton_uma}
+      datos_generales = {datos_generales}
+      datos_principales = {datos_principales}
     />
   </svg>
 
-
-
-
     )
 }
+
 
 export default uma
