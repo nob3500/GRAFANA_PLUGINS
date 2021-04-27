@@ -358,9 +358,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _grafana_ui__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @grafana/ui */ "@grafana/ui");
 /* harmony import */ var _grafana_ui__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_grafana_ui__WEBPACK_IMPORTED_MODULE_3__);
 /* harmony import */ var components_uma__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! components/uma */ "./components/uma.tsx");
+/* harmony import */ var modules_dataUMA__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! modules/dataUMA */ "./modules/dataUMA.ts");
 
 
  //import { stylesFactory, useTheme } from '@grafana/ui';
+
 
 
 
@@ -371,9 +373,16 @@ var SimplePanel = function SimplePanel(_a) {
       height = _a.height; //const theme = useTheme();
 
   var styles = getStyles();
+  var uma = Object(modules_dataUMA__WEBPACK_IMPORTED_MODULE_5__["default"])(data, options);
   return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
-    className: Object(emotion__WEBPACK_IMPORTED_MODULE_2__["cx"])(styles.wrapper, Object(emotion__WEBPACK_IMPORTED_MODULE_2__["css"])(templateObject_1 || (templateObject_1 = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__makeTemplateObject"])(["\n          width: ", "px;\n          height: ", "px;\n        "], ["\n          width: ", "px;\n          height: ", "px;\n        "])), width, height))
-  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(components_uma__WEBPACK_IMPORTED_MODULE_4__["default"], null));
+    className: Object(emotion__WEBPACK_IMPORTED_MODULE_2__["cx"])(styles.wrapper, Object(emotion__WEBPACK_IMPORTED_MODULE_2__["css"])(templateObject_1 || (templateObject_1 = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__makeTemplateObject"])(["\n            width: ", "px;\n            height: ", "px;\n          "], ["\n            width: ", "px;\n            height: ", "px;\n          "])), width, height))
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(components_uma__WEBPACK_IMPORTED_MODULE_4__["default"], {
+    estados: uma.estados,
+    botones_alarmas: uma.botones_alarmas,
+    datos_generales: uma.datos_generales,
+    datos_principales: uma.datos_principales,
+    boton_uma: uma.boton_uma
+  }));
 };
 var getStyles = Object(_grafana_ui__WEBPACK_IMPORTED_MODULE_3__["stylesFactory"])(function () {
   return {
@@ -1792,49 +1801,7 @@ var uma = function uma(_a) {
     id: "path14961",
     d: "M205.08 26.007l-.288 27.85 1.969-1.877V27.375z",
     fill: "url(#linearGradient14967)"
-  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("path", {
-    id: "rect2077",
-    fillRule: "evenodd",
-    fill: "#10677d",
-    opacity: 0.75,
-    paintOrder: "markers stroke fill",
-    d: "M209.94 53.893H217.3324V57.0808H209.94z"
-  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("path", {
-    id: "rect2077-1",
-    fillRule: "evenodd",
-    fill: "#10677d",
-    opacity: 0.75,
-    paintOrder: "markers stroke fill",
-    d: "M209.94 49.576H217.3324V52.7638H209.94z"
-  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("path", {
-    id: "rect2077-7",
-    fillRule: "evenodd",
-    fill: "#10677d",
-    opacity: 0.75,
-    paintOrder: "markers stroke fill",
-    d: "M209.94 45.26H217.3324V48.4478H209.94z"
-  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("path", {
-    id: "rect2077-1-2",
-    fillRule: "evenodd",
-    fill: "#10677d",
-    opacity: 0.75,
-    paintOrder: "markers stroke fill",
-    d: "M209.94 40.943H217.3324V44.1308H209.94z"
-  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("path", {
-    id: "rect2077-9",
-    fillRule: "evenodd",
-    fill: "#10677d",
-    opacity: 0.75,
-    paintOrder: "markers stroke fill",
-    d: "M209.94 36.626H217.3324V39.8138H209.94z"
-  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("path", {
-    id: "rect2077-1-5",
-    fillRule: "evenodd",
-    fill: "#10677d",
-    opacity: 0.75,
-    paintOrder: "markers stroke fill",
-    d: "M209.94 32.309H217.3324V35.4968H209.94z"
-  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("g", {
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("path", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("path", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("path", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("path", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("path", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("path", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("g", {
     id: "g6103",
     transform: "translate(-2.382 -26.9)",
     fill: "#168498",
@@ -2688,11 +2655,11 @@ var Variables = function Variables(_a) {
     wordSpacing: 0
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tspan", {
     id: "tspan5848",
-    x: 222.46786,
+    x: 223.46786,
     y: 176.62492,
     fill: "#fff",
     fontFamily: "Franklin Gothic Medium",
-    fontSize: "7.0556px",
+    fontSize: "6.5556px",
     strokeWidth: 0.26458
   }, datos_principales.estado)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("text", {
     id: "humedad",
@@ -2716,7 +2683,7 @@ var Variables = function Variables(_a) {
     fill: "#fff",
     fontFamily: "Franklin Gothic Medium",
     fontSize: "12.491px",
-    fontWeight: 700,
+    fontWeight: 590,
     strokeWidth: 0.28918
   }, datos_principales.humedad_relativa)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("g", {
     id: "g15358",
@@ -2753,12 +2720,12 @@ var Variables = function Variables(_a) {
     wordSpacing: 0
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tspan", {
     id: "tspan1960-4",
-    x: 208.90504,
+    x: 198.90504,
     y: 50.935295,
     fill: "#fff",
     fontFamily: "Franklin Gothic Medium",
     fontSize: "12.347px",
-    fontWeight: 700,
+    fontWeight: 590,
     strokeWidth: 0.28918
   }, datos_principales.t_retorno)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("text", {
     id: "room_temp",
@@ -3071,7 +3038,7 @@ var Variables = function Variables(_a) {
     fill: "#fff",
     fontFamily: "Franklin Gothic Medium",
     fontSize: "12.347px",
-    fontWeight: 700,
+    fontWeight: 590,
     strokeWidth: 0.28918
   }, datos_principales.t_suministro)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("text", {
     id: "nom_on",
@@ -3089,7 +3056,7 @@ var Variables = function Variables(_a) {
     wordSpacing: 0
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tspan", {
     id: "tspan6769",
-    x: 105.35529,
+    x: 109.55529,
     y: 24.536306,
     fill: "#fff",
     fontFamily: "Franklin Gothic Medium",
@@ -3112,7 +3079,7 @@ var Variables = function Variables(_a) {
     wordSpacing: 0
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tspan", {
     id: "tspan15409",
-    x: 580.72345,
+    x: 578.72345,
     y: 112.84469,
     fill: "#fff",
     fontFamily: "Franklin Gothic Medium",
@@ -3140,35 +3107,215 @@ __webpack_require__.r(__webpack_exports__);
 
 var plugin = new _grafana_data__WEBPACK_IMPORTED_MODULE_0__["PanelPlugin"](_SimplePanel__WEBPACK_IMPORTED_MODULE_1__["SimplePanel"]).setPanelOptions(function (builder) {
   return builder.addTextInput({
-    path: 'text',
-    name: 'Simple text option',
-    description: 'Description of panel option',
-    defaultValue: 'Default value of text input option'
-  }).addBooleanSwitch({
-    path: 'showSeriesCount',
-    name: 'Show series counter',
-    defaultValue: false
-  }).addRadio({
-    path: 'seriesCountSize',
-    defaultValue: 'sm',
-    name: 'Series counter size',
-    settings: {
-      options: [{
-        value: 'sm',
-        label: 'Small'
-      }, {
-        value: 'md',
-        label: 'Medium'
-      }, {
-        value: 'lg',
-        label: 'Large'
-      }]
-    },
-    showIf: function showIf(config) {
-      return config.showSeriesCount;
-    }
+    path: 'nombre',
+    name: 'Nombre',
+    description: 'Nombre de uma'
+  }).addTextInput({
+    path: 'fase',
+    name: 'Fase',
+    description: 'Fase donde esta el uma'
+  }).addTextInput({
+    path: 'sistema',
+    name: 'Sistema',
+    description: 'Sistema donde esta el uma'
+  }).addTextInput({
+    path: 'marca',
+    name: 'Marca',
+    description: 'Marca del uma'
+  }).addTextInput({
+    path: 'modelo',
+    name: 'Modelo',
+    description: 'Modelo del uma'
+  }).addTextInput({
+    path: 'ubicacion',
+    name: 'Ubicación',
+    description: 'Ubicación del uma'
   });
 });
+
+/***/ }),
+
+/***/ "./modules/dataUMA.ts":
+/*!****************************!*\
+  !*** ./modules/dataUMA.ts ***!
+  \****************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var styles_estadoStyles__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! styles/estadoStyles */ "./styles/estadoStyles.ts");
+//import alarmaStyles from 'styles/alarmsStyles';
+
+
+var DataUMA = function DataUMA(data, options) {
+  var _a, _b, _c, _d, _e, _f, _g, _h, _j, _k, _l, _m, _o, _p, _q, _r, _s, _t, _u, _v, _w, _x, _y, _z, _0, _1, _2, _3, _4, _5, _6, _7, _8, _9, _10, _11, _12, _13, _14, _15, _16, _17;
+
+  console.log(options);
+  console.log(data); //------------------------------------ASIGNACION DE VARIABLES-------------------------------//
+
+  var SYS_ON = (_c = (_b = (_a = data.series.find(function (_a) {
+    var name = _a.name;
+    return name === null || name === void 0 ? void 0 : name.includes('DATA.SYS_ON.VALUE');
+  })) === null || _a === void 0 ? void 0 : _a.fields[1].state) === null || _b === void 0 ? void 0 : _b.calcs) === null || _c === void 0 ? void 0 : _c.lastNotNull; //let ROOM_TEMP_LIMIT = data.series.find(({ name }) => name?.includes('DATA.ROOM_TEMP_LIMIT.VALUE'))?.fields[1].state?.calcs?.lastNotNull
+
+  var FILTER_ALARM = (_f = (_e = (_d = data.series.find(function (_a) {
+    var name = _a.name;
+    return name === null || name === void 0 ? void 0 : name.includes('DATA.FILTER_ALARM.VALUE');
+  })) === null || _d === void 0 ? void 0 : _d.fields[1].state) === null || _e === void 0 ? void 0 : _e.calcs) === null || _f === void 0 ? void 0 : _f.lastNotNull;
+  var FLOODING_ALARM = (_j = (_h = (_g = data.series.find(function (_a) {
+    var name = _a.name;
+    return name === null || name === void 0 ? void 0 : name.includes('DATA.FLOODING_ALARM.VALUE');
+  })) === null || _g === void 0 ? void 0 : _g.fields[1].state) === null || _h === void 0 ? void 0 : _h.calcs) === null || _j === void 0 ? void 0 : _j.lastNotNull;
+  var LOSS_OF_AIR = (_m = (_l = (_k = data.series.find(function (_a) {
+    var name = _a.name;
+    return name === null || name === void 0 ? void 0 : name.includes('DATA.LOSS_OF_AIR.VALUE');
+  })) === null || _k === void 0 ? void 0 : _k.fields[1].state) === null || _l === void 0 ? void 0 : _l.calcs) === null || _m === void 0 ? void 0 : _m.lastNotNull;
+  var HEAT_OVER_ALARM = (_q = (_p = (_o = data.series.find(function (_a) {
+    var name = _a.name;
+    return name === null || name === void 0 ? void 0 : name.includes('DATA.HEAT_OVER_ALARM.VALUE');
+  })) === null || _o === void 0 ? void 0 : _o.fields[1].state) === null || _p === void 0 ? void 0 : _p.calcs) === null || _q === void 0 ? void 0 : _q.lastNotNull;
+  var SMOKE_FIRE_ALARM = (_t = (_s = (_r = data.series.find(function (_a) {
+    var name = _a.name;
+    return name === null || name === void 0 ? void 0 : name.includes('DATA.SMOKE_FIRE_ALARM.VALUE');
+  })) === null || _r === void 0 ? void 0 : _r.fields[1].state) === null || _s === void 0 ? void 0 : _s.calcs) === null || _t === void 0 ? void 0 : _t.lastNotNull; //let HUMIDIFIER_ALARM = data.series.find(({ name }) => name?.includes('DATA.HUMIDIFIER_ALARM.VALUE'))?.fields[1].state?.calcs?.lastNotNull
+
+  var UNIT_ALARM = (_w = (_v = (_u = data.series.find(function (_a) {
+    var name = _a.name;
+    return name === null || name === void 0 ? void 0 : name.includes('DATA.UNIT_ALARM.VALUE');
+  })) === null || _u === void 0 ? void 0 : _u.fields[1].state) === null || _v === void 0 ? void 0 : _v.calcs) === null || _w === void 0 ? void 0 : _w.lastNotNull;
+  var ROOM_TEMP = (_z = (_y = (_x = data.series.find(function (_a) {
+    var name = _a.name;
+    return name === null || name === void 0 ? void 0 : name.includes('DATA.ROOM_TEMP.VALUE');
+  })) === null || _x === void 0 ? void 0 : _x.fields[1].state) === null || _y === void 0 ? void 0 : _y.calcs) === null || _z === void 0 ? void 0 : _z.lastNotNull;
+  var DELI_AIR_TEMP = (_2 = (_1 = (_0 = data.series.find(function (_a) {
+    var name = _a.name;
+    return name === null || name === void 0 ? void 0 : name.includes('DATA.DELI_AIR_TEMP.VALUE');
+  })) === null || _0 === void 0 ? void 0 : _0.fields[1].state) === null || _1 === void 0 ? void 0 : _1.calcs) === null || _2 === void 0 ? void 0 : _2.lastNotNull;
+  var ROOM_REL_HUM = (_5 = (_4 = (_3 = data.series.find(function (_a) {
+    var name = _a.name;
+    return name === null || name === void 0 ? void 0 : name.includes('DATA.ROOM_REL_HUM.VALUE');
+  })) === null || _3 === void 0 ? void 0 : _3.fields[1].state) === null || _4 === void 0 ? void 0 : _4.calcs) === null || _5 === void 0 ? void 0 : _5.lastNotNull;
+  var COLD_WAT_VALV = (_8 = (_7 = (_6 = data.series.find(function (_a) {
+    var name = _a.name;
+    return name === null || name === void 0 ? void 0 : name.includes('DATA.COLD_WAT_VALV.VALUE');
+  })) === null || _6 === void 0 ? void 0 : _6.fields[1].state) === null || _7 === void 0 ? void 0 : _7.calcs) === null || _8 === void 0 ? void 0 : _8.lastNotNull;
+  var EVAP_FAN_SPEED = (_11 = (_10 = (_9 = data.series.find(function (_a) {
+    var name = _a.name;
+    return name === null || name === void 0 ? void 0 : name.includes('DATA.EVAP_FAN_SPEED.VALUE');
+  })) === null || _9 === void 0 ? void 0 : _9.fields[1].state) === null || _10 === void 0 ? void 0 : _10.calcs) === null || _11 === void 0 ? void 0 : _11.lastNotNull;
+  var SETP_COOL_RET_AIR = (_14 = (_13 = (_12 = data.series.find(function (_a) {
+    var name = _a.name;
+    return name === null || name === void 0 ? void 0 : name.includes('DATA.SETP_COOL_RET_AIR.VALUE');
+  })) === null || _12 === void 0 ? void 0 : _12.fields[1].state) === null || _13 === void 0 ? void 0 : _13.calcs) === null || _14 === void 0 ? void 0 : _14.lastNotNull; // let SNS_COOL_RET_AIR = data.series.find(({ name }) => name?.includes('DATA.SNS_COOL_RET_AIR.VALUE'))?.fields[1].state?.calcs?.lastNotNull
+
+  var UNIT_RUN_ALARM = (_17 = (_16 = (_15 = data.series.find(function (_a) {
+    var name = _a.name;
+    return name === null || name === void 0 ? void 0 : name.includes('DATA.UNIT_RUN_ALARM.VALUE');
+  })) === null || _15 === void 0 ? void 0 : _15.fields[1].state) === null || _16 === void 0 ? void 0 : _16.calcs) === null || _17 === void 0 ? void 0 : _17.lastNotNull; //let HUM_RUN_HOURS = data.series.find(({ name }) => name?.includes('DATA.HUM_RUN_HOURS.VALUE'))?.fields[1].state?.calcs?.lastNotNull
+  //-------------------------------------------------------------------------------------------//
+
+  var uma = {
+    estados: {
+      modo: '',
+      ventilador: '',
+      valvulas: '',
+      temp_cuarto: 0,
+      humedad_relativa: 0,
+      t_suministro: 0,
+      t_retorno: 0,
+      h_funcionamiento: 0
+    },
+    botones_alarmas: {
+      general: styles_estadoStyles__WEBPACK_IMPORTED_MODULE_0__["default"].sinConexion,
+      filtro_aire: styles_estadoStyles__WEBPACK_IMPORTED_MODULE_0__["default"].sinConexion,
+      inundacion: styles_estadoStyles__WEBPACK_IMPORTED_MODULE_0__["default"].sinConexion,
+      sobrecalentamiento: styles_estadoStyles__WEBPACK_IMPORTED_MODULE_0__["default"].sinConexion,
+      perdida_flujo: styles_estadoStyles__WEBPACK_IMPORTED_MODULE_0__["default"].sinConexion,
+      humo_fuego: styles_estadoStyles__WEBPACK_IMPORTED_MODULE_0__["default"].sinConexion
+    },
+    datos_generales: {
+      fase: '',
+      marca: '',
+      modelo: '',
+      sistema: '',
+      ubicacion: ''
+    },
+    boton_uma: styles_estadoStyles__WEBPACK_IMPORTED_MODULE_0__["default"].sinConexion,
+    datos_principales: {
+      t_suministro: 0,
+      t_retorno: 0,
+      humedad_relativa: 0,
+      nombre_uma: '',
+      boton_estado: styles_estadoStyles__WEBPACK_IMPORTED_MODULE_0__["default"].sinConexion,
+      estado: ''
+    }
+  }; // --------------------------ESTADOS----------------------------------//
+
+  uma.estados.modo = SYS_ON === 0 ? 'OFF' : 'ON';
+  uma.estados.ventilador = EVAP_FAN_SPEED === 0 ? 'OFF' : 'ON';
+  uma.estados.valvulas = COLD_WAT_VALV === 0 ? 'OFF' : 'ON';
+  uma.estados.temp_cuarto = Number.parseFloat(ROOM_TEMP === null || ROOM_TEMP === void 0 ? void 0 : ROOM_TEMP.toFixed(2));
+  uma.estados.humedad_relativa = Number.parseFloat(ROOM_REL_HUM === null || ROOM_REL_HUM === void 0 ? void 0 : ROOM_REL_HUM.toFixed(2));
+  uma.estados.t_suministro = Number.parseFloat(DELI_AIR_TEMP === null || DELI_AIR_TEMP === void 0 ? void 0 : DELI_AIR_TEMP.toFixed(2));
+  uma.estados.t_retorno = Number.parseFloat(SETP_COOL_RET_AIR === null || SETP_COOL_RET_AIR === void 0 ? void 0 : SETP_COOL_RET_AIR.toFixed(2));
+  uma.estados.h_funcionamiento = Number.parseFloat(UNIT_RUN_ALARM === null || UNIT_RUN_ALARM === void 0 ? void 0 : UNIT_RUN_ALARM.toFixed(2)); // --------------------------DATOS GENERALES-------------------------//
+
+  uma.datos_generales.fase = options.fase;
+  uma.datos_generales.sistema = options.sistema;
+  uma.datos_generales.marca = options.marca;
+  uma.datos_generales.modelo = options.modelo;
+  uma.datos_generales.ubicacion = options.ubicacion; // ----------------------BOTONES ALARMAS------------------------------//
+
+  uma.botones_alarmas.filtro_aire = FILTER_ALARM === 1 ? styles_estadoStyles__WEBPACK_IMPORTED_MODULE_0__["default"].alarma : styles_estadoStyles__WEBPACK_IMPORTED_MODULE_0__["default"].sinConexion;
+  uma.botones_alarmas.general = UNIT_ALARM === 1 ? styles_estadoStyles__WEBPACK_IMPORTED_MODULE_0__["default"].alarma : styles_estadoStyles__WEBPACK_IMPORTED_MODULE_0__["default"].sinConexion;
+  uma.botones_alarmas.humo_fuego = SMOKE_FIRE_ALARM === 1 ? styles_estadoStyles__WEBPACK_IMPORTED_MODULE_0__["default"].alarma : styles_estadoStyles__WEBPACK_IMPORTED_MODULE_0__["default"].sinConexion;
+  uma.botones_alarmas.inundacion = FLOODING_ALARM === 1 ? styles_estadoStyles__WEBPACK_IMPORTED_MODULE_0__["default"].alarma : styles_estadoStyles__WEBPACK_IMPORTED_MODULE_0__["default"].sinConexion;
+  uma.botones_alarmas.perdida_flujo = LOSS_OF_AIR === 1 ? styles_estadoStyles__WEBPACK_IMPORTED_MODULE_0__["default"].alarma : styles_estadoStyles__WEBPACK_IMPORTED_MODULE_0__["default"].sinConexion;
+  uma.botones_alarmas.sobrecalentamiento = HEAT_OVER_ALARM === 1 ? styles_estadoStyles__WEBPACK_IMPORTED_MODULE_0__["default"].alarma : styles_estadoStyles__WEBPACK_IMPORTED_MODULE_0__["default"].sinConexion; // ---------------------- DATOS PRINCIPALES---------------------------//
+
+  uma.datos_principales.t_suministro = Number.parseFloat(DELI_AIR_TEMP === null || DELI_AIR_TEMP === void 0 ? void 0 : DELI_AIR_TEMP.toFixed(2));
+  uma.datos_principales.t_retorno = Number.parseFloat(ROOM_TEMP === null || ROOM_TEMP === void 0 ? void 0 : ROOM_TEMP.toFixed(2));
+  uma.datos_principales.nombre_uma = options.nombre;
+  uma.datos_principales.humedad_relativa = Number.parseFloat(ROOM_REL_HUM === null || ROOM_REL_HUM === void 0 ? void 0 : ROOM_REL_HUM.toFixed(2));
+  uma.datos_principales.boton_estado = SYS_ON === 0 ? styles_estadoStyles__WEBPACK_IMPORTED_MODULE_0__["default"].sinConexion : styles_estadoStyles__WEBPACK_IMPORTED_MODULE_0__["default"].ok;
+  uma.datos_principales.estado = SYS_ON === 0 ? 'REPOSO' : 'ENCENDIDO';
+  uma.boton_uma = SYS_ON === 0 ? styles_estadoStyles__WEBPACK_IMPORTED_MODULE_0__["default"].sinConexion : styles_estadoStyles__WEBPACK_IMPORTED_MODULE_0__["default"].ok;
+  return uma;
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (DataUMA);
+
+/***/ }),
+
+/***/ "./styles/estadoStyles.ts":
+/*!********************************!*\
+  !*** ./styles/estadoStyles.ts ***!
+  \********************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "../node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _grafana_ui__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @grafana/ui */ "@grafana/ui");
+/* harmony import */ var _grafana_ui__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_grafana_ui__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var emotion__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! emotion */ "emotion");
+/* harmony import */ var emotion__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(emotion__WEBPACK_IMPORTED_MODULE_2__);
+
+
+
+var parpadeo = Object(emotion__WEBPACK_IMPORTED_MODULE_2__["keyframes"])(templateObject_1 || (templateObject_1 = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__makeTemplateObject"])(["\n  0% { opacity: 1.0; };\n  100% { opacity: 0.0; };\n"], ["\n  0% { opacity: 1.0; };\n  100% { opacity: 0.0; };\n"])));
+var getStyles = Object(_grafana_ui__WEBPACK_IMPORTED_MODULE_1__["stylesFactory"])(function () {
+  return {
+    sinConexion: Object(emotion__WEBPACK_IMPORTED_MODULE_2__["css"])(templateObject_2 || (templateObject_2 = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__makeTemplateObject"])(["\n      fill: #999;\n    "], ["\n      fill: #999;\n    "]))),
+    alarma: Object(emotion__WEBPACK_IMPORTED_MODULE_2__["css"])(templateObject_3 || (templateObject_3 = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__makeTemplateObject"])(["\n      fill: red;\n      animation: ", " 1s ease infinite;\n    "], ["\n      fill: red;\n      animation: ", " 1s ease infinite;\n    "])), parpadeo),
+    ok: Object(emotion__WEBPACK_IMPORTED_MODULE_2__["css"])(templateObject_4 || (templateObject_4 = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__makeTemplateObject"])(["\n      fill: green;\n    "], ["\n      fill: green;\n    "])))
+  };
+});
+var styles = getStyles();
+/* harmony default export */ __webpack_exports__["default"] = (styles);
+var templateObject_1, templateObject_2, templateObject_3, templateObject_4;
 
 /***/ }),
 

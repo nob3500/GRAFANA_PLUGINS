@@ -278,11 +278,11 @@ export const Variables = ({
         >
           <tspan
             id="tspan5848"
-            x={222.46786}
+            x={223.46786}
             y={176.62492}
             fill="#fff"
             fontFamily="Franklin Gothic Medium"
-            fontSize="7.0556px"
+            fontSize="6.5556px"
             strokeWidth={0.26458}
           >
             {datos_principales.estado}
@@ -311,7 +311,7 @@ export const Variables = ({
             fill="#fff"
             fontFamily="Franklin Gothic Medium"
             fontSize="12.491px"
-            fontWeight={700}
+            fontWeight={590}
             strokeWidth={0.28918}
           >
             {datos_principales.humedad_relativa}
@@ -355,12 +355,12 @@ export const Variables = ({
         >
           <tspan
             id="tspan1960-4"
-            x={208.90504}
+            x={198.90504}
             y={50.935295}
             fill="#fff"
             fontFamily="Franklin Gothic Medium"
             fontSize="12.347px"
-            fontWeight={700}
+            fontWeight={590}
             strokeWidth={0.28918}
           >
             {datos_principales.t_retorno}
@@ -740,7 +740,7 @@ export const Variables = ({
             fill="#fff"
             fontFamily="Franklin Gothic Medium"
             fontSize="12.347px"
-            fontWeight={700}
+            fontWeight={590}
             strokeWidth={0.28918}
           >
             {datos_principales.t_suministro}
@@ -763,7 +763,7 @@ export const Variables = ({
         >
           <tspan
             id="tspan6769"
-            x={105.35529}
+            x={109.55529}
             y={24.536306}
             fill="#fff"
             fontFamily="Franklin Gothic Medium"
@@ -791,7 +791,7 @@ export const Variables = ({
         >
           <tspan
             id="tspan15409"
-            x={580.72345}
+            x={578.72345}
             y={112.84469}
             fill="#fff"
             fontFamily="Franklin Gothic Medium"

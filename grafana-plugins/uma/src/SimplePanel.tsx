@@ -5,26 +5,39 @@ import { css, cx } from 'emotion';
 //import { stylesFactory, useTheme } from '@grafana/ui';
 import { stylesFactory } from '@grafana/ui';
 import Uma from 'components/uma';
+import { DataUma} from 'components/variables/variables'
+import dataUMA from 'modules/dataUMA';
+
 
 interface Props extends PanelProps<SimpleOptions> {}
 
 export const SimplePanel: React.FC<Props> = ({ options, data, width, height }) => {
-  //const theme = useTheme();
-  const styles = getStyles();
-  return (
-    <div
-      className={cx(
-        styles.wrapper,
-        css`
-          width: ${width}px;
-          height: ${height}px;
-        `
-      )}
-    >
-   <Uma/>
-    </div>
-  );
-};
+    //const theme = useTheme();
+    const styles = getStyles();
+
+    let uma: DataUma = dataUMA(data , options)
+
+    return (
+      <div
+        className={cx(
+          styles.wrapper,
+          css`
+            width: ${width}px;
+            height: ${height}px;
+          `
+        )}
+      >
+    <Uma
+        estados = {uma.estados}
+        botones_alarmas = {uma.botones_alarmas}
+        datos_generales = {uma.datos_generales}
+        datos_principales = {uma.datos_principales}
+        boton_uma = {uma.boton_uma}  
+    
+    />
+      </div>
+    );
+  };
 
 const getStyles = stylesFactory(() => {
   return {

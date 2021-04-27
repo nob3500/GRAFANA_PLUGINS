@@ -1,44 +1,29 @@
-# Grafana Panel Plugin Template
+# VARIABLES UMA
 
-[![Build](https://github.com/grafana/grafana-starter-panel/workflows/CI/badge.svg)](https://github.com/grafana/grafana-starter-panel/actions?query=workflow%3A%22CI%22)
+'DATA.SYS_ON.VALUE'
+'DATA.ROOM_TEMP_LIMIT.VALUE'
+'DATA.FILTER_ALARM.VALUE'
+'DATA.FLOODING_ALARM.VALUE'
+'DATA.LOSS_OF_AIR.VALUE'
+'DATA.HEAT_OVER_ALARM.VALUE'
+'DATA.SMOKE_FIRE_ALARM.VALUE'
+'DATA.HUMIDIFIER_ALARM.VALUE'
+'DATA.UNIT_ALARM.VALUE'
+'DATA.ROOM_TEMP.VALUE'
+'DATA.DELI_AIR_TEMP.VALUE'
+'DATA.ROOM_REL_HUM.VALUE'
+'DATA.COLD_WAT_VALV.VALUE'
+'DATA.EVAP_FAN_SPEED.VALUE'
+'DATA.SETP_COOL_RET_AIR.VALUE'
+'DATA.SNS_COOL_RET_AIR.VALUE'
+'DATA.UNIT_RUN_ALARM.VALUE'
+'DATA.HUM_RUN_HOURS.VALUE'
 
-This template is a starting point for building Grafana Panel Plugins in Grafana 7.0+
+# INDEX
+dc_gye_uma_gw7a*
 
-## What is Grafana Panel Plugin?
+# GATEWAY
 
-Panels are the building blocks of Grafana. They allow you to visualize data in different ways. While Grafana has several types of panels already built-in, you can also build your own panel, to add support for other visualizations.
+# Forma de pegar en el campo Campos del dataSource para elastic en el grafana
 
-For more information about panels, refer to the documentation on [Panels](https://grafana.com/docs/grafana/latest/features/panels/panels/)
-
-## Getting started
-
-1. Install dependencies
-
-   ```bash
-   yarn install
-   ```
-
-2. Build plugin in development mode or run in watch mode
-
-   ```bash
-   yarn dev
-   ```
-
-   or
-
-   ```bash
-   yarn watch
-   ```
-
-3. Build plugin in production mode
-
-   ```bash
-   yarn build
-   ```
-
-## Learn more
-
-- [Build a panel plugin tutorial](https://grafana.com/tutorials/build-a-panel-plugin)
-- [Grafana documentation](https://grafana.com/docs/)
-- [Grafana Tutorials](https://grafana.com/tutorials/) - Grafana Tutorials are step-by-step guides that help you make the most of Grafana
-- [Grafana UI Library](https://developers.grafana.com/ui) - UI components to help you build interfaces using Grafana Design System
+DATA.SYS_ON.VALUE,DATA.ROOM_TEMP_LIMIT.VALUE,DATA.FILTER_ALARM.VALUE,DATA.FLOODING_ALARM.VALUE,DATA.LOSS_OF_AIR.VALUE,DATA.HEAT_OVER_ALARM.VALUE,DATA.SMOKE_FIRE_ALARM.VALUE,DATA.HUMIDIFIER_ALARM.VALUE,DATA.UNIT_ALARM.VALUE,DATA.ROOM_TEMP.VALUE,DATA.DELI_AIR_TEMP.VALUE,DATA.ROOM_REL_HUM.VALUE,DATA.COLD_WAT_VALV.VALUE,DATA.EVAP_FAN_SPEED.VALUE,DATA.SETP_COOL_RET_AIR.VALUE,DATA.SNS_COOL_RET_AIR.VALUE,DATA.UNIT_RUN_ALARM.VALUE,DATA.HUM_RUN_HOURS.VALUE

@@ -7,7 +7,7 @@ const uma = ({
 
     estados, botones_alarmas, datos_generales, boton_uma, datos_principales
     
-    }: DataUma) =>{
+}: DataUma) =>{
     return (
         
   
@@ -1557,52 +1557,62 @@ const uma = ({
         fill="url(#linearGradient14967)"
       />
       <path
+      /*
         id="rect2077"
         fillRule="evenodd"
         fill="#10677d"
         opacity={0.75}
         paintOrder="markers stroke fill"
         d="M209.94 53.893H217.3324V57.0808H209.94z"
+        */
       />
       <path
+      /*
         id="rect2077-1"
         fillRule="evenodd"
         fill="#10677d"
         opacity={0.75}
         paintOrder="markers stroke fill"
         d="M209.94 49.576H217.3324V52.7638H209.94z"
+        */
       />
       <path
+      /*
         id="rect2077-7"
         fillRule="evenodd"
         fill="#10677d"
         opacity={0.75}
         paintOrder="markers stroke fill"
         d="M209.94 45.26H217.3324V48.4478H209.94z"
+        */
       />
       <path
+      /*
         id="rect2077-1-2"
         fillRule="evenodd"
         fill="#10677d"
         opacity={0.75}
         paintOrder="markers stroke fill"
         d="M209.94 40.943H217.3324V44.1308H209.94z"
+        */
       />
       <path
-        id="rect2077-9"
+        /*id="rect2077-9"
         fillRule="evenodd"
         fill="#10677d"
         opacity={0.75}
         paintOrder="markers stroke fill"
         d="M209.94 36.626H217.3324V39.8138H209.94z"
+        */
       />
       <path
-        id="rect2077-1-5"
+        /*id="rect2077-1-5"
         fillRule="evenodd"
         fill="#10677d"
         opacity={0.75}
         paintOrder="markers stroke fill"
         d="M209.94 32.309H217.3324V35.4968H209.94z"
+        */
       />
       <g
         id="g6103"
