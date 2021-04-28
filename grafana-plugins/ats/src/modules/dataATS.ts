@@ -68,7 +68,7 @@ const DataATS = (data: PanelData, options: SimpleOptions): DataAts => {
 
   // --------------------------ESTADOS----------------------------------//
   
-  ats.estados.est_equipo = AUT_TRANS_REL === 0? 'OFF':'ON' 
+  ats.estados.est_equipo = AUT_TRANS_REL === 1? 'OFF':'ON' 
   ats.estados.pres_f1 = F1_AVAIL === 0? 'OFF': 'ON'
   ats.estados.pres_f2 = F2_AVAIL ===0? 'OFF': 'ON'
   ats.estados.pos_f1 =  F1_POSIC ===0? 'OFF': 'ON'
@@ -91,9 +91,9 @@ const DataATS = (data: PanelData, options: SimpleOptions): DataAts => {
 
   ats.botones_alarmas.rele_trans_auto = AUT_TRANS_REL === 1 ? estadoStyles.alarma: estadoStyles.sinConexion
   ats.botones_alarmas.falla_auto = NOT_IN_AUTO === 1 ? estadoStyles.alarma: estadoStyles.sinConexion
-  ats.botones_alarmas.pos_f1 = F1_POSIC === 1 ? estadoStyles.alarma: estadoStyles.sinConexion
+  ats.botones_alarmas.pos_f1 = F1_POSIC === 1 ? estadoStyles.ok: estadoStyles.sinConexion
   ats.botones_alarmas.pos_f2 = F2_POSIC === 1 ? estadoStyles.alarma: estadoStyles.sinConexion
-  ats.botones_alarmas.red_modbus= MODBUS_ST === 1 ? estadoStyles.alarma: estadoStyles.sinConexion
+  ats.botones_alarmas.red_modbus= MODBUS_ST === 1 ? estadoStyles.alarma: estadoStyles.ok
    
   
   // ---------------------- DATOS PRINCIPALES---------------------------//

@@ -3009,7 +3009,7 @@ var DataATS = function DataATS(data, options) {
     }
   }; // --------------------------ESTADOS----------------------------------//
 
-  ats.estados.est_equipo = AUT_TRANS_REL === 0 ? 'OFF' : 'ON';
+  ats.estados.est_equipo = AUT_TRANS_REL === 1 ? 'OFF' : 'ON';
   ats.estados.pres_f1 = F1_AVAIL === 0 ? 'OFF' : 'ON';
   ats.estados.pres_f2 = F2_AVAIL === 0 ? 'OFF' : 'ON';
   ats.estados.pos_f1 = F1_POSIC === 0 ? 'OFF' : 'ON';
@@ -3027,9 +3027,9 @@ var DataATS = function DataATS(data, options) {
 
   ats.botones_alarmas.rele_trans_auto = AUT_TRANS_REL === 1 ? styles_estadoStyles__WEBPACK_IMPORTED_MODULE_0__["default"].alarma : styles_estadoStyles__WEBPACK_IMPORTED_MODULE_0__["default"].sinConexion;
   ats.botones_alarmas.falla_auto = NOT_IN_AUTO === 1 ? styles_estadoStyles__WEBPACK_IMPORTED_MODULE_0__["default"].alarma : styles_estadoStyles__WEBPACK_IMPORTED_MODULE_0__["default"].sinConexion;
-  ats.botones_alarmas.pos_f1 = F1_POSIC === 1 ? styles_estadoStyles__WEBPACK_IMPORTED_MODULE_0__["default"].alarma : styles_estadoStyles__WEBPACK_IMPORTED_MODULE_0__["default"].sinConexion;
+  ats.botones_alarmas.pos_f1 = F1_POSIC === 1 ? styles_estadoStyles__WEBPACK_IMPORTED_MODULE_0__["default"].ok : styles_estadoStyles__WEBPACK_IMPORTED_MODULE_0__["default"].sinConexion;
   ats.botones_alarmas.pos_f2 = F2_POSIC === 1 ? styles_estadoStyles__WEBPACK_IMPORTED_MODULE_0__["default"].alarma : styles_estadoStyles__WEBPACK_IMPORTED_MODULE_0__["default"].sinConexion;
-  ats.botones_alarmas.red_modbus = MODBUS_ST === 1 ? styles_estadoStyles__WEBPACK_IMPORTED_MODULE_0__["default"].alarma : styles_estadoStyles__WEBPACK_IMPORTED_MODULE_0__["default"].sinConexion; // ---------------------- DATOS PRINCIPALES---------------------------//
+  ats.botones_alarmas.red_modbus = MODBUS_ST === 1 ? styles_estadoStyles__WEBPACK_IMPORTED_MODULE_0__["default"].alarma : styles_estadoStyles__WEBPACK_IMPORTED_MODULE_0__["default"].ok; // ---------------------- DATOS PRINCIPALES---------------------------//
 
   ats.datos_principales.volt_f1 = Number.parseFloat(TOT_TRANS_F1 === null || TOT_TRANS_F1 === void 0 ? void 0 : TOT_TRANS_F1.toFixed(2));
   ats.datos_principales.volt_f2 = Number.parseFloat(TOT_TRANS_F2 === null || TOT_TRANS_F2 === void 0 ? void 0 : TOT_TRANS_F2.toFixed(2));
