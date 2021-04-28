@@ -109,7 +109,7 @@ export const Variables = ({
         >
           <tspan
             id="tspan5927"
-            x={210.39435}
+            x={207.39435}
             y={135.13402}
             fill="#fff"
             fontFamily="Franklin Gothic Medium"
@@ -138,11 +138,11 @@ export const Variables = ({
         >
           <tspan
             id="tspan1960-4"
-            x={204.53853}
-            y={50.369724}
+            x={203.53853}
+            y={53.369724}
             fill="#fff"
             fontFamily="Franklin Gothic Medium"
-            fontSize="9.8778px"
+            fontSize="10.8778px"
             fontWeight={700}
             strokeWidth={0.28918}
           >
@@ -214,12 +214,12 @@ export const Variables = ({
         >
           <tspan
             id="tspan5848"
-            x={236.20271}
+            x={223.20271}
             y={175.78246}
             dy={0}
             fill="#fff"
             fontFamily="Franklin Gothic Medium"
-            fontSize="7.0556px"
+            fontSize="6.0556px"
             strokeWidth={0.26458}
           >
             {datos_principales.text_estado}

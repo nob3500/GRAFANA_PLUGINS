@@ -1,48 +1,13 @@
 import React from 'react'
 import {Variables, DataAts} from 'components/variables/variables';
 
-const ats = () => {
+const ats = ({
 
-  let ats: DataAts = {
+    estados, botones_alarmas, datos_generales, datos_principales
 
-    estados: {
-      est_equipo: '',
-      pres_f1: '',
-      pres_f2:'',
-      pos_f1: '',
-      pos_f2: '',
-      transf_f1: 0,
-      transf_f2: 0,
-      volt_f1: 0,
-      volt_f2: 0
-    },
-    botones_alarmas:{
-      rele_trans_auto:'',
-      falla_auto: '',
-      pos_f1: '',
-      pos_f2: '',
-      red_modbus: ''
-    },
-    datos_generales: {
-      fase: '1',
-      marca: '',
-      modelo: '',
-      sistema: '',
-      ubicacion: ''
-    },
-    datos_principales: {
-      volt_f1: 0,
-      volt_f2: 0,
-      total_transf: 0,
-      boton_ats: '',
-      nombre_ats:'',
-      boton_estado: '',
-      text_estado: '',
-    },
+}: DataAts) => {
 
-
-  }
-
+  
     return (
 
         
@@ -1556,6 +1521,7 @@ const ats = () => {
           paintOrder="markers stroke fill"
         />
         <path
+        /*
           id="rect2077"
           fillRule="evenodd"
           fill="#10677d"
@@ -1602,6 +1568,8 @@ const ats = () => {
           opacity={0.75}
           paintOrder="markers stroke fill"
           d="M209.94 32.309H214.2787V35.4968H209.94z"
+          */
+
         />
         <path
           id="path15126"
@@ -1832,7 +1800,7 @@ const ats = () => {
             fontSize="4.5861px"
             strokeWidth={0.26458}
           >
-            {"VOLTAJE F2"}
+            {"TRANSF F2"}
           </tspan>
         </text>
         <text
@@ -1857,7 +1825,7 @@ const ats = () => {
             fontSize="4.5861px"
             strokeWidth={0.26458}
           >
-            {"VOLTAJE F1"}
+            {"TRANSF F1"}
           </tspan>
         </text>
         <text
@@ -1874,6 +1842,7 @@ const ats = () => {
           strokeWidth={0.26458}
         >
           <tspan
+          /*
             id="tspan9357"
             x={32.423794}
             y={54.525833}
@@ -1882,8 +1851,9 @@ const ats = () => {
             fontSize="6.35px"
             fontWeight={700}
             strokeWidth={0.26458}
+            */
           >
-            {"V"}
+            {}
           </tspan>
         </text>
         <text
@@ -1900,6 +1870,7 @@ const ats = () => {
           strokeWidth={0.26458}
         >
           <tspan
+          /*
             id="tspan6618"
             x={231.3891}
             y={54.525833}
@@ -1908,8 +1879,9 @@ const ats = () => {
             fontSize="6.35px"
             fontWeight={700}
             strokeWidth={0.26458}
+            */
           >
-            {"V"}
+            {}
           </tspan>
         </text>
         <text
@@ -2273,10 +2245,10 @@ const ats = () => {
         </text>
       </g>
       <Variables
-      estados = {ats.estados}
-      botones_alarmas = {ats.botones_alarmas}
-      datos_generales = {ats.datos_generales}
-      datos_principales = {ats.datos_principales}
+      estados = {estados}
+      botones_alarmas = {botones_alarmas}
+      datos_generales = {datos_generales}
+      datos_principales = {datos_principales}
     
     />
     </g>

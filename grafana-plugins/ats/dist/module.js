@@ -358,9 +358,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _grafana_ui__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @grafana/ui */ "@grafana/ui");
 /* harmony import */ var _grafana_ui__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_grafana_ui__WEBPACK_IMPORTED_MODULE_3__);
 /* harmony import */ var _components_ats__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./components/ats */ "./components/ats.tsx");
+/* harmony import */ var modules_dataATS__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! modules/dataATS */ "./modules/dataATS.ts");
 
 
  //import { stylesFactory, useTheme } from '@grafana/ui';
+
 
 
 
@@ -371,9 +373,15 @@ var SimplePanel = function SimplePanel(_a) {
       height = _a.height; //const theme = useTheme();
 
   var styles = getStyles();
+  var ats = Object(modules_dataATS__WEBPACK_IMPORTED_MODULE_5__["default"])(data, options);
   return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
     className: Object(emotion__WEBPACK_IMPORTED_MODULE_2__["cx"])(styles.wrapper, Object(emotion__WEBPACK_IMPORTED_MODULE_2__["css"])(templateObject_1 || (templateObject_1 = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__makeTemplateObject"])(["\n          width: ", "px;\n          height: ", "px;\n        "], ["\n          width: ", "px;\n          height: ", "px;\n        "])), width, height))
-  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_components_ats__WEBPACK_IMPORTED_MODULE_4__["default"], null));
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_components_ats__WEBPACK_IMPORTED_MODULE_4__["default"], {
+    estados: ats.estados,
+    botones_alarmas: ats.botones_alarmas,
+    datos_generales: ats.datos_generales,
+    datos_principales: ats.datos_principales
+  }));
 };
 var getStyles = Object(_grafana_ui__WEBPACK_IMPORTED_MODULE_3__["stylesFactory"])(function () {
   return {
@@ -401,43 +409,11 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-var ats = function ats() {
-  var ats = {
-    estados: {
-      est_equipo: '',
-      pres_f1: '',
-      pres_f2: '',
-      pos_f1: '',
-      pos_f2: '',
-      transf_f1: 0,
-      transf_f2: 0,
-      volt_f1: 0,
-      volt_f2: 0
-    },
-    botones_alarmas: {
-      rele_trans_auto: '',
-      falla_auto: '',
-      pos_f1: '',
-      pos_f2: '',
-      red_modbus: ''
-    },
-    datos_generales: {
-      fase: '1',
-      marca: '',
-      modelo: '',
-      sistema: '',
-      ubicacion: ''
-    },
-    datos_principales: {
-      volt_f1: 0,
-      volt_f2: 0,
-      total_transf: 0,
-      boton_ats: '',
-      nombre_ats: '',
-      boton_estado: '',
-      text_estado: ''
-    }
-  };
+var ats = function ats(_a) {
+  var estados = _a.estados,
+      botones_alarmas = _a.botones_alarmas,
+      datos_generales = _a.datos_generales,
+      datos_principales = _a.datos_principales;
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("svg", {
     id: "svg8",
     viewBox: "0 0 508 198.44"
@@ -1794,49 +1770,7 @@ var ats = function ats() {
     fill: "#168498",
     opacity: 0.75,
     paintOrder: "markers stroke fill"
-  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("path", {
-    id: "rect2077",
-    fillRule: "evenodd",
-    fill: "#10677d",
-    opacity: 0.75,
-    paintOrder: "markers stroke fill",
-    d: "M209.94 53.893H214.2787V57.0808H209.94z"
-  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("path", {
-    id: "rect2077-1",
-    fillRule: "evenodd",
-    fill: "#10677d",
-    opacity: 0.75,
-    paintOrder: "markers stroke fill",
-    d: "M209.94 49.576H214.2787V52.7638H209.94z"
-  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("path", {
-    id: "rect2077-7",
-    fillRule: "evenodd",
-    fill: "#10677d",
-    opacity: 0.75,
-    paintOrder: "markers stroke fill",
-    d: "M209.94 45.26H214.2787V48.4478H209.94z"
-  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("path", {
-    id: "rect2077-1-2",
-    fillRule: "evenodd",
-    fill: "#10677d",
-    opacity: 0.75,
-    paintOrder: "markers stroke fill",
-    d: "M209.94 40.943H214.2787V44.1308H209.94z"
-  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("path", {
-    id: "rect2077-9",
-    fillRule: "evenodd",
-    fill: "#10677d",
-    opacity: 0.75,
-    paintOrder: "markers stroke fill",
-    d: "M209.94 36.626H214.2787V39.8138H209.94z"
-  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("path", {
-    id: "rect2077-1-5",
-    fillRule: "evenodd",
-    fill: "#10677d",
-    opacity: 0.75,
-    paintOrder: "markers stroke fill",
-    d: "M209.94 32.309H214.2787V35.4968H209.94z"
-  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("path", {
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("path", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("path", {
     id: "path15126",
     d: "M242.1 32.285l2.14-2.07-5.196-4.953h-28.83l-3.768-4.591",
     fill: "none",
@@ -2032,7 +1966,7 @@ var ats = function ats() {
     fontFamily: "Franklin Gothic Medium",
     fontSize: "4.5861px",
     strokeWidth: 0.26458
-  }, "VOLTAJE F2")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("text", {
+  }, "TRANSF F2")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("text", {
     id: "text21801",
     x: 27.416189,
     y: 24.13065,
@@ -2052,7 +1986,7 @@ var ats = function ats() {
     fontFamily: "Franklin Gothic Medium",
     fontSize: "4.5861px",
     strokeWidth: 0.26458
-  }, "VOLTAJE F1")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("text", {
+  }, "TRANSF F1")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("text", {
     id: "text9359",
     x: 32.423794,
     y: 54.525833,
@@ -2064,16 +1998,7 @@ var ats = function ats() {
     fontFamily: "sans-serif",
     fontSize: "6.35px",
     strokeWidth: 0.26458
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tspan", {
-    id: "tspan9357",
-    x: 32.423794,
-    y: 54.525833,
-    fill: "#fff",
-    fontFamily: "Franklin Gothic Medium",
-    fontSize: "6.35px",
-    fontWeight: 700,
-    strokeWidth: 0.26458
-  }, "V")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("text", {
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tspan", null)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("text", {
     id: "text6620",
     x: 231.3891,
     y: 54.525833,
@@ -2085,16 +2010,7 @@ var ats = function ats() {
     fontFamily: "sans-serif",
     fontSize: "6.35px",
     strokeWidth: 0.26458
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tspan", {
-    id: "tspan6618",
-    x: 231.3891,
-    y: 54.525833,
-    fill: "#fff",
-    fontFamily: "Franklin Gothic Medium",
-    fontSize: "6.35px",
-    fontWeight: 700,
-    strokeWidth: 0.26458
-  }, "V")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("text", {
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tspan", null)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("text", {
     id: "text3596",
     x: 305.1004,
     y: 21.760416,
@@ -2371,10 +2287,10 @@ var ats = function ats() {
     fontSize: "9.8778px",
     strokeWidth: 0.33875
   }, "DC-GYE"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(components_variables_variables__WEBPACK_IMPORTED_MODULE_1__["Variables"], {
-    estados: ats.estados,
-    botones_alarmas: ats.botones_alarmas,
-    datos_generales: ats.datos_generales,
-    datos_principales: ats.datos_principales
+    estados: estados,
+    botones_alarmas: botones_alarmas,
+    datos_generales: datos_generales,
+    datos_principales: datos_principales
   })));
 };
 
@@ -2452,7 +2368,7 @@ var Variables = function Variables(_a) {
     wordSpacing: 0
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tspan", {
     id: "tspan5927",
-    x: 210.39435,
+    x: 207.39435,
     y: 135.13402,
     fill: "#fff",
     fontFamily: "Franklin Gothic Medium",
@@ -2476,11 +2392,11 @@ var Variables = function Variables(_a) {
     wordSpacing: 0
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tspan", {
     id: "tspan1960-4",
-    x: 204.53853,
-    y: 50.369724,
+    x: 203.53853,
+    y: 53.369724,
     fill: "#fff",
     fontFamily: "Franklin Gothic Medium",
-    fontSize: "9.8778px",
+    fontSize: "10.8778px",
     fontWeight: 700,
     strokeWidth: 0.28918
   }, datos_principales.volt_f2)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("g", {
@@ -2539,12 +2455,12 @@ var Variables = function Variables(_a) {
     wordSpacing: 0
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tspan", {
     id: "tspan5848",
-    x: 236.20271,
+    x: 223.20271,
     y: 175.78246,
     dy: 0,
     fill: "#fff",
     fontFamily: "Franklin Gothic Medium",
-    fontSize: "7.0556px",
+    fontSize: "6.0556px",
     strokeWidth: 0.26458
   }, datos_principales.text_estado)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("text", {
     id: "fase",
@@ -2968,35 +2884,195 @@ __webpack_require__.r(__webpack_exports__);
 
 var plugin = new _grafana_data__WEBPACK_IMPORTED_MODULE_0__["PanelPlugin"](_SimplePanel__WEBPACK_IMPORTED_MODULE_1__["SimplePanel"]).setPanelOptions(function (builder) {
   return builder.addTextInput({
-    path: 'text',
-    name: 'Simple text option',
-    description: 'Description of panel option',
-    defaultValue: 'Default value of text input option'
-  }).addBooleanSwitch({
-    path: 'showSeriesCount',
-    name: 'Show series counter',
-    defaultValue: false
-  }).addRadio({
-    path: 'seriesCountSize',
-    defaultValue: 'sm',
-    name: 'Series counter size',
-    settings: {
-      options: [{
-        value: 'sm',
-        label: 'Small'
-      }, {
-        value: 'md',
-        label: 'Medium'
-      }, {
-        value: 'lg',
-        label: 'Large'
-      }]
-    },
-    showIf: function showIf(config) {
-      return config.showSeriesCount;
-    }
+    path: 'nombre',
+    name: 'Nombre',
+    description: 'Nombre de ats'
+  }).addTextInput({
+    path: 'fase',
+    name: 'Fase',
+    description: 'Fase donde esta el ats'
+  }).addTextInput({
+    path: 'sistema',
+    name: 'Sistema',
+    description: 'Sistema donde esta el ats'
+  }).addTextInput({
+    path: 'marca',
+    name: 'Marca',
+    description: 'Marca del ats'
+  }).addTextInput({
+    path: 'modelo',
+    name: 'Modelo',
+    description: 'Modelo del ats'
+  }).addTextInput({
+    path: 'ubicacion',
+    name: 'Ubicación',
+    description: 'Ubicación del ats'
   });
 });
+
+/***/ }),
+
+/***/ "./modules/dataATS.ts":
+/*!****************************!*\
+  !*** ./modules/dataATS.ts ***!
+  \****************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var styles_estadoStyles__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! styles/estadoStyles */ "./styles/estadoStyles.ts");
+//import alarmaStyles from 'styles/alarmsStyles';
+
+
+var DataATS = function DataATS(data, options) {
+  var _a, _b, _c, _d, _e, _f, _g, _h, _j, _k, _l, _m, _o, _p, _q, _r, _s, _t, _u, _v, _w, _x, _y, _z, _0, _1, _2, _3, _4, _5;
+
+  console.log(options);
+  console.log(data); //------------------------------------ASIGNACION DE VARIABLES-------------------------------//  
+
+  var AUT_TRANS_REL = (_c = (_b = (_a = data.series.find(function (_a) {
+    var name = _a.name;
+    return name === null || name === void 0 ? void 0 : name.includes('DATA.AUT_TRANS_REL.VALUE');
+  })) === null || _a === void 0 ? void 0 : _a.fields[1].state) === null || _b === void 0 ? void 0 : _b.calcs) === null || _c === void 0 ? void 0 : _c.lastNotNull;
+  var F1_AVAIL = (_f = (_e = (_d = data.series.find(function (_a) {
+    var name = _a.name;
+    return name === null || name === void 0 ? void 0 : name.includes('DATA.F1_AVAIL.VALUE');
+  })) === null || _d === void 0 ? void 0 : _d.fields[1].state) === null || _e === void 0 ? void 0 : _e.calcs) === null || _f === void 0 ? void 0 : _f.lastNotNull;
+  var F1_POSIC = (_j = (_h = (_g = data.series.find(function (_a) {
+    var name = _a.name;
+    return name === null || name === void 0 ? void 0 : name.includes('DATA.F1_POSIC.VALUE');
+  })) === null || _g === void 0 ? void 0 : _g.fields[1].state) === null || _h === void 0 ? void 0 : _h.calcs) === null || _j === void 0 ? void 0 : _j.lastNotNull;
+  var F2_AVAIL = (_m = (_l = (_k = data.series.find(function (_a) {
+    var name = _a.name;
+    return name === null || name === void 0 ? void 0 : name.includes('DATA.F2_AVAIL.VALUE');
+  })) === null || _k === void 0 ? void 0 : _k.fields[1].state) === null || _l === void 0 ? void 0 : _l.calcs) === null || _m === void 0 ? void 0 : _m.lastNotNull;
+  var F2_POSIC = (_q = (_p = (_o = data.series.find(function (_a) {
+    var name = _a.name;
+    return name === null || name === void 0 ? void 0 : name.includes('DATA.F2_POSIC.VALUE');
+  })) === null || _o === void 0 ? void 0 : _o.fields[1].state) === null || _p === void 0 ? void 0 : _p.calcs) === null || _q === void 0 ? void 0 : _q.lastNotNull;
+  var MODBUS_ST = (_t = (_s = (_r = data.series.find(function (_a) {
+    var name = _a.name;
+    return name === null || name === void 0 ? void 0 : name.includes('DATA.MODBUS_ST.VALUE');
+  })) === null || _r === void 0 ? void 0 : _r.fields[1].state) === null || _s === void 0 ? void 0 : _s.calcs) === null || _t === void 0 ? void 0 : _t.lastNotNull;
+  var NOT_IN_AUTO = (_w = (_v = (_u = data.series.find(function (_a) {
+    var name = _a.name;
+    return name === null || name === void 0 ? void 0 : name.includes('DATA.NOT_IN_AUTO.VALUE');
+  })) === null || _u === void 0 ? void 0 : _u.fields[1].state) === null || _v === void 0 ? void 0 : _v.calcs) === null || _w === void 0 ? void 0 : _w.lastNotNull;
+  var TOT_FAULT = (_z = (_y = (_x = data.series.find(function (_a) {
+    var name = _a.name;
+    return name === null || name === void 0 ? void 0 : name.includes('DATA.TOT_FAULT.VALUE');
+  })) === null || _x === void 0 ? void 0 : _x.fields[1].state) === null || _y === void 0 ? void 0 : _y.calcs) === null || _z === void 0 ? void 0 : _z.lastNotNull;
+  var TOT_TRANS_F1 = (_2 = (_1 = (_0 = data.series.find(function (_a) {
+    var name = _a.name;
+    return name === null || name === void 0 ? void 0 : name.includes('DATA.TOT_TRANS_F1.VALUE');
+  })) === null || _0 === void 0 ? void 0 : _0.fields[1].state) === null || _1 === void 0 ? void 0 : _1.calcs) === null || _2 === void 0 ? void 0 : _2.lastNotNull;
+  var TOT_TRANS_F2 = (_5 = (_4 = (_3 = data.series.find(function (_a) {
+    var name = _a.name;
+    return name === null || name === void 0 ? void 0 : name.includes('DATA.TOT_TRANS_F2.VALUE');
+  })) === null || _3 === void 0 ? void 0 : _3.fields[1].state) === null || _4 === void 0 ? void 0 : _4.calcs) === null || _5 === void 0 ? void 0 : _5.lastNotNull; //-------------------------------------------------------------------------------------------//
+
+  var ats = {
+    estados: {
+      est_equipo: '',
+      pres_f1: '',
+      pres_f2: '',
+      pos_f1: '',
+      pos_f2: '',
+      transf_f1: 0,
+      transf_f2: 0,
+      volt_f1: 0,
+      volt_f2: 0
+    },
+    botones_alarmas: {
+      rele_trans_auto: styles_estadoStyles__WEBPACK_IMPORTED_MODULE_0__["default"].sinConexion,
+      falla_auto: styles_estadoStyles__WEBPACK_IMPORTED_MODULE_0__["default"].sinConexion,
+      pos_f1: styles_estadoStyles__WEBPACK_IMPORTED_MODULE_0__["default"].sinConexion,
+      pos_f2: styles_estadoStyles__WEBPACK_IMPORTED_MODULE_0__["default"].sinConexion,
+      red_modbus: styles_estadoStyles__WEBPACK_IMPORTED_MODULE_0__["default"].sinConexion
+    },
+    datos_generales: {
+      fase: '',
+      marca: '',
+      modelo: '',
+      sistema: '',
+      ubicacion: ''
+    },
+    datos_principales: {
+      volt_f1: 0,
+      volt_f2: 0,
+      total_transf: 0,
+      boton_ats: styles_estadoStyles__WEBPACK_IMPORTED_MODULE_0__["default"].sinConexion,
+      nombre_ats: '',
+      boton_estado: styles_estadoStyles__WEBPACK_IMPORTED_MODULE_0__["default"].sinConexion,
+      text_estado: ''
+    }
+  }; // --------------------------ESTADOS----------------------------------//
+
+  ats.estados.est_equipo = AUT_TRANS_REL === 0 ? 'OFF' : 'ON';
+  ats.estados.pres_f1 = F1_AVAIL === 0 ? 'OFF' : 'ON';
+  ats.estados.pres_f2 = F2_AVAIL === 0 ? 'OFF' : 'ON';
+  ats.estados.pos_f1 = F1_POSIC === 0 ? 'OFF' : 'ON';
+  ats.estados.pos_f2 = F2_POSIC === 0 ? 'OFF' : 'ON';
+  ats.estados.transf_f1 = Number.parseFloat(TOT_TRANS_F1 === null || TOT_TRANS_F1 === void 0 ? void 0 : TOT_TRANS_F1.toFixed(2));
+  ats.estados.transf_f2 = Number.parseFloat(TOT_TRANS_F2 === null || TOT_TRANS_F2 === void 0 ? void 0 : TOT_TRANS_F2.toFixed(2)); //ats.estados.volt_f1 = Number.parseFloat(?.toFixed(2));
+  //ats.estados.volt_f2 =  Number.parseFloat(?.toFixed(2));
+  // --------------------------DATOS GENERALES-------------------------//
+
+  ats.datos_generales.fase = options.fase;
+  ats.datos_generales.sistema = options.sistema;
+  ats.datos_generales.marca = options.marca;
+  ats.datos_generales.modelo = options.modelo;
+  ats.datos_generales.ubicacion = options.ubicacion; // ----------------------BOTONES ALARMAS------------------------------//
+
+  ats.botones_alarmas.rele_trans_auto = AUT_TRANS_REL === 1 ? styles_estadoStyles__WEBPACK_IMPORTED_MODULE_0__["default"].alarma : styles_estadoStyles__WEBPACK_IMPORTED_MODULE_0__["default"].sinConexion;
+  ats.botones_alarmas.falla_auto = NOT_IN_AUTO === 1 ? styles_estadoStyles__WEBPACK_IMPORTED_MODULE_0__["default"].alarma : styles_estadoStyles__WEBPACK_IMPORTED_MODULE_0__["default"].sinConexion;
+  ats.botones_alarmas.pos_f1 = F1_POSIC === 1 ? styles_estadoStyles__WEBPACK_IMPORTED_MODULE_0__["default"].alarma : styles_estadoStyles__WEBPACK_IMPORTED_MODULE_0__["default"].sinConexion;
+  ats.botones_alarmas.pos_f2 = F2_POSIC === 1 ? styles_estadoStyles__WEBPACK_IMPORTED_MODULE_0__["default"].alarma : styles_estadoStyles__WEBPACK_IMPORTED_MODULE_0__["default"].sinConexion;
+  ats.botones_alarmas.red_modbus = MODBUS_ST === 1 ? styles_estadoStyles__WEBPACK_IMPORTED_MODULE_0__["default"].alarma : styles_estadoStyles__WEBPACK_IMPORTED_MODULE_0__["default"].sinConexion; // ---------------------- DATOS PRINCIPALES---------------------------//
+
+  ats.datos_principales.volt_f1 = Number.parseFloat(TOT_TRANS_F1 === null || TOT_TRANS_F1 === void 0 ? void 0 : TOT_TRANS_F1.toFixed(2));
+  ats.datos_principales.volt_f2 = Number.parseFloat(TOT_TRANS_F2 === null || TOT_TRANS_F2 === void 0 ? void 0 : TOT_TRANS_F2.toFixed(2));
+  ats.datos_principales.nombre_ats = options.nombre;
+  ats.datos_principales.total_transf = Number.parseFloat(TOT_FAULT === null || TOT_FAULT === void 0 ? void 0 : TOT_FAULT.toFixed(2));
+  ats.datos_principales.boton_estado = F1_POSIC === 0 ? styles_estadoStyles__WEBPACK_IMPORTED_MODULE_0__["default"].sinConexion : styles_estadoStyles__WEBPACK_IMPORTED_MODULE_0__["default"].ok;
+  ats.datos_principales.boton_ats = F1_POSIC === 0 ? styles_estadoStyles__WEBPACK_IMPORTED_MODULE_0__["default"].sinConexion : styles_estadoStyles__WEBPACK_IMPORTED_MODULE_0__["default"].ok;
+  ats.datos_principales.text_estado = F1_POSIC === 0 ? 'DESCONECT' : 'CONECTADO';
+  return ats;
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (DataATS);
+
+/***/ }),
+
+/***/ "./styles/estadoStyles.ts":
+/*!********************************!*\
+  !*** ./styles/estadoStyles.ts ***!
+  \********************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "../node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _grafana_ui__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @grafana/ui */ "@grafana/ui");
+/* harmony import */ var _grafana_ui__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_grafana_ui__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var emotion__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! emotion */ "emotion");
+/* harmony import */ var emotion__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(emotion__WEBPACK_IMPORTED_MODULE_2__);
+
+
+
+var parpadeo = Object(emotion__WEBPACK_IMPORTED_MODULE_2__["keyframes"])(templateObject_1 || (templateObject_1 = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__makeTemplateObject"])(["\n  0% { opacity: 1.0; };\n  100% { opacity: 0.0; };\n"], ["\n  0% { opacity: 1.0; };\n  100% { opacity: 0.0; };\n"])));
+var getStyles = Object(_grafana_ui__WEBPACK_IMPORTED_MODULE_1__["stylesFactory"])(function () {
+  return {
+    sinConexion: Object(emotion__WEBPACK_IMPORTED_MODULE_2__["css"])(templateObject_2 || (templateObject_2 = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__makeTemplateObject"])(["\n      fill: #999;\n    "], ["\n      fill: #999;\n    "]))),
+    alarma: Object(emotion__WEBPACK_IMPORTED_MODULE_2__["css"])(templateObject_3 || (templateObject_3 = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__makeTemplateObject"])(["\n      fill: red;\n      animation: ", " 1s ease infinite;\n    "], ["\n      fill: red;\n      animation: ", " 1s ease infinite;\n    "])), parpadeo),
+    ok: Object(emotion__WEBPACK_IMPORTED_MODULE_2__["css"])(templateObject_4 || (templateObject_4 = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__makeTemplateObject"])(["\n      fill: green;\n    "], ["\n      fill: green;\n    "])))
+  };
+});
+var styles = getStyles();
+/* harmony default export */ __webpack_exports__["default"] = (styles);
+var templateObject_1, templateObject_2, templateObject_3, templateObject_4;
 
 /***/ }),
 

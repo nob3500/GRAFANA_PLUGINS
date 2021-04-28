@@ -1,44 +1,29 @@
-# Grafana Panel Plugin Template
+# Variables PQM
 
-[![Build](https://github.com/grafana/grafana-starter-panel/workflows/CI/badge.svg)](https://github.com/grafana/grafana-starter-panel/actions?query=workflow%3A%22CI%22)
 
-This template is a starting point for building Grafana Panel Plugins in Grafana 7.0+
+    DATA.AUT_TRANS_REL.VALUE
+    DATA.F1_AVAIL.VALUE
+    DATA.F1_POSIC.VALUE
+    DATA.F2_AVAIL.VALUE
+    DATA.F2_POSIC.VALUE
+    DATA.MODBUS_ST.VALUE
+    DATA.NOT_IN_AUTO.VALUE
+    DATA.TOT_FAULT.VALUE
+    DATA.TOT_TRANS_F1.VALUE
+    DATA.TOT_TRANS_F2.VALUE
 
-## What is Grafana Panel Plugin?
+# Index
 
-Panels are the building blocks of Grafana. They allow you to visualize data in different ways. While Grafana has several types of panels already built-in, you can also build your own panel, to add support for other visualizations.
+dc_gye_ats
 
-For more information about panels, refer to the documentation on [Panels](https://grafana.com/docs/grafana/latest/features/panels/panels/)
+# GATEWAY
 
-## Getting started
+http://172.30.0.220:1880/
 
-1. Install dependencies
+# NOMBRE DEL EQUIPO
 
-   ```bash
-   yarn install
-   ```
+ATS_4A ; ATS_ASAT_2A ; ATS_ASAT_1A ; ATS_3A ; ATS_CHI_7A ; ATS_PDU_9A ; ATS_SG_11A ; ATS_REC_5A
 
-2. Build plugin in development mode or run in watch mode
+# Forma de pegar en el campo Campos del dataSource para elastic en el grafana
 
-   ```bash
-   yarn dev
-   ```
-
-   or
-
-   ```bash
-   yarn watch
-   ```
-
-3. Build plugin in production mode
-
-   ```bash
-   yarn build
-   ```
-
-## Learn more
-
-- [Build a panel plugin tutorial](https://grafana.com/tutorials/build-a-panel-plugin)
-- [Grafana documentation](https://grafana.com/docs/)
-- [Grafana Tutorials](https://grafana.com/tutorials/) - Grafana Tutorials are step-by-step guides that help you make the most of Grafana
-- [Grafana UI Library](https://developers.grafana.com/ui) - UI components to help you build interfaces using Grafana Design System
+ DATA.AUT_TRANS_REL.VALUE,DATA.F1_AVAIL.VALUE,DATA.F1_POSIC.VALUE,DATA.F2_AVAIL.VALUE,DATA.F2_POSIC.VALUE,DATA.MODBUS_ST.VALUE,DATA.NOT_IN_AUTO.VALUE,DATA.TOT_FAULT.VALUE,DATA.TOT_TRANS_F1.VALUE,DATA.TOT_TRANS_F2.VALUE

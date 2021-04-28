@@ -5,12 +5,17 @@ import { css, cx } from 'emotion';
 //import { stylesFactory, useTheme } from '@grafana/ui';
 import { stylesFactory} from '@grafana/ui';
 import Ats from './components/ats';
+import {DataAts} from 'components/variables/variables';
+import dataATS from 'modules/dataATS'
 
 interface Props extends PanelProps<SimpleOptions> {}
 
 export const SimplePanel: React.FC<Props> = ({ options, data, width, height }) => {
   //const theme = useTheme();
   const styles = getStyles();
+
+  let ats: DataAts = dataATS(data , options)
+
   return (
     <div
       className={cx(
@@ -21,7 +26,13 @@ export const SimplePanel: React.FC<Props> = ({ options, data, width, height }) =
         `
       )}
     >
-      <Ats/>
+      <Ats
+          estados = {ats.estados}
+          botones_alarmas = {ats.botones_alarmas}
+          datos_generales = {ats.datos_generales}
+          datos_principales = {ats.datos_principales}
+      
+      />
       
     </div>
   );

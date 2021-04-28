@@ -5,36 +5,34 @@ import { SimplePanel } from './SimplePanel';
 export const plugin = new PanelPlugin<SimpleOptions>(SimplePanel).setPanelOptions(builder => {
   return builder
     .addTextInput({
-      path: 'text',
-      name: 'Simple text option',
-      description: 'Description of panel option',
-      defaultValue: 'Default value of text input option',
+      path: 'nombre',
+      name: 'Nombre',
+      description: 'Nombre de ats',
     })
-    .addBooleanSwitch({
-      path: 'showSeriesCount',
-      name: 'Show series counter',
-      defaultValue: false,
+    .addTextInput({
+      path: 'fase',
+      name: 'Fase',
+      description: 'Fase donde esta el ats',
     })
-    .addRadio({
-      path: 'seriesCountSize',
-      defaultValue: 'sm',
-      name: 'Series counter size',
-      settings: {
-        options: [
-          {
-            value: 'sm',
-            label: 'Small',
-          },
-          {
-            value: 'md',
-            label: 'Medium',
-          },
-          {
-            value: 'lg',
-            label: 'Large',
-          },
-        ],
-      },
-      showIf: config => config.showSeriesCount,
+    .addTextInput({
+      path: 'sistema',
+      name: 'Sistema',
+      description: 'Sistema donde esta el ats',
+    })
+    .addTextInput({
+      path: 'marca',
+      name: 'Marca',
+      description: 'Marca del ats',
+    })
+    .addTextInput({
+      path: 'modelo',
+      name: 'Modelo',
+      description: 'Modelo del ats',
+    })
+    .addTextInput({
+      path: 'ubicacion',
+      name: 'Ubicación',
+      description: 'Ubicación del ats',
     });
+    
 });
