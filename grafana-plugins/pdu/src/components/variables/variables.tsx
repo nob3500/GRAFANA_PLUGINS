@@ -1,6 +1,6 @@
 import React from 'react'
 
-type Fases = {
+type Estados = {
     in1_AB: number;
     in1_BC: number;
     in1_CA: number;
@@ -12,17 +12,18 @@ type Fases = {
     out1_C: number;
     corriente_N: number;
 }
-
+/*
 type Estados_alarmas = {
     on: string;
     off: string;
 }
+*/
 
 type Botones_alarmas = {
-    alarma_general: Estados_alarmas;
-    puerta_abierta: Estados_alarmas;
-    falla_breaker: Estados_alarmas;
-    red_modbus:Estados_alarmas;
+    alarma_general: string;
+    puerta_abierta: string;
+    falla_breaker: string;
+    red_modbus:string;
 }
 
 type Datos_generales = {
@@ -34,7 +35,7 @@ type Datos_generales = {
 
 }
 
-type Volt_corr ={
+type datos_principales ={
     in_volt: number;
     out_volt: number;
     corr_total: number;
@@ -46,14 +47,14 @@ type Volt_corr ={
 }
 
 export interface DataPdu{
-    fases:Fases;
+    estados:Estados;
     botones_alarmas: Botones_alarmas;
     datos_generales: Datos_generales;
-    volt_corr: Volt_corr;
+    datos_principales: datos_principales;
 }
 
 export const Variables = ({
-    fases, botones_alarmas, datos_generales, volt_corr 
+    estados, botones_alarmas, datos_generales, datos_principales 
 }: DataPdu) =>{
     return(
         <g id="layer4">
@@ -84,12 +85,12 @@ export const Variables = ({
               fontWeight={700}
               strokeWidth={0.28918}
             >
-              {volt_corr.in_volt}
+              {datos_principales.in_volt}
             </tspan>
           </text>
           <path
             id="estado_eq"
-            className= {volt_corr.boton_pdu}
+            className= {datos_principales.boton_pdu}
             fillRule="evenodd"
             fill="url(#linearGradient4474)"
             strokeWidth={0.26219}
@@ -110,15 +111,15 @@ export const Variables = ({
           >
             <tspan
               id="tspan9221-2"
-              x={209.63374}
+              x={205.63374}
               y={54.087193}
               fill="#fff"
               fontFamily="Franklin Gothic Medium"
               fontSize="9.8778px"
-              fontWeight={700}
+              fontWeight={600}
               strokeWidth={0.26458}
             >
-              {volt_corr.out_volt}
+              {datos_principales.out_volt}
             </tspan>
           </text>
           <text
@@ -136,7 +137,7 @@ export const Variables = ({
           >
             <tspan
               id="tspan9221"
-              x={217.73564}
+              x={214.73564}
               y={128.04333}
               fill="#fff"
               fontFamily="Franklin Gothic Medium"
@@ -144,7 +145,7 @@ export const Variables = ({
               fontWeight={700}
               strokeWidth={0.26458}
             >
-              {volt_corr.corr_total}
+              {datos_principales.corr_total}
             </tspan>
           </text>
           <text
@@ -285,7 +286,7 @@ export const Variables = ({
             ry={2.4137}
             fillRule="evenodd"
             fill="#3a3d3d"
-            className= { botones_alarmas.puerta_abierta.off }
+            className= { botones_alarmas.puerta_abierta }
             opacity={0.88}
             paintOrder="markers stroke fill"
           />
@@ -297,7 +298,7 @@ export const Variables = ({
             ry={2.4137}
             fillRule="evenodd"
             fill="#3a3d3d"
-            className= { botones_alarmas.falla_breaker.off }
+            className= { botones_alarmas.falla_breaker }
             opacity={0.88}
             paintOrder="markers stroke fill"
           />
@@ -309,7 +310,7 @@ export const Variables = ({
             ry={2.4137}
             fillRule="evenodd"
             fill="#3a3d3d"
-            className= { botones_alarmas.red_modbus.off }
+            className= { botones_alarmas.red_modbus }
             opacity={0.88}
             paintOrder="markers stroke fill"
           />
@@ -321,7 +322,7 @@ export const Variables = ({
             ry={2.4137}
             fillRule="evenodd"
             fill="#3a3d3d"
-            className= { botones_alarmas.alarma_general.off }
+            className= { botones_alarmas.alarma_general}
             opacity={0.88}
             paintOrder="markers stroke fill"
           />
@@ -348,7 +349,7 @@ export const Variables = ({
               fontSize="4.9389px"
               strokeWidth={0.26458}
             >
-              {fases.in1_AB}
+              {estados.in1_AB}
             </tspan>
           </text>
           <text
@@ -374,7 +375,7 @@ export const Variables = ({
               fontSize="4.9389px"
               strokeWidth={0.26458}
             >
-              {fases.in1_BC}
+              {estados.in1_BC}
             </tspan>
           </text>
           <text
@@ -400,7 +401,7 @@ export const Variables = ({
               fontSize="4.9389px"
               strokeWidth={0.26458}
             >
-              {fases.in1_CA}
+              {estados.in1_CA}
             </tspan>
           </text>
           <text
@@ -426,7 +427,7 @@ export const Variables = ({
               fontSize="4.9389px"
               strokeWidth={0.26458}
             >
-              {fases.out1_A}
+              {estados.out1_A}
             </tspan>
           </text>
           <text
@@ -452,7 +453,7 @@ export const Variables = ({
               fontSize="4.9389px"
               strokeWidth={0.26458}
             >
-              {fases.out1_BC}
+              {estados.out1_BC}
             </tspan>
           </text>
           <text
@@ -478,7 +479,7 @@ export const Variables = ({
               fontSize="4.9389px"
               strokeWidth={0.26458}
             >
-              {fases.out1_CA}
+              {estados.out1_CA}
             </tspan>
           </text>
           <text
@@ -497,14 +498,14 @@ export const Variables = ({
           >
             <tspan
               id="tspan15579"
-              x={570.33478}
+              x={567.63638}
               y={124.71497}
               fill="#fff"
               fontFamily="Franklin Gothic Medium"
               fontSize="4.9389px"
               strokeWidth={0.26458}
             >
-              {fases.corriente_N}
+              {estados.corriente_N}
             </tspan>
           </text>
           <text
@@ -530,7 +531,7 @@ export const Variables = ({
               fontSize="4.9389px"
               strokeWidth={0.26458}
             >
-              {fases.out1_B}
+              {estados.out1_B}
             </tspan>
           </text>
           <text
@@ -556,7 +557,7 @@ export const Variables = ({
               fontSize="4.9389px"
               strokeWidth={0.26458}
             >
-              {fases.out1_C}
+              {estados.out1_C}
             </tspan>
           </text>
           <text
@@ -581,12 +582,12 @@ export const Variables = ({
               fontSize="6.35px"
               strokeWidth={0.26458}
             >
-              {volt_corr.estado}
+              {datos_principales.estado}
             </tspan>
           </text>
           <g 
           id="st2" 
-          className={volt_corr.boton_estado}//power
+          className={datos_principales.boton_estado}//power
           transform="translate(-7.11 3.577)" 
           fill="#00990c">
             <path
@@ -631,7 +632,7 @@ export const Variables = ({
               fontSize="4.9389px"
               strokeWidth={0.26458}
             >
-              {fases.out1_A}
+              {estados.out1_A}
             </tspan>
           </text>
           <text
@@ -663,7 +664,7 @@ export const Variables = ({
                 fontSize="11.289px"
                 strokeWidth={0.25953}
               >
-                {volt_corr.nombre_pdu}
+                {datos_principales.nombre_pdu}
               </tspan>
             </tspan>
           </text>

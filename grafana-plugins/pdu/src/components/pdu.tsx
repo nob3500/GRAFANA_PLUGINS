@@ -1,60 +1,11 @@
 import React from 'react'
 import { Variables, DataPdu } from './variables/variables';
 
-const pdu = () =>{
-    let pdu: DataPdu ={
-      
-    fases:{
-        in1_AB: 0,
-        in1_BC: 0,
-        in1_CA: 0,
-        out1_AB: 0,
-        out1_BC: 0,
-        out1_CA: 0,
-        out1_A: 0,
-        out1_B: 0,
-        out1_C: 0,
-        corriente_N: 0
-    },
-    botones_alarmas:{
-        alarma_general:{
-            on:'',
-            off:''
-        },
-        puerta_abierta:{
-            on:'',
-            off:''
-        },
-        falla_breaker:{
-            on:'',
-            off:''
-        },
-        red_modbus:{
-            on:'',
-            off:''
-        },
-    },
-    datos_generales: {
-        fase: '1',
-        marca: '',
-        modelo: '',
-        sistema: '',
-        ubicacion: ''
-
-    },
-    volt_corr:{
-        in_volt: 0,
-        out_volt: 0,
-        corr_total: 0,
-        boton_estado: '',
-        boton_pdu:'',
-        nombre_pdu:'',
-        estado: ''
+const pdu = ({
     
+     estados, botones_alarmas, datos_generales, datos_principales
 
-    } 
-
-    }
+    }: DataPdu ) =>{
     return (
         
         
@@ -2152,6 +2103,7 @@ const pdu = () =>{
           paintOrder="markers stroke fill"
         />
         <path
+        /*
           id="rect2077"
           fillRule="evenodd"
           fill="#10677d"
@@ -2198,6 +2150,7 @@ const pdu = () =>{
           opacity={0.75}
           paintOrder="markers stroke fill"
           d="M202.76 36.125H206.9719V39.3128H202.76z"
+          */
         />
         <path
           id="path15126"
@@ -2308,7 +2261,7 @@ const pdu = () =>{
         >
           <tspan
             id="tspan5945"
-            x={210.66203}
+            x={205.66203}
             y={96.363808}
             style={{
               fontVariantCaps: "normal",
@@ -2413,10 +2366,10 @@ const pdu = () =>{
       />
     </g>
   <Variables
-    fases = {pdu.fases}
-    botones_alarmas=  {pdu.botones_alarmas}
-    datos_generales= {pdu.datos_generales}
-    volt_corr = {pdu.volt_corr}
+    estados = {estados}
+    botones_alarmas=  {botones_alarmas}
+    datos_generales= {datos_generales}
+    datos_principales = {datos_principales}
   
   /> 
   </svg>
