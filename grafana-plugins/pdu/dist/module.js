@@ -369,11 +369,12 @@ __webpack_require__.r(__webpack_exports__);
 var SimplePanel = function SimplePanel(_a) {
   var options = _a.options,
       data = _a.data,
+      replaceVariables = _a.replaceVariables,
       width = _a.width,
       height = _a.height; //const theme = useTheme();
 
   var styles = getStyles();
-  var pdu = Object(modules_dataPDU__WEBPACK_IMPORTED_MODULE_5__["default"])(data, options);
+  var pdu = Object(modules_dataPDU__WEBPACK_IMPORTED_MODULE_5__["default"])(data, options, replaceVariables);
   return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
     className: Object(emotion__WEBPACK_IMPORTED_MODULE_2__["cx"])(styles.wrapper, Object(emotion__WEBPACK_IMPORTED_MODULE_2__["css"])(templateObject_1 || (templateObject_1 = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__makeTemplateObject"])(["\n          width: ", "px;\n          height: ", "px;\n        "], ["\n          width: ", "px;\n          height: ", "px;\n        "])), width, height))
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_components_pdu__WEBPACK_IMPORTED_MODULE_4__["default"], {
@@ -1032,11 +1033,12 @@ __webpack_require__.r(__webpack_exports__);
 //import alarmaStyles from 'styles/alarmsStyles';
 
 
-var DataPDU = function DataPDU(data, options) {
+var DataPDU = function DataPDU(data, options, replaceVariables) {
   var _a, _b, _c, _d, _e, _f, _g, _h, _j, _k, _l, _m, _o, _p, _q, _r, _s, _t, _u, _v, _w, _x, _y, _z, _0, _1, _2, _3, _4, _5, _6, _7, _8, _9, _10, _11, _12, _13, _14, _15, _16, _17, _18, _19, _20;
 
   console.log(options);
-  console.log(data); //------------------------------------ASIGNACION DE VARIABLES-------------------------------//
+  console.log(data);
+  console.log(replaceVariables); //------------------------------------ASIGNACION DE VARIABLES-------------------------------//
 
   /*
   {variable:'PDU_1.KVA_1.CH1',detalle:'POTENCIA APARENTE 1 CH 1'},
@@ -1313,7 +1315,11 @@ var DataPDU = function DataPDU(data, options) {
       boton_estado: styles_estadoStyles__WEBPACK_IMPORTED_MODULE_0__["default"].sinConexion,
       estado: ''
     }
-  }; // --------------------------ESTADOS----------------------------------// 
+  }; // ------------------------INTERPOLACION DE VARIABLES-------------
+
+  var variableNombre = replaceVariables('$EQUIPO');
+  pdu.datos_principales.nombre_pdu = variableNombre !== '$NOMBRE' ? variableNombre : options.nombre; // pdu.datos_principales.nombre_pdu = options.nombre 
+  // --------------------------ESTADOS----------------------------------// 
 
   pdu.estados.in1_AB = Number.parseFloat(IN1_AB_VOL === null || IN1_AB_VOL === void 0 ? void 0 : IN1_AB_VOL.toFixed(2));
   pdu.estados.in1_BC = Number.parseFloat(IN1_BC_VOL === null || IN1_BC_VOL === void 0 ? void 0 : IN1_BC_VOL.toFixed(2));
@@ -1328,7 +1334,16 @@ var DataPDU = function DataPDU(data, options) {
   // --------------------------DATOS GENERALES-------------------------//
 
   pdu.datos_generales.fase = options.fase;
-  pdu.datos_generales.sistema = options.sistema;
+
+  if (variableNombre === 'PDU_1A_F1' || variableNombre === 'PDU_1A_F2' || variableNombre === 'PDU_1A_F3' || variableNombre === 'PDU_1A_F4' || variableNombre === 'PDU_1A_F5' || variableNombre === 'PDU_1A_F6' || variableNombre === 'PDU_1A_F7' || variableNombre === 'PDU_1A_F8' || variableNombre === 'PDU_1A_F9' || variableNombre === 'PDU_1A_F10') {
+    pdu.datos_generales.sistema = '1';
+  }
+
+  if (variableNombre === 'PDU_2A_F1' || variableNombre === 'PDU_2A_F2' || variableNombre === 'PDU_2A_F3' || variableNombre === 'PDU_2A_F4' || variableNombre === 'PDU_2A_F5' || variableNombre === 'PDU_2A_F6' || variableNombre === 'PDU_2A_F7' || variableNombre === 'PDU_2A_F8' || variableNombre === 'PDU_2A_F9' || variableNombre === 'PDU_2A_F10') {
+    pdu.datos_generales.sistema = '2';
+  } //pdu.datos_generales.sistema = options.sistema 
+
+
   pdu.datos_generales.marca = options.marca;
   pdu.datos_generales.modelo = options.modelo;
   pdu.datos_generales.ubicacion = options.ubicacion; // ----------------------BOTONES ALARMAS------------------------------//
@@ -1354,9 +1369,9 @@ var DataPDU = function DataPDU(data, options) {
 
   if (out_volt !== undefined && OUT1_TOTAL_KVA !== undefined) {
     pdu.datos_principales.corr_total = Number.parseFloat(corr_total.toFixed(2));
-  }
+  } //pdu.datos_principales.nombre_pdu = options.nombre  
 
-  pdu.datos_principales.nombre_pdu = options.nombre;
+
   pdu.datos_principales.boton_estado = MODBUS_ST === 1 ? styles_estadoStyles__WEBPACK_IMPORTED_MODULE_0__["default"].sinConexion : styles_estadoStyles__WEBPACK_IMPORTED_MODULE_0__["default"].ok;
   pdu.datos_principales.estado = GEN_ALM === 1 ? 'ALARMADO' : 'ENCENDIDO';
   pdu.datos_principales.boton_pdu = MODBUS_ST === 1 ? styles_estadoStyles__WEBPACK_IMPORTED_MODULE_0__["default"].sinConexion : styles_estadoStyles__WEBPACK_IMPORTED_MODULE_0__["default"].ok;

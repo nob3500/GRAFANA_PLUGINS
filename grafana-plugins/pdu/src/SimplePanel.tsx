@@ -11,11 +11,11 @@ import dataPDU from 'modules/dataPDU';
 
 interface Props extends PanelProps<SimpleOptions> {}
 
-export const SimplePanel: React.FC<Props> = ({ options, data, width, height }) => {
+export const SimplePanel: React.FC<Props> = ({ options, data,replaceVariables, width, height }) => {
   //const theme = useTheme();
   const styles = getStyles();
 
-  let pdu: DataPdu = dataPDU (data, options)
+  let pdu: DataPdu = dataPDU (data, options,replaceVariables)
 
   return (
     <div
