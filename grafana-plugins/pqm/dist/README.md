@@ -32,6 +32,9 @@ dc_gye_tdlow_pqm2_gw1a_data
 
 http://172.30.0.220:1880/
 
+# NOMBRE DEL EQUIPO
+
+TDLOW_PQMII
 
 # Forma de pegar en el campo Campos del dataSource para elastic en el grafana
 
