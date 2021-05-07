@@ -370,10 +370,11 @@ var SimplePanel = function SimplePanel(_a) {
   var options = _a.options,
       data = _a.data,
       width = _a.width,
-      height = _a.height; //const theme = useTheme();
+      height = _a.height,
+      replaceVariables = _a.replaceVariables; //const theme = useTheme();
 
   var styles = getStyles();
-  var uma = Object(modules_dataUMA__WEBPACK_IMPORTED_MODULE_5__["default"])(data, options);
+  var uma = Object(modules_dataUMA__WEBPACK_IMPORTED_MODULE_5__["default"])(data, options, replaceVariables);
   return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
     className: Object(emotion__WEBPACK_IMPORTED_MODULE_2__["cx"])(styles.wrapper, Object(emotion__WEBPACK_IMPORTED_MODULE_2__["css"])(templateObject_1 || (templateObject_1 = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__makeTemplateObject"])(["\n            width: ", "px;\n            height: ", "px;\n          "], ["\n            width: ", "px;\n            height: ", "px;\n          "])), width, height))
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(components_uma__WEBPACK_IMPORTED_MODULE_4__["default"], {
@@ -3148,11 +3149,12 @@ __webpack_require__.r(__webpack_exports__);
 //import alarmaStyles from 'styles/alarmsStyles';
 
 
-var DataUMA = function DataUMA(data, options) {
-  var _a, _b, _c, _d, _e, _f, _g, _h, _j, _k, _l, _m, _o, _p, _q, _r, _s, _t, _u, _v, _w, _x, _y, _z, _0, _1, _2, _3, _4, _5, _6, _7, _8, _9, _10, _11, _12, _13, _14, _15, _16, _17;
+var DataUMA = function DataUMA(data, options, replaceVariables) {
+  var _a, _b, _c, _d, _e, _f, _g, _h, _j, _k, _l, _m, _o, _p, _q, _r, _s, _t, _u, _v, _w, _x, _y, _z, _0, _1, _2, _3, _4, _5, _6, _7, _8, _9, _10, _11, _12, _13, _14;
 
   console.log(options);
-  console.log(data); //------------------------------------ASIGNACION DE VARIABLES-------------------------------//
+  console.log(data);
+  console.log(replaceVariables); //------------------------------------ASIGNACION DE VARIABLES-------------------------------//
 
   var SYS_ON = (_c = (_b = (_a = data.series.find(function (_a) {
     var name = _a.name;
@@ -3203,16 +3205,13 @@ var DataUMA = function DataUMA(data, options) {
   var EVAP_FAN_SPEED = (_11 = (_10 = (_9 = data.series.find(function (_a) {
     var name = _a.name;
     return name === null || name === void 0 ? void 0 : name.includes('DATA.EVAP_FAN_SPEED.VALUE');
-  })) === null || _9 === void 0 ? void 0 : _9.fields[1].state) === null || _10 === void 0 ? void 0 : _10.calcs) === null || _11 === void 0 ? void 0 : _11.lastNotNull;
-  var SETP_COOL_RET_AIR = (_14 = (_13 = (_12 = data.series.find(function (_a) {
-    var name = _a.name;
-    return name === null || name === void 0 ? void 0 : name.includes('DATA.SETP_COOL_RET_AIR.VALUE');
-  })) === null || _12 === void 0 ? void 0 : _12.fields[1].state) === null || _13 === void 0 ? void 0 : _13.calcs) === null || _14 === void 0 ? void 0 : _14.lastNotNull; // let SNS_COOL_RET_AIR = data.series.find(({ name }) => name?.includes('DATA.SNS_COOL_RET_AIR.VALUE'))?.fields[1].state?.calcs?.lastNotNull
+  })) === null || _9 === void 0 ? void 0 : _9.fields[1].state) === null || _10 === void 0 ? void 0 : _10.calcs) === null || _11 === void 0 ? void 0 : _11.lastNotNull; //let SETP_COOL_RET_AIR= data.series.find(({ name }) => name?.includes('DATA.SETP_COOL_RET_AIR.VALUE'))?.fields[1].state?.calcs?.lastNotNull
+  // let SNS_COOL_RET_AIR = data.series.find(({ name }) => name?.includes('DATA.SNS_COOL_RET_AIR.VALUE'))?.fields[1].state?.calcs?.lastNotNull
 
-  var UNIT_RUN_ALARM = (_17 = (_16 = (_15 = data.series.find(function (_a) {
+  var UNIT_RUN_ALARM = (_14 = (_13 = (_12 = data.series.find(function (_a) {
     var name = _a.name;
     return name === null || name === void 0 ? void 0 : name.includes('DATA.UNIT_RUN_ALARM.VALUE');
-  })) === null || _15 === void 0 ? void 0 : _15.fields[1].state) === null || _16 === void 0 ? void 0 : _16.calcs) === null || _17 === void 0 ? void 0 : _17.lastNotNull; //let HUM_RUN_HOURS = data.series.find(({ name }) => name?.includes('DATA.HUM_RUN_HOURS.VALUE'))?.fields[1].state?.calcs?.lastNotNull
+  })) === null || _12 === void 0 ? void 0 : _12.fields[1].state) === null || _13 === void 0 ? void 0 : _13.calcs) === null || _14 === void 0 ? void 0 : _14.lastNotNull; //let HUM_RUN_HOURS = data.series.find(({ name }) => name?.includes('DATA.HUM_RUN_HOURS.VALUE'))?.fields[1].state?.calcs?.lastNotNull
   //-------------------------------------------------------------------------------------------//
 
   var uma = {
@@ -3250,7 +3249,11 @@ var DataUMA = function DataUMA(data, options) {
       boton_estado: styles_estadoStyles__WEBPACK_IMPORTED_MODULE_0__["default"].sinConexion,
       estado: ''
     }
-  }; // --------------------------ESTADOS----------------------------------//
+  }; // ------------------------INTERPOLACION DE VARIABLES-------------
+
+  var variableNombre = replaceVariables('$EQUIPO'); ///console.log("variableNombre", variableNombre)
+
+  uma.datos_principales.nombre_uma = variableNombre !== '' ? variableNombre : options.nombre; // --------------------------ESTADOS----------------------------------//
 
   uma.estados.modo = SYS_ON === 0 ? 'OFF' : 'ON';
   uma.estados.ventilador = EVAP_FAN_SPEED === 0 ? 'OFF' : 'ON';
@@ -3258,7 +3261,7 @@ var DataUMA = function DataUMA(data, options) {
   uma.estados.temp_cuarto = Number.parseFloat(ROOM_TEMP === null || ROOM_TEMP === void 0 ? void 0 : ROOM_TEMP.toFixed(2));
   uma.estados.humedad_relativa = Number.parseFloat(ROOM_REL_HUM === null || ROOM_REL_HUM === void 0 ? void 0 : ROOM_REL_HUM.toFixed(2));
   uma.estados.t_suministro = Number.parseFloat(DELI_AIR_TEMP === null || DELI_AIR_TEMP === void 0 ? void 0 : DELI_AIR_TEMP.toFixed(2));
-  uma.estados.t_retorno = Number.parseFloat(SETP_COOL_RET_AIR === null || SETP_COOL_RET_AIR === void 0 ? void 0 : SETP_COOL_RET_AIR.toFixed(2));
+  uma.estados.t_retorno = Number.parseFloat(ROOM_TEMP === null || ROOM_TEMP === void 0 ? void 0 : ROOM_TEMP.toFixed(2));
   uma.estados.h_funcionamiento = Number.parseFloat(UNIT_RUN_ALARM === null || UNIT_RUN_ALARM === void 0 ? void 0 : UNIT_RUN_ALARM.toFixed(2)); // --------------------------DATOS GENERALES-------------------------//
 
   uma.datos_generales.fase = options.fase;
@@ -3275,8 +3278,8 @@ var DataUMA = function DataUMA(data, options) {
   uma.botones_alarmas.sobrecalentamiento = HEAT_OVER_ALARM === 1 ? styles_estadoStyles__WEBPACK_IMPORTED_MODULE_0__["default"].alarma : styles_estadoStyles__WEBPACK_IMPORTED_MODULE_0__["default"].sinConexion; // ---------------------- DATOS PRINCIPALES---------------------------//
 
   uma.datos_principales.t_suministro = Number.parseFloat(DELI_AIR_TEMP === null || DELI_AIR_TEMP === void 0 ? void 0 : DELI_AIR_TEMP.toFixed(2));
-  uma.datos_principales.t_retorno = Number.parseFloat(ROOM_TEMP === null || ROOM_TEMP === void 0 ? void 0 : ROOM_TEMP.toFixed(2));
-  uma.datos_principales.nombre_uma = options.nombre;
+  uma.datos_principales.t_retorno = Number.parseFloat(ROOM_TEMP === null || ROOM_TEMP === void 0 ? void 0 : ROOM_TEMP.toFixed(2)); //uma.datos_principales.nombre_uma = options.nombre
+
   uma.datos_principales.humedad_relativa = Number.parseFloat(ROOM_REL_HUM === null || ROOM_REL_HUM === void 0 ? void 0 : ROOM_REL_HUM.toFixed(2));
   uma.datos_principales.boton_estado = SYS_ON === 0 ? styles_estadoStyles__WEBPACK_IMPORTED_MODULE_0__["default"].sinConexion : styles_estadoStyles__WEBPACK_IMPORTED_MODULE_0__["default"].ok;
   uma.datos_principales.estado = SYS_ON === 0 ? 'REPOSO' : 'ENCENDIDO';

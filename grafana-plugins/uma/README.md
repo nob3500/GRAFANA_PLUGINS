@@ -21,9 +21,11 @@
 
 # INDEX
 dc_gye_uma_gw7a*
+dc_gye_uma_gw3a*
 
+dc_gye_uma*
 # GATEWAY
-
+http://172.30.0.228:1880
 # NOMBRE DEL EQUIPO
 1/UMA-N     N=(1,2,3,4,5,6,7,8,9,10,11,12)
 # Forma de pegar en el campo Campos del dataSource para elastic en el grafana
