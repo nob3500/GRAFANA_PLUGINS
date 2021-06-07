@@ -2,7 +2,7 @@ import React from 'react'
 
 
 
-type Lineas_Sistema1 = {
+type Lineas_Sist1 = {
   
    //PSG2A, TDLOWA ,ATS03A,TDP01A
     l1_1: string;//path6103-7
@@ -21,14 +21,14 @@ type Lineas_Sistema1 = {
     l1_12: string;//path5894
     l1_13: string;//path5892
     l1_14: string;//path5890
-    l1_15: string;//path5886
+    l1_15: string;//path5886efi24j  
     l1_16: string;//path20299
     l1_17: string;//path6683
-    l1_18: string;//
-    l1_19: string;//
-    l1_20: string;//
-    l1_21: string;//
-
+    //TR-DRY; P-UPS2A
+    l1_18: string;//path6603-8
+    l1_19: string;//path6605-3
+    l1_20: string;//path6609-1
+    l1_21: string;//path6607-0
 
     //ATSANTSAT1A,CUARTO SATELITAL
     l1_22: string;//path16574
@@ -36,47 +36,48 @@ type Lineas_Sistema1 = {
 
     //ATSREC05A, REC01A
     l1_24: string;//path20297
-
-    //TUPSIN01A1 , TUPSOUT01A
-    l1_25: string;//
-    l1_26: string;//
-    l1_27: string;//
     
-    /*l1_24: string;//
-    l1_25: string;//
-    l1_26: string;//
-    l1_27: string;//
-    l1_28: string;//
-    l1_29: string;//
-    l1_30: string;//
-    l1_31: string;//
-    l1_32: string;//
-    l1_33: string;
-    l1_34: string;
-    l1_35: string;
-    l1_36: string;
-    l1_37: string;
-    l1_38: string;
-    l1_39: string;
-    l1_40: string;
-    l1_41: string;
-    l1_42: string;
-    l1_43: string;
-    l1_44: string;
-    l1_45: string;
-    l1_46: string;
-    l1_47: string;
-    l1_48: string;
-    l1_49: string;
-    l1_50: string;
-         
-    */
+    //TUPSIN01A1 
+    l1_25: string;//path16768
+    l1_26: string;//path16770
+    l1_27: string;//path16772
+    l1_28: string;//path16774
+    l1_29: string;//path16776
+    l1_30: string;//path16778
+
+    // TUPSOUT01A
+    l1_31: string;//path16780
+    l1_32: string;//path16782
+    l1_33: string;//path16784
+    l1_34: string;//path16786
+    l1_35: string;//path16788
+    l1_36: string;//path16790
+
+    //TUPSOUT01A,ATS-PDU-10A
+    l1_37: string;//path20323
+
+    //TUPSOUT01A, ATS-PDU-09A
+    l1_38: string;//path6304
+
+    //ATS-PDU-09A, T-PDU-01A
+    l1_39: string;//path6519
+
+    //ATS-CHI-07A, T-CHI-03A
+    l1_40: string;//path5544
+
+    //T-CHI-03A, T-CHI-01A
+    l1_41: string;//path9357
+
+    //ATS-SG-11A, TSG-1A
+    l1_42: string;//path6542
+    l1_43: string;//path6544       
+    
 }
 
 
-export interface DataLine_s1{
+export interface DataLine_sist1{
   
-  lineas_sistema1: Lineas_Sistema1;
+  lineas_sistema1: Lineas_Sist1;
   
 
 }
@@ -85,7 +86,7 @@ export const Variables = ({
     lineas_sistema1
  // estados,botones_alarmas,datos_generales,datos_principales
 
-}: DataLine_s1) =>{  
+}: DataLine_sist1) =>{  
 
     return (
         //insertar el grupo o capa completo de las lineas de sistema1
