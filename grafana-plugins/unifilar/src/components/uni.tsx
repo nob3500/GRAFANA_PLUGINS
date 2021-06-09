@@ -2,10 +2,82 @@ import React from 'react';
 import {Var15, DataLine_sist1} from './variables_sist1/var15_lineas_sist1'
 //import {Variables_sist2, DataUni} from './variables_sist2/var1_psg_2A';
 
-const uni = ({
-  lineas_sistema1
+const uni = () => {
+  let uni : DataLine_sist1 = {
+    lineas_sistema1:{
 
-}: DataLine_sist1) =>{
+      //PSG2A, TDLOWA ,ATS03A,TDP01A
+    l1_1: '',//path6103-7
+    l1_2: '',//path6183
+    l1_3: '',//path6185
+    l1_4: '',//path11202
+    l1_5: '',//path11200
+    l1_6: '',//path6673
+    l1_7: '',//path15921
+    l1_8: '',//path15966
+
+    //TDP01A,ATSREC08A,ATSANTSAT1A,ATSREC05A,TRDRY,TUPSIN01A,ATSCHI08A,ATSSG11A,ATSCHI07A
+    l1_9: '',//path5903
+    l1_10: '',//path5901
+    l1_11: '',//path5899
+    l1_12: '',//path5894
+    l1_13: '',//path5892
+    l1_14: '',//path5890
+    l1_15: '',//path5886  
+    l1_16: '',//path20299
+    l1_17: '',//path6683
+    //TR-DRY; P-UPS2A
+    l1_18: '',//path6603-8
+    l1_19: '',//path6605-3
+    l1_20: '',//path6609-1
+    l1_21: '',//path6607-0
+
+    //ATSANTSAT1A,CUARTO SATELITAL
+    l1_22: '',//path16574
+    l1_23: '',//path16572
+
+    //ATSREC05A, REC01A
+    l1_24: '',//path20297
+    
+    //TUPSIN01A1 
+    l1_25: '',//path16768
+    l1_26: '',//path16770
+    l1_27: '',//path16772
+    l1_28: '',//path16774
+    l1_29: '',//path16776
+    l1_30: '',//path16778
+
+    // TUPSOUT01A
+    l1_31: '',//path16780
+    l1_32: '',//path16782
+    l1_33: '',//path16784
+    l1_34: '',//path16786
+    l1_35: '',//path16788
+    l1_36: '',//path16790
+
+    //TUPSOUT01A,ATS-PDU-10A
+    l1_37: '',//path20323
+
+    //TUPSOUT01A, ATS-PDU-09A
+    l1_38: '',//path6304
+
+    //ATS-PDU-09A, T-PDU-01A
+    l1_39: '',//path6519
+
+    //ATS-CHI-07A, T-CHI-03A
+    l1_40: '',//path5544
+
+    //T-CHI-03A, T-CHI-01A
+    l1_41: '',//path9357
+
+    //ATS-SG-11A, TSG-1A
+    l1_42: '',//path6542
+    //l1_43: '',//path6544  
+      
+    }
+
+  }
+
      
   return(
         
@@ -35752,7 +35824,7 @@ const uni = ({
     </g>
     
     <Var15
-    lineas_sistema1 = {lineas_sistema1}
+    lineas_sistema1 = {uni.lineas_sistema1}
     
     />
   </svg>
