@@ -3,7 +3,7 @@ import React from 'react'
 type ATS_PDU_09A = {
   
 
-////className = {atspdu09A.atspdu09A_F2}
+//className = {atspdu09A.atspdu09A_F2}
 
     atspdu09A_F2:    string;//path19632-1
     atspdu09A_tri2:  string;//path17164-6-8-6-3-5
