@@ -25,7 +25,7 @@ export interface DataPSG_1A_2A{
     psg_1A_2A: PSG_1A_2A; 
 
 }
-export const Var3 = ({
+export const Var1 = ({
     psg_1A_2A
 
 }: DataPSG_1A_2A) =>{  
