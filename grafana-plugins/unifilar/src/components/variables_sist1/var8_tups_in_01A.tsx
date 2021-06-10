@@ -3,1005 +3,1039 @@ import React from 'react'
 type T_UPS_IN_01A = {
   
 
-////className = {tupsIN01A.tupsIN01A}
+////className = {tupsin01A.tupsin01A}
 
-    tupsIN01A_0: string;//
-    tupsIN01A_1: string;//
-    tupsIN01A_2: string;//
-    tupsIN01A_3: string;//
-    tupsIN01A_4: string;//
-    tupsIN01A_5: string;//
-    tupsIN01A_6: string;//
-    tupsIN01A_7: string;//
+    tupsin01A_0: string;//rect5302
+    tupsin01A_1: string;//rect5266
+    tupsin01A_2: string;//rect5268
+    tupsin01A_3: string;//rect5276
+    tupsin01A_4: string;//rect5280
+    tupsin01A_5: string;//rect5282
+    tupsin01A_6: string;//rect5290
     
    
 }
-export interface DataTupsIN01A{
+export interface DataTupsin01A{
   
-  tupsIN01A: T_UPS_IN_01A; 
+  tupsin01A: T_UPS_IN_01A; 
 
 }
-export const Var9 = ({
-    tupsIN01A
+export const Var8 = ({
+    tupsin01A
 
-}: DataTupsIN01A) =>{  
+}: DataTupsin01A) =>{  
 
     return (
-        //Se inserta GRupo del tablero DataTupsIN01A
+        //Se inserta GRupo del tablero DataTupsin01A
 
-        <g id="layer46">
-        <g id="g8323" transform="translate(-2.82 134.54) scale(.18308)">
-          <g
-            id="g5409"
-            transform="matrix(.98476 0 0 .55776 2450.6 322.88)"
-            clipPath="url(#clipath_lpe_path-effect5557)"
-            strokeWidth={0.99961}
-            stroke="#4a4a4a"
-          >
-            <g
-              id="g5407"
-              transform="matrix(1.0234 0 0 .99996 -67.752 -224.6)"
-              clipPath="none"
-              strokeWidth={0.98813}
-              stroke="#4a4a4a"
-            >
-              <path
-                id="path5405"
-                d="M-1307.3-167.17h95.668c2.816 0 5.082 2.823 5.082 6.33V75.21c0 3.506-2.266 6.33-5.082 6.33h-95.668c-2.816 0-5.083-2.824-5.083-6.33v-236.05c0-3.507 2.267-6.33 5.083-6.33z"
-                strokeLinecap="round"
-                strokeMiterlimit={15}
-                strokeWidth={0.98837}
+        <g id="layer44">
+        <g id="g7972" transform="translate(-9.17 134.54) scale(.18308)">
+          <g id="g5397" transform="matrix(.51151 0 0 .50395 926.55 16.877)">
+            <g id="g5262" transform="matrix(1 0 0 1.0153 -13.634 1111)">
+              <g
+                id="g5250"
+                transform="matrix(1.6861 0 0 1.0924 2090.4 -496.24)"
+                clipPath="url(#clipath_lpe_path-effect5399)"
+                strokeWidth={0.99961}
                 stroke="#4a4a4a"
-              />
-            </g>
-          </g>
-          <g
-            id="g5415"
-            transform="matrix(1.1932 0 0 .5572 2744.7 322.78)"
-            clipPath="url(#clipath_lpe_path-effect5559)"
-            strokeWidth={0.99961}
-            stroke="#4a4a4a"
-          >
-            <g
-              id="g5413"
-              transform="matrix(.84472 0 0 .99996 -302.27 -224.6)"
-              clipPath="none"
-              strokeWidth={0.98813}
-              stroke="#4a4a4a"
-            >
+              >
+                <g
+                  id="g5248"
+                  transform="matrix(1.0234 0 0 .99996 -67.752 -224.6)"
+                  clipPath="none"
+                  strokeWidth={0.98813}
+                  stroke="#4a4a4a"
+                >
+                  <path
+                    id="path5246"
+                    d="M-1307.3-167.17h95.668c2.816 0 5.082 2.823 5.082 6.33V75.21c0 3.506-2.266 6.33-5.082 6.33h-95.668c-2.816 0-5.083-2.824-5.083-6.33v-236.05c0-3.507 2.267-6.33 5.083-6.33z"
+                    strokeLinecap="round"
+                    strokeMiterlimit={15}
+                    strokeWidth={0.98837}
+                    stroke="#4a4a4a"
+                  />
+                </g>
+              </g>
+              <g
+                id="g5256"
+                transform="matrix(1.8099 0 0 1.0913 2265.1 -496.45)"
+                clipPath="url(#clipath_lpe_path-effect5401)"
+                strokeWidth={0.99961}
+                stroke="#4a4a4a"
+              >
+                <g
+                  id="g5254"
+                  transform="matrix(1.0234 0 0 .99996 -67.752 -224.6)"
+                  clipPath="none"
+                  strokeWidth={0.98813}
+                  stroke="#4a4a4a"
+                >
+                  <path
+                    id="path5252"
+                    d="M-1307.4-167.17h89.026c2.62 0 4.73 2.823 4.73 6.33V75.21c0 3.506-2.11 6.33-4.73 6.33h-89.026c-2.62 0-4.73-2.824-4.73-6.33v-236.05c0-3.507 2.11-6.33 4.73-6.33z"
+                    fill="url(#linearGradient5850)"
+                    strokeLinecap="round"
+                    strokeMiterlimit={15}
+                    strokeWidth={0.95345}
+                    stroke="#116aef"
+                  />
+                </g>
+              </g>
               <path
-                id="path5411"
-                d="M-1307.3-167.17h95.668c2.816 0 5.082 2.823 5.082 6.33V75.21c0 3.506-2.266 6.33-5.082 6.33h-95.668c-2.816 0-5.083-2.824-5.083-6.33v-236.05c0-3.507 2.267-6.33 5.083-6.33z"
-                fill="url(#linearGradient15460)"
-                strokeLinecap="round"
-                strokeMiterlimit={15}
-                strokeWidth={0.98837}
+                id="path5258"
+                transform="matrix(1.6545 0 0 1.4776 1845.9 766.16)"
+                d="M-1284.2-1155.8h99.106c3.11 0 5.613 2.028 5.613 4.546v15.612c0 2.519-2.504 4.547-5.613 4.547h-99.106c-3.11 0-5.613-2.028-5.613-4.547v-15.612c0-2.518 2.504-4.546 5.613-4.546z"
+                clipPath="url(#clipath_lpe_path-effect5403)"
+                fill="url(#linearGradient15462)"
+                strokeLinejoin="round"
+                strokeWidth={1.008}
                 stroke="#116aef"
               />
+              <path
+                id="path5260"
+                d="M-289.02-911.29h184.21"
+                fill="none"
+                strokeWidth={1.4724}
+                stroke="#116aef"
+              />
+              <text
+                id="text6282-8-8"
+                transform="scale(1.0002 .99983)"
+                x={-284.41727}
+                y={-722.36841}
+                style={{ lineHeight: 1.25 }}
+                xmlSpace="preserve"
+                fill="#fff"
+                fontFamily="sans-serif"
+                fontSize="22.599px"
+                letterSpacing={0}
+                strokeWidth={0.24142}
+                wordSpacing={0}
+              >
+                <tspan
+                  id="tspan6276-5-5"
+                  x={-284.41727}
+                  y={-722.36841}
+                  fill="#fff"
+                  fontSize="22.599px"
+                  strokeWidth={0.24142}
+                >
+                  {"695"}
+                </tspan>
+              </text>
+              <text
+                id="text6258-3-4"
+                transform="scale(1.0002 .99983)"
+                x={-233.569}
+                y={-778.86676}
+                style={{ lineHeight: 1.25 }}
+                xmlSpace="preserve"
+                fill="#12789b"
+                fontFamily="sans-serif"
+                fontSize="22.599px"
+                letterSpacing={0}
+                strokeWidth={0.24142}
+                wordSpacing={0}
+              >
+                <tspan
+                  id="tspan6246-1-6"
+                  x={-233.569}
+                  y={-778.86676}
+                  fill="#fff"
+                  fontFamily="sans-serif"
+                  fontSize="18.833px"
+                  fontWeight={700}
+                  strokeWidth={0.24142}
+                >
+                  {"KVA"}
+                </tspan>
+                <tspan
+                  id="tspan6250-7-2"
+                  x={-233.569}
+                  y={-750.61761}
+                  fill="#fff"
+                  fontFamily="sans-serif"
+                  fontSize="14.313px"
+                  fontWeight={700}
+                  strokeWidth={0.24142}
+                >
+                  {"V(FF)"}
+                </tspan>
+                <tspan
+                  id="tspan6254-5-5"
+                  x={-233.569}
+                  y={-722.36853}
+                  fill="#fff"
+                  fontFamily="sans-serif"
+                  fontSize="18.833px"
+                  fontWeight={700}
+                  strokeWidth={0.24142}
+                >
+                  {"A"}
+                </tspan>
+              </text>
+              <text
+                id="text6266-62-6"
+                transform="scale(1.0002 .99983)"
+                x={-284.41727}
+                y={-778.86676}
+                style={{ lineHeight: 1.25 }}
+                xmlSpace="preserve"
+                fill="#fff"
+                fontFamily="sans-serif"
+                fontSize="22.599px"
+                letterSpacing={0}
+                strokeWidth={0.24142}
+                wordSpacing={0}
+              >
+                <tspan
+                  id="tspan6260-1-2"
+                  x={-284.41727}
+                  y={-778.86676}
+                  fill="#fff"
+                  fontSize="22.599px"
+                  strokeWidth={0.24142}
+                >
+                  {"504"}
+                </tspan>
+              </text>
+              <text
+                id="text6274-5-7"
+                transform="scale(1.0002 .99983)"
+                x={-284.41727}
+                y={-750.61755}
+                style={{ lineHeight: 1.25 }}
+                xmlSpace="preserve"
+                fill="#fff"
+                fontFamily="sans-serif"
+                fontSize="22.599px"
+                letterSpacing={0}
+                strokeWidth={0.24142}
+                wordSpacing={0}
+              >
+                <tspan
+                  id="tspan6268-7-2"
+                  x={-284.41727}
+                  y={-750.61755}
+                  fill="#fff"
+                  fontSize="22.599px"
+                  strokeWidth={0.24142}
+                >
+                  {"417"}
+                </tspan>
+              </text>
             </g>
+            <path
+              id="path5264"
+              d="M-202.24 210.23h19.922"
+              fill="#939d93"
+              strokeWidth={2.1517}
+              stroke="#939d93"
+            />
+            <rect
+              id="rect5266"
+              x={-182.48}
+              y={198.85}
+              width={48.22}
+              height={25.958}
+              ry={0.18119}
+              fill="#12789b"
+              paintOrder="markers stroke fill"
+              strokeWidth={1.472}
+              stroke="#485258"
+              className = {tupsin01A.tupsin01A_1}
+            />
+            <rect
+              id="rect5268"
+              x={-182.48}
+              y={242.56}
+              width={48.22}
+              height={25.958}
+              ry={0.18119}
+              fill="#12789b"
+              paintOrder="markers stroke fill"
+              strokeWidth={1.472}
+              stroke="#485258"
+              className = {tupsin01A.tupsin01A_2}
+            />
+            <path
+              id="path5270"
+              d="M-202.24 251.58h19.354"
+              fill="#939d93"
+              strokeWidth={2.1517}
+              stroke="#939d93"
+            />
+            <rect
+              id="rect5272"
+              x={-182.47}
+              y={231.6}
+              width={48.224}
+              height={10.235}
+              ry={0.071443}
+              fill="gray"
+              paintOrder="markers stroke fill"
+              strokeWidth={1.4505}
+              stroke="#485258"
+            />
+            <rect
+              id="rect5274"
+              x={-182.5}
+              y={188.32}
+              width={48.253}
+              height={9.8163}
+              ry={0.068518}
+              fill="gray"
+              paintOrder="markers stroke fill"
+              strokeWidth={1.4481}
+              stroke="#485258"
+            />
+            <rect
+              id="rect5276"
+              x={-182.48}
+              y={286.55}
+              width={48.22}
+              height={25.958}
+              ry={0.18119}
+              fill="#00d300"
+              paintOrder="markers stroke fill"
+              strokeWidth={1.472}
+              stroke="#485258"
+              className = {tupsin01A.tupsin01A_3}
+            />
+            <path
+              id="path5278"
+              d="M-202.24 342.71h19.922"
+              fill="#939d93"
+              strokeWidth={2.1517}
+              stroke="#939d93"
+            />
+            <rect
+              id="rect5280"
+              x={-182.48}
+              y={330.8}
+              width={48.22}
+              height={25.958}
+              ry={0.18119}
+              fill="#12789b"
+              paintOrder="markers stroke fill"
+              strokeWidth={1.472}
+              stroke="#485258"
+              className = {tupsin01A.tupsin01A_4}
+            />
+            <rect
+              id="rect5282"
+              x={-182.48}
+              y={375.04}
+              width={48.22}
+              height={25.958}
+              ry={0.18119}
+              fill="#12789b"
+              paintOrder="markers stroke fill"
+              strokeWidth={1.472}
+              stroke="#485258"
+              className = {tupsin01A.tupsin01A_5}
+            />
+            <path
+              id="rect5284"
+              fill="#939d93"
+              paintOrder="markers stroke fill"
+              strokeWidth={2.1876}
+              stroke="#939d93"
+              d="M-202.4 205.24H-200.967V435.36H-202.4z"
+            />
+            <path
+              id="path5286"
+              d="M-201.06 301.37h18.407"
+              fill="#939d93"
+              strokeWidth={2.1517}
+              stroke="#939d93"
+            />
+            <path
+              id="path5288"
+              d="M-202.24 384.06h19.354"
+              fill="#939d93"
+              strokeWidth={2.1517}
+              stroke="#939d93"
+            />
+            <rect
+              id="rect5290"
+              x={-182.48}
+              y={419.03}
+              width={48.22}
+              height={25.958}
+              ry={0.18119}
+              fill="#12789b"
+              paintOrder="markers stroke fill"
+              strokeWidth={1.4717}
+              stroke="#485258"
+              className = {tupsin01A.tupsin01A_6}
+            />
+            <rect
+              id="rect5292"
+              x={-182.51}
+              y={408.49}
+              width={48.291}
+              height={9.8177}
+              ry={0.068528}
+              fill="gray"
+              paintOrder="markers stroke fill"
+              strokeWidth={1.4216}
+              stroke="#485258"
+            />
+            <rect
+              id="rect5294"
+              x={-182.49}
+              y={276.01}
+              width={48.26}
+              height={9.7924}
+              ry={0.068351}
+              fill="gray"
+              paintOrder="markers stroke fill"
+              strokeWidth={1.4194}
+              stroke="#485258"
+            />
+            <rect
+              id="rect5296"
+              x={-182.52}
+              y={320.26}
+              width={48.313}
+              height={9.8135}
+              ry={0.068498}
+              fill="gray"
+              paintOrder="markers stroke fill"
+              strokeWidth={1.4216}
+              stroke="#485258"
+            />
+            <rect
+              id="rect5298"
+              x={-182.51}
+              y={364.5}
+              width={48.271}
+              height={9.8141}
+              ry={0.068503}
+              fill="gray"
+              paintOrder="markers stroke fill"
+              strokeWidth={1.4211}
+              stroke="#485258"
+            />
+            <path
+              id="path5300"
+              d="M-201.99 430.38h19.354"
+              fill="#939d93"
+              strokeWidth={2.1517}
+              stroke="#939d93"
+            />
+            <rect
+              id="rect5302"
+              x={-264.59}
+              y={270.87}
+              width={48.22}
+              height={25.958}
+              ry={0.18119}
+              fill="#12789b"
+              paintOrder="markers stroke fill"
+              strokeWidth={1.472}
+              stroke="#485258"
+              className = {tupsin01A.tupsin01A_0}
+            />
+            <rect
+              id="rect5304"
+              x={-264.65}
+              y={260.33}
+              width={48.308}
+              height={9.8021}
+              ry={0.068419}
+              fill="gray"
+              paintOrder="markers stroke fill"
+              strokeWidth={1.4208}
+              stroke="#485258"
+            />
+            <ellipse
+              id="ellipse5306"
+              transform="rotate(-90.106) skewX(.009)"
+              cx={-289.81}
+              cy={-258.34}
+              rx={3.0461}
+              ry={2.9266}
+              fill="#b1cae0"
+              strokeWidth={0.27143}
+            />
+            <ellipse
+              id="ellipse5308"
+              transform="rotate(-90.106) skewX(.009)"
+              cx={-289.81}
+              cy={-222.42}
+              rx={3.0461}
+              ry={2.9266}
+              fill="#b1cae0"
+              strokeWidth={0.27143}
+            />
+            <path
+              id="path5310"
+              d="M-255.87 282.8c8.806-9.618 23.085-9.646 31.927-.064"
+              fill="none"
+              strokeLinecap="round"
+              strokeMiterlimit={10}
+              strokeWidth={1.3572}
+              stroke="#b1cae0"
+            />
+            <ellipse
+              id="ellipse5312"
+              transform="rotate(-90.106) skewX(.009)"
+              cx={-349.37}
+              cy={-176.47}
+              rx={3.0461}
+              ry={2.9266}
+              fill="#b1cae0"
+              strokeWidth={0.27143}
+            />
+            <ellipse
+              id="ellipse5314"
+              transform="rotate(-90.106) skewX(.009)"
+              cx={-349.37}
+              cy={-140.55}
+              rx={3.0461}
+              ry={2.9266}
+              fill="#b1cae0"
+              strokeWidth={0.27143}
+            />
+            <path
+              id="path5316"
+              d="M-173.89 342.2c8.806-9.618 23.085-9.646 31.927-.064"
+              fill="none"
+              strokeLinecap="round"
+              strokeMiterlimit={10}
+              strokeWidth={1.3572}
+              stroke="#b1cae0"
+            />
+            <ellipse
+              id="ellipse5318"
+              transform="rotate(-90.106) skewX(.009)"
+              cx={-304.87}
+              cy={-177.46}
+              rx={3.0461}
+              ry={2.9266}
+              fill="#b1cae0"
+              strokeWidth={0.27143}
+            />
+            <ellipse
+              id="ellipse5320"
+              transform="rotate(-90.106) skewX(.009)"
+              cx={-304.87}
+              cy={-141.54}
+              rx={3.0461}
+              ry={2.9266}
+              fill="#b1cae0"
+              strokeWidth={0.27143}
+            />
+            <path
+              id="path5322"
+              d="M-174.96 297.7c8.806-9.618 23.085-9.646 31.927-.064"
+              fill="none"
+              strokeLinecap="round"
+              strokeMiterlimit={10}
+              strokeWidth={1.3572}
+              stroke="#b1cae0"
+            />
+            <ellipse
+              id="ellipse5324"
+              transform="rotate(-90.106) skewX(.009)"
+              cx={-260.24}
+              cy={-177.24}
+              rx={3.0461}
+              ry={2.9266}
+              fill="#b1cae0"
+              strokeWidth={0.27143}
+            />
+            <ellipse
+              id="ellipse5326"
+              transform="rotate(-90.106) skewX(.009)"
+              cx={-260.24}
+              cy={-141.32}
+              rx={3.0461}
+              ry={2.9266}
+              fill="#b1cae0"
+              strokeWidth={0.27143}
+            />
+            <path
+              id="path5328"
+              d="M-174.83 253.07c8.806-9.618 23.085-9.646 31.927-.064"
+              fill="none"
+              strokeLinecap="round"
+              strokeMiterlimit={10}
+              strokeWidth={1.3572}
+              stroke="#b1cae0"
+            />
+            <ellipse
+              id="ellipse5330"
+              transform="rotate(-90.106) skewX(.009)"
+              cx={-216.4}
+              cy={-176.76}
+              rx={3.0461}
+              ry={2.9266}
+              fill="#b1cae0"
+              strokeWidth={0.27143}
+            />
+            <ellipse
+              id="ellipse5332"
+              transform="rotate(-90.106) skewX(.009)"
+              cx={-216.4}
+              cy={-140.84}
+              rx={3.0461}
+              ry={2.9266}
+              fill="#b1cae0"
+              strokeWidth={0.27143}
+            />
+            <path
+              id="path5334"
+              d="M-174.43 209.23c8.806-9.618 23.085-9.646 31.927-.064"
+              fill="none"
+              strokeLinecap="round"
+              strokeMiterlimit={10}
+              strokeWidth={1.3572}
+              stroke="#b1cae0"
+            />
+            <text
+              id="text5354"
+              transform="scale(1.0191 .98121)"
+              x={-292.43582}
+              y={180.2643}
+              style={{ lineHeight: 1.25 }}
+              xmlSpace="preserve"
+              fill="#fff"
+              fontFamily="sans-serif"
+              fontSize="22.013px"
+              letterSpacing={0}
+              strokeWidth={0.40997}
+              wordSpacing={0}
+            >
+              <tspan
+                id="tspan5352"
+                x={-292.43582}
+                y={180.2643}
+                fill="#fff"
+                fontFamily="sans-serif"
+                fontSize="22.013px"
+                fontWeight={700}
+                strokeWidth={0.40997}
+              >
+                {"T-UPS-IN-01A"}
+              </tspan>
+            </text>
+            <text
+              id="text5358"
+              transform="scale(.76131 1.3135)"
+              x={-345.74887}
+              y={204.98193}
+              style={{ lineHeight: 1.25 }}
+              xmlSpace="preserve"
+              fill="#000"
+              fontFamily="sans-serif"
+              fontSize="8.2468px"
+              letterSpacing={0}
+              strokeWidth={0.20617}
+              wordSpacing={0}
+            >
+              <tspan
+                id="tspan5356"
+                x={-345.74887}
+                y={204.98193}
+                fill="#000"
+                strokeWidth={0.20617}
+              >
+                {"TUPSIN-01A-0"}
+              </tspan>
+            </text>
+            <text
+              id="text5362"
+              transform="scale(.76131 1.3135)"
+              x={-237.7117}
+              y={150.28046}
+              style={{ lineHeight: 1.25 }}
+              xmlSpace="preserve"
+              fill="#000"
+              fontFamily="sans-serif"
+              fontSize="8.2468px"
+              letterSpacing={0}
+              strokeWidth={0.20617}
+              wordSpacing={0}
+            >
+              <tspan
+                id="tspan5360"
+                x={-237.7117}
+                y={150.28046}
+                fill="#000"
+                strokeWidth={0.20617}
+              >
+                {"TUPSIN-01A-1"}
+              </tspan>
+            </text>
+            <text
+              id="text5366"
+              transform="scale(.76131 1.3135)"
+              x={-238.26047}
+              y={183.24292}
+              style={{ lineHeight: 1.25 }}
+              xmlSpace="preserve"
+              fill="#000"
+              fontFamily="sans-serif"
+              fontSize="8.2468px"
+              letterSpacing={0}
+              strokeWidth={0.20617}
+              wordSpacing={0}
+            >
+              <tspan
+                id="tspan5364"
+                x={-238.26047}
+                y={183.24292}
+                fill="#000"
+                strokeWidth={0.20617}
+              >
+                {"TUPSIN-01A-2"}
+              </tspan>
+            </text>
+            <text
+              id="text5370"
+              transform="scale(.76131 1.3135)"
+              x={-238.01154}
+              y={217.224}
+              style={{ lineHeight: 1.25 }}
+              xmlSpace="preserve"
+              fill="#000"
+              fontFamily="sans-serif"
+              fontSize="8.2468px"
+              letterSpacing={0}
+              strokeWidth={0.20617}
+              wordSpacing={0}
+            >
+              <tspan
+                id="tspan5368"
+                x={-238.01154}
+                y={217.224}
+                fill="#000"
+                strokeWidth={0.20617}
+              >
+                {"TUPSIN-01A-3"}
+              </tspan>
+            </text>
+            <text
+              id="text5374"
+              transform="scale(.76131 1.3135)"
+              x={-237.82895}
+              y={250.89908}
+              style={{ lineHeight: 1.25 }}
+              xmlSpace="preserve"
+              fill="#000"
+              fontFamily="sans-serif"
+              fontSize="8.2468px"
+              letterSpacing={0}
+              strokeWidth={0.20617}
+              wordSpacing={0}
+            >
+              <tspan
+                id="tspan5372"
+                x={-237.82895}
+                y={250.89908}
+                fill="#000"
+                strokeWidth={0.20617}
+              >
+                {"TUPSIN-01A-4"}
+              </tspan>
+            </text>
+            <text
+              id="text5378"
+              transform="scale(.76131 1.3135)"
+              x={-238.35556}
+              y={284.37067}
+              style={{ lineHeight: 1.25 }}
+              xmlSpace="preserve"
+              fill="#000"
+              fontFamily="sans-serif"
+              fontSize="8.2468px"
+              letterSpacing={0}
+              strokeWidth={0.20617}
+              wordSpacing={0}
+            >
+              <tspan
+                id="tspan5376"
+                x={-238.35556}
+                y={284.37067}
+                fill="#000"
+                strokeWidth={0.20617}
+              >
+                {"TUPSIN-01A-5"}
+              </tspan>
+            </text>
+            <text
+              id="text5382"
+              transform="scale(.76131 1.3135)"
+              x={-238.35556}
+              y={318.04575}
+              style={{ lineHeight: 1.25 }}
+              xmlSpace="preserve"
+              fill="#000"
+              fontFamily="sans-serif"
+              fontSize="8.2468px"
+              letterSpacing={0}
+              strokeWidth={0.20617}
+              wordSpacing={0}
+            >
+              <tspan
+                id="tspan5380"
+                x={-238.35556}
+                y={318.04575}
+                fill="#000"
+                strokeWidth={0.20617}
+              >
+                {"TUPSIN-01A-6"}
+              </tspan>
+            </text>
+            <ellipse
+              id="ellipse5385"
+              transform="rotate(-90.106) skewX(.009)"
+              cx={-394.45}
+              cy={-176.36}
+              rx={3.0461}
+              ry={2.9266}
+              fill="#b1cae0"
+              strokeWidth={0.27143}
+            />
+            <ellipse
+              id="ellipse5387"
+              transform="rotate(-90.106) skewX(.009)"
+              cx={-394.45}
+              cy={-140.44}
+              rx={3.0461}
+              ry={2.9266}
+              fill="#b1cae0"
+              strokeWidth={0.27143}
+            />
+            <path
+              id="path5389"
+              d="M-173.7 387.28c8.806-9.618 23.085-9.646 31.927-.064"
+              fill="none"
+              strokeLinecap="round"
+              strokeMiterlimit={10}
+              strokeWidth={1.3572}
+              stroke="#b1cae0"
+            />
+            <ellipse
+              id="ellipse5391"
+              transform="rotate(-90.106) skewX(.009)"
+              cx={-438.23}
+              cy={-176.07}
+              rx={3.0461}
+              ry={2.9266}
+              fill="#b1cae0"
+              strokeWidth={0.27143}
+            />
+            <ellipse
+              id="ellipse5393"
+              transform="rotate(-90.106) skewX(.009)"
+              cx={-438.23}
+              cy={-140.15}
+              rx={3.0461}
+              ry={2.9266}
+              fill="#b1cae0"
+              strokeWidth={0.27143}
+            />
+            <path
+              id="path5395"
+              d="M-173.33 431.06c8.806-9.618 23.085-9.646 31.927-.064"
+              fill="none"
+              strokeLinecap="round"
+              strokeMiterlimit={10}
+              strokeWidth={1.3572}
+              stroke="#b1cae0"
+            />
+            <path
+              id="path20301"
+              d="M-215.97 280.29h14.061"
+              fill="#939d93"
+              strokeWidth={2.1517}
+              stroke="#939d93"
+            />
+            <text
+              id="text6599"
+              transform="scale(.99259 1.0075)"
+              x={-111.42119}
+              y={199.8093}
+              style={{ lineHeight: 1.25 }}
+              xmlSpace="preserve"
+              fill="#fff"
+              fontFamily="Mukti Narrow"
+              fontSize="22.772px"
+              strokeWidth={2.8465}
+            >
+              <tspan
+                id="tspan6597"
+                x={-111.42119}
+                y={199.8093}
+                fill="#fff"
+                fontFamily="sans-serif"
+                fontSize="22.772px"
+                strokeWidth={2.8465}
+              >
+                {"TUPSIN-01A-1"}
+              </tspan>
+            </text>
+            <text
+              id="text6607"
+              transform="scale(.99259 1.0075)"
+              x={-111.89709}
+              y={284.27237}
+              style={{ lineHeight: 1.25 }}
+              xmlSpace="preserve"
+              fill="#fff"
+              fontFamily="Mukti Narrow"
+              fontSize="22.772px"
+              strokeWidth={2.8465}
+            >
+              <tspan
+                id="tspan6605"
+                x={-111.89709}
+                y={284.27237}
+                fill="#fff"
+                fontFamily="sans-serif"
+                fontSize="22.772px"
+                strokeWidth={2.8465}
+              >
+                {"TUPSIN-01A-3"}
+              </tspan>
+            </text>
+            <text
+              id="text6611"
+              transform="scale(.99259 1.0075)"
+              x={-111.33673}
+              y={330.34888}
+              style={{ lineHeight: 1.25 }}
+              xmlSpace="preserve"
+              fill="#fff"
+              fontFamily="Mukti Narrow"
+              fontSize="22.772px"
+              strokeWidth={2.8465}
+            >
+              <tspan
+                id="tspan6609"
+                x={-111.33673}
+                y={330.34888}
+                fill="#fff"
+                fontFamily="sans-serif"
+                fontSize="22.772px"
+                strokeWidth={2.8465}
+              >
+                {"TUPSIN-01A-4"}
+              </tspan>
+            </text>
+            <text
+              id="text6615"
+              transform="scale(.99259 1.0075)"
+              x={-110.71773}
+              y={374.08176}
+              style={{ lineHeight: 1.25 }}
+              xmlSpace="preserve"
+              fill="#fff"
+              fontFamily="Mukti Narrow"
+              fontSize="22.772px"
+              strokeWidth={2.8465}
+            >
+              <tspan
+                id="tspan6613"
+                x={-110.71773}
+                y={374.08176}
+                fill="#fff"
+                fontFamily="sans-serif"
+                fontSize="22.772px"
+                strokeWidth={2.8465}
+              >
+                {"TUPSIN-01A-5"}
+              </tspan>
+            </text>
+            <text
+              id="text6619"
+              transform="scale(.99259 1.0075)"
+              x={-110.75953}
+              y={415.26151}
+              style={{ lineHeight: 1.25 }}
+              xmlSpace="preserve"
+              fill="#fff"
+              fontFamily="Mukti Narrow"
+              fontSize="22.772px"
+              strokeWidth={2.8465}
+            >
+              <tspan
+                id="tspan6617"
+                x={-110.75953}
+                y={415.26151}
+                fill="#fff"
+                fontFamily="sans-serif"
+                fontSize="22.772px"
+                strokeWidth={2.8465}
+              >
+                {"TUPSIN-01A-6"}
+              </tspan>
+            </text>
+            <text
+              id="text6599-9"
+              transform="scale(.99259 1.0075)"
+              x={-302.09515}
+              y={252.59007}
+              style={{ lineHeight: 1.25 }}
+              xmlSpace="preserve"
+              fill="#fff"
+              fontFamily="Mukti Narrow"
+              fontSize="11.386px"
+              strokeWidth={2.8465}
+            >
+              <tspan
+                id="tspan6597-2"
+                x={-302.09515}
+                y={252.59007}
+                fill="#fff"
+                fontFamily="sans-serif"
+                fontSize="11.386px"
+                fontWeight={700}
+                strokeWidth={2.8465}
+              >
+                {"TUPSIN-01A-0"}
+              </tspan>
+            </text>
           </g>
           <path
-            id="path5417"
-            transform="matrix(.96705 0 0 .79741 2308.7 1016.5)"
-            d="M-1284.2-1155.8h99.106c3.11 0 5.613 2.028 5.613 4.546v15.612c0 2.519-2.504 4.547-5.613 4.547h-99.106c-3.11 0-5.613-2.028-5.613-4.547v-15.612c0-2.518 2.504-4.546 5.613-4.546z"
-            clipPath="url(#clipath_lpe_path-effect5561)"
-            fill="url(#linearGradient15462)"
-            strokeLinejoin="round"
-            strokeWidth={1.008}
-            stroke="#116aef"
-          />
-          <path
-            id="path5419"
-            d="M1061 110.97h107.67"
-            fill="none"
-            strokeWidth={0.80436}
-            stroke="#116aef"
-          />
-          <path
-            id="path5421"
-            d="M1092.6 123.04h9.025"
+            id="path6655"
+            d="M748.65 222.65h73.343"
             fill="none"
             strokeWidth={1.0924}
             stroke="#939d93"
           />
-          <rect
-            id="rect5423"
-            x={1067.9}
-            y={117.33}
-            width={24.669}
-            height={13.084}
-            ry={0.091326}
-            fill="#12789b"
-            paintOrder="markers stroke fill"
-            strokeWidth={0.74748}
-            stroke="#485258"
-            className = {tupsIN01A.tupsIN01A_1}
-          />
-          <rect
-            id="rect5425"
-            x={1067.9}
-            y={139.63}
-            width={24.669}
-            height={13.084}
-            ry={0.091326}
-            fill="#12789b"
-            paintOrder="markers stroke fill"
-            strokeWidth={0.74748}
-            stroke="#485258"
-            className={tupsIN01A.tupsIN01A_2}
-          />
-          <path
-            id="path5427"
-            d="M1092.6 145.68h9.025"
-            fill="none"
-            strokeWidth={1.0924}
-            stroke="#939d93"
-          />
-          <path
-            id="path5429"
-            d="M1092.4 168.68h9.025"
-            fill="none"
-            strokeWidth={1.0924}
-            stroke="#939d93"
-          />
-          <rect
-            id="rect5431"
-            x={1067.9}
-            y={134.1}
-            width={24.704}
-            height={5.1475}
-            ry={0.03593}
-            fill="gray"
-            paintOrder="markers stroke fill"
-            strokeWidth={0.73626}
-            stroke="#485258"
-          />
-          <rect
-            id="rect5433"
-            x={1067.9}
-            y={112.02}
-            width={24.693}
-            height={4.9522}
-            ry={0.034566}
-            fill="gray"
-            paintOrder="markers stroke fill"
-            strokeWidth={0.72199}
-            stroke="#485258"
-          />
-          <rect
-            id="rect5435"
-            x={1067.9}
-            y={161.8}
-            width={24.669}
-            height={13.084}
-            ry={0.091326}
-            fill="#12789b"
-            paintOrder="markers stroke fill"
-            strokeWidth={0.74748}
-            stroke="#485258"
-            className = {tupsIN01A.tupsIN01A_3}
-          />
-          <path
-            id="path5437"
-            d="M1092.8 190.09h8.553"
-            fill="none"
-            strokeWidth={1.0924}
-            stroke="#939d93"
-          />
-          <rect
-            id="rect5439"
-            x={1067.9}
-            y={184.1}
-            width={24.669}
-            height={13.084}
-            ry={0.091326}
-            fill="#12789b"
-            paintOrder="markers stroke fill"
-            strokeWidth={0.74748}
-            stroke="#485258"
-            className = {tupsIN01A.tupsIN01A_4}
-          />
-          <rect
-            id="rect5441"
-            x={1067.9}
-            y={206.4}
-            width={24.669}
-            height={13.084}
-            ry={0.091326}
-            fill="#12789b"
-            paintOrder="markers stroke fill"
-            strokeWidth={0.74748}
-            stroke="#485258"
-            className={tupsIN01A.tupsIN01A_5}
-          />
-          <path
-            id="rect5443"
-            fill="#939d93"
-            paintOrder="markers stroke fill"
-            strokeWidth={1.1157}
-            stroke="#939d93"
-            d="M1100.9 119.65H1101.63226V236.95H1100.9z"
-          />
-          <path
-            id="path5445"
-            d="M1092.6 211.84h8.899"
-            fill="none"
-            strokeWidth={1.0924}
-            stroke="#939d93"
-          />
-          <rect
-            id="rect5447"
-            x={1067.9}
-            y={228.58}
-            width={24.669}
-            height={13.084}
-            ry={0.091326}
-            fill="#12789b"
-            paintOrder="markers stroke fill"
-            strokeWidth={0.74748}
-            stroke="#485258"
-            className={tupsIN01A.tupsIN01A_6}
-          />
-          <rect
-            id="rect5449"
-            x={1067.9}
-            y={223.26}
-            width={24.704}
-            height={4.952}
-            ry={0.034565}
-            fill="gray"
-            paintOrder="markers stroke fill"
-            strokeWidth={0.72216}
-            stroke="#485258"
-            className = {tupsIN01A.tupsIN01A_7}
-          />
-          <rect
-            id="rect5451"
-            x={1067.9}
-            y={156.49}
-            width={24.711}
-            height={4.9468}
-            ry={0.034529}
-            fill="gray"
-            paintOrder="markers stroke fill"
-            strokeWidth={0.72188}
-            stroke="#485258"
-          />
-          <rect
-            id="rect5453"
-            x={1067.9}
-            y={178.79}
-            width={24.695}
-            height={4.946}
-            ry={0.034523}
-            fill="gray"
-            paintOrder="markers stroke fill"
-            strokeWidth={0.72156}
-            stroke="#485258"
-          />
-          <rect
-            id="rect5455"
-            x={1067.9}
-            y={201.09}
-            width={24.703}
-            height={4.9372}
-            ry={0.034462}
-            fill="gray"
-            paintOrder="markers stroke fill"
-            strokeWidth={0.72104}
-            stroke="#485258"
-          />
-          <path
-            id="path5457"
-            d="M1092.7 234.28h9.048"
-            fill="none"
-            strokeWidth={1.0924}
-            stroke="#939d93"
-          />
-          <rect
-            id="rect5459"
-            x={1107.3}
-            y={131.03}
-            width={24.669}
-            height={13.084}
-            ry={0.091326}
-            fill="#12789b"
-            paintOrder="markers stroke fill"
-            strokeWidth={0.74748}
-            stroke="#485258"
-          />
-          <rect
-            id="rect5461"
-            x={1107.2}
-            y={125.72}
-            width={24.692}
-            height={4.9274}
-            ry={0.034394}
-            fill="gray"
-            paintOrder="markers stroke fill"
-            strokeWidth={0.74864}
-            stroke="#485258"
-          />
-          <rect
-            id="rect5463"
-            x={1107.3}
-            y={219}
-            width={24.669}
-            height={13.084}
-            ry={0.091326}
-            fill="#12789b"
-            paintOrder="markers stroke fill"
-            strokeWidth={0.74748}
-            stroke="#485258"
-            className = {tupsIN01A.tupsIN01A_0}
-          />
-          <rect
-            id="rect5465"
-            x={1107.2}
-            y={213.69}
-            width={24.708}
-            height={4.9465}
-            ry={0.034527}
-            fill="gray"
-            paintOrder="markers stroke fill"
-            strokeWidth={0.7218}
-            stroke="#485258"
-          />
-          <path
-            id="path5467"
-            d="M1101.1 225.57h5.902"
-            fill="none"
-            strokeWidth={1.0924}
-            stroke="#939d93"
-          />
-          <path
-            id="path5469"
-            d="M1100.9 137.5h6.192"
-            fill="none"
-            strokeWidth={1.0924}
-            stroke="#939d93"
-          />
-          <text
-            id="text5473"
-            transform="scale(1.0268 .97394)"
-            x={1034.4259}
-            y={110.86908}
-            style={{ lineHeight: 1.25 }}
-            xmlSpace="preserve"
-            fill="#fff"
-            fontFamily="Mukti Narrow"
-            fontSize="11.562px"
-            fontWeight={700}
-            letterSpacing={0}
-            strokeWidth={0.20818}
-            wordSpacing={0}
-          >
-            <tspan
-              id="tspan5471"
-              x={1034.4259}
-              y={110.86908}
-              fill="#fff"
-              fontFamily="sans-serif"
-              fontSize="11.562px"
-              fontWeight={700}
-              strokeWidth={0.20818}
-            >
-              {"T-UPS-IN-01A"}
-            </tspan>
-          </text>
-          <text
-            id="text5477"
-            transform="scale(.71013 1.4082)"
-            x={1504.8074}
-            y={82.87056}
-            style={{ lineHeight: 1.25 }}
-            xmlSpace="preserve"
-            fill="#000"
-            fontFamily="sans-serif"
-            fontSize="3.9666px"
-            letterSpacing={0}
-            strokeWidth={0.099165}
-            wordSpacing={0}
-          >
-            <tspan
-              id="tspan5475"
-              x={1504.8074}
-              y={82.87056}
-              fill="#000"
-              strokeWidth={0.099165}
-            >
-              {"TUPSIN-01A-1"}
-            </tspan>
-          </text>
-          <text
-            id="text5481"
-            transform="scale(.71013 1.4082)"
-            x={1504.7886}
-            y={98.647675}
-            style={{ lineHeight: 1.25 }}
-            xmlSpace="preserve"
-            fill="#000"
-            fontFamily="sans-serif"
-            fontSize="3.9666px"
-            letterSpacing={0}
-            strokeWidth={0.099165}
-            wordSpacing={0}
-          >
-            <tspan
-              id="tspan5479"
-              x={1504.7886}
-              y={98.647675}
-              fill="#000"
-              strokeWidth={0.099165}
-            >
-              {"TUPSIN-01A-2"}
-            </tspan>
-          </text>
-          <text
-            id="text5485"
-            transform="scale(.71013 1.4082)"
-            x={1504.8976}
-            y={114.42253}
-            style={{ lineHeight: 1.25 }}
-            xmlSpace="preserve"
-            fill="#000"
-            fontFamily="sans-serif"
-            fontSize="3.9666px"
-            letterSpacing={0}
-            strokeWidth={0.099165}
-            wordSpacing={0}
-          >
-            <tspan
-              id="tspan5483"
-              x={1504.8976}
-              y={114.42253}
-              fill="#000"
-              strokeWidth={0.099165}
-            >
-              {"TUPSIN-01A-3"}
-            </tspan>
-          </text>
-          <text
-            id="text5489"
-            transform="scale(.71013 1.4082)"
-            x={1504.9384}
-            y={130.18385}
-            style={{ lineHeight: 1.25 }}
-            xmlSpace="preserve"
-            fill="#000"
-            fontFamily="sans-serif"
-            fontSize="3.9666px"
-            letterSpacing={0}
-            strokeWidth={0.099165}
-            wordSpacing={0}
-          >
-            <tspan
-              id="tspan5487"
-              x={1504.9384}
-              y={130.18385}
-              fill="#000"
-              strokeWidth={0.099165}
-            >
-              {"TUPSIN-01A-4"}
-            </tspan>
-          </text>
-          <text
-            id="text5493"
-            transform="scale(.71013 1.4082)"
-            x={1504.8431}
-            y={146.1346}
-            style={{ lineHeight: 1.25 }}
-            xmlSpace="preserve"
-            fill="#000"
-            fontFamily="sans-serif"
-            fontSize="3.9666px"
-            letterSpacing={0}
-            strokeWidth={0.099165}
-            wordSpacing={0}
-          >
-            <tspan
-              id="tspan5491"
-              x={1504.8431}
-              y={146.1346}
-              fill="#000"
-              strokeWidth={0.099165}
-            >
-              {"TUPSIN-01A-5"}
-            </tspan>
-          </text>
-          <text
-            id="text5497"
-            transform="scale(.71013 1.4082)"
-            x={1504.8499}
-            y={161.82828}
-            style={{ lineHeight: 1.25 }}
-            xmlSpace="preserve"
-            fill="#000"
-            fontFamily="sans-serif"
-            fontSize="3.9666px"
-            letterSpacing={0}
-            strokeWidth={0.099165}
-            wordSpacing={0}
-          >
-            <tspan
-              id="tspan5495"
-              x={1504.8499}
-              y={161.82828}
-              fill="#000"
-              strokeWidth={0.099165}
-            >
-              {"TUPSIN-01A-6"}
-            </tspan>
-          </text>
-          <text
-            id="text5501"
-            transform="scale(.71013 1.4082)"
-            x={1560.6105}
-            y={155.00964}
-            style={{ lineHeight: 1.25 }}
-            xmlSpace="preserve"
-            fill="#000"
-            fontFamily="sans-serif"
-            fontSize="3.9666px"
-            letterSpacing={0}
-            strokeWidth={0.099165}
-            wordSpacing={0}
-          >
-            <tspan
-              id="tspan5499"
-              x={1560.6105}
-              y={155.00964}
-              dy="0 0 0 0 0 0 0 0 0 0 0 0"
-              fill="#000"
-              strokeWidth={0.099165}
-            >
-              {"TUPSIN-01A-0"}
-            </tspan>
-          </text>
-          <text
-            id="text5505"
-            transform="scale(.71013 1.4082)"
-            x={1560.3381}
-            y={92.505493}
-            style={{ lineHeight: 1.25 }}
-            xmlSpace="preserve"
-            fill="#000"
-            fontFamily="sans-serif"
-            fontSize="3.9666px"
-            letterSpacing={0}
-            strokeWidth={0.099165}
-            wordSpacing={0}
-          >
-            <tspan
-              id="tspan5503"
-              x={1560.3381}
-              y={92.505493}
-              fill="#000"
-              strokeWidth={0.099165}
-            >
-              {"TUPSIN-01A-7"}
-            </tspan>
-          </text>
-          <ellipse
-            id="ellipse5507"
-            transform="rotate(-90.107) skewX(.006)"
-            cx={-129.26}
-            cy={1071.1}
-            rx={1.5354}
-            ry={1.4972}
-            fill="#b1cae0"
-            strokeWidth={0.13784}
-          />
-          <ellipse
-            id="ellipse5509"
-            transform="rotate(-90.107) skewX(.006)"
-            cx={-129.26}
-            cy={1089.5}
-            rx={1.5354}
-            ry={1.4972}
-            fill="#b1cae0"
-            strokeWidth={0.13784}
-          />
-          <path
-            id="path5511"
-            d="M1072.4 123.36c4.505-4.848 11.81-4.862 16.333-.032"
-            fill="none"
-            strokeLinecap="round"
-            strokeMiterlimit={10}
-            strokeWidth={0.68917}
-            stroke="#b1cae0"
-          />
-          <ellipse
-            id="ellipse5513"
-            transform="rotate(-90.107) skewX(.006)"
-            cx={-151.55}
-            cy={1071}
-            rx={1.5354}
-            ry={1.4972}
-            fill="#b1cae0"
-            strokeWidth={0.13784}
-          />
-          <ellipse
-            id="ellipse5515"
-            transform="rotate(-90.107) skewX(.006)"
-            cx={-151.55}
-            cy={1089.4}
-            rx={1.5354}
-            ry={1.4972}
-            fill="#b1cae0"
-            strokeWidth={0.13784}
-          />
-          <path
-            id="path5517"
-            d="M1072.3 145.65c4.505-4.848 11.81-4.862 16.333-.032"
-            fill="none"
-            strokeLinecap="round"
-            strokeMiterlimit={10}
-            strokeWidth={0.68917}
-            stroke="#b1cae0"
-          />
-          <ellipse
-            id="ellipse5519"
-            transform="rotate(-90.107) skewX(.006)"
-            cx={-143.05}
-            cy={1110.2}
-            rx={1.5354}
-            ry={1.4972}
-            fill="#b1cae0"
-            strokeWidth={0.13784}
-          />
-          <ellipse
-            id="ellipse5521"
-            transform="rotate(-90.107) skewX(.006)"
-            cx={-143.05}
-            cy={1128.5}
-            rx={1.5354}
-            ry={1.4972}
-            fill="#b1cae0"
-            strokeWidth={0.13784}
-          />
-          <path
-            id="path5523"
-            d="M1111.4 137.07c4.505-4.848 11.81-4.862 16.333-.032"
-            fill="none"
-            strokeLinecap="round"
-            strokeMiterlimit={10}
-            strokeWidth={0.68917}
-            stroke="#b1cae0"
-          />
-          <ellipse
-            id="ellipse5525"
-            transform="rotate(-90.107) skewX(.006)"
-            cx={-173.46}
-            cy={1071.1}
-            rx={1.5354}
-            ry={1.4972}
-            fill="#b1cae0"
-            strokeWidth={0.13784}
-          />
-          <ellipse
-            id="ellipse5527"
-            transform="rotate(-90.107) skewX(.006)"
-            cx={-173.46}
-            cy={1089.5}
-            rx={1.5354}
-            ry={1.4972}
-            fill="#b1cae0"
-            strokeWidth={0.13784}
-          />
-          <path
-            id="path5529"
-            d="M1072.4 167.55c4.505-4.848 11.81-4.862 16.333-.032"
-            fill="none"
-            strokeLinecap="round"
-            strokeMiterlimit={10}
-            strokeWidth={0.68917}
-            stroke="#b1cae0"
-          />
-          <ellipse
-            id="ellipse5531"
-            transform="rotate(-90.107) skewX(.006)"
-            cx={-195.94}
-            cy={1071}
-            rx={1.5354}
-            ry={1.4972}
-            fill="#b1cae0"
-            strokeWidth={0.13784}
-          />
-          <ellipse
-            id="ellipse5533"
-            transform="rotate(-90.107) skewX(.006)"
-            cx={-195.94}
-            cy={1089.4}
-            rx={1.5354}
-            ry={1.4972}
-            fill="#b1cae0"
-            strokeWidth={0.13784}
-          />
-          <path
-            id="path5535"
-            d="M1072.4 190.04c4.505-4.848 11.81-4.862 16.333-.032"
-            fill="none"
-            strokeLinecap="round"
-            strokeMiterlimit={10}
-            strokeWidth={0.68917}
-            stroke="#b1cae0"
-          />
-          <ellipse
-            id="ellipse5537"
-            transform="rotate(-90.107) skewX(.006)"
-            cx={-217.68}
-            cy={1070.9}
-            rx={1.5354}
-            ry={1.4972}
-            fill="#b1cae0"
-            strokeWidth={0.13783}
-          />
-          <ellipse
-            id="ellipse5539"
-            transform="rotate(-90.107) skewX(.006)"
-            cx={-217.68}
-            cy={1089.3}
-            rx={1.5354}
-            ry={1.4972}
-            fill="#b1cae0"
-            strokeWidth={0.13783}
-          />
-          <path
-            id="path5541"
-            d="M1072.3 211.78c4.505-4.848 11.81-4.862 16.333-.032"
-            fill="none"
-            strokeLinecap="round"
-            strokeMiterlimit={10}
-            strokeWidth={0.68917}
-            stroke="#b1cae0"
-          />
-          <ellipse
-            id="ellipse5543"
-            transform="rotate(-90.107) skewX(.006)"
-            cx={-240.09}
-            cy={1070.8}
-            rx={1.5354}
-            ry={1.4972}
-            fill="#b1cae0"
-            strokeWidth={0.13783}
-          />
-          <ellipse
-            id="ellipse5545"
-            transform="rotate(-90.107) skewX(.006)"
-            cx={-240.09}
-            cy={1089.1}
-            rx={1.5354}
-            ry={1.4972}
-            fill="#b1cae0"
-            strokeWidth={0.13783}
-          />
-          <path
-            id="path5547"
-            d="M1072.2 234.19c4.505-4.848 11.81-4.862 16.333-.032"
-            fill="none"
-            strokeLinecap="round"
-            strokeMiterlimit={10}
-            strokeWidth={0.68917}
-            stroke="#b1cae0"
-          />
-          <ellipse
-            id="ellipse5549"
-            transform="rotate(-90.107) skewX(.006)"
-            cx={-231.5}
-            cy={1110}
-            rx={1.5354}
-            ry={1.4972}
-            fill="#b1cae0"
-            strokeWidth={0.13783}
-          />
-          <ellipse
-            id="ellipse5551"
-            transform="rotate(-90.107) skewX(.006)"
-            cx={-231.5}
-            cy={1128.4}
-            rx={1.5354}
-            ry={1.4972}
-            fill="#b1cae0"
-            strokeWidth={0.13783}
-          />
-          <path
-            id="path5553"
-            d="M1111.5 225.52c4.505-4.848 11.81-4.862 16.333-.032"
-            fill="none"
-            strokeLinecap="round"
-            strokeMiterlimit={10}
-            strokeWidth={0.68917}
-            stroke="#b1cae0"
-          />
-          <text
-            id="text7131"
-            x={964.48938}
-            y={118.77263}
-            style={{ lineHeight: 1.25 }}
-            xmlSpace="preserve"
-            fill="#fff"
-            fontFamily="Mukti Narrow"
-            fontSize="11.562px"
-            strokeWidth={1.4452}
-          >
-            <tspan
-              id="tspan7129"
-              x={964.48938}
-              y={118.77263}
-              fill="#fff"
-              fontFamily="sans-serif"
-              fontSize="11.562px"
-              strokeWidth={1.4452}
-            >
-              {"TUPSIN-01A-1"}
-            </tspan>
-          </text>
-          <text
-            id="text7135"
-            x={964.8371}
-            y={139.29826}
-            style={{ lineHeight: 1.25 }}
-            xmlSpace="preserve"
-            fill="#fff"
-            fontFamily="Mukti Narrow"
-            fontSize="11.562px"
-            strokeWidth={1.4452}
-          >
-            <tspan
-              id="tspan7133"
-              x={964.8371}
-              y={139.29826}
-              fill="#fff"
-              fontFamily="sans-serif"
-              fontSize="11.562px"
-              strokeWidth={1.4452}
-            >
-              {"TUPSIN-01A-2"}
-            </tspan>
-          </text>
-          <text
-            id="text7139"
-            x={965.04004}
-            y={162.05162}
-            style={{ lineHeight: 1.25 }}
-            xmlSpace="preserve"
-            fill="#fff"
-            fontFamily="Mukti Narrow"
-            fontSize="11.562px"
-            strokeWidth={1.4452}
-          >
-            <tspan
-              id="tspan7137"
-              x={965.04004}
-              y={162.05162}
-              fill="#fff"
-              fontFamily="sans-serif"
-              fontSize="11.562px"
-              strokeWidth={1.4452}
-            >
-              {"TUPSIN-01A-3"}
-            </tspan>
-          </text>
-          <text
-            id="text7143"
-            x={964.75867}
-            y={184.32306}
-            style={{ lineHeight: 1.25 }}
-            xmlSpace="preserve"
-            fill="#fff"
-            fontFamily="Mukti Narrow"
-            fontSize="11.562px"
-            strokeWidth={1.4452}
-          >
-            <tspan
-              id="tspan7141"
-              x={964.75867}
-              y={184.32306}
-              fill="#fff"
-              fontFamily="sans-serif"
-              fontSize="11.562px"
-              strokeWidth={1.4452}
-            >
-              {"TUPSIN-01A-4"}
-            </tspan>
-          </text>
-          <text
-            id="text7149"
-            x={964.9231}
-            y={206.60175}
-            style={{ lineHeight: 1.25 }}
-            xmlSpace="preserve"
-            fill="#fff"
-            fontFamily="Mukti Narrow"
-            fontSize="11.562px"
-            strokeWidth={1.4452}
-          >
-            <tspan
-              id="tspan7147"
-              x={964.9231}
-              y={206.60175}
-              fill="#fff"
-              fontFamily="sans-serif"
-              fontSize="11.562px"
-              strokeWidth={1.4452}
-            >
-              {"TUPSIN-01A-5"}
-            </tspan>
-          </text>
-          <text
-            id="text7153"
-            x={964.9054}
-            y={227.77356}
-            style={{ lineHeight: 1.25 }}
-            xmlSpace="preserve"
-            fill="#fff"
-            fontFamily="Mukti Narrow"
-            fontSize="11.562px"
-            strokeWidth={1.4452}
-          >
-            <tspan
-              id="tspan7151"
-              x={964.9054}
-              y={227.77356}
-              fill="#fff"
-              fontFamily="sans-serif"
-              fontSize="11.562px"
-              strokeWidth={1.4452}
-            >
-              {"TUPSIN-01A-6"}
-            </tspan>
-          </text>
-          <text
-            id="text6501"
-            x={1103.0999}
-            y={121.4502}
-            style={{ lineHeight: 1.25 }}
-            xmlSpace="preserve"
-            fill="#fff"
-            fontFamily="Mukti Narrow"
-            fontSize="7.7078px"
-            strokeWidth={1.4452}
-          >
-            <tspan
-              id="tspan6499"
-              x={1103.0999}
-              y={121.4502}
-              fill="#fff"
-              fontFamily="sans-serif"
-              fontSize="7.7078px"
-              strokeWidth={1.4452}
-            >
-              {"TUPSIN-01A-7"}
-            </tspan>
-          </text>
-          <text
-            id="text6505"
-            x={1103.7227}
-            y={210.28114}
-            style={{ lineHeight: 1.25 }}
-            xmlSpace="preserve"
-            fill="#fff"
-            fontFamily="Mukti Narrow"
-            fontSize="7.7078px"
-            strokeWidth={1.4452}
-          >
-            <tspan
-              id="tspan6503"
-              x={1103.7227}
-              y={210.28114}
-              fill="#fff"
-              fontFamily="sans-serif"
-              fontSize="7.7078px"
-              strokeWidth={1.4452}
-            >
-              {"TUPSIN-01A-0"}
-            </tspan>
-          </text>
         </g>
+        <text
+          id="text6603"
+          x={150.02487}
+          y={159.90622}
+          style={{ lineHeight: 1.25 }}
+          xmlSpace="preserve"
+          fill="#fff"
+          fontFamily="Mukti Narrow"
+          fontSize="2.1167px"
+          strokeWidth={0.26458}
+        >
+          <tspan
+            id="tspan6601"
+            x={150.02487}
+            y={159.90622}
+            fill="#fff"
+            fontFamily="sans-serif"
+            fontSize="2.1167px"
+            strokeWidth={0.26458}
+          >
+            {"TUPSIN-01A-2"}
+          </tspan>
+        </text>
       </g>
+  
       
-    
+     
     )
 }
 
