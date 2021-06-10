@@ -3,19 +3,64 @@ import {Var15, DataLine_sist1} from './variables_sist1/var15_lineas_sist1';
 import {Var14, DataTchi01A} from './variables_sist1/var14_tchi_01A';
 import {Var13, DataTchi03A} from './variables_sist1/var13_tchi_03A';
 import {Var12, DataAtschi07A } from './variables_sist1/var12_ats_chi_07A';
+import {Var11, DataTpdu01A } from './variables_sist1/var11_tpdu_01A';
+import {Var10, DataAtspdu09A} from './variables_sist1/var10_ats_pdu_09A';
 
 
 const uni = () => {
+
+  let uni_10: DataAtspdu09A = {
+
+    atspdu09A:{
+
+      atspdu09A_F2:    '',//path19632-1
+      atspdu09A_tri2:  '',//path17164-6-8-6-3-5
+      atspdu09A_F1:    '',//ellipse19634-70
+      atspdu09A_tri1:  '',//path11127-1 
+    }
+
+  }
+
+  let uni_11: DataTpdu01A = {
+
+    tpdu01A:{
+
+      tpdu01A_0: '',//rect7982
+      tpdu01A_1: '',//rect7821
+      tpdu01A_2: '',//rect7825
+      tpdu01A_3: '',//rect7828
+      tpdu01A_4: '',//rect7840
+      tpdu01A_5: '',//rect7844
+      tpdu01A_6: '',//rect7846
+      tpdu01A_7: '',//rect7854
+      tpdu01A_8: '',//rect7926
+      tpdu01A_9: '',//rect7930
+      tpdu01A_10: '',//rect7932
+      tpdu01A_11: '',//rect7944
+      tpdu01A_12: '',//rect7996
+      pdu01AF1: '',//circle8132
+      pdu01AF2: '',//circle8134
+      pdu01AF3: '',//circle8136
+      pdu01AF4: '',//circle8138
+      pdu01AF5: '',//circle8140
+      pdu01AF6: '',//circle8142
+      pdu01AF7: '',//circle8144
+      pdu01AF8: '',//circle8146
+      pdu01AF9: '',//circle8148
+      pdu01AF10: '',//circle8150
+      pout1A: '',//circle8152
+    }
+  }
 
  
   let uni_12: DataAtschi07A = {
 
     atschi07A :{
 
-      atschi07A_F2:    '',//
-      atschi07A_tri2:  '',//
-      atschi07A_F1:    '',//
-      atschi07A_tri1:  '',//   
+      atschi07A_F2:    '',//path19632-6-7
+      atschi07A_tri2:  '',//path17164-6-8-6-3-0-19
+      atschi07A_F1:    '',//ellipse19634-7-7
+      atschi07A_tri1:  '',//path11125-0    
         
     }
   }
@@ -12973,207 +13018,6 @@ const uni = () => {
     </g>
 
     
-    <g id="layer33">
-      <g id="g12159-4" transform="translate(182.01 106.93) scale(.14245)">
-        <g id="g6182-3">
-          <g
-            id="g6154-7"
-            transform="translate(-108.43 -86.896) scale(1.2848)"
-          >
-            <g
-              id="g5647-8-7-0-1"
-              transform="matrix(.89652 0 0 .24156 1570.4 367.31)"
-              clipPath="url(#clipath_lpe_path-effect8836)"
-              strokeWidth={0.99961}
-              stroke="#4a4a4a"
-            >
-              <g
-                id="g5645-8-99-4-22"
-                transform="matrix(1.0234 0 0 .99996 -67.752 -224.6)"
-                clipPath="none"
-                strokeWidth={0.98813}
-                stroke="#4a4a4a"
-              >
-                <path
-                  id="path5643-5-7-3-0"
-                  d="M-1307.3-167.17h95.668c2.816 0 5.082 2.823 5.082 6.33V75.21c0 3.506-2.266 6.33-5.082 6.33h-95.668c-2.816 0-5.083-2.824-5.083-6.33v-236.05c0-3.507 2.267-6.33 5.083-6.33z"
-                  strokeLinecap="round"
-                  strokeMiterlimit={15}
-                  strokeWidth={0.98837}
-                  stroke="#4a4a4a"
-                />
-              </g>
-            </g>
-            <g
-              id="g5050-3-0-1-9-2"
-              transform="matrix(.89644 0 0 .24151 1570.3 367.29)"
-              clipPath="url(#clipath_lpe_path-effect8838)"
-              strokeWidth={0.99961}
-              stroke="#1366e7"
-            >
-              <g
-                id="g4980-3-4-3-7-5-1"
-                transform="matrix(1.0234 0 0 .99996 -67.752 -224.6)"
-                clipPath="none"
-                strokeWidth={0.98813}
-                stroke="#1366e7"
-              >
-                <path
-                  id="rect4958-5-5-9-1-7-75"
-                  d="M-1307.3-167.17h95.668c2.816 0 5.082 2.823 5.082 6.33V75.21c0 3.506-2.266 6.33-5.082 6.33h-95.668c-2.816 0-5.083-2.824-5.083-6.33v-236.05c0-3.507 2.267-6.33 5.083-6.33z"
-                  fill="url(#linearGradient8857)"
-                  strokeLinecap="round"
-                  strokeMiterlimit={15}
-                  strokeWidth={0.98837}
-                  stroke="#1366e7"
-                />
-              </g>
-            </g>
-            <path
-              id="rect9071-6-6-2-6-7-2-17"
-              transform="matrix(.88028 0 0 .72138 1440.9 1094.4)"
-              d="M-1284.2-1155.8h99.106c3.11 0 5.613 2.028 5.613 4.546v15.612c0 2.519-2.504 4.547-5.613 4.547h-99.106c-3.11 0-5.613-2.028-5.613-4.547v-15.612c0-2.518 2.504-4.546 5.613-4.546z"
-              clipPath="url(#clipath_lpe_path-effect8840)"
-              fill="url(#linearGradient8859)"
-              strokeLinejoin="round"
-              strokeWidth={1.008}
-              stroke="#1366e7"
-            />
-            <path
-              id="path5637-9-3-0-4"
-              d="M305.13 275.38h98.002"
-              fill="none"
-              strokeWidth={0.5321}
-              stroke="#1366e7"
-            />
-            <path
-              id="rect36772-7-1-5-1-0-08-4-1"
-              fill="#939d93"
-              paintOrder="markers stroke fill"
-              strokeWidth={0.13689}
-              stroke="#000"
-              d="M376.48 279.36H378.135V328.35H376.48z"
-            />
-            <path
-              id="path22961-5-9-0-5-1-0-3-7-0-6-7"
-              d="M338.35 318.92h38.362"
-              fill="#939d93"
-              strokeWidth={0.99383}
-              stroke="#939d93"
-            />
-            <ellipse
-              id="path19632-1"
-              cx={326.73}
-              cy={290.69}
-              rx={11.512}
-              ry={11.275}
-              fill="#0f0"
-            />
-            <text
-              id="text2160-2-7-8-0-4-8-7-0-3-1"
-              transform="scale(1.1716 .85351)"
-              x={271.54193}
-              y={345.09695}
-              style={{ lineHeight: 1.25 }}
-              xmlSpace="preserve"
-              fill="#000"
-              fontFamily="sans-serif"
-              fontSize="12.539px"
-              letterSpacing={0}
-              strokeWidth={0.31348}
-              wordSpacing={0}
-            >
-              <tspan
-                id="tspan2158-7-1-1-87-4-9-7-0-0-1"
-                x={271.54193}
-                y={345.09695}
-                fill="#000"
-                strokeWidth={0.31348}
-              >
-                {"F2"}
-              </tspan>
-            </text>
-            <ellipse
-              id="ellipse19634-70"
-              cx={326.73}
-              cy={318.37}
-              rx={11.512}
-              ry={11.275}
-              fill="#999"
-            />
-            <text
-              id="text2160-2-7-8-0-4-8-7-6-6-1-4"
-              transform="scale(1.1716 .85351)"
-              x={271.28171}
-              y={378.00323}
-              style={{ lineHeight: 1.25 }}
-              xmlSpace="preserve"
-              fill="#000"
-              fontFamily="sans-serif"
-              fontSize="12.539px"
-              letterSpacing={0}
-              strokeWidth={0.31348}
-              wordSpacing={0}
-            >
-              <tspan
-                id="tspan2158-7-1-1-87-4-9-7-4-8-9-0"
-                x={271.28171}
-                y={378.00323}
-                fill="#000"
-                strokeWidth={0.31348}
-              >
-                {"F1"}
-              </tspan>
-            </text>
-            <path
-              id="path5026-8"
-              d="M338.35 289.83h38.362"
-              fill="#939d93"
-              strokeWidth={0.99383}
-              stroke="#939d93"
-            />
-            <path
-              id="path17164-6-8-6-3-5"
-              d="M347.43 281.63l.491 18.094 18.677-10.052z"
-              fill="#0f0"
-            />
-            <path
-              id="path11127-1"
-              d="M347.43 310.52l.491 18.094 18.677-10.052z"
-              fill="#999"
-            />
-          </g>
-          <text
-            id="text2160-2-3-9-42-9-9-2-1-6"
-            transform="scale(1.0191 .98121)"
-            x={283.32602}
-            y={268.95706}
-            style={{ lineHeight: 1.25 }}
-            xmlSpace="preserve"
-            fill="#fff"
-            fontFamily="Mukti Narrow"
-            fontSize="14.859px"
-            fontWeight={700}
-            letterSpacing={0}
-            strokeWidth={0.2715}
-            wordSpacing={0}
-          >
-            <tspan
-              id="tspan2158-7-4-2-77-5-1-1-5-6"
-              x={283.32602}
-              y={268.95706}
-              fill="#fff"
-              fontFamily="sans-serif"
-              fontSize="14.859px"
-              fontWeight={700}
-              strokeWidth={0.2715}
-            >
-              {"ATS-PDU-09A"}
-            </tspan>
-          </text>
-        </g>
-      </g>
-    </g>
     <g id="layer7">
       <g id="g12159" transform="translate(181.87 -.877) scale(.14245)">
         <g id="g6182">
@@ -29945,6 +29789,14 @@ const uni = () => {
         />
       </g>
     </g>
+
+    <Var10
+      atspdu09A = {uni_10.atspdu09A}    
+    />
+
+    <Var11
+      tpdu01A = {uni_11.tpdu01A}       
+    />
 
     <Var12
       atschi07A = {uni_12.atschi07A}

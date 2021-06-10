@@ -6,40 +6,39 @@ type TPDU_01A = {
 //className = {tpdu01A}
 
 //Breakers T-PDU-01A
-    tpdu01A_0: string;//
-    tpdu01A_1: string;//
-    tpdu01A_2: string;//
-    tpdu01A_3: string;//
-    tpdu01A_4: string;//
-    tpdu01A_5: string;//
-    tpdu01A_6: string;//
-    tpdu01A_7: string;//
-    tpdu01A_8: string;//
-    tpdu01A_9: string;//
-    tpdu01A_10: string;//
-    tpdu01A_11: string;//
-    tpdu01A_12: string;//
+//className = {tpdu01A.tpdu01A_0}
+    tpdu01A_0: string;//rect7982
+    tpdu01A_1: string;//rect7821
+    tpdu01A_2: string;//rect7825
+    tpdu01A_3: string;//rect7828
+    tpdu01A_4: string;//rect7840
+    tpdu01A_5: string;//rect7844
+    tpdu01A_6: string;//rect7846
+    tpdu01A_7: string;//rect7854
+    tpdu01A_8: string;//rect7926
+    tpdu01A_9: string;//rect7930
+    tpdu01A_10: string;//rect7932
+    tpdu01A_11: string;//rect7944
+    tpdu01A_12: string;//rect7996
 
 // indicador de PDis
-
-    pdu01AF1: string;//
-    pdu01AF2: string;//
-    pdu01AF3: string;//
-    pdu01AF4: string;//
-    pdu01AF5: string;//
-    pdu01AF6: string;//
-    pdu01AF7: string;//
-    pdu01AF8: string;//
-    pdu01AF9: string;//
-    pdu01AF10: string;//
-    pout1A: string;//
-
-
+//className = {tpdu01A.pdu01AF1}
+    pdu01AF1: string;//circle8132
+    pdu01AF2: string;//circle8134
+    pdu01AF3: string;//circle8136
+    pdu01AF4: string;//circle8138
+    pdu01AF5: string;//circle8140
+    pdu01AF6: string;//circle8142
+    pdu01AF7: string;//circle8144
+    pdu01AF8: string;//circle8146
+    pdu01AF9: string;//circle8148
+    pdu01AF10: string;//circle8150
+    pout1A: string;//circle8152
       
 }
 export interface DataTpdu01A{
 
-  //className = {tpdu01A.atschi07A_F2}
+  //className = {tpdu01A.tpdu01A_0}
   tpdu01A: TPDU_01A; 
 
 }
@@ -186,6 +185,7 @@ export const Var11 = ({
                 paintOrder="markers stroke fill"
                 strokeWidth={1.636}
                 stroke="#485258"
+                className = {tpdu01A.tpdu01A_1}
               />
               <path
                 id="path7823"
@@ -205,6 +205,7 @@ export const Var11 = ({
                 paintOrder="markers stroke fill"
                 strokeWidth={1.636}
                 stroke="#485258"
+                className = {tpdu01A.tpdu01A_2}
               />
               <rect
                 id="rect7828"
@@ -217,6 +218,7 @@ export const Var11 = ({
                 paintOrder="markers stroke fill"
                 strokeWidth={1.636}
                 stroke="#485258"
+                className = {tpdu01A.tpdu01A_3}
               />
               <path
                 id="path7830"
@@ -279,6 +281,7 @@ export const Var11 = ({
                 paintOrder="markers stroke fill"
                 strokeWidth={1.636}
                 stroke="#485258"
+                className = {tpdu01A.tpdu01A_4}
               />
               <path
                 id="path7842"
@@ -298,6 +301,7 @@ export const Var11 = ({
                 paintOrder="markers stroke fill"
                 strokeWidth={1.636}
                 stroke="#485258"
+                className = {tpdu01A.tpdu01A_5}
               />
               <rect
                 id="rect7846"
@@ -310,6 +314,7 @@ export const Var11 = ({
                 paintOrder="markers stroke fill"
                 strokeWidth={1.636}
                 stroke="#485258"
+                className = {tpdu01A.tpdu01A_6}
               />
               <path
                 id="rect7848"
@@ -344,6 +349,7 @@ export const Var11 = ({
                 paintOrder="markers stroke fill"
                 strokeWidth={1.636}
                 stroke="#485258"
+                className = {tpdu01A.tpdu01A_7}
               />
               <rect
                 id="rect7856"
@@ -748,6 +754,7 @@ export const Var11 = ({
                 paintOrder="markers stroke fill"
                 strokeWidth={1.636}
                 stroke="#485258"
+                className = {tpdu01A.tpdu01A_8}
               />
               <path
                 id="path7928"
@@ -767,6 +774,7 @@ export const Var11 = ({
                 paintOrder="markers stroke fill"
                 strokeWidth={1.636}
                 stroke="#485258"
+                className = {tpdu01A.tpdu01A_9}
               />
               <rect
                 id="rect7932"
@@ -779,6 +787,7 @@ export const Var11 = ({
                 paintOrder="markers stroke fill"
                 strokeWidth={1.636}
                 stroke="#485258"
+                className = {tpdu01A.tpdu01A_10}
               />
               <path
                 id="path7934"
@@ -841,6 +850,7 @@ export const Var11 = ({
                 paintOrder="markers stroke fill"
                 strokeWidth={1.636}
                 stroke="#485258"
+                className = {tpdu01A.tpdu01A_11}
               />
               <path
                 id="path7946"
@@ -1127,6 +1137,7 @@ export const Var11 = ({
                 paintOrder="markers stroke fill"
                 strokeWidth={1.636}
                 stroke="#485258"
+                className = {tpdu01A.tpdu01A_12}
               />
               <rect
                 id="rect7998"
@@ -1655,6 +1666,7 @@ export const Var11 = ({
                 fill="#00d300"
                 strokeWidth={1.1969}
                 stroke="#485258"
+                className = {tpdu01A.pdu01AF1}
               />
               <circle
                 id="circle8134"
@@ -1664,6 +1676,7 @@ export const Var11 = ({
                 fill="#00d300"
                 strokeWidth={1.1969}
                 stroke="#485258"
+                className = {tpdu01A.pdu01AF2}
               />
               <circle
                 id="circle8136"
@@ -1673,6 +1686,7 @@ export const Var11 = ({
                 fill="#00d300"
                 strokeWidth={1.1969}
                 stroke="#485258"
+                className = {tpdu01A.pdu01AF3}
               />
               <circle
                 id="circle8138"
@@ -1682,6 +1696,7 @@ export const Var11 = ({
                 fill="#00d300"
                 strokeWidth={1.1969}
                 stroke="#485258"
+                className = {tpdu01A.pdu01AF4}
               />
               <circle
                 id="circle8140"
@@ -1691,6 +1706,7 @@ export const Var11 = ({
                 fill="#00d300"
                 strokeWidth={1.1969}
                 stroke="#485258"
+                className = {tpdu01A.pdu01AF5}
               />
               <circle
                 id="circle8142"
@@ -1700,6 +1716,7 @@ export const Var11 = ({
                 fill="#00d300"
                 strokeWidth={1.1969}
                 stroke="#485258"
+                className = {tpdu01A.pdu01AF6}
               />
               <circle
                 id="circle8144"
@@ -1709,6 +1726,7 @@ export const Var11 = ({
                 fill="#00d300"
                 strokeWidth={1.1969}
                 stroke="#485258"
+                className = {tpdu01A.pdu01AF7}
               />
               <circle
                 id="circle8146"
@@ -1718,6 +1736,7 @@ export const Var11 = ({
                 fill="#00d300"
                 strokeWidth={1.1969}
                 stroke="#485258"
+                className = {tpdu01A.pdu01AF8}
               />
               <circle
                 id="circle8148"
@@ -1727,6 +1746,7 @@ export const Var11 = ({
                 fill="#00d300"
                 strokeWidth={1.1969}
                 stroke="#485258"
+                className = {tpdu01A.pdu01AF9}
               />
               <circle
                 id="circle8150"
@@ -1736,6 +1756,7 @@ export const Var11 = ({
                 fill="#00d300"
                 strokeWidth={1.1969}
                 stroke="#485258"
+                className = {tpdu01A.pdu01AF10}
               />
               <circle
                 id="circle8152"
@@ -1745,6 +1766,7 @@ export const Var11 = ({
                 fill="#00d300"
                 strokeWidth={1.1969}
                 stroke="#485258"
+                className = {tpdu01A.pout1A}
               />
               <path
                 id="path8188"
