@@ -35,159 +35,11 @@ export const Var18 = ({
 
     return (
         //Se inserta GRupo del tablero TDP_02A
-        <g id="layer2">
-      <text
-        id="text4902-9"
-        x={89.745422}
-        y={82.456467}
-        style={{ lineHeight: 1.25 }}
-        xmlSpace="preserve"
-        fill="#fff"
-        fontFamily="Mukti Narrow"
-        fontSize="2.1167px"
-        fontWeight={700}
-        strokeWidth={0.26458}
-      >
-        <tspan
-          id="tspan4900-0"
-          x={89.745422}
-          y={82.456467}
-          fill="#fff"
-          fontFamily="Mukti Narrow"
-          fontSize="2.1167px"
-          fontWeight={700}
-          strokeWidth={0.26458}
-        >
-          {"3"}
-        </tspan>
-      </text>
-      <text
-        id="text6783"
-        x={89.745422}
-        y={86.160614}
-        style={{ lineHeight: 1.25 }}
-        xmlSpace="preserve"
-        fill="#fff"
-        fontFamily="Mukti Narrow"
-        fontSize="2.1167px"
-        fontWeight={700}
-        strokeWidth={0.26458}
-      >
-        <tspan
-          id="tspan6781"
-          x={89.745422}
-          y={86.160614}
-          fill="#fff"
-          fontFamily="Mukti Narrow"
-          fontSize="2.1167px"
-          fontWeight={700}
-          strokeWidth={0.26458}
-        >
-          {"2"}
-        </tspan>
-      </text>
-      <text
-        id="text6787"
-        x={89.745422}
-        y={89.864761}
-        style={{ lineHeight: 1.25 }}
-        xmlSpace="preserve"
-        fill="#fff"
-        fontFamily="Mukti Narrow"
-        fontSize="2.1167px"
-        fontWeight={700}
-        strokeWidth={0.26458}
-      >
-        <tspan
-          id="tspan6785"
-          x={89.745422}
-          y={89.864761}
-          fill="#fff"
-          fontFamily="Mukti Narrow"
-          fontSize="2.1167px"
-          fontWeight={700}
-          strokeWidth={0.26458}
-        >
-          {"1"}
-        </tspan>
-      </text>
-      <text
-        id="text7117"
-        x={89.745422}
-        y={106.79802}
-        style={{ lineHeight: 1.25 }}
-        xmlSpace="preserve"
-        fill="#fff"
-        fontFamily="Mukti Narrow"
-        fontSize="2.1167px"
-        fontWeight={700}
-        strokeWidth={0.26458}
-      >
-        <tspan
-          id="tspan7115"
-          x={89.745422}
-          y={106.79802}
-          fill="#fff"
-          fontFamily="Mukti Narrow"
-          fontSize="2.1167px"
-          fontWeight={700}
-          strokeWidth={0.26458}
-        >
-          {"3"}
-        </tspan>
-      </text>
-      <text
-        id="text7121"
-        x={89.745422}
-        y={110.50217}
-        style={{ lineHeight: 1.25 }}
-        xmlSpace="preserve"
-        fill="#fff"
-        fontFamily="Mukti Narrow"
-        fontSize="2.1167px"
-        fontWeight={700}
-        strokeWidth={0.26458}
-      >
-        <tspan
-          id="tspan7119"
-          x={89.745422}
-          y={110.50217}
-          fill="#fff"
-          fontFamily="Mukti Narrow"
-          fontSize="2.1167px"
-          fontWeight={700}
-          strokeWidth={0.26458}
-        >
-          {"2"}
-        </tspan>
-      </text>
-      <text
-        id="text7125"
-        x={89.745422}
-        y={114.20631}
-        style={{ lineHeight: 1.25 }}
-        xmlSpace="preserve"
-        fill="#fff"
-        fontFamily="Mukti Narrow"
-        fontSize="2.1167px"
-        fontWeight={700}
-        strokeWidth={0.26458}
-      >
-        <tspan
-          id="tspan7123"
-          x={89.745422}
-          y={114.20631}
-          fill="#fff"
-          fontFamily="Mukti Narrow"
-          fontSize="2.1167px"
-          fontWeight={700}
-          strokeWidth={0.26458}
-        >
-          {"1"}
-        </tspan>
-      </text>
 
-      <g id="g8471">
+        
+
+
+     <g id="g8471">
         <g
           id="g5647-3"
           transform="matrix(.14182 0 0 .1936 292.97 99.839)"
@@ -1731,9 +1583,6 @@ export const Var18 = ({
       </g>
     
      
-    </g>
-
-    
         
     )
 }
