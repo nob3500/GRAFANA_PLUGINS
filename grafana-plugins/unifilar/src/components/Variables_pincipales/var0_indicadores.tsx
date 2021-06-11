@@ -4,13 +4,14 @@ type INDICADORES = {
   
 //SISTEMA 1 Y SISTEMA2
 //className = {indicador.t_suministro_chi1}
-    t_suministro_chi1: string;
-    t_retorno_chi1: string;
-    t_retorno_chi2: string;
-    t_suministro_chi2: string;
-    vol_cmt: string;
-    vol_inups: string;
-    vol_outups: string;
+
+    t_suministro_chi1: number;//id="tspan4605"
+    t_retorno_chi1: number;//id="tspan4617"
+    t_retorno_chi2: number;//id="tspan4601"
+    t_suministro_chi2: number;//id="tspan1960-4"
+    vol_cmt: number;//id="tspan5101-4-9-1"
+    vol_inups: number;// id="tspan5101-4-92"
+    vol_outups: number; // id = "tspan5117"
 
    
 }
@@ -1078,7 +1079,7 @@ export const Var0 = ({
                 fontWeight={700}
                 strokeWidth={0.19973}
               >
-                {"21.1"}
+                {indicador.t_suministro_chi1}
               </tspan>
             </text>
             <text
@@ -1133,7 +1134,7 @@ export const Var0 = ({
                 fontWeight={700}
                 strokeWidth={0.19973}
               >
-                {"22.2"}
+                {indicador.t_retorno_chi1}
               </tspan>
             </text>
             <text
@@ -1186,7 +1187,7 @@ export const Var0 = ({
                 fontWeight={700}
                 strokeWidth={0.19973}
               >
-                {"23.3"}
+                {indicador.t_suministro_chi2}
               </tspan>
             </text>
             <text
@@ -1294,7 +1295,7 @@ export const Var0 = ({
                 fontWeight={700}
                 strokeWidth={0.19973}
               >
-                {"24.4"}
+                {indicador.t_retorno_chi2}
               </tspan>
             </text>
             <text
@@ -1432,7 +1433,7 @@ export const Var0 = ({
                 fontWeight={700}
                 strokeWidth={0.10546}
               >
-                {"425.1"}
+                {indicador.vol_inups}
               </tspan>
             </text>
             <text
@@ -1460,7 +1461,7 @@ export const Var0 = ({
                 fontWeight={700}
                 strokeWidth={0.10546}
               >
-                {"415.7"}
+                {indicador.vol_outups}
               </tspan>
             </text>
             <text
@@ -1487,7 +1488,7 @@ export const Var0 = ({
                 fontWeight={700}
                 strokeWidth={0.10546}
               >
-                {"22.8"}
+                {indicador.vol_cmt}
               </tspan>
             </text>
             <text

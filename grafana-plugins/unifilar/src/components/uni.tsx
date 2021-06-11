@@ -13,11 +13,25 @@ import {Var6, DataAtsrec05A} from './variables_sist1/var6_ats_rec_05A';
 import {Var5, DataAtsantsat1A} from './variables_sist1/var5_ats_ant_sat_1A';
 import {Var4, DataTdp01A} from './variables_sist1/var4_tdp_01A';
 import {Var3, DataAts03A} from './variables_sist1/var3_ats_03A';
-import {Var2, DataDieselS1} from './variables_sist1/var2_combustible';
+import {Var2, DataDieselS1} from './variables_sist1/var2_combustible_s1';
 import {Var1, DataPSG_1A_2A } from './Variables_pincipales/var1_PSG_s1_s2';
+import {Var0, DataIndicadores} from './Variables_pincipales/var0_indicadores';
 
 
 const uni = () => {
+
+  let uni_0 : DataIndicadores = {
+
+    indicador: {
+      t_suministro_chi1: 0,
+      t_retorno_chi1: 0,
+      t_retorno_chi2: 0,
+      t_suministro_chi2: 0,
+      vol_cmt: 0,
+      vol_inups: 0,
+      vol_outups: 0,
+    }
+  }
 
   let uni_1 : DataPSG_1A_2A = {
 
@@ -20782,6 +20796,10 @@ const uni = () => {
         />
       </g>
     </g>
+
+    <Var0
+     indicador = {uni_0.indicador}
+    />
 
     <Var1
       psg_1A_2A = {uni_1.psg_1A_2A}
