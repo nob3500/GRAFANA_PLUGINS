@@ -1,0 +1,22 @@
+{
+	"folders": [
+		{
+			"path": "../../../CURSO_PLUGIN_GRAFANA"
+		},
+		{
+			"path": "."
+		},
+		{
+			"path": "../ELASTIC_GO"
+		},
+		{
+			"path": "../../../PROYECTOS/Scada/PUE"
+		},
+		{
+			"path": "../CALCULO_PUE"
+		},
+		{
+			"path": "../../../../CURSOS/DEV_OPS"
+		}
+	]
+}

@@ -436,13 +436,7 @@ var QueryEditor = function QueryEditor(_a) {
       setState = _b[1];
 
   var variable = Object(_grafana_runtime__WEBPACK_IMPORTED_MODULE_2__["getTemplateSrv"])().replace('$EQUIPO');
-  console.log(variable); // let hy = getTemplateSrv().getVariables()
-  // console.log('variable: ', hy)
-  // const handleChange = (event: React.FormEvent<HTMLInputElement>) =>
-  //   setState({
-  //     ...state,
-  //     [event.currentTarget.name]: event.currentTarget.value,
-  // });
+  console.log("variable: " + variable);
 
   var handleChange = function handleChange(event) {
     var _a;
@@ -451,8 +445,6 @@ var QueryEditor = function QueryEditor(_a) {
   };
 
   var saveQuery = function saveQuery() {
-    // onChange(state, `${state.query} (${state.namespace})`);
-    console.log(state);
     onChange(Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__assign"])(Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__assign"])({}, query), {
       select: state.select,
       from: state.from,
