@@ -1,6 +1,7 @@
 import React from 'react';
 //VARIABLES SISTEMA 2
 
+import {Var22, DataTupsin02A} from './variables_sist2/var22_tups_in_02A';
 import {Var21, DataRec02A} from './variables_sist2/var21_rec_02A';
 import {Var20, DataAtsrec06A} from './variables_sist2/var20_ats_rec_06A';
 import {Var19, DataAtsantsat2A} from './variables_sist2/var19_ats_ant_sat_2A';
@@ -401,6 +402,19 @@ const uni = () => {
       tdc1A_2: '',
       tdc1A_3: '',
       tdc1A_4: '',
+    }
+  }
+
+  let uni_22: DataTupsin02A = {
+
+    tupsin02A: {
+      tupsin02A_0: '',
+      tupsin02A_1: '',
+      tupsin02A_2: '',
+      tupsin02A_3: '',
+      tupsin02A_4: '',
+      tupsin02A_5: '',
+      tupsin02A_6: '',
     }
   }
   
@@ -16846,6 +16860,9 @@ const uni = () => {
     />
     <Var21 
       rec02A = {uni_21.rec02A}
+    />
+    <Var22
+      tupsin02A = {uni_22.tupsin02A}
     />
 
 
