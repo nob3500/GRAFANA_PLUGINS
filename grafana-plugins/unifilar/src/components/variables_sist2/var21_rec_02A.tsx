@@ -4,11 +4,11 @@ type REC_02A = {
   
 
 //TABLEROS
-//className = {rec02A.tdc1A_1}
-    tdc1A_1: string;//rect17863-0 // path5600-2
-    tdc1A_2: string;//rect17865-1 // circle5693
-    tdc1A_3: string;//rect17867-5 // circle5701
-    tdc1A_4: string;//rect17929-6 // circle5709
+//className = {rec02A.tdc2A_1}
+    tdc2A_1: string;//rect17863-0 // path5600-2
+    tdc2A_2: string;//rect17865-1 // circle5693
+    tdc2A_3: string;//rect17867-5 // circle5701
+    tdc2A_4: string;//rect17929-6 // circle5709
 }
 export interface DataRec02A{
   
@@ -120,7 +120,7 @@ export const Var21 = ({
                   paintOrder="markers stroke fill"
                   strokeWidth={1.5411}
                   stroke="#485258"
-                  className = {rec02A.tdc1A_1}
+                  className = {rec02A.tdc2A_1}
                 />
                 <rect
                   id="rect17865-1"
@@ -133,7 +133,7 @@ export const Var21 = ({
                   paintOrder="markers stroke fill"
                   strokeWidth={1.5411}
                   stroke="#485258"
-                  className = {rec02A.tdc1A_2}
+                  className = {rec02A.tdc2A_2}
                 />
                 <rect
                   id="rect17867-5"
@@ -146,7 +146,7 @@ export const Var21 = ({
                   paintOrder="markers stroke fill"
                   strokeWidth={1.5411}
                   stroke="#485258"
-                  className = {rec02A.tdc1A_3}
+                  className = {rec02A.tdc2A_3}
                 />
                 <rect
                   id="rect17869-7"
@@ -383,7 +383,7 @@ export const Var21 = ({
                   paintOrder="markers stroke fill"
                   strokeWidth={1.5411}
                   stroke="#485258"
-                  className = {rec02A.tdc1A_4}
+                  className = {rec02A.tdc2A_4}
                 />
                 <rect
                   id="rect17931-0"
@@ -527,7 +527,7 @@ export const Var21 = ({
                 fill="#00d300"
                 strokeWidth={0.11}
                 stroke="#485258"
-                className = {rec02A.tdc1A_1}
+                className = {rec02A.tdc2A_1}
               />
               <text
                 id="text5689"
@@ -567,7 +567,7 @@ export const Var21 = ({
                 fill="#00d300"
                 strokeWidth={0.11}
                 stroke="#485258"
-                className = {rec02A.tdc1A_2}
+                className = {rec02A.tdc2A_2}
               />
               <text
                 id="text5697"
@@ -607,7 +607,7 @@ export const Var21 = ({
                 fill="#00d300"
                 strokeWidth={0.11}
                 stroke="#485258"
-                className = {rec02A.tdc1A_3}
+                className = {rec02A.tdc2A_3}
               />
               <text
                 id="text5705"
@@ -647,7 +647,7 @@ export const Var21 = ({
                 fill="#00d300"
                 strokeWidth={0.11}
                 stroke="#485258"
-                className = {rec02A.tdc1A_4}
+                className = {rec02A.tdc2A_4}
               />
               <path
                 id="path8008"
@@ -664,4 +664,3 @@ export const Var21 = ({
          
     )
 }
-

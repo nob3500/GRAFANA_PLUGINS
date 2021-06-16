@@ -4,7 +4,8 @@ import { SimpleOptions } from 'types';
 import { css, cx } from 'emotion';
 //import { stylesFactory, useTheme } from '@grafana/ui';
 import { stylesFactory} from '@grafana/ui';
-import Uni from './components/uni';
+import Unifilar from './components/uni';
+import dataUnifilar from 'modules/dataUnifilar'
 
 
 interface Props extends PanelProps<SimpleOptions> {}
@@ -12,6 +13,9 @@ interface Props extends PanelProps<SimpleOptions> {}
 export const SimplePanel: React.FC<Props> = ({ options, data, width, height }) => {
   //const theme = useTheme();
   const styles = getStyles();
+
+  let infoUnifilar = dataUnifilar(data, options)
+
   return (
     <div
       className={cx(
@@ -22,7 +26,7 @@ export const SimplePanel: React.FC<Props> = ({ options, data, width, height }) =
         `
       )}
     >
-     <Uni/>
+     <Unifilar unifilar={ infoUnifilar.unifilar }/>
 
       
     </div>
