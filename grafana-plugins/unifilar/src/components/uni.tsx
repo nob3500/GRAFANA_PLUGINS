@@ -1,6 +1,6 @@
 import React from 'react';
 //VARIABLES SISTEMA 2
-
+import {Var29, DataLine_sist2} from './variables_sist2/var29_lineas_sist2';
 import {Var28, DataTchi02A} from './variables_sist2/var28_tchi_02A';
 import {Var27, DataTchi04A} from './variables_sist2/var27_tchi_04A';
 import {Var26, DataAtschi08A} from './variables_sist2/var26_ats_chi_08A';
@@ -539,6 +539,54 @@ const uni = () => {
       unoB2_2: '', 
       
 
+    }
+  }
+
+  let uni_29: DataLine_sist2 = {
+
+    lineas_sistema2:{
+      l2_1: '',
+      l2_2: '',
+      l2_3: '',
+      l2_4: '',
+      l2_5: '',
+      l2_6: '',
+      l2_7: '',
+      l2_8: '',
+      l2_9: '',
+      l2_10: '',
+      l2_11: '',
+      l2_12: '',
+      l2_13: '',
+      l2_14: '',
+      l2_15: '',  
+      l2_16: '',
+      l2_17: '',
+      l2_18: '',
+      l2_19: '',
+      l2_20: '',
+      l2_21: '',
+      l2_22: '',
+      l2_23: '',
+      l2_24: '',
+      l2_25: '',
+      l2_26: '',
+      l2_27: '',
+      l2_28: '',
+      l2_29: '',
+      l2_30: '',
+      l2_31: '',
+      l2_32: '',
+      l2_33: '',
+      l2_34: '',
+      l2_35: '',
+      l2_36: '',
+      l2_37: '',
+      l2_38: '',
+      l2_39: '',
+      //l2_40: '',
+      //l2_41: '',
+      //l2_42: '',   
     }
   }
      
@@ -8167,278 +8215,7 @@ const uni = () => {
         </text>
       </g>
     </g>
-    <g id="layer51" fill="none">
-      <path
-        id="path11141"
-        d="M68.365 51.071h17.787v59.86h6.46"
-        strokeDasharray="1.28191,.427305"
-        strokeWidth={0.4273}
-        stroke="#0f0"
-      />
-      <path
-        id="path11149"
-        d="M106 87.671h2.786V75.26h-18.07V41.725h4.78"
-        strokeWidth={0.38787}
-        stroke="#0f0"
-      />
-      <path
-        id="path11147"
-        d="M68.359 42.319h16.593V6.325h146.8v15.099h16.392"
-        strokeDasharray="1.28191,.427305"
-        strokeWidth={0.4273}
-        stroke="#00fa08"
-      />
-      <path
-        id="path15871"
-        d="M92.533 90.943h-4.092v13.32h-11.35"
-        strokeWidth={0.4273}
-        stroke="#0f0"
-      />
-      <path
-        id="path6601"
-        d="M107.81 32.617h16.869v-7.991h11.039"
-        strokeWidth={0.4273}
-        stroke="#0f0"
-      />
-      <path
-        id="path11143"
-        d="M68.372 46.378h20.069v37.237h4.065"
-        strokeWidth={0.427}
-        stroke="#0f0"
-      />
-      <path
-        id="path20303"
-        d="M107.87 28.795h18.692V44.78h5.446"
-        strokeWidth={0.4273}
-        stroke="#b1cae0"
-      />
-      <path
-        id="path19704"
-        d="M107.82 36.29h16.852v19.284h14.985"
-        strokeWidth={0.4273}
-        stroke="#0f0"
-      />
-      <path
-        id="path6797"
-        d="M107.83 62.908h6.464v39.375h15.647"
-        strokeDasharray="1.2819,.427301"
-        strokeWidth={0.4273}
-        stroke="#0f0"
-      />
-      <path
-        id="path19714"
-        d="M107.83 47.764h10.644v24.975h107.49v22.478h6.173"
-        strokeWidth={0.4273}
-        stroke="#878787"
-      />
-      <path
-        id="path19716"
-        d="M107.83 51.574h8.36v34.54h14.106"
-        strokeWidth={0.4273}
-        stroke="#0f0"
-      />
-      <path
-        id="path19712"
-        d="M225.2 126.74h-5.675V70.546l-98.527-.4V44.113h-13.174"
-        strokeDasharray="1.281,.427"
-        strokeWidth={0.427}
-        stroke="#0f0"
-      />
-      <path
-        id="path20295"
-        d="M139.7 130.97h-29.122V66.897h-2.746"
-        strokeDasharray="1.2819,.427301"
-        strokeWidth={0.4273}
-        stroke="#0f0"
-      />
-      <path
-        id="path19708"
-        d="M107.83 40.133h14.873v26.733h95.244v-6.142h7.24"
-        strokeWidth={0.4273}
-        stroke="#0f0"
-      />
-      <path
-        id="path16545"
-        d="M184.9 89.297h-5.662"
-        strokeWidth={0.4273}
-        stroke="#0f0"
-      />
-      <path
-        id="path16549"
-        d="M166.63 89.297h-4.994"
-        strokeWidth={0.4273}
-        stroke="#0f0"
-      />
-      <path
-        id="path16551"
-        d="M151.17 89.297h-8.531"
-        strokeWidth={0.4273}
-        stroke="#0f0"
-      />
-      <path
-        id="path6789"
-        d="M152.07 57.66h36.333"
-        strokeWidth={0.4273}
-        stroke="#0f0"
-      />
-      <path
-        id="path19702"
-        d="M204.22 32.143h10.816v115.53h9.018"
-        strokeDasharray="1.281,.427"
-        strokeWidth={0.427}
-        stroke="#0f0"
-      />
-      <path
-        id="path6825"
-        d="M171.17 13.462h21.454"
-        strokeWidth={0.43049}
-        stroke="#00fa08"
-      />
-      <path
-        id="path6827"
-        d="M171.17 17.487h21.403"
-        strokeWidth={0.43049}
-        stroke="#00fa08"
-      />
-      <path
-        id="path6829"
-        d="M171.17 21.738h21.337"
-        strokeWidth={0.43049}
-        stroke="#00fa08"
-      />
-      <path
-        id="path6831"
-        d="M171.17 25.899h21.348"
-        strokeWidth={0.43049}
-        stroke="#00fa08"
-      />
-      <path
-        id="path6833"
-        d="M171.17 29.652h21.442"
-        strokeWidth={0.43049}
-        stroke="#00fa08"
-      />
-      <path
-        id="path6835"
-        d="M171.17 33.768h21.343"
-        strokeWidth={0.43049}
-        stroke="#0f0"
-      />
-      <path
-        id="path6521"
-        d="M235.68 41.902h7.883v5.846h4.58"
-        strokeWidth={0.427}
-        stroke="#0f0"
-      />
-      <path
-        id="path6540"
-        d="M236.82 64.268h9.48V74.74h3.255"
-        strokeWidth={0.4273}
-        stroke="#0f0"
-      />
-      <path
-        id="path6538"
-        d="M273.75 81.084h24.513"
-        strokeWidth={0.4273}
-        stroke="#0f0"
-      />
-      <path
-        id="path5542"
-        d="M204.38 15.882h14.404v23.803h5.263"
-        strokeWidth={0.4273}
-        stroke="#0f0"
-      />
-      <path
-        id="path6813"
-        d="M147.92 13.585h18.719"
-        strokeWidth={0.43049}
-        stroke="#00fa08"
-      />
-      <path
-        id="path6815"
-        d="M147.92 17.61h18.719"
-        strokeWidth={0.43049}
-        stroke="#00fa08"
-      />
-      <path
-        id="path6817"
-        d="M147.92 21.861h18.719"
-        strokeWidth={0.43049}
-        stroke="#00fa08"
-      />
-      <path
-        id="path6819"
-        d="M147.92 26.021h18.719"
-        strokeWidth={0.43049}
-        stroke="#00fa08"
-      />
-      <path
-        id="path6821"
-        d="M147.92 29.775h18.719"
-        strokeWidth={0.43049}
-        stroke="#00fa08"
-      />
-      <path
-        id="path6823"
-        d="M147.92 33.89h18.719"
-        strokeWidth={0.43049}
-        stroke="#00fa08"
-      />
-      <path
-        id="path6596"
-        d="M278.64 60.948h5.43"
-        strokeWidth={0.4273}
-        stroke="#0f0"
-      />
-      <path
-        id="path6603"
-        d="M140.05 44.89h3.788"
-        strokeWidth={0.347266144}
-        stroke="#00fa08"
-      />
-      <path
-        id="path6605"
-        d="M152.72 44.89h2.745"
-        strokeWidth={0.347266144}
-        stroke="#00fa08"
-      />
-      <path
-        id="path6607"
-        d="M164.652 44.89h2.813"
-        strokeWidth={0.347266144}
-        stroke="#00fa08"
-      />
-      <path
-        id="path6609"
-        d="M159.46 39.684v-2.01h-8.266"
-        strokeWidth={0.347266144}
-        stroke="#00fa08"
-      />
-      <path
-        id="path11135"
-        d="M68.411 55.329h10.975v3.254"
-        strokeWidth={0.4273}
-        stroke="#0eef11"
-      />
-      <path
-        id="path6101"
-        d="M53.072 48.99h8.256"
-        strokeWidth={0.427}
-        stroke="#0f0"
-      />
-      <path
-        id="path6103"
-        d="M53.072 42.64h8.256"
-        strokeWidth={0.427}
-        stroke="#0f0"
-      />
-      <path
-        id="path6105"
-        d="M53.072 55.34h8.256"
-        strokeWidth={0.427}
-        stroke="#0f0"
-      />
-    </g>
+
     
     
   
@@ -8541,6 +8318,9 @@ const uni = () => {
     />
     <Var28
       tchi02A = {uni_28.tchi02A}
+    />
+    <Var29
+      lineas_sistema2 = {uni_29.lineas_sistema2}
     />
 
 
