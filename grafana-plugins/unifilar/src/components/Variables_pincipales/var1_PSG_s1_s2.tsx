@@ -2063,7 +2063,7 @@ export const Var1 = ({
           </g>
         </g>
 
-        <g id="g6858" transform="matrix(.08659 0 0 .08659 44.759 137.21)">
+        <g id="g6858" transform="matrix(.08659 0 0 .08659 44.759 137.21)" className={psg_1A_2A.gen1}>
           <g id="g6740">
             <path id="rect6738" fill="none" d="M0 0H100V100H0z" />
           </g>
@@ -2071,33 +2071,27 @@ export const Var1 = ({
             <path
               id="path6742"
               d="M90.3 69.9v-1.5h.8v1h3.8c.7 0 1.2-.5 1.2-1.2V38.8c0-.7-.5-1.2-1.2-1.2h-3.8v1H67.7v-4.9h-7.6v-2.1h1.1v-.9c0-.5-.3-.9-.6-.9h-.1c-1.8-2.2-4.4-2.2-6.2 0h-.1c-.3 0-.6.4-.6.9v.9h1.1v2.1H42.5V39h-1.2v-1.2h-1.4V39h-1.5v-3.7c0-2.6-2-4.7-4.6-5v-.8H32v.8h-.7v-.8H30v.8H11.3v-2H1v34.2h10.2v7.4H9.5v4.9H99v-4.9zm-56.5 0H16.4V58.6h15.3v1.2h1.4v-1.2h.7zM35.6 39h-2.4v-1.2h-1.4V39H11.3v-6H30v.6h1.2V33h.7v.6h1.8V33c1.1.2 1.8 1.1 1.8 2.2V39zm6.9 30.9H39V58.6h.9v1.2h1.4v-1.2h1.2zm25.2-1.5h17.5v1.5H67.7z"
-              fill="#52a6f9"
-              className={psg_1A_2A.gen1}
             />
           </g>
           <g id="g6748">
             <path
               id="rect6746"
-              fill="#6db6ff"
               d="M1.3 28.5H11.100000000000001V62.1H1.3z"
-              className = {psg_1A_2A.gen1}
             />
           </g>
-          <g id="g6754" fill="#3185d8">
+          <g id="g6754">
             <path
               id="rect6750"
               d="M62.1 43.2H66.4V45.300000000000004H62.1z"
-              className={psg_1A_2A.gen1}
             />
             <path id="polygon6752" d="M66.3 52.1L62.1 52.1 64.3 48.3z" />
           </g>
-          <g id="g6834" fill="#254a70">
+          <g id="g6834">
             <path id="polygon6756" d="M10.5 71.9L99 71.9 99 70.8 9.5 70.8z" />
             <g id="g6764">
               <path
                 id="rect6758"
                 d="M86.1 64.4H89.39999999999999V69.9H86.1z"
-                className ={psg_1A_2A.gen1}
               />
               <path
                 id="polygon6760"
