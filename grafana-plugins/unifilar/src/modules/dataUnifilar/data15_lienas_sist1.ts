@@ -1,4 +1,5 @@
 import {DataLine_sist1} from 'components/variables_sist1/var15_lineas_sist1';
+//import lineas_s1Styles from 'styles/lineas_s1Styles';
 
 const dataLine_sist1 = ():DataLine_sist1 => {
 
