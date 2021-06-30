@@ -6,10 +6,10 @@ const getStyles = stylesFactory(() => {
   return {
     
     On: css`
-      fill: #ff00de;
+      stroke: #ff00de;
     `,
     Off: css`
-      fill: #999;
+      stroke: #999;
     `,
   };
 });

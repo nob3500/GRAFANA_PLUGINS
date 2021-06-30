@@ -1,5 +1,5 @@
-import { DataPSG_1A_2A } from 'components/Variables_pincipales/var1_PSG_s1_s2'
-import breakersStyles from 'styles/breakersStyles'
+import { DataPSG_1A_2A } from 'components/Variables_pincipales/var1_PSG_s1_s2';
+import breakersStyles from 'styles/breakersStyles';
 import generadoresStyles from 'styles/generadoresStyles';
 
 const dataPSG_1A_2A = (): DataPSG_1A_2A => {
