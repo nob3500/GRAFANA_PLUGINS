@@ -1731,7 +1731,7 @@ export const Var1 = ({
             fontWeight={700}
             strokeWidth={0.049728}
           >
-            {"G-4"}
+            {"G-1"}
           </tspan>
         </text>
         <text
@@ -1759,7 +1759,7 @@ export const Var1 = ({
             fontWeight={700}
             strokeWidth={0.049728}
           >
-            {"G-5"}
+            {"G-2"}
           </tspan>
         </text>
         <text
@@ -1787,7 +1787,7 @@ export const Var1 = ({
             fontWeight={700}
             strokeWidth={0.049728}
           >
-            {"G-6"}
+            {"G-3"}
           </tspan>
         </text>
         <text

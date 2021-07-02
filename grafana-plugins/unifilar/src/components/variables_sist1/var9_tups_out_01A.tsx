@@ -309,6 +309,7 @@ export const Var9 = ({
             paintOrder="markers stroke fill"
             strokeWidth={0.74748}
             stroke="#485258"
+            className = {tupsout01A.tupsout01A_7}
           />
           <rect
             id="rect5461"

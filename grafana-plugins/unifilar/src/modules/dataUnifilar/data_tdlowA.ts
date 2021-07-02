@@ -14,6 +14,8 @@ const dataTdlowA = (): DataTdlowA => {
   }
    
   return var_tdlowA
+
+  
 }
 
 export default dataTdlowA

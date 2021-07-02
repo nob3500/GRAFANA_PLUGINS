@@ -8,7 +8,7 @@ const dataPSG_1A_2A = (): DataPSG_1A_2A => {
       psg01A_1: breakersStyles.sinConexion,
       psg01A_2: breakersStyles.sinConexion,
       psg01A_3: breakersStyles.sinConexion,
-      gen1: generadoresStyles.Standby, 
+      gen1: generadoresStyles.sinConexion, 
       gen2: generadoresStyles.sinConexion, 
       gen3: generadoresStyles.sinConexion, 
       psg02A_1: breakersStyles.sinConexion,

@@ -1,18 +1,31 @@
-
 import { stylesFactory } from '@grafana/ui';
-import { css } from 'emotion';
+import { css, keyframes } from 'emotion';
+
+const parpadeo = keyframes`
+  0% { opacity: 1.0; };
+  100% { opacity: 0.0; };
+`;
 
 const getStyles = stylesFactory(() => {
   return {
     sinConexion: css`
-      fill: #999;
+      fill: black;
+      
     `,
-    On: css`
-      fill: green;
+    cerrado: css`
+      fill: #0f0;
     `,
-    Off: css`
+    abierto: css`
+      fill: #666;
+    `,
+    alarma: css`
       fill: red;
+      animation: ${parpadeo} 1s ease infinite;
     `,
+    umbrales: css`
+      fill: orange;
+      animation: ${parpadeo} 1s ease infinite;
+    `
   };
 });
 

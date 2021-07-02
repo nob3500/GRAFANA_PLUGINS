@@ -70,7 +70,7 @@ type Lineas_Sist1 = {
 
     //ATS-SG-11A, TSG-1A
     l1_42: string;//path6542
-    //l1_43: string;//path6544       
+    l1_43: string;//path6544       
     
 }
 
@@ -377,7 +377,8 @@ export const Var15 = ({
         d="M261.18 96.853h9.384"
         style={{ mixBlendMode: "normal" }}
         strokeWidth={0.427}
-        stroke="#ff00de"
+        stroke="#999"
+        className = {lineas_sistema1.l1_43}
       />
       <path
         id="path9357"
@@ -440,14 +441,14 @@ export const Var15 = ({
         d="M282.147 174.137h2.092"
         opacity={0.999}
         strokeWidth={0.42730872}
-        stroke="#ff00de"
+        stroke="#999"
       />
       <path
         id="path6592"
         d="M278.54 178.359h5.739"
         opacity={0.999}
         strokeWidth={0.594167832}
-        stroke="#ff00de"
+        stroke="#999"
       />
     </g>
     

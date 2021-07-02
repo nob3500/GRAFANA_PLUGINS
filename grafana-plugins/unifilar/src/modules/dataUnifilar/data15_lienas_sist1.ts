@@ -47,7 +47,7 @@ const dataLine_sist1 = ():DataLine_sist1 => {
                 l1_40: lineas_s1Styles.Off,
                 l1_41: lineas_s1Styles.Off,
                 l1_42: lineas_s1Styles.Off,
-                //l1_43: lineas_s1Styles.Off,  
+                l1_43: lineas_s1Styles.Off,  
             }
         }
         return lineas_sistema1

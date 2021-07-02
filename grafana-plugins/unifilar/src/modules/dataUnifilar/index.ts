@@ -21,6 +21,9 @@ import dataAtschi07A from './data12_ats_chi_07A';
 import dataTchi03A from './data13_tchi_03A';
 import dataTchi01A from './data14_tchi_01A';
 import dataLine_sist1 from './data15_lienas_sist1';
+import data_Ats_sg_11A from './data_var15_1_ats_sg_11A';
+import datatsg1A from './data15_2tsg1A';
+
 //Data sistema 2
 import dataCombustible2 from './data16_combustible_s2';
 import data_ats_04A from './data17_ats_04A';
@@ -36,6 +39,7 @@ import dataAtschi08A from './data26_ats_chi_08A';
 import dataTchi04A from './data27_tchi_04A';
 import dataTchi02A from './data28_tchi_02A';
 import dataLine_sist2 from './data29_lineas_sist2';
+
 
 
 const dataUnifilar = (data: PanelData, options: SimpleOptions): DataUnifilar => {
@@ -60,6 +64,8 @@ const dataUnifilar = (data: PanelData, options: SimpleOptions): DataUnifilar => 
   let tchi03A = dataTchi03A();
   let tchi01A = dataTchi01A ();
   let lineas_sistema1 = dataLine_sist1 ();
+  let ats_sg11A = data_Ats_sg_11A ();
+  let tsg1A = datatsg1A ();
   //sistema 2
   let combustible_s2 = dataCombustible2 ();
   let ats04A = data_ats_04A ();
@@ -99,6 +105,8 @@ const dataUnifilar = (data: PanelData, options: SimpleOptions): DataUnifilar => 
       dataTchi03A: tchi03A,
       dataTchi01A: tchi01A,
       dataLine_sist1: lineas_sistema1,
+      dataatssg11A: ats_sg11A,
+      datatsg1A: tsg1A,
       //sistema2
       dataDieselS2: combustible_s2,
       dataAts04A : ats04A,
