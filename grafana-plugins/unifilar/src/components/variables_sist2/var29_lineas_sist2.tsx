@@ -1,10 +1,12 @@
 import React from 'react'
 
 
+
 //className = {lineas_sistema2.l2_1}
 type Lineas_Sist2 = {
   
    //PSG2A, TDLOWA ,ATS04A,ATS03A,TDP02A
+    l2_0: string;//path11149   
     l2_1: string;//path11147
     l2_2: string;//path11143
     l2_3: string;//path11141
@@ -103,6 +105,7 @@ export const Var29 = ({
           d="M106 87.671h2.786V75.26h-18.07V41.725h4.78"
           strokeWidth={0.38787}
           stroke="#0f0"
+          className = {lineas_sistema2.l2_0}
         />
         <path
           id="path11147"
@@ -344,7 +347,8 @@ export const Var29 = ({
           id="path6596"
           d="M278.64 60.948h5.43"
           strokeWidth={0.4273}
-          stroke="#0f0"
+          stroke="#999"
+          
         />
         <path
           id="path6603"
@@ -385,19 +389,19 @@ export const Var29 = ({
           id="path6101"
           d="M53.072 48.99h8.256"
           strokeWidth={0.427}
-          stroke="#0f0"
+          stroke="#999"
         />
         <path
           id="path6103"
           d="M53.072 42.64h8.256"
           strokeWidth={0.427}
-          stroke="#0f0"
+          stroke="#999"
         />
         <path
           id="path6105"
           d="M53.072 55.34h8.256"
           strokeWidth={0.427}
-          stroke="#0f0"
+          stroke="#999"
         />
       </g>
       

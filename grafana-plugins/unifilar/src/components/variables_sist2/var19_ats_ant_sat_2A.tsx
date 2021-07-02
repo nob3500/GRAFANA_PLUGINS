@@ -185,12 +185,13 @@ export const Var19 = ({
                 id="path15166"
                 d="M944.74 483.14l.491 18.094 18.677-10.052z"
                 fill="#0f0"
+                className = {atsantsat2A.atsantsat2A_tri1}
               />
               <path
                 id="path15168"
                 d="M944.74 512.07l.491 18.094 18.677-10.052z"
                 fill="#999"
-                className = {atsantsat2A.atsantsat2A_tri1}
+                className = {atsantsat2A.atsantsat2A_tri2}
               />
             </g>
             <text

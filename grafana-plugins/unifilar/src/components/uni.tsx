@@ -30,11 +30,14 @@ import {Var4, DataTdp01A} from './variables_sist1/var4_tdp_01A';
 import {Var3, DataAts03A} from './variables_sist1/var3_ats_03A';
 import {Var2, DataDieselS1} from './variables_sist1/var2_combustible_s1';
 //VARIABLES INDICADORES Y PSG SIST1 Y SIST2
+import {VartdlowA, DataTdlowA} from './Variables_pincipales/var_tdlowA';
 import {Var1, DataPSG_1A_2A } from './Variables_pincipales/var1_PSG_s1_s2';
 import {Var0, DataIndicadores} from './Variables_pincipales/var0_indicadores';
 
 type Unifilar = {
+  
   dataIndicadores: DataIndicadores,
+  dataTdlowA: DataTdlowA,
   dataPSG_1A_2A: DataPSG_1A_2A,
   dataDieselS1 : DataDieselS1,
   dataAtsrec05A: DataAtsrec05A,
@@ -4852,6 +4855,7 @@ const uni = ({ unifilar }: DataUnifilar) => {
       </g>
     </g>
     <g id="layer13">
+     
       <g id="g7604">
         <g id="g7475">
           <path
@@ -5556,7 +5560,7 @@ const uni = ({ unifilar }: DataUnifilar) => {
           width={56.797}
           height={24.164}
           ry={0.16867}
-          fill="#12789b"
+          fill="#999"
           paintOrder="markers stroke fill"
           strokeWidth={1.5411}
           stroke="#485258"
@@ -5634,7 +5638,7 @@ const uni = ({ unifilar }: DataUnifilar) => {
           width={56.797}
           height={24.164}
           ry={0.16867}
-          fill="#12789b"
+          fill="#999"
           paintOrder="markers stroke fill"
           strokeWidth={1.5411}
           stroke="#485258"
@@ -5712,7 +5716,7 @@ const uni = ({ unifilar }: DataUnifilar) => {
           width={56.797}
           height={24.164}
           ry={0.16867}
-          fill="#12789b"
+          fill="#999"
           paintOrder="markers stroke fill"
           strokeWidth={1.5411}
           stroke="#485258"
@@ -5790,7 +5794,7 @@ const uni = ({ unifilar }: DataUnifilar) => {
           width={56.797}
           height={24.164}
           ry={0.16867}
-          fill="#12789b"
+          fill="#999"
           paintOrder="markers stroke fill"
           strokeWidth={1.5411}
           stroke="#485258"
@@ -7699,7 +7703,9 @@ const uni = ({ unifilar }: DataUnifilar) => {
     </g>
 
     
-    
+    <VartdlowA
+      tdlowA = {unifilar.dataTdlowA.tdlowA}
+    />
   
     <Var0
      indicador = {unifilar.dataIndicadores.indicador}

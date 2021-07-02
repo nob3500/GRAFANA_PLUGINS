@@ -2,9 +2,11 @@ import { PanelData } from '@grafana/data';
 import { SimpleOptions } from 'types';
 import { DataUnifilar } from 'components/uni';
 
-// Data sismtema 1 
+//principales
+import dataTdlowA from './data_tdlowA';
 import dataIndicadores from './data0_indicadores';
 import dataPSG_1A_2A from './data1_psg_s1_s2';
+// Data sismtema 1 
 import dataCombustible from './data2_combustible_s1';
 import data_ats_03A from './data3_ats_03A';
 import dataTdp_01A from './data4_tdp_01A';
@@ -37,9 +39,13 @@ import dataLine_sist2 from './data29_lineas_sist2';
 
 
 const dataUnifilar = (data: PanelData, options: SimpleOptions): DataUnifilar => {
-  //sistema 1 
+
+
+  //principales
+  let tdlowA = dataTdlowA();
   let indicadores = dataIndicadores();
   let psg_1A_2A = dataPSG_1A_2A();
+  //sistema 1 
   let combustible = dataCombustible();
   let ats_03A = data_ats_03A();
   let tdp_01A = dataTdp_01A () ;
@@ -73,9 +79,12 @@ const dataUnifilar = (data: PanelData, options: SimpleOptions): DataUnifilar => 
 
   let infoUnifilar: DataUnifilar = {
     unifilar: {
-      //sistema1
+
+      //principal
+      dataTdlowA:tdlowA,
       dataIndicadores: indicadores,
       dataPSG_1A_2A: psg_1A_2A,
+      //sistema1
       dataDieselS1: combustible,
       dataAts03A: ats_03A,
       dataTdp01A: tdp_01A,

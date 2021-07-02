@@ -6,7 +6,7 @@ type TPDU_02A = {
 
 //Breakers T-PDU-02A
 //className = {tpdu02A.tpdu02A_0}
-    tpdu02A_0: string;//rect5358-2-3
+    tpdu02A_0: string;//rect5602
     tpdu02A_1: string;//rect33035-2-1-9-3
     tpdu02A_2: string;//rect33035-3-2-0-8-57
     tpdu02A_3: string;//rect33035-3-8-16-5-2-37
@@ -17,7 +17,8 @@ type TPDU_02A = {
     tpdu02A_8: string;//rect5338-0
     tpdu02A_9: string;//rect5342-3
     tpdu02A_10: string;//rect5344-0
-    tpdu02A_11: string;//rect5358-2    
+    tpdu02A_11: string;//rect5358-2 
+    tpdu02A_12: string;//rect5358-2-3  
 
 // indicador de PDis
 //className = {tpdu02A.pdu02AF1}
@@ -763,7 +764,7 @@ export const Var25 = ({
         paintOrder="markers stroke fill"
         strokeWidth={0.13981}
         stroke="#485258"
-        className = {tpdu02A.pdu02AF10}
+        className = {tpdu02A.tpdu02A_10}
       />
       <path
         id="path5348-4"
@@ -1034,7 +1035,7 @@ export const Var25 = ({
         paintOrder="markers stroke fill"
         strokeWidth={0.13981}
         stroke="#485258"
-        className = {tpdu02A.tpdu02A_0}
+        className = {tpdu02A.tpdu02A_12}
       />
       <rect
         id="rect5376-2-6"
@@ -1113,6 +1114,7 @@ export const Var25 = ({
         paintOrder="markers stroke fill"
         strokeWidth={0.13981}
         stroke="#485258"
+        className = {tpdu02A.tpdu02A_0}
       />
       <rect
         id="rect5604"
@@ -1736,8 +1738,8 @@ export const Var25 = ({
         r={0.94801}
         fill="#00d300"
         strokeWidth={0.10229}
-        stroke="#485258"
-        className = {tpdu02A.tpdu02A_10}
+        stroke="#999"
+        className = {tpdu02A.pdu02AF10}
       />
       <circle
         id="circle5879"
@@ -1804,7 +1806,7 @@ export const Var25 = ({
         d="M283 56.803h4.805"
         fill="none"
         strokeWidth={0.4273}
-        stroke="#0f0"
+        stroke="#999"
       />
       <text
         id="text6127"

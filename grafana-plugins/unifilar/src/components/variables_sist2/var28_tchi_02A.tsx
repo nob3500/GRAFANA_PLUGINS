@@ -1567,6 +1567,8 @@ export const Var28 = ({
             fill="#00d300"
             strokeWidth={1.1969}
             stroke="#485258"
+            className={tchi02A.uma01}
+
           />
           <circle
             id="circle5754-8"
@@ -1576,6 +1578,7 @@ export const Var28 = ({
             fill="#00d300"
             strokeWidth={1.1969}
             stroke="#485258"
+            className = {tchi02A.uma02}
           />
           <circle
             id="circle5786-8"
@@ -1585,6 +1588,7 @@ export const Var28 = ({
             fill="#00d300"
             strokeWidth={1.1969}
             stroke="#485258"
+            className = {tchi02A.uma03}
           />
           <circle
             id="circle5796-9"
@@ -1594,6 +1598,7 @@ export const Var28 = ({
             fill="#00d300"
             strokeWidth={1.1969}
             stroke="#485258"
+            className = {tchi02A.uma04}
           />
           <circle
             id="circle5804-1"
@@ -1603,6 +1608,7 @@ export const Var28 = ({
             fill="#00d300"
             strokeWidth={1.1969}
             stroke="#485258"
+            className = {tchi02A.uma05}
           />
           <circle
             id="circle5812-2"
@@ -1612,6 +1618,7 @@ export const Var28 = ({
             fill="#00d300"
             strokeWidth={1.1969}
             stroke="#485258"
+            className = {tchi02A.uma06}
           />
           <circle
             id="circle5820-3"
@@ -1621,6 +1628,7 @@ export const Var28 = ({
             fill="#00d300"
             strokeWidth={1.1969}
             stroke="#485258"
+            className = {tchi02A.uma07}
           />
           <circle
             id="circle5828-4"
@@ -1630,6 +1638,8 @@ export const Var28 = ({
             fill="#00d300"
             strokeWidth={1.1969}
             stroke="#485258"
+            className = {tchi02A.uma08}
+
           />
           <circle
             id="circle5836-6"
@@ -1639,6 +1649,7 @@ export const Var28 = ({
             fill="#00d300"
             strokeWidth={1.1969}
             stroke="#485258"
+            className = {tchi02A.uma09}
           />
           <circle
             id="circle5871-5"
@@ -1648,6 +1659,7 @@ export const Var28 = ({
             fill="#00d300"
             strokeWidth={1.1969}
             stroke="#485258"
+            className = {tchi02A.uma10}
           />
           <circle
             id="circle5879-8"
@@ -1657,6 +1669,7 @@ export const Var28 = ({
             fill="#00d300"
             strokeWidth={1.1969}
             stroke="#485258"
+            className = {tchi02A.uma11}
           />
           <rect
             id="rect8928"
@@ -1814,7 +1827,7 @@ export const Var28 = ({
             width={59.562}
             height={25.958}
             ry={0.18119}
-            fill="#12789b"
+            fill="#999"
             paintOrder="markers stroke fill"
             strokeWidth={1.636}
             stroke="#485258"
@@ -2189,7 +2202,7 @@ export const Var28 = ({
             width={59.562}
             height={25.958}
             ry={0.18119}
-            fill="#12789b"
+            fill="#999"
             paintOrder="markers stroke fill"
             strokeWidth={1.636}
             stroke="#485258"
@@ -2592,6 +2605,7 @@ export const Var28 = ({
             fill="#00d300"
             strokeWidth={1.1969}
             stroke="#485258"
+            className = {tchi02A.uma12}
           />
           <circle
             id="circle9172"
