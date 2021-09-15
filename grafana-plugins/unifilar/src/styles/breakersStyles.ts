@@ -10,6 +10,7 @@ const getStyles = stylesFactory(() => {
   return {
     sinConexion: css`
       fill: black;
+      
     `,
     cerrado: css`
       fill: #0f0;

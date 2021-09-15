@@ -20,7 +20,7 @@ const dataTpdu02A = (): DataTpdu02A => {
             tpdu02A_11: breakersStyles.sinConexion, 
             tpdu02A_12: breakersStyles.sinConexion,
 
-            pdu02AF1: estadosStyles.cerrado,
+            pdu02AF1: estadosStyles.sinConexion,
             pdu02AF2: estadosStyles.sinConexion,
             pdu02AF3: estadosStyles.sinConexion,
             pdu02AF4: estadosStyles.sinConexion,
