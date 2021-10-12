@@ -6,8 +6,8 @@ import { css, cx } from 'emotion';
 import { stylesFactory } from '@grafana/ui';
 import Pqm from './components/pqm';
 import { DataPqm } from 'components/variables/variables'
-// import dataPQM from 'modules/dataPQM'
-import dataPQM from 'modules/dataPQM_influx'
+import dataPQM from 'modules/dataPQM'
+//import dataPQM from 'modules/dataPQM_influx'
 
 interface Props extends PanelProps<SimpleOptions> {}
 
