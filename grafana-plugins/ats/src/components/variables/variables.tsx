@@ -187,11 +187,11 @@ export const Variables = ({
         >
           <tspan
             id="tspan6769"
-            x={109.56927}
-            y={25.667294}
+            x={101.56927}
+            y={23.667294}
             fill="#fff"
             fontFamily="Franklin Gothic Medium"
-            fontSize="11.289px"
+            fontSize="9.289px"
             strokeWidth={0.36412}
           >
             {datos_principales.nombre_ats}
@@ -478,7 +478,7 @@ export const Variables = ({
             fontSize="5.6444px"
             strokeWidth={0.26458}
           >
-            {estados.volt_f1}
+            {}
           </tspan>
         </text>
         <text
@@ -700,7 +700,7 @@ export const Variables = ({
             fontSize="5.6444px"
             strokeWidth={0.26458}
           >
-            {estados.volt_f2}
+            {}
           </tspan>
         </text>
       </g>

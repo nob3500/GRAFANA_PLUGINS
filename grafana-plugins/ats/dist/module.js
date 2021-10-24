@@ -370,10 +370,11 @@ var SimplePanel = function SimplePanel(_a) {
   var options = _a.options,
       data = _a.data,
       width = _a.width,
-      height = _a.height; //const theme = useTheme();
+      height = _a.height,
+      replaceVariables = _a.replaceVariables; //const theme = useTheme();
 
   var styles = getStyles();
-  var ats = Object(modules_dataATS__WEBPACK_IMPORTED_MODULE_5__["default"])(data, options);
+  var ats = Object(modules_dataATS__WEBPACK_IMPORTED_MODULE_5__["default"])(data, options, replaceVariables);
   return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
     className: Object(emotion__WEBPACK_IMPORTED_MODULE_2__["cx"])(styles.wrapper, Object(emotion__WEBPACK_IMPORTED_MODULE_2__["css"])(templateObject_1 || (templateObject_1 = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__makeTemplateObject"])(["\n          width: ", "px;\n          height: ", "px;\n        "], ["\n          width: ", "px;\n          height: ", "px;\n        "])), width, height))
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_components_ats__WEBPACK_IMPORTED_MODULE_4__["default"], {
@@ -1884,7 +1885,7 @@ var ats = function ats(_a) {
     fontFamily: "Franklin Gothic Medium",
     fontSize: "5.6444px",
     strokeWidth: 0.26458
-  }, "V ")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("text", {
+  }, "")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("text", {
     id: "text550",
     transform: "scale(.8204 1.2189)",
     x: 596.0321,
@@ -1906,7 +1907,7 @@ var ats = function ats(_a) {
     fontFamily: "Franklin Gothic Medium",
     fontSize: "5.6444px",
     strokeWidth: 0.26458
-  }, "V")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("text", {
+  }, "")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("text", {
     id: "text5947",
     x: 219.70467,
     y: 92.736946,
@@ -2124,7 +2125,7 @@ var ats = function ats(_a) {
     fontFamily: "Franklin Gothic Medium",
     fontSize: "5.6444px",
     strokeWidth: 0.47057
-  }, "RELE TRANSFERENCIA AUTO. :"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tspan", {
+  }, "RELE T. AUTOMATIC :"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tspan", {
     id: "tspan3679",
     x: 290.61584,
     y: 135.81032,
@@ -2253,7 +2254,7 @@ var ats = function ats(_a) {
     fontFamily: "Franklin Gothic Medium",
     fontSize: "6.35px",
     strokeWidth: 0.26458
-  }, "VOLTAJE F1:"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tspan", {
+  }, ""), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tspan", {
     id: "tspan6734",
     x: 498.96017,
     y: 122.54087,
@@ -2261,7 +2262,7 @@ var ats = function ats(_a) {
     fontFamily: "Franklin Gothic Medium",
     fontSize: "6.35px",
     strokeWidth: 0.26458
-  }, "VOLTAJE F2:")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("text", {
+  }, "")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("text", {
     id: "text1940-4",
     x: 433.91071,
     y: 23.384418,
@@ -2433,11 +2434,11 @@ var Variables = function Variables(_a) {
     wordSpacing: 0
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tspan", {
     id: "tspan6769",
-    x: 109.56927,
-    y: 25.667294,
+    x: 101.56927,
+    y: 23.667294,
     fill: "#fff",
     fontFamily: "Franklin Gothic Medium",
-    fontSize: "11.289px",
+    fontSize: "9.289px",
     strokeWidth: 0.36412
   }, datos_principales.nombre_ats)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("text", {
     id: "ats_st",
@@ -2678,7 +2679,7 @@ var Variables = function Variables(_a) {
     fontFamily: "Franklin Gothic Medium",
     fontSize: "5.6444px",
     strokeWidth: 0.26458
-  }, estados.volt_f1)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("text", {
+  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("text", {
     id: "ats_presf1",
     transform: "scale(.8204 1.2189)",
     x: 579.22656,
@@ -2862,7 +2863,7 @@ var Variables = function Variables(_a) {
     fontFamily: "Franklin Gothic Medium",
     fontSize: "5.6444px",
     strokeWidth: 0.26458
-  }, estados.volt_f2))));
+  }))));
 };
 
 /***/ }),
@@ -2925,9 +2926,10 @@ __webpack_require__.r(__webpack_exports__);
 //import alarmaStyles from 'styles/alarmsStyles';
 
 
-var DataATS = function DataATS(data, options) {
+var DataATS = function DataATS(data, options, replaceVariables) {
   var _a, _b, _c, _d, _e, _f, _g, _h, _j, _k, _l, _m, _o, _p, _q, _r, _s, _t, _u, _v, _w, _x, _y, _z, _0, _1, _2, _3, _4, _5;
 
+  console.log(replaceVariables);
   console.log(options);
   console.log(data); //------------------------------------ASIGNACION DE VARIABLES-------------------------------//  
 
@@ -3007,7 +3009,11 @@ var DataATS = function DataATS(data, options) {
       boton_estado: styles_estadoStyles__WEBPACK_IMPORTED_MODULE_0__["default"].sinConexion,
       text_estado: ''
     }
-  }; // --------------------------ESTADOS----------------------------------//
+  }; // ------------------------INTERPOLACION DE VARIABLES-------------
+
+  var variableNombre = replaceVariables('$EQUIPO'); ///console.log("variableNombre", variableNombre)
+
+  ats.datos_principales.nombre_ats = variableNombre !== '' ? variableNombre : options.nombre; // --------------------------ESTADOS----------------------------------//
 
   ats.estados.est_equipo = AUT_TRANS_REL === 1 ? 'OFF' : 'ON';
   ats.estados.pres_f1 = F1_AVAIL === 0 ? 'OFF' : 'ON';
@@ -3032,12 +3038,12 @@ var DataATS = function DataATS(data, options) {
   ats.botones_alarmas.red_modbus = MODBUS_ST === 1 ? styles_estadoStyles__WEBPACK_IMPORTED_MODULE_0__["default"].alarma : styles_estadoStyles__WEBPACK_IMPORTED_MODULE_0__["default"].ok; // ---------------------- DATOS PRINCIPALES---------------------------//
 
   ats.datos_principales.volt_f1 = Number.parseFloat(TOT_TRANS_F1 === null || TOT_TRANS_F1 === void 0 ? void 0 : TOT_TRANS_F1.toFixed(2));
-  ats.datos_principales.volt_f2 = Number.parseFloat(TOT_TRANS_F2 === null || TOT_TRANS_F2 === void 0 ? void 0 : TOT_TRANS_F2.toFixed(2));
-  ats.datos_principales.nombre_ats = options.nombre;
+  ats.datos_principales.volt_f2 = Number.parseFloat(TOT_TRANS_F2 === null || TOT_TRANS_F2 === void 0 ? void 0 : TOT_TRANS_F2.toFixed(2)); //ats.datos_principales.nombre_ats= options.nombre
+
   ats.datos_principales.total_transf = Number.parseFloat(TOT_FAULT === null || TOT_FAULT === void 0 ? void 0 : TOT_FAULT.toFixed(2));
   ats.datos_principales.boton_estado = F1_POSIC === 0 ? styles_estadoStyles__WEBPACK_IMPORTED_MODULE_0__["default"].sinConexion : styles_estadoStyles__WEBPACK_IMPORTED_MODULE_0__["default"].ok;
   ats.datos_principales.boton_ats = F1_POSIC === 0 ? styles_estadoStyles__WEBPACK_IMPORTED_MODULE_0__["default"].sinConexion : styles_estadoStyles__WEBPACK_IMPORTED_MODULE_0__["default"].ok;
-  ats.datos_principales.text_estado = F1_POSIC === 0 ? 'DESCONECT' : 'CONECTADO';
+  ats.datos_principales.text_estado = F1_POSIC === 0 ? 'DESCONECT' : 'ENCENDIDO';
   return ats;
 };
 

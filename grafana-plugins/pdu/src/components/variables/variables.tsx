@@ -82,7 +82,7 @@ export const Variables = ({
               fill="#fff"
               fontFamily="Franklin Gothic Medium"
               fontSize="9.8778px"
-              fontWeight={700}
+              fontWeight={590}
               strokeWidth={0.28918}
             >
               {datos_principales.in_volt}
@@ -116,7 +116,7 @@ export const Variables = ({
               fill="#fff"
               fontFamily="Franklin Gothic Medium"
               fontSize="9.8778px"
-              fontWeight={600}
+              fontWeight={590}
               strokeWidth={0.26458}
             >
               {datos_principales.out_volt}
@@ -142,7 +142,7 @@ export const Variables = ({
               fill="#fff"
               fontFamily="Franklin Gothic Medium"
               fontSize="9.8778px"
-              fontWeight={700}
+              fontWeight={590}
               strokeWidth={0.26458}
             >
               {datos_principales.corr_total}
@@ -427,7 +427,7 @@ export const Variables = ({
               fontSize="4.9389px"
               strokeWidth={0.26458}
             >
-              {estados.out1_A}
+              {estados.out1_AB}
             </tspan>
           </text>
           <text
@@ -661,7 +661,7 @@ export const Variables = ({
               <tspan
                 id="tspan4559"
                 fill="#fff"
-                fontSize="11.289px"
+                fontSize="10.289px"
                 strokeWidth={0.25953}
               >
                 {datos_principales.nombre_pdu}
