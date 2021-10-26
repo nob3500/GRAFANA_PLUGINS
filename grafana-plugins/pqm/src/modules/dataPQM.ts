@@ -16,11 +16,11 @@ const dataPQM = (data: PanelData, options: SimpleOptions): DataPqm => {
     let CURR_B = data.series.find(({ name }) => name?.includes('DATA.CURR_B.VALUE'))?.fields[1].state?.calcs?.lastNotNull
     let CURR_C = data.series.find(({ name }) => name?.includes('DATA.CURR_C.VALUE'))?.fields[1].state?.calcs?.lastNotNull
     //let CURR_UNB = data.series.find(({ name }) => name?.includes('DATA.CURR_UNB.VALUE'))?.fields[1].state?.calcs?.lastNotNull
-    let ENY_APP = data.series.find(({ name }) => name?.includes('DATA.ENY_APP.VALUE'))?.fields[1].state?.calcs?.lastNotNull
+    //let ENY_APP = data.series.find(({ name }) => name?.includes('DATA.ENY_APP.VALUE'))?.fields[1].state?.calcs?.lastNotNull
     //let ENY_NEG_REACT = data.series.find(({ name }) => name?.includes('DATA.ENY_NEG_REACT.VALUE'))?.fields[1].state?.calcs?.lastNotNull
     //let ENY_NEG_REAL = data.series.find(({ name }) => name?.includes('ENY_NEG_REAL'))?.fields[1].state?.calcs?.lastNotNull
     //let ENY_POS_REACT = data.series.find(({ name }) => name?.includes('ENY_POS_REACT'))?.fields[1].state?.calcs?.lastNotNull
-    //let ENY_POS_REAL = data.series.find(({ name }) => name?.includes('ENY_POS_REAL'))?.fields[1].state?.calcs?.lastNotNull
+    let ENY_POS_REAL = data.series.find(({ name }) => name?.includes('ENY_POS_REAL'))?.fields[1].state?.calcs?.lastNotNull
     let FREQ = data.series.find(({ name }) => name?.includes('DATA.FREQ.VALUE'))?.fields[1].state?.calcs?.lastNotNull
     let MODBUS_ST = data.series.find(({ name }) => name?.includes('DATA.MODBUS_ST.VALUE'))?.fields[1].state?.calcs?.lastNotNull
     let APPPOW_3PHAS = data.series.find(({ name }) => name?.includes('DATA.APPPOW_3PHAS.VALUE'))?.fields[1].state?.calcs?.lastNotNull
@@ -95,7 +95,7 @@ const dataPQM = (data: PanelData, options: SimpleOptions): DataPqm => {
 
   pqm.estados.cur_c = Number.parseFloat (CURR_C?.toFixed(2));
   
-  pqm.estados.p_real_t = Number.parseFloat (ENY_APP?.toFixed(2));
+  pqm.estados.p_real_t = Number.parseFloat (ENY_POS_REAL?.toFixed(2));
 
   pqm.estados.p_apt_t = Number.parseFloat (APPPOW_3PHAS?.toFixed(2));
   
@@ -115,7 +115,7 @@ const dataPQM = (data: PanelData, options: SimpleOptions): DataPqm => {
 
   // ----------------------BOTONES ALARMAS------------------------------//
 
-  pqm.botones_alarmas.red_modbus = MODBUS_ST === 1 ? estadoStyles.alarma: estadoStyles.sinConexion
+  pqm.botones_alarmas.red_modbus = MODBUS_ST === 1 ? estadoStyles.alarma : estadoStyles.ok
   
   // ---------------------- DATOS PRINCIPALES---------------------------//
   pqm.datos_principales.frecuencia = Number.parseFloat(FREQ?.toFixed(2));
@@ -123,7 +123,7 @@ const dataPQM = (data: PanelData, options: SimpleOptions): DataPqm => {
   pqm.datos_principales.factor_p = Number.parseFloat(POWFAC_3PHAS?.toFixed(2));
   pqm.datos_principales.boton_estado = MODBUS_ST === 1? estadoStyles.sinConexion : estadoStyles.ok;
   pqm.datos_principales.boton_pqm = MODBUS_ST === 1? estadoStyles.sinConexion : estadoStyles.ok;
-  pqm.datos_principales.text_estado = MODBUS_ST === 1? 'ALARMADO':'DISPONIBLE' // Disponible , Alarmado
+  pqm.datos_principales.text_estado = MODBUS_ST === 1? 'ALARMADO':'ENCENDIDO' // Disponible , Alarmado
   pqm.datos_principales.nombre_pqm = options.nombre
   
   
