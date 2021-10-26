@@ -422,7 +422,7 @@ const pdu = ({
             <path
               id="rect818"
               fillRule="evenodd"
-              fill="url(#linearGradient701)"
+              fill="black"// fondo azul "url(#linearGradient701)"
               paintOrder="markers stroke fill"
               d="M80.369 300.08H590.749V584.5H80.369z"
             />
