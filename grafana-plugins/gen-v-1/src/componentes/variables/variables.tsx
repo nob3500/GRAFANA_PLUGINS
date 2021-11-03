@@ -1,12 +1,12 @@
 import React from 'react';
-
+//-----------VINCULAR Y ARREGLAR OJO----------
 type Modo_control ={
   stop_mode: string; // 
   auto_mode: string; // 
   manual_mode: string; // 
   off_mode: string; // 
 };
-
+//-----------VINCULAR Y ARREGLAR OJO----------
 type Alternador ={
   voltaje_ff: number;
   corriente: number;
@@ -14,7 +14,7 @@ type Alternador ={
   pot_kva: number;
   factor_pot: number;
 };
-
+//-----------VINCULAR Y ARREGLAR OJO----------
 type Motor ={
   volt_bat: number;
   temp: number;
@@ -29,6 +29,8 @@ type Estados_alarmas={
   trip: string;
 };
 
+//-----------VINCULAR Y ARREGLAR OJO----------
+
 type Alarmas ={
     emerg_stop: Estados_alarmas; //gen_es_warn_alm ,gen_es_shutd_alm ,gen_es_eltrip_alm //
     low_oil_press: Estados_alarmas; //gen_lop_warn_alm, gen_lop_shutd_alm, gen_lop_eltrip_alm //
@@ -36,9 +38,11 @@ type Alarmas ={
     under_speed: Estados_alarmas; //gen_us_warn_alm,gen_us_shutd_alm,gen_us_eltrip_alm
     over_speed: Estados_alarmas; //gen_os_warn_alm,gen_os_shutd_alm,gen_os_eltrip_alm
     fail_start: Estados_alarmas; //gen_fs_warn_alm,gen_fs_shutd_alm,gen_fs_eltrip_alm
-    gen_low_volt: Estados_alarmas; //gen_glv_warn_alm,gen_glv_shutd_alm,gen_glv_eltrip_alm
-    gen_high_volt: Estados_alarmas; //gen_ghv_warn_alm,gen_ghv_shutd_alm,gen_ghv_eltrip_alm
+    gen_low_volt: Estados_alarmas; //
+    gen_high_volt: Estados_alarmas; //
 };
+
+//-----------estos datos estan OK----------
 
 type Datos_generales ={
   fase: string;
@@ -49,14 +53,16 @@ type Datos_generales ={
 
 };
 
+//-----------estos datos estan OK----------
+
 type Datos_principales ={
   voltaje: number; //id = tspan5844
   temp: number; //id = tspan1960-4
-  diesel: number; //id = tspan5927
-  rectan_gen: string; // rectangulo id= estado_eq
+  diesel: number; //id = tspan9221
+  rectan_gen: string; // rectangulo id= estado_eq = g1499
   nombre_gen: string;//nombre del equipo id= tspan6769
-  boton_estado: string;// power id = g876
-  text_estado: string ;// texto id= tspan5848
+  boton_estado: string;// power id = st2
+  text_estado: string ;// texto id= tspan5848-3
 };
 
 export interface DataGenerador{
@@ -101,7 +107,7 @@ export const Variables = ({
         fontWeight={700}
         strokeWidth={0.27418}
       >
-        {"37.1"}
+        {datos_principales.temp}
       </tspan>
     </text>
     <text
@@ -129,7 +135,7 @@ export const Variables = ({
         fontWeight={700}
         strokeWidth={0.33559}
       >
-        {"425"}
+        {datos_principales.voltaje}
       </tspan>
     </text>
     <text
@@ -157,11 +163,12 @@ export const Variables = ({
         fontWeight={700}
         strokeWidth={0.2084}
       >
-        {"ENCENDIDO"}
+        {datos_principales.text_estado}
       </tspan>
     </text>
     <g
       id="st2"
+      className={datos_principales.boton_estado}
       transform="translate(1.761 .066)"
       fill="#00990c"
       opacity={0.999}
@@ -207,7 +214,7 @@ export const Variables = ({
         fontSize="5.6444px"
         strokeWidth={0.47057}
       >
-        {"B"}
+        {datos_generales.fase}
       </tspan>
     </text>
     <text
@@ -234,7 +241,7 @@ export const Variables = ({
         fontSize="5.6444px"
         strokeWidth={0.47057}
       >
-        {"1"}
+        {datos_generales.sistema}
       </tspan>
     </text>
     <text
@@ -261,7 +268,7 @@ export const Variables = ({
         fontSize="5.6444px"
         strokeWidth={0.47057}
       >
-        {"HIMOINSA"}
+        {datos_generales.marca}
       </tspan>
     </text>
     <text
@@ -288,7 +295,7 @@ export const Variables = ({
         fontSize="5.6444px"
         strokeWidth={0.47057}
       >
-        {"HMW-810 T6"}
+        {datos_generales.modelo}
       </tspan>
     </text>
     <text
@@ -315,7 +322,7 @@ export const Variables = ({
         fontSize="5.6444px"
         strokeWidth={0.47057}
       >
-        {"PATIO GEN"}
+        {datos_generales.ubicacion}
       </tspan>
     </text>
     <g
@@ -720,13 +727,14 @@ export const Variables = ({
           fontWeight={700}
           strokeWidth={0.3215}
         >
-          {"100"}
+          {datos_principales.diesel}
         </tspan>
       </tspan>
     </text>
     <g id="g1499" opacity={0.999}>
       <path
         id="estado_eq"
+        className={datos_principales.rectan_gen}
         fillRule="evenodd"
         fill="url(#linearGradient4474)"
         opacity={0.999}
@@ -757,7 +765,7 @@ export const Variables = ({
           fontWeight={700}
           strokeWidth={0.36412}
         >
-          {"GEN - 4"}
+          {datos_principales.nombre_gen}
         </tspan>
       </text>
       <g id="g658">
