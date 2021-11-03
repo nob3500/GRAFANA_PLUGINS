@@ -1,9 +1,15 @@
 import React from 'react';
-import  Variables from './variables/variables';
+import   { Variables,DataGenerador } from './variables/variables';
 
 const Generador = ({
+  modo_control,
+  alternador ,
+  motor,
+  alarmas,
+  datos_generales,
+  datos_principales, 
 
-}) =>{
+}:DataGenerador) =>{
   return(
     <svg
       id="svg1181"      
@@ -474,9 +480,16 @@ const Generador = ({
         />
       </g>
 
-      <Variables/>
-     
-      
+      <Variables
+        modo_control = {modo_control}
+        alternador ={alternador}
+        motor={motor}
+        alarmas ={alarmas}
+        datos_generales={datos_generales}
+        datos_principales={datos_principales}    
+            
+      />
+           
       <g id="layer1" opacity={0.999}>
         <path
           id="path21607-0-0"
@@ -1813,7 +1826,7 @@ const Generador = ({
               fontSize="6.35px"
               strokeWidth={0.47057}
             >
-              {"CORRIETE "}
+              {"CORRIENTE"}
             </tspan>
             <tspan
               id="tspan2507"

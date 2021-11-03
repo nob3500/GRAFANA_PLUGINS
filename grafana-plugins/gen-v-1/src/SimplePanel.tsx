@@ -4,14 +4,17 @@ import { SimpleOptions } from 'types';
 import { css, cx } from 'emotion';
 //import { stylesFactory, useTheme } from '@grafana/ui';
 import { stylesFactory } from '@grafana/ui';
-
 import Generador from './componentes/generador';
+import dataGenerador from 'modules/dataGenerador';
 
 interface Props extends PanelProps<SimpleOptions> {}
 
 export const SimplePanel: React.FC<Props> = ({ options, data, width, height }) => {
   //const theme = useTheme();
   const styles = getStyles();
+
+  let generador = dataGenerador(data, options);
+
   return (
     <div
       className={cx(
@@ -23,7 +26,14 @@ export const SimplePanel: React.FC<Props> = ({ options, data, width, height }) =
       )}
     >
         
-    <Generador/>     
+    <Generador
+      modo_control = {generador.modo_control}
+      alternador ={generador.alternador}
+      motor={generador.motor}
+      alarmas ={generador.alarmas}
+      datos_generales={generador.datos_generales}
+      datos_principales={generador.datos_principales}  
+    />     
 
       
     </div>

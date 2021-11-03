@@ -1,8 +1,78 @@
-import React from 'react'
+import React from 'react';
+
+type Modo_control ={
+  stop_mode: string; // 
+  auto_mode: string; // 
+  manual_mode: string; // 
+  off_mode: string; // 
+};
+
+type Alternador ={
+  voltaje_ff: number;
+  corriente: number;
+  pot_kw: number;
+  pot_kva: number;
+  factor_pot: number;
+};
+
+type Motor ={
+  volt_bat: number;
+  temp: number;
+  oil_press: number;
+  horas_uso: number;
+  frecuencia: number;
+};
+
+type Estados_alarmas={
+  war: string;
+  sht: string;
+  trip: string;
+};
+
+type Alarmas ={
+    emerg_stop: Estados_alarmas; //gen_es_warn_alm ,gen_es_shutd_alm ,gen_es_eltrip_alm //
+    low_oil_press: Estados_alarmas; //gen_lop_warn_alm, gen_lop_shutd_alm, gen_lop_eltrip_alm //
+    high_cool_temp: Estados_alarmas; //gen_hct_warn_alm, gen_hct_shutd_alm, gen_hct_eltrip_alm
+    under_speed: Estados_alarmas; //gen_us_warn_alm,gen_us_shutd_alm,gen_us_eltrip_alm
+    over_speed: Estados_alarmas; //gen_os_warn_alm,gen_os_shutd_alm,gen_os_eltrip_alm
+    fail_start: Estados_alarmas; //gen_fs_warn_alm,gen_fs_shutd_alm,gen_fs_eltrip_alm
+    gen_low_volt: Estados_alarmas; //gen_glv_warn_alm,gen_glv_shutd_alm,gen_glv_eltrip_alm
+    gen_high_volt: Estados_alarmas; //gen_ghv_warn_alm,gen_ghv_shutd_alm,gen_ghv_eltrip_alm
+};
+
+type Datos_generales ={
+  fase: string;
+  sistema: string;
+  marca: string;
+  modelo: string;
+  ubicacion: string;
+
+};
+
+type Datos_principales ={
+  voltaje: number; //id = tspan5844
+  temp: number; //id = tspan1960-4
+  diesel: number; //id = tspan5927
+  rectan_gen: string; // rectangulo id= estado_eq
+  nombre_gen: string;//nombre del equipo id= tspan6769
+  boton_estado: string;// power id = g876
+  text_estado: string ;// texto id= tspan5848
+};
+
+export interface DataGenerador{
+    modo_control: Modo_control;
+    alternador: Alternador;
+    motor: Motor;
+    alarmas: Alarmas;
+    datos_generales: Datos_generales;
+    datos_principales: Datos_principales;
+}
 
 export const Variables = ({
+    modo_control,alternador,motor,alarmas,datos_generales,datos_principales
 
-}) =>{
+}: DataGenerador) =>{
+   
   return(
 
     <g id="layer4">
