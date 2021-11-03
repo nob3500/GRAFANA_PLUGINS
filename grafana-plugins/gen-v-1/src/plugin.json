@@ -1,10 +1,10 @@
 {
   "$schema": "https://raw.githubusercontent.com/grafana/grafana/master/docs/sources/developers/plugins/plugin.schema.json",
   "type": "panel",
-  "name": "generador",
-  "id": "telconet-generador",
+  "name": "gen_v1",
+  "id": "telconet-gen-v-1",
   "info": {
-    "description": "Plugin-generador",
+    "description": "",
     "author": {
       "name": "bryanind195",
       "url": ""
@@ -25,8 +25,8 @@
       }
     ],
     "screenshots": [],
-    "version": "1.0.0",
-    "updated": "2021-11-02"
+    "version": "%VERSION%",
+    "updated": "%TODAY%"
   },
   "dependencies": {
     "grafanaDependency": ">=7.0.0",
