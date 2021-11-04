@@ -1,4 +1,4 @@
-import { PanelData } from '@grafana/data';
+import { InterpolateFunction, PanelData } from '@grafana/data';
 import { SimpleOptions } from 'types';
 
 import { DataGenerador } from 'componentes/variables/variables';
@@ -6,9 +6,10 @@ import modo_controlStyles from 'styles/modoControlStyles';
 import alarmasStyles from 'styles/alarmsStyles';
 import estadoStyles from 'styles/estadoStyles';
 
-const dataGenerador = (data: PanelData, options: SimpleOptions): DataGenerador => {
+const dataGenerador = (data: PanelData, options: SimpleOptions, replaceVariables: InterpolateFunction): DataGenerador => {
   console.log('data: ', data);
   console.log('options: ', options);
+  console.log(replaceVariables)
 
   let MANUAL_MODE = data.series.find(({ name }) => name?.includes('DATA.MANUAL_MODE.VALUE'))?.fields[1].state?.calcs
     ?.lastNotNull;
@@ -197,7 +198,13 @@ const dataGenerador = (data: PanelData, options: SimpleOptions): DataGenerador =
   };
 
 
-  
+    // ------------------------INTERPOLACION DE VARIABLES-------------
+    let variableNombre = replaceVariables('$EQUIPO')
+
+     ///console.log("variableNombre", variableNombre)
+
+     //uma.datos_principales.nombre_uma = variableNombre !== '' ? variableNombre : options.nombre
+     generador.datos_principales.nombre_gen = variableNombre !== '' ? variableNombre : options.nombre
 
   // ---------------------------------------------------------------
   let corriente = (L1_CUR + L2_CUR + L3_CUR) / 3;
@@ -239,7 +246,7 @@ const dataGenerador = (data: PanelData, options: SimpleOptions): DataGenerador =
   generador.motor.temp = Number.parseFloat(COOL_TEMP?.toFixed(2));
   generador.motor.volt_bat = Number.parseFloat(ENG_BATT_VOL?.toFixed(2));
 
-  generador.datos_principales.text_estado = WARNING_ST === 1 || MODBUS_ST === 1 ? 'PELIGRO' : 'NORMAL';
+  generador.datos_principales.text_estado = WARNING_ST === 1 || MODBUS_ST === 1 ? 'APAGADO' : 'ENCENDIDO';
   generador.datos_principales.boton_estado = WARNING_ST === 1 || MODBUS_ST === 1 ? estadoStyles.alarma : estadoStyles.ok;
   // -------------------------------------------------------------------
   // ---------------------------MODO CONTROL----------------------------

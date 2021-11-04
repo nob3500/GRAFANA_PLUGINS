@@ -5,15 +5,16 @@ import { css, cx } from 'emotion';
 //import { stylesFactory, useTheme } from '@grafana/ui';
 import { stylesFactory } from '@grafana/ui';
 import Generador from './componentes/generador';
+import { DataGenerador } from 'componentes/variables/variables';
 import dataGenerador from 'modules/dataGenerador';
 
 interface Props extends PanelProps<SimpleOptions> {}
 
-export const SimplePanel: React.FC<Props> = ({ options, data, width, height }) => {
+export const SimplePanel: React.FC<Props> = ({ options, data, width, height,replaceVariables }) => {
   //const theme = useTheme();
   const styles = getStyles();
 
-  let generador = dataGenerador(data, options);
+  let generador:DataGenerador = dataGenerador(data, options,replaceVariables);
 
   return (
     <div
