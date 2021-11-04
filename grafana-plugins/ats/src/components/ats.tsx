@@ -444,7 +444,7 @@ const ats = ({
                       <path
                         id="rect818"
                         fillRule="evenodd"
-                        fill="url(#linearGradient701)"
+                        fill="black"//fondo azul //url(#linearGradient701)
                         paintOrder="markers stroke fill"
                         d="M80.369 300.08H590.749V584.5H80.369z"
                       />
@@ -1698,7 +1698,7 @@ const ats = ({
             fontSize="5.6444px"
             strokeWidth={0.26458}
           >
-            {"V "}
+            {""}
           </tspan>
         </text>
         <text
@@ -1725,7 +1725,7 @@ const ats = ({
             fontSize="5.6444px"
             strokeWidth={0.26458}
           >
-            {"V"}
+            {""}
           </tspan>
         </text>
         <text
@@ -2027,7 +2027,7 @@ const ats = ({
             fontSize="5.6444px"
             strokeWidth={0.47057}
           >
-            {"RELE TRANSFERENCIA AUTO. :"}
+            {"RELE T. AUTOMATIC :"}
           </tspan>
           <tspan
             id="tspan3679"
@@ -2038,7 +2038,7 @@ const ats = ({
             fontSize="5.6444px"
             strokeWidth={0.47057}
           >
-            {"FALL AUTOMATICO:"}
+            {"FALLA AUTOMATICO:"}
           </tspan>
           <tspan
             id="tspan3683"
@@ -2199,7 +2199,7 @@ const ats = ({
             fontSize="6.35px"
             strokeWidth={0.26458}
           >
-            {"VOLTAJE F1:"}
+            {""} 
           </tspan>
           <tspan
             id="tspan6734"
@@ -2210,7 +2210,7 @@ const ats = ({
             fontSize="6.35px"
             strokeWidth={0.26458}
           >
-            {"VOLTAJE F2:"}
+            {""}
           </tspan>
         </text>
         <text

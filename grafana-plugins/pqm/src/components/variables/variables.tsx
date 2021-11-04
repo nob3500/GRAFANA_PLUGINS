@@ -110,7 +110,7 @@ export const Variables = ({
                 y={52.108124}
                 fill="#fff"
                 fontFamily="Franklin Gothic Medium"
-                fontSize="8.8778px"
+                fontSize="9.8778px"
                 fontWeight={525}
                 strokeWidth={0.28918}
               >
@@ -163,16 +163,16 @@ export const Variables = ({
                 fill="#fff"
                 fontFamily="Franklin Gothic Medium"
                 fontSize="12.491px"
-                fontWeight={700}
+                fontWeight={400}
                 strokeWidth={0.28918}
               >
-                {datos_principales.factor_p}
+                {datos_principales.factor_p} Ø
               </tspan>
             </text>
             <text
               id="pqm_freq"
               transform="scale(1.0508 .95161)"
-              x={208.58806}
+              x={213}
               y={52.141777}
               style={{ lineHeight: 1.25 }}
               xmlSpace="preserve"
@@ -185,11 +185,11 @@ export const Variables = ({
             >
               <tspan
                 id="tspan1960-4"
-                x={203.58806}
+                x={201.58806}
                 y={52.141777}
                 fill="#fff"
                 fontFamily="Franklin Gothic Medium"
-                fontSize="8.8778px"
+                fontSize="9.8778px"
                 fontWeight={525}
                 strokeWidth={0.28918}
               >
@@ -374,7 +374,7 @@ export const Variables = ({
             >
               <tspan
                 id="tspan1165-7"
-                x={569.24414}
+                x={566}
                 y={50.169689}
                 fill="#fff"
                 fontFamily="Franklin Gothic Medium"
@@ -400,7 +400,7 @@ export const Variables = ({
             >
               <tspan
                 id="tspan15409"
-                x={569.29095}
+                x={566}
                 y={113.79575}
                 fill="#fff"
                 fontFamily="Franklin Gothic Medium"
@@ -452,7 +452,7 @@ export const Variables = ({
             >
               <tspan
                 id="tspan1165-7-4"
-                x={569.24414}
+                x={566}
                 y={58.0723}
                 fill="#fff"
                 fontFamily="Franklin Gothic Medium"
@@ -478,7 +478,7 @@ export const Variables = ({
             >
               <tspan
                 id="tspan6736-3"
-                x={555.34058}
+                x={557}
                 //x={569.34058}
                 y={121.75623}
                 fill="#fff"
@@ -505,7 +505,7 @@ export const Variables = ({
             >
               <tspan
                 id="tspan15409-5"
-                x={569.29095}
+                x={566}
                 y={105.83525}
                 fill="#fff"
                 fontFamily="Franklin Gothic Medium"
@@ -531,7 +531,7 @@ export const Variables = ({
             >
               <tspan
                 id="tspan15409-5-4"
-                x={569.29095}
+                x={566}
                 y={97.932632}
                 fill="#fff"
                 fontFamily="Franklin Gothic Medium"
@@ -557,7 +557,7 @@ export const Variables = ({
             >
               <tspan
                 id="tspan1165-7-4-4"
-                x={569.24396}
+                x={566}
                 y={66.032791}
                 fill="#fff"
                 fontFamily="Franklin Gothic Medium"
@@ -583,7 +583,7 @@ export const Variables = ({
             >
               <tspan
                 id="tspan15409-5-4-2"
-                x={569.29095}
+                x={566}
                 y={74.051163}
                 fill="#fff"
                 fontFamily="Franklin Gothic Medium"
@@ -609,7 +609,7 @@ export const Variables = ({
             >
               <tspan
                 id="tspan1765"
-                x={569.29095}
+                x={566}
                 y={81.953773}
                 fill="#fff"
                 fontFamily="Franklin Gothic Medium"
@@ -635,7 +635,7 @@ export const Variables = ({
             >
               <tspan
                 id="tspan1765-8"
-                x={569.29095}
+                x={566}
                 y={89.914268}
                 fill="#fff"
                 fontFamily="Franklin Gothic Medium"

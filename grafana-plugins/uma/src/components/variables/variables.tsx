@@ -251,7 +251,7 @@ export const Variables = ({
         >
           <tspan
             id="tspan1165-7"
-            x={580.56189}
+            x={575}
             y={60.315125}
             fill="#fff"
             fontFamily="Franklin Gothic Medium"
@@ -306,7 +306,7 @@ export const Variables = ({
         >
           <tspan
             id="tspan5927"
-            x={212.52034}
+            x={206.52034}
             y={131.45428}
             fill="#fff"
             fontFamily="Franklin Gothic Medium"
@@ -359,7 +359,7 @@ export const Variables = ({
             y={50.935295}
             fill="#fff"
             fontFamily="Franklin Gothic Medium"
-            fontSize="12.347px"
+            fontSize="11.347px"
             fontWeight={590}
             strokeWidth={0.28918}
           >
@@ -384,7 +384,7 @@ export const Variables = ({
         >
           <tspan
             id="tspan15444"
-            x={580.0434}
+            x={575}
             y={82.662178}
             fill="#fff"
             fontFamily="Franklin Gothic Medium"
@@ -412,7 +412,7 @@ export const Variables = ({
         >
           <tspan
             id="tspan15488"
-            x={580.59082}
+            x={575}
             y={90.25013}
             fill="#fff"
             fontFamily="Franklin Gothic Medium"
@@ -440,7 +440,7 @@ export const Variables = ({
         >
           <tspan
             id="tspan15522"
-            x={580.59082}
+            x={575}
             y={97.816376}
             fill="#fff"
             fontFamily="Franklin Gothic Medium"
@@ -468,7 +468,7 @@ export const Variables = ({
         >
           <tspan
             id="tspan15530"
-            x={580.59082}
+            x={575}
             y={105.38263}
             fill="#fff"
             fontFamily="Franklin Gothic Medium"
@@ -496,7 +496,7 @@ export const Variables = ({
         >
           <tspan
             id="tspan15552"
-            x={580.59564}
+            x={575}
             y={67.757507}
             fill="#fff"
             fontFamily="Franklin Gothic Medium"
@@ -524,7 +524,7 @@ export const Variables = ({
         >
           <tspan
             id="tspan15579"
-            x={580.59564}
+            x={575}
             y={75.323692}
             fill="#fff"
             fontFamily="Franklin Gothic Medium"
@@ -739,7 +739,7 @@ export const Variables = ({
             y={48.699165}
             fill="#fff"
             fontFamily="Franklin Gothic Medium"
-            fontSize="12.347px"
+            fontSize="11.347px"
             fontWeight={590}
             strokeWidth={0.28918}
           >
@@ -763,7 +763,7 @@ export const Variables = ({
         >
           <tspan
             id="tspan6769"
-            x={109.55529}
+            x={106}
             y={24.536306}
             fill="#fff"
             fontFamily="Franklin Gothic Medium"
@@ -791,7 +791,7 @@ export const Variables = ({
         >
           <tspan
             id="tspan15409"
-            x={578.72345}
+            x={575}
             y={112.84469}
             fill="#fff"
             fontFamily="Franklin Gothic Medium"

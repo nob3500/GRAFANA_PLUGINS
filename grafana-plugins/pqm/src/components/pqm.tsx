@@ -433,7 +433,7 @@ const pqm = ({
                       <path
                         id="rect818"
                         fillRule="evenodd"
-                        fill="url(#linearGradient701)"
+                        fill="black"//FONDO AZUL url(#linearGradient701)
                         paintOrder="markers stroke fill"
                         d="M80.369 300.08H590.749V584.5H80.369z"
                       />
@@ -1691,7 +1691,7 @@ const pqm = ({
               fill="#fff"
               fontFamily="Franklin Gothic Medium"
               fontSize="6.35px"
-              fontWeight={700}
+              fontWeight={400}
               strokeWidth={0.26458}
             >
               {"KW"}
@@ -1711,11 +1711,11 @@ const pqm = ({
             <tspan
               id="tspan6618"
               x={227.70714}
-              y={56.212147}
+              y={58.212147}
               fill="#fff"
               fontFamily="Franklin Gothic Medium"
-              fontSize="6.35px"
-              fontWeight={700}
+              fontSize="9.35px"
+              fontWeight={400}
               strokeWidth={0.26458}
             >
               {"Hz"}
@@ -2129,7 +2129,7 @@ const pqm = ({
             <tspan
               id="tspan1165-7-4-2-2-5"
               x={586.65955}
-              y={105.60952}
+              y={105.83}
               fill="#fff"
               fontFamily="Franklin Gothic Medium"
               fontSize="5.6444px"
@@ -2321,7 +2321,7 @@ const pqm = ({
             <tspan
               id="tspan1165-7-4-2-2"
               x={586.33704}
-              y={97.795181}
+              y={97.93}
               fill="#fff"
               fontFamily="Franklin Gothic Medium"
               fontSize="5.6444px"
@@ -2351,7 +2351,7 @@ const pqm = ({
               fontSize="5.6444px"
               strokeWidth={0.26458}
             >
-              {"KW"}
+              {"KW/H"}
             </tspan>
           </text>
           <text

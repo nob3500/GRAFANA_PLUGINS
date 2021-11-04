@@ -26,7 +26,11 @@
     ],
     "screenshots": [],
     "version": "1.0.0",
+<<<<<<< HEAD
     "updated": "2021-10-15"
+=======
+    "updated": "2021-10-26"
+>>>>>>> 82b25bf68296bc735801399f00a8be7c37e5f590
   },
   "dependencies": {
     "grafanaDependency": ">=7.0.0",

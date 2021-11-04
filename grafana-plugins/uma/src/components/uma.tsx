@@ -511,7 +511,7 @@ const uma = ({
                   <path
                     id="rect818"
                     fillRule="evenodd"
-                    fill="url(#linearGradient701)"
+                    fill="black"//"url(#linearGradient701)"
                     paintOrder="markers stroke fill"
                     d="M80.369 300.08H590.749V584.5H80.369z"
                   />
@@ -2064,7 +2064,7 @@ const uma = ({
           fontSize="5.6444px"
           strokeWidth={0.26458}
         >
-          {"HORAS FUNCIONAMIENTO:"}
+          {"HORAS DE TRABAJO:"}
         </tspan>
       </text>
       <text
@@ -2244,8 +2244,8 @@ const uma = ({
       >
         <tspan
           id="tspan5927-2"
-          x={224.06041}
-          y={143.4953}
+          x={220.06041}
+          y={145.4953}
           fill="#fff"
           fontFamily="Franklin Gothic Medium"
           fontSize="12.491px"

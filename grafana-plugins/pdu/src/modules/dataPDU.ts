@@ -199,14 +199,14 @@ const DataPDU = (data: PanelData, options: SimpleOptions, replaceVariables: Inte
   let MODBUS_ST = data.series.find(({ name }) => name?.includes('DATA.MODBUS_ST.VALUE'))?.fields[1].state?.calcs?.lastNotNull
   let MAIN_TRIP_ALM = data.series.find(({ name }) => name?.includes('DATA.MAIN_TRIP_ALM.VALUE'))?.fields[1].state?.calcs?.lastNotNull
   let OUT1_TOTAL_KVA = data.series.find(({ name }) => name?.includes('DATA.OUT1_TOTAL_KVA.VALUE'))?.fields[1].state?.calcs?.lastNotNull
-  //let OUT1_VOL_LOW_ALM = data.series.find(({ name }) => name?.includes('DATA.OUT1_VOL_LOW_ALM.VALUE'))?.fields[1].state?.calcs?.lastNotNull
-  //let OUT1_VOL_HI_ALM = data.series.find(({ name }) => name?.includes('DATA.OUT1_VOL_HI_ALM.VALUE'))?.fields[1].state?.calcs?.lastNotNull
-  //let IN1_VOL_LOW_ALM = data.series.find(({ name }) => name?.includes('DATA.IN1_VOL_LOW_ALM.VALUE'))?.fields[1].state?.calcs?.lastNotNull
-  //let IN1_VOL_HI_ALM = data.series.find(({ name }) => name?.includes('DATA.IN1_VOL_HI_ALM.VALUE'))?.fields[1].state?.calcs?.lastNotNull
-  //let OUT1_KWH = data.series.find(({ name }) => name?.includes('DATA.OUT1_KWH.VALUE'))?.fields[1].state?.calcs?.lastNotNull
-  //let OUT1_A_COS_FI = data.series.find(({ name }) => name?.includes('DATA.OUT1_A_COS_FI.VALUE'))?.fields[1].state?.calcs?.lastNotNull
-  //let OUT1_B_COS_FI = data.series.find(({ name }) => name?.includes('DATA.OUT1_B_COS_FI.VALUE'))?.fields[1].state?.calcs?.lastNotNull
-  //let OUT1_C_COS_FI = data.series.find(({ name }) => name?.includes('DATA.OUT1_C_COS_FI.VALUE'))?.fields[1].state?.calcs?.lastNotNull
+  /*let OUT1_VOL_LOW_ALM = data.series.find(({ name }) => name?.includes('DATA.OUT1_VOL_LOW_ALM.VALUE'))?.fields[1].state?.calcs?.lastNotNull
+  let OUT1_VOL_HI_ALM = data.series.find(({ name }) => name?.includes('DATA.OUT1_VOL_HI_ALM.VALUE'))?.fields[1].state?.calcs?.lastNotNull
+  let IN1_VOL_LOW_ALM = data.series.find(({ name }) => name?.includes('DATA.IN1_VOL_LOW_ALM.VALUE'))?.fields[1].state?.calcs?.lastNotNull
+  let IN1_VOL_HI_ALM = data.series.find(({ name }) => name?.includes('DATA.IN1_VOL_HI_ALM.VALUE'))?.fields[1].state?.calcs?.lastNotNull
+  let OUT1_KWH = data.series.find(({ name }) => name?.includes('DATA.OUT1_KWH.VALUE'))?.fields[1].state?.calcs?.lastNotNull
+  let OUT1_A_COS_FI = data.series.find(({ name }) => name?.includes('DATA.OUT1_A_COS_FI.VALUE'))?.fields[1].state?.calcs?.lastNotNull
+  let OUT1_B_COS_FI = data.series.find(({ name }) => name?.includes('DATA.OUT1_B_COS_FI.VALUE'))?.fields[1].state?.calcs?.lastNotNull
+  let OUT1_C_COS_FI = data.series.find(({ name }) => name?.includes('DATA.OUT1_C_COS_FI.VALUE'))?.fields[1].state?.calcs?.lastNotNull*/
   
   
   
@@ -309,10 +309,12 @@ const DataPDU = (data: PanelData, options: SimpleOptions, replaceVariables: Inte
   pdu.botones_alarmas.alarma_general = GEN_ALM === 1 ? estadoStyles.alarma: estadoStyles.sinConexion
   pdu.botones_alarmas.puerta_abierta = DOOR_OPEN_ALM === 1 ? estadoStyles.alarma: estadoStyles.sinConexion
   pdu.botones_alarmas.falla_breaker = MAIN_TRIP_ALM === 1 ? estadoStyles.alarma: estadoStyles.sinConexion
-  pdu.botones_alarmas.red_modbus = MODBUS_ST === 1 ? estadoStyles.alarma: estadoStyles.sinConexion
-  
+  pdu.botones_alarmas.red_modbus = MODBUS_ST === 1 ? estadoStyles.alarma: estadoStyles.ok
+
+    
   // ---------------------- DATOS PRINCIPALES---------------------------//
 
+  
 
   let in_volt = (IN1_AB_VOL + IN1_BC_VOL + IN1_CA_VOL) / 3;
   if (IN1_AB_VOL !== undefined && IN1_BC_VOL !== undefined && IN1_CA_VOL !== undefined) {

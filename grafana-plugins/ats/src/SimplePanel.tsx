@@ -10,11 +10,11 @@ import dataATS from 'modules/dataATS'
 
 interface Props extends PanelProps<SimpleOptions> {}
 
-export const SimplePanel: React.FC<Props> = ({ options, data, width, height }) => {
+export const SimplePanel: React.FC<Props> = ({ options, data, width, height, replaceVariables }) => {
   //const theme = useTheme();
   const styles = getStyles();
 
-  let ats: DataAts = dataATS(data , options)
+  let ats: DataAts = dataATS(data , options, replaceVariables)
 
   return (
     <div
