@@ -2087,11 +2087,11 @@ export const Variables = ({
       paintOrder="markers stroke fill"
     />
   </g>
-    )
+    );
     
-}
+};
 
-export default Variables;
+
 
 
   
