@@ -265,7 +265,7 @@ const DataPDU = (data: PanelData, options: SimpleOptions, replaceVariables: Inte
    // ------------------------INTERPOLACION DE VARIABLES-------------
    let variableNombre = replaceVariables('$EQUIPO')
 
-   pdu.datos_principales.nombre_pdu = variableNombre !== '$NOMBRE' ? variableNombre : options.nombre
+   pdu.datos_principales.nombre_pdu = variableNombre !== '' ? variableNombre : options.nombre
 
   // pdu.datos_principales.nombre_pdu = options.nombre 
 
