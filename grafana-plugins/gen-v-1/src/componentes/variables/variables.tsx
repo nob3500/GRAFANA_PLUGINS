@@ -105,7 +105,7 @@ export const Variables = ({
         y={42.808056}
         fill="#fff"
         fontFamily="sans-serif"
-        fontSize="9.3654px"
+        fontSize="11.3654px"
         fontWeight={700}
         strokeWidth={0.27418}
       >
@@ -414,6 +414,7 @@ export const Variables = ({
         opacity={0.592}
       />
     </g>
+
     <g
       id="gen_off_mode"
       transform="translate(.547 -4.912)"
@@ -442,6 +443,10 @@ export const Variables = ({
         filter="url(#filter2963-9-77-6)"
         opacity={0.592}
       />
+    
+    
+    
+    
     </g>
     <text
       id="alt1"
@@ -466,7 +471,7 @@ export const Variables = ({
         fontSize="6.35px"
         strokeWidth={0.26458}
       >
-        {alternador.voltaje_ff}V
+        {alternador.voltaje_ff}  V
       </tspan>
     </text>
     <text
@@ -492,7 +497,7 @@ export const Variables = ({
         fontSize="6.35px"
         strokeWidth={0.26458}
       >
-        {alternador.corriente}A
+        {alternador.corriente}  A
       </tspan>
     </text>
     <text
@@ -518,7 +523,7 @@ export const Variables = ({
         fontSize="6.35px"
         strokeWidth={0.26458}
       >
-        {alternador.pot_kw}KW
+        {alternador.pot_kw}  KW
       </tspan>
     </text>
     <text
@@ -544,7 +549,7 @@ export const Variables = ({
         fontSize="6.35px"
         strokeWidth={0.26458}
       >
-        {alternador.pot_kva}KVA
+        {alternador.pot_kva}  KVA
       </tspan>
     </text>
     <text
@@ -570,7 +575,7 @@ export const Variables = ({
         fontSize="6.35px"
         strokeWidth={0.26458}
       >
-        {alternador.factor_pot} Ø
+        {alternador.factor_pot}  Ø
       </tspan>
     </text>
     <text
@@ -596,7 +601,7 @@ export const Variables = ({
         fontSize="6.35px"
         strokeWidth={0.26458}
       >
-        {motor.volt_bat}V
+        {motor.volt_bat}  V
       </tspan>
     </text>
     <text
@@ -622,7 +627,7 @@ export const Variables = ({
         fontSize="6.35px"
         strokeWidth={0.26458}
       >
-        {motor.temp}°C
+        {motor.temp}  °C
       </tspan>
     </text>
     <text
@@ -648,7 +653,7 @@ export const Variables = ({
         fontSize="6.35px"
         strokeWidth={0.26458}
       >
-        {motor.oil_press}PSI
+        {motor.oil_press}  PSI
       </tspan>
     </text>
     <text
@@ -674,7 +679,7 @@ export const Variables = ({
         fontSize="6.35px"
         strokeWidth={0.26458}
       >
-        {motor.horas_uso}Hrs.
+        {motor.horas_uso}  Hrs.
       </tspan>
     </text>
     <text
@@ -700,7 +705,7 @@ export const Variables = ({
         fontSize="6.35px"
         strokeWidth={0.26458}
       >
-        {motor.frecuencia}HZ
+        {motor.frecuencia}  HZ
       </tspan>
     </text>
     <text
@@ -763,11 +768,11 @@ export const Variables = ({
       >
         <tspan
           id="tspan6769"
-          x={109.45366}
+          x={105.45366}
           y={24.316792}
           fill="#fff"
           fontFamily="sans-serif"
-          fontSize="11.289px"
+          fontSize="10.289px"
           fontWeight={700}
           strokeWidth={0.36412}
         >
