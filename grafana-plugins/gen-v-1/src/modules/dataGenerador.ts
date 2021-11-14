@@ -5,6 +5,7 @@ import { DataGenerador } from 'componentes/variables/variables';
 import modo_controlStyles from 'styles/modoControlStyles';
 import alarmasStyles from 'styles/alarmsStyles';
 import estadoStyles from 'styles/estadoStyles';
+import { QueryField } from '@grafana/ui';
 
 const dataGenerador = (data: PanelData, options: SimpleOptions, replaceVariables: InterpolateFunction): DataGenerador => {
   console.log('data: ', data);
@@ -227,6 +228,7 @@ const dataGenerador = (data: PanelData, options: SimpleOptions, replaceVariables
     let variableNombre = replaceVariables('$EQUIPO')
 
      ///console.log("variableNombre", variableNombre)
+     QueryField
 
     generador.datos_principales.nombre_gen = variableNombre !== '' ? variableNombre : options.nombre
 

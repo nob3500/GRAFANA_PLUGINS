@@ -79,7 +79,11 @@ export interface DataUnifilar {
   unifilar: Unifilar
 }
 
-const uni = ({ unifilar }: DataUnifilar) => {
+const uni = ({ 
+  
+  unifilar
+
+}: DataUnifilar) => {
      
   return(
         
