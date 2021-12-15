@@ -1,5 +1,155 @@
 import React from 'react'
 
+///-------------tipo de dato--------------///
+type gen1 = {
+    boton_gen1: string; //estado_eq-4-6
+    nombre_gen1: string;
+    color_gen1: string;
+    barra1_gen1:string;
+    contacto_gen1: string;
+    barra2_gen1:string;
+    modo_gen1:string;
+    volt_gen1: number;
+    amp_gen1: number;
+    kw_gen1: number;
+    carga_gen1: number;
+    diesel_gen1: number;
+    
+};
+
+type gen2 = {
+    boton_gen2: string;
+    nombre_gen2: string;
+    color_gen2: string;
+    barra1_gen2:string;
+    contacto_gen2: string;
+    barra2_gen2:string;
+    modo_gen2:string;
+    volt_gen2: number;
+    amp_gen2: number;
+    kw_gen2: number;
+    carga_gen2: number;
+    diesel_gen2: number;
+    
+};
+
+type gen3 = {
+    boton_gen3: string;
+    nombre_gen3: string;
+    color_gen3: string;
+    barra1_gen3:string;
+    contacto_gen3: string;
+    barra2_gen3:string;
+    modo_gen3:string;
+    volt_gen3: number;
+    amp_gen3: number;
+    kw_gen3: number;
+    carga_gen3: number;
+    diesel_gen3: number;
+    
+};
+
+type gen4 = {
+    boton_gen4: string;
+    nombre_gen4: string;
+    color_gen4: string;
+    barra1_gen4:string;
+    contacto_gen4: string;
+    barra2_gen4:string;
+    modo_gen4:string;
+    volt_gen4: number;
+    amp_gen4: number;
+    kw_gen4: number;
+    carga_gen4: number;
+    diesel_gen4: number;
+    
+};
+
+type gen5 = {
+    boton_gen5: string;
+    nombre_gen5: string;
+    color_gen5: string;
+    barra5_gen5:string;
+    contacto_gen5: string;
+    barra2_gen5:string;
+    modo_gen5:string;
+    volt_gen5: number;
+    amp_gen5: number;
+    kw_gen5: number;
+    carga_gen5: number;
+    diesel_gen5: number;
+    
+};
+
+type gen6 = {
+    boton_gen6: string;
+    nombre_gen6: string;
+    color_gen6: string;
+    barra1_gen6:string;
+    contacto_gen6: string;
+    barra2_gen6:string;
+    modo_gen6:string;
+    volt_gen6: number;
+    amp_gen6: number;
+    kw_gen6: number;
+    carga_gen6: number;
+    diesel_gen6: number;
+    
+};
+
+type tdlow_A0 = {
+    boton_tdlow_A0: string;
+    nombre_tdlow_A0: string;
+    color_tdlow_A0_torre: string;
+    color_tdlow_A0_indust: string;
+    modo_tdlow_A0:string;
+    voltff_tdlow_A0: number;
+    voltfn_tdlow_A0: number;
+    amp_tdlow_A0: number;
+    kw_tdlow_A0: number;
+    carga_tdlow_A0: number;
+    kvar_tdlow_A0: number;
+    
+};
+
+type tdlow_A1 = {
+    boton_tdlow_A1: string;
+    nombre_tdlow_A1: string;
+    piloto_tdlow_A1: string;  
+    volt_tdlow_A1: number;
+    amp_tdlow_A1: number;
+    kw_tdlow_A1: number;
+    kva_tdlow_A1: number;
+    
+    
+};
+
+type tdlow_A2 = {
+    boton_tdlow_A2: string;
+    nombre_tdlow_A2: string;
+    piloto_tdlow_A2: string;  
+    volt_tdlow_A2: number;
+    amp_tdlow_A2: number;
+    kw_tdlow_A2: number;
+    kva_tdlow_A2: number;
+    
+};
+
+type tableros = {
+    piloto1_ats3a: string;
+    piloto2_ats3a: string;
+    piloto1_ats4a: string;
+    piloto2_ats4a: string;
+    piloto1_tpdu1a: string;
+    piloto2_tpdu1a: string;
+    piloto1_tpdu2a: string;
+    piloto2_tpdu2a: string;
+    
+
+    
+    
+};
+
 const variables = () => {
     return (
         
