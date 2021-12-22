@@ -8,7 +8,8 @@ type Modo_control ={
   manual_mode: string; //gen_manual 
   off_mode: string; // gen_off_mode
 };
-//-----------estos datos estan OK----------
+
+
 type Alternador ={
   voltaje_ff: number;//alt1
   corriente: number;//alt2
@@ -16,7 +17,8 @@ type Alternador ={
   pot_kva: number;//alt4
   factor_pot: number;//alt5
 };
-//-----------estos datos estan OK----------
+
+
 type Motor ={
   volt_bat: number;//mot1
   temp: number;//mot2
@@ -31,7 +33,6 @@ type Estados_alarmas={
   trip: string;
 };
 
-//-----------estos datos estan OK----------
 
 type Alarmas ={
     emerg_stop: Estados_alarmas; //gen_es_warn_alm ,gen_es_shutd_alm ,gen_es_eltrip_alm //
@@ -44,7 +45,6 @@ type Alarmas ={
     gen_high_volt: Estados_alarmas; //gen_ghv_warn_alm,gen_ghv_shutd_alm,gen_ghv_eltrip_alm
 };
 
-//-----------estos datos estan OK----------
 
 type Datos_generales ={
   fase: string;
@@ -55,7 +55,6 @@ type Datos_generales ={
 
 };
 
-//-----------estos datos estan OK----------
 
 type Datos_principales ={
   voltaje: number; //id = tspan5844

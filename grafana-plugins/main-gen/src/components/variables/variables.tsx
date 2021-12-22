@@ -1,161 +1,176 @@
 import React from 'react'
 
 ///-------------tipo de dato--------------///
-type gen1 = {
+type Gen1 = {
     boton_gen1: string; //estado_eq-4-6
-    nombre_gen1: string;
-    color_gen1: string;
-    barra1_gen1:string;
-    contacto_gen1: string;
-    barra2_gen1:string;
-    modo_gen1:string;
-    volt_gen1: number;
-    amp_gen1: number;
-    kw_gen1: number;
-    carga_gen1: number;
-    diesel_gen1: number;
+    //nombre_gen1: string; //gen_nom_on-3-0-6-9
+    color_gen1: string; //g5795,shape-4-3-8,light-2-8-5
+    barra1_gen1:string; //g7895-79
+    contacto_gen1: string; //shape-3-0-6-6-6-1-3-9-0-8-3
+    barra2_gen1:string; //g7945-6
+    modo_gen1:string; //text10992-9-0-1-1-3-7-6
+    volt_gen1: number; //alt1-6-4
+    amp_gen1: number; //alt2-1-6
+    kw_gen1: number; //alt3-7-5
+    carga_gen1: number; //alt4-5-1
+    diesel_gen1: number; //alt4-1-2-2
     
 };
 
-type gen2 = {
-    boton_gen2: string;
-    nombre_gen2: string;
-    color_gen2: string;
-    barra1_gen2:string;
-    contacto_gen2: string;
-    barra2_gen2:string;
-    modo_gen2:string;
-    volt_gen2: number;
-    amp_gen2: number;
-    kw_gen2: number;
-    carga_gen2: number;
-    diesel_gen2: number;
+type Gen2 = {
+    boton_gen2: string; //estado_eq-4-74
+    //nombre_gen2: string; //gen_nom_on-3-0-2-6
+    color_gen2: string; //g5606, light-2-8, shape-4-3
+    barra1_gen2:string; //g7895-7
+    contacto_gen2: string; //shape-3-0-6-6-6-1-3-9-0-8-1
+    barra2_gen2:string; //g7945-8
+    modo_gen2:string; //text10992-9-0-1-1-3-1-5
+    volt_gen2: number; //alt1-1-5
+    amp_gen2: number; //alt2-8-5
+    kw_gen2: number; // alt3-4-0
+    carga_gen2: number; //alt4-17-0
+    diesel_gen2: number; //alt4-1-3-4
     
 };
 
-type gen3 = {
-    boton_gen3: string;
-    nombre_gen3: string;
-    color_gen3: string;
-    barra1_gen3:string;
-    contacto_gen3: string;
-    barra2_gen3:string;
-    modo_gen3:string;
-    volt_gen3: number;
-    amp_gen3: number;
-    kw_gen3: number;
-    carga_gen3: number;
-    diesel_gen3: number;
+type Gen3 = {
+    boton_gen3: string; //estado_eq-4-7
+    //nombre_gen3: string; //gen_nom_on-3-0-9
+    color_gen3: string; // g4211,light-2,shape-4
+    barra1_gen3:string; //g7895
+    contacto_gen3: string; // shape-3-0-6-6-6-1-3-9-0-8
+    barra2_gen3:string; // g8295
+    modo_gen3:string; //text10992-9-0-1-1-3-71
+    volt_gen3: number; //alt1-9
+    amp_gen3: number; //alt2-19
+    kw_gen3: number; //alt3-9
+    carga_gen3: number; //alt4-54
+    diesel_gen3: number; //alt4-1-9
     
 };
 
-type gen4 = {
-    boton_gen4: string;
-    nombre_gen4: string;
-    color_gen4: string;
-    barra1_gen4:string;
-    contacto_gen4: string;
-    barra2_gen4:string;
-    modo_gen4:string;
-    volt_gen4: number;
-    amp_gen4: number;
-    kw_gen4: number;
-    carga_gen4: number;
-    diesel_gen4: number;
+type Gen4 = {
+    boton_gen4: string; //estado_eq-4-0
+    //nombre_gen4: string;//gen_nom_on-3-0-6
+    color_gen4: string;//g5795-0, shape-4-3-8-2, light-2-8-5-0
+    barra1_gen4:string;//g8354-4
+    contacto_gen4: string;//shape-3-0-6-6-6-1-3-9-0-8-19-2
+    barra2_gen4:string;//g8319-9
+    modo_gen4:string;// text10992-9-0-1-1-3-7
+    volt_gen4: number;//alt1-6
+    amp_gen4: number;//alt2-1
+    kw_gen4: number;//alt3-7
+    carga_gen4: number;//alt4-5
+    diesel_gen4: number;//alt4-1-2
     
 };
 
-type gen5 = {
-    boton_gen5: string;
-    nombre_gen5: string;
-    color_gen5: string;
-    barra5_gen5:string;
-    contacto_gen5: string;
-    barra2_gen5:string;
-    modo_gen5:string;
-    volt_gen5: number;
-    amp_gen5: number;
-    kw_gen5: number;
-    carga_gen5: number;
-    diesel_gen5: number;
+type Gen5 = {
+    boton_gen5: string;//estado_eq-4
+    //nombre_gen5: string;//gen_nom_on-3-0-2
+    color_gen5: string;//g5606-4, light-2-8-3, shape-4-3-2
+    barra1_gen5:string;//g8354-1
+    contacto_gen5: string;//shape-3-0-6-6-6-1-3-9-0-8-19-7
+    barra2_gen5:string;// g8319-4
+    modo_gen5:string;//text10992-9-0-1-1-3-1
+    volt_gen5: number;//alt1-1
+    amp_gen5: number;//alt2-8
+    kw_gen5: number;//alt3-4
+    carga_gen5: number;//alt4-17
+    diesel_gen5: number;//alt4-1-3
     
 };
 
-type gen6 = {
-    boton_gen6: string;
-    nombre_gen6: string;
-    color_gen6: string;
-    barra1_gen6:string;
-    contacto_gen6: string;
-    barra2_gen6:string;
-    modo_gen6:string;
-    volt_gen6: number;
-    amp_gen6: number;
-    kw_gen6: number;
-    carga_gen6: number;
-    diesel_gen6: number;
+type Gen6 = {
+    boton_gen6: string; //estado_eq
+    //nombre_gen6: string;//gen_nom_on-3-0
+    color_gen6: string;//g4211-9, shape-4-7, light-2-2
+    barra1_gen6:string;//g8354
+    contacto_gen6: string;//shape-3-0-6-6-6-1-3-9-0-8-19
+    barra2_gen6:string;//g8319
+    modo_gen6:string;//text10992-9-0-1-1-3
+    volt_gen6: number;//alt1
+    amp_gen6: number;//alt2
+    kw_gen6: number;//alt3
+    carga_gen6: number;//alt4
+    diesel_gen6: number;//alt4-1
     
 };
 
-type tdlow_A0 = {
-    boton_tdlow_A0: string;
-    nombre_tdlow_A0: string;
-    color_tdlow_A0_torre: string;
-    color_tdlow_A0_indust: string;
-    modo_tdlow_A0:string;
-    voltff_tdlow_A0: number;
-    voltfn_tdlow_A0: number;
-    amp_tdlow_A0: number;
-    kw_tdlow_A0: number;
-    carga_tdlow_A0: number;
-    kvar_tdlow_A0: number;
+type Tdlow_A0 = {
+    boton_tdlow_A0: string; //rect4837-8-8-7-9-6-4-9-3
+   // nombre_tdlow_A0: string;//gen_nom_on-1-5-1-0-6-1
+    color_tdlow_A0_torre: string;//g104,path4-2
+    color_tdlow_A0_indust: string;//g26,shape
+    modo_tdlow_A0:string;//text10992-9-0-1-1-3-7-6-4
+    voltff_tdlow_A0: number;//alt1-6-4-0
+    voltfn_tdlow_A0: number;//alt1-6-4-0-4
+    amp_tdlow_A0: number;//alt2-1-6-4
+    kw_tdlow_A0: number;//alt3-7-5-0
+    carga_tdlow_A0: number;//alt4-5-1-9
+    kvar_tdlow_A0: number;//alt4-1-2-2-6
     
 };
 
-type tdlow_A1 = {
-    boton_tdlow_A1: string;
-    nombre_tdlow_A1: string;
-    piloto_tdlow_A1: string;  
-    volt_tdlow_A1: number;
-    amp_tdlow_A1: number;
-    kw_tdlow_A1: number;
-    kva_tdlow_A1: number;
-    
-    
-};
-
-type tdlow_A2 = {
-    boton_tdlow_A2: string;
-    nombre_tdlow_A2: string;
-    piloto_tdlow_A2: string;  
-    volt_tdlow_A2: number;
-    amp_tdlow_A2: number;
-    kw_tdlow_A2: number;
-    kva_tdlow_A2: number;
-    
-};
-
-type tableros = {
-    piloto1_ats3a: string;
-    piloto2_ats3a: string;
-    piloto1_ats4a: string;
-    piloto2_ats4a: string;
-    piloto1_tpdu1a: string;
-    piloto2_tpdu1a: string;
-    piloto1_tpdu2a: string;
-    piloto2_tpdu2a: string;
-    
-
+type Tdlow_A1 = {
+    boton_tdlow_A1: string;// rect4837-8-8-7-9-6-4-9
+    //nombre_tdlow_A1: string;//gen_nom_on-1-5-1-0-6
+    piloto_tdlow_A1: string; //gen_off_mode-5-7
+    volt_tdlow_A1: number;//temp_retagua-7-0-6-8-1-6
+    amp_tdlow_A1: number;//temp_retagua-7-0-6-8-1-6-88
+    kw_tdlow_A1: number;//temp_retagua-7-0-6-8-1-6-88-2
+    kva_tdlow_A1: number;//temp_retagua-7-0-6-8-1-6-88-2-2
     
     
 };
 
-const variables = () => {
+type Tdlow_A2 = {
+    boton_tdlow_A2: string; //estado_eq-4-3-56-1
+    //nombre_tdlow_A2: string;//gen_nom_on-1-5-1-0-6-5
+    piloto_tdlow_A2: string;//gen_off_mode-5-7-3
+    volt_tdlow_A2: number;//temp_retagua-7-0-6-8-1-6-7
+    amp_tdlow_A2: number;//temp_retagua-7-0-6-8-1-6-88-8
+    kw_tdlow_A2: number;//temp_retagua-7-0-6-8-1-6-88-2-5
+    kva_tdlow_A2: number;//temp_retagua-7-0-6-8-1-6-88-2-2-9
+    
+};
+
+type Tableros = {
+    piloto1_ats3a: string;//gen_off_mode-5-4-6
+    piloto2_ats3a: string;//gen_off_mode-5-4-0-5
+    piloto1_ats4a: string;//gen_off_mode-5-4-6-9
+    piloto2_ats4a: string;//gen_off_mode-5-4-0-5-0
+    piloto1_tpdu1a: string;//gen_off_mode-5-4-6-8
+    piloto2_tpdu1a: string;//gen_off_mode-5-4-0-5-3
+    piloto1_tpdu2a: string;//gen_off_mode-5-4-6-9-9
+    piloto2_tpdu2a: string;//gen_off_mode-5-4-0-5-0-3
+    
+};
+
+export interface DataGeneradores{
+    gen1: Gen1;
+    gen2: Gen2;
+    gen3: Gen3;
+    gen4: Gen4;
+    gen5: Gen5;
+    gen6: Gen6;
+    tdlow_A0: Tdlow_A0;
+    tdlow_A1: Tdlow_A1;
+    tdlow_A2: Tdlow_A2;
+    tableros: Tableros;
+}
+
+export const Variables = ({
+    gen1, gen2, gen3, gen4, gen5, gen6, tdlow_A0, tdlow_A1, tdlow_A2, tableros
+
+}: DataGeneradores) => {
     return (
         
     <g id="layer4">
         <g id="g11377">
-          <g id="g8319" opacity={0.999}>
+          <g id="g8319" 
+              className={gen6.barra2_gen6}
+              opacity={0.999}>
             <g
               id="g6502-5-2-1-6-2-3"
               transform="matrix(.7902 0 0 .68831 -.469 68.919)"
@@ -204,7 +219,9 @@ const variables = () => {
                       d="M0 0H100V100H0z"
                     />
                   </g>
-                  <g id="shape-3-0-6-6-6-1-3-9-0-8-19" fill="#0ff">
+                  <g id="shape-3-0-6-6-6-1-3-9-0-8-19"
+                        className={gen6.contacto_gen6}
+                        fill="#0ff">
                     <path
                       id="rect7-4-1-8-4-3-3-4-3-4-1"
                       fill="#0ff"
@@ -258,7 +275,9 @@ const variables = () => {
             </g>
           </g>
           <g id="g11076">
-            <g id="g8354" opacity={0.999}>
+            <g id="g8354" 
+                  className={gen6.barra1_gen6}
+                  opacity={0.999}>
               <g
                 id="g6502-5-2"
                 transform="matrix(.83717 0 0 .94237 -2.736 69.388)"
@@ -370,7 +389,7 @@ const variables = () => {
                 fontSize="2.9807px"
                 strokeWidth={0.1242}
               >
-                {"425.5"}
+                {gen6.volt_gen6}
               </tspan>
             </text>
             <text
@@ -397,7 +416,7 @@ const variables = () => {
                 fontSize="2.9807px"
                 strokeWidth={0.1242}
               >
-                {"300.5"}
+                {gen6.amp_gen6}
               </tspan>
             </text>
             <text
@@ -424,7 +443,7 @@ const variables = () => {
                 fontSize="2.9807px"
                 strokeWidth={0.1242}
               >
-                {"200.5"}
+                {gen6.kw_gen6}
               </tspan>
             </text>
             <text
@@ -451,7 +470,7 @@ const variables = () => {
                 fontSize="2.9807px"
                 strokeWidth={0.1242}
               >
-                {"80.8"}
+                {gen6.carga_gen6}
               </tspan>
             </text>
             <text
@@ -478,7 +497,7 @@ const variables = () => {
                 fontSize="2.9807px"
                 strokeWidth={0.1242}
               >
-                {"90.0"}
+                {gen6.diesel_gen6}
               </tspan>
             </text>
             <text
@@ -640,18 +659,21 @@ const variables = () => {
                 fontSize="2.699px"
                 strokeWidth={0.20001}
               >
-                {"AUTO"}
+                {gen6.modo_gen6}
               </tspan>
             </text>
             <g id="g9110">
               <g
                 id="g4211-9"
+                className={gen6.color_gen6}
                 transform="matrix(.27234 0 0 .28717 28.91 138.92)"
                 opacity={0.999}
               >
                 <g id="g4023-0" transform="translate(-341.25 -93.544)">
                   <g id="g363-2" transform="matrix(-1 0 0 1 495.88 85.312)">
-                    <g id="shape-4-7" fill="#999">
+                    <g id="shape-4-7" 
+                    className={gen6.color_gen6}
+                    fill="#999">
                       <path
                         id="rect4-8"
                         d="M0 74.984H100V82.35799999999999H0z"
@@ -743,7 +765,9 @@ const variables = () => {
                         d="M24.444 33.692c0-1.339 1.93-2.424 4.31-2.424s4.31 1.085 4.31 2.424"
                       />
                     </g>
-                    <g id="light-2-2" fill="#ccc">
+                    <g id="light-2-2" 
+                    className={gen6.color_gen6}
+                    fill="#ccc">
                       <path
                         id="rect49-1"
                         d="M65.387 52.646H98.114V58.69H65.387z"
@@ -1398,6 +1422,7 @@ const variables = () => {
               />
               <path
                 id="estado_eq"
+                className={gen6.boton_gen6}
                 fillRule="evenodd"
                 fill="url(#linearGradient4474-7)"
                 opacity={0.999}
@@ -1459,7 +1484,7 @@ const variables = () => {
               fontSize="2.9807px"
               strokeWidth={0.1242}
             >
-              {"425.5"}
+              {gen5.volt_gen5}
             </tspan>
           </text>
           <text
@@ -1486,7 +1511,7 @@ const variables = () => {
               fontSize="2.9807px"
               strokeWidth={0.1242}
             >
-              {"300.5"}
+              {gen5.amp_gen5}
             </tspan>
           </text>
           <text
@@ -1513,7 +1538,7 @@ const variables = () => {
               fontSize="2.9807px"
               strokeWidth={0.1242}
             >
-              {"200.5"}
+              {gen5.kw_gen5}
             </tspan>
           </text>
           <text
@@ -1540,7 +1565,7 @@ const variables = () => {
               fontSize="2.9807px"
               strokeWidth={0.1242}
             >
-              {"80.8"}
+              {gen5.carga_gen5}
             </tspan>
           </text>
           <text
@@ -1567,7 +1592,7 @@ const variables = () => {
               fontSize="2.9807px"
               strokeWidth={0.1242}
             >
-              {"90.0"}
+              {gen5.diesel_gen5}
             </tspan>
           </text>
           <text
@@ -1729,10 +1754,13 @@ const variables = () => {
               fontSize="2.699px"
               strokeWidth={0.20001}
             >
-              {"AUTO"}
+              {gen5.modo_gen5}
             </tspan>
           </text>
-          <g id="g8354-1" transform="translate(37.814 .016)" opacity={0.999}>
+          <g id="g8354-1" 
+                className={gen5.barra1_gen5}
+                transform="translate(37.814 .016)"
+                opacity={0.999}>
             <g
               id="g6502-5-2-01"
               transform="matrix(.83717 0 0 .94237 -2.736 69.388)"
@@ -1820,7 +1848,10 @@ const variables = () => {
               </g>
             </g>
           </g>
-          <g id="g8319-4" transform="translate(37.814 .016)" opacity={0.999}>
+          <g id="g8319-4" 
+          className={gen5.barra2_gen5}
+          transform="translate(37.814 .016)"
+           opacity={0.999}>
             <g
               id="g6502-5-2-1-6-2-3-15"
               transform="matrix(.7902 0 0 .68831 -.469 68.919)"
@@ -1879,7 +1910,9 @@ const variables = () => {
                       d="M0 0H100V100H0z"
                     />
                   </g>
-                  <g id="shape-3-0-6-6-6-1-3-9-0-8-19-7" fill="#0ff">
+                  <g id="shape-3-0-6-6-6-1-3-9-0-8-19-7" 
+                    className={gen5.contacto_gen5}
+                    fill="#0ff">
                     <path
                       id="rect7-4-1-8-4-3-3-4-3-4-1-4"
                       fill="#0ff"
@@ -1935,6 +1968,7 @@ const variables = () => {
           <g id="g9694">
             <g
               id="g5606-4"
+              className={gen5.color_gen5}              
               transform="matrix(.83717 0 0 .8143 .416 108.5)"
               opacity={0.999}
             >
@@ -1944,7 +1978,9 @@ const variables = () => {
               >
                 <g id="g4023-2-8" transform="translate(-341.25 -93.544)">
                   <g id="g363-6-8" transform="matrix(-1 0 0 1 495.88 85.312)">
-                    <g id="shape-4-3-2" fill="#999">
+                    <g id="shape-4-3-2"
+                    className={gen5.color_gen5}
+                    fill="#999">
                       <path
                         id="rect4-58-9"
                         d="M0 74.984H100V82.35799999999999H0z"
@@ -2036,7 +2072,9 @@ const variables = () => {
                         d="M24.444 33.692c0-1.339 1.93-2.424 4.31-2.424s4.31 1.085 4.31 2.424"
                       />
                     </g>
-                    <g id="light-2-8-3" fill="#ccc">
+                    <g id="light-2-8-3"
+                    className={gen5.color_gen5}
+                    fill="#ccc">
                       <path
                         id="rect49-6-44"
                         d="M65.387 52.646H98.114V58.69H65.387z"
@@ -2692,6 +2730,7 @@ const variables = () => {
             />
             <path
               id="estado_eq-4"
+              className={gen5.boton_gen5}
               fillRule="evenodd"
               fill="url(#linearGradient4474-7-3)"
               opacity={0.999}
@@ -2752,7 +2791,7 @@ const variables = () => {
               fontSize="2.9807px"
               strokeWidth={0.1242}
             >
-              {"425.5"}
+              {gen4.volt_gen4}
             </tspan>
           </text>
           <text
@@ -2779,7 +2818,7 @@ const variables = () => {
               fontSize="2.9807px"
               strokeWidth={0.1242}
             >
-              {"300.5"}
+              {gen4.amp_gen4}
             </tspan>
           </text>
           <text
@@ -2806,7 +2845,7 @@ const variables = () => {
               fontSize="2.9807px"
               strokeWidth={0.1242}
             >
-              {"200.5"}
+              {gen4.kw_gen4}
             </tspan>
           </text>
           <text
@@ -2833,7 +2872,7 @@ const variables = () => {
               fontSize="2.9807px"
               strokeWidth={0.1242}
             >
-              {"80.8"}
+              {gen4.carga_gen4}
             </tspan>
           </text>
           <text
@@ -2860,7 +2899,7 @@ const variables = () => {
               fontSize="2.9807px"
               strokeWidth={0.1242}
             >
-              {"90.0"}
+              {gen4.diesel_gen4}
             </tspan>
           </text>
           <text
@@ -3022,10 +3061,13 @@ const variables = () => {
               fontSize="2.699px"
               strokeWidth={0.20001}
             >
-              {"AUTO"}
+              {gen4.modo_gen4}
             </tspan>
           </text>
-          <g id="g8354-4" transform="translate(76.158 .065)" opacity={0.999}>
+          <g id="g8354-4" 
+          className={gen4.barra1_gen4}
+          transform="translate(76.158 .065)" 
+          opacity={0.999}>
             <g
               id="g6502-5-2-8"
               transform="matrix(.83717 0 0 .94237 -2.736 69.388)"
@@ -3113,7 +3155,10 @@ const variables = () => {
               </g>
             </g>
           </g>
-          <g id="g8319-9" transform="translate(76.158 .065)" opacity={0.999}>
+          <g id="g8319-9"
+          className={gen4.barra2_gen4}
+           transform="translate(76.158 .065)" 
+           opacity={0.999}>
             <g
               id="g6502-5-2-1-6-2-3-9"
               transform="matrix(.7902 0 0 .68831 -.469 68.919)"
@@ -3172,7 +3217,9 @@ const variables = () => {
                       d="M0 0H100V100H0z"
                     />
                   </g>
-                  <g id="shape-3-0-6-6-6-1-3-9-0-8-19-2" fill="#0ff">
+                  <g id="shape-3-0-6-6-6-1-3-9-0-8-19-2" 
+                        className={gen4.contacto_gen4}
+                        fill="#0ff">
                     <path
                       id="rect7-4-1-8-4-3-3-4-3-4-1-5"
                       fill="#0ff"
@@ -3228,6 +3275,7 @@ const variables = () => {
           <g id="g10277">
             <g
               id="g5795-0"
+              className={gen4.color_gen4}              
               transform="matrix(.83717 0 0 .8143 -1.553 108.5)"
               opacity={0.999}
             >
@@ -3237,7 +3285,9 @@ const variables = () => {
               >
                 <g id="g4023-2-0-8" transform="translate(-341.25 -93.544)">
                   <g id="g363-6-4-5" transform="matrix(-1 0 0 1 495.88 85.312)">
-                    <g id="shape-4-3-8-2" fill="#999">
+                    <g id="shape-4-3-8-2"
+                    className= {gen4.color_gen4}
+                    fill="#999">
                       <path
                         id="rect4-58-5-3"
                         d="M0 74.984H100V82.35799999999999H0z"
@@ -3329,7 +3379,9 @@ const variables = () => {
                         d="M24.444 33.692c0-1.339 1.93-2.424 4.31-2.424s4.31 1.085 4.31 2.424"
                       />
                     </g>
-                    <g id="light-2-8-5-0" fill="#ccc">
+                    <g id="light-2-8-5-0" 
+                    className={gen4.color_gen4}
+                    fill="#ccc">
                       <path
                         id="rect49-6-4-1"
                         d="M65.387 52.646H98.114V58.69H65.387z"
@@ -3985,6 +4037,7 @@ const variables = () => {
             />
             <path
               id="estado_eq-4-0"
+              className={gen4.boton_gen4}
               fillRule="evenodd"
               fill="url(#linearGradient4474-7-3-6)"
               opacity={0.999}
@@ -4023,12 +4076,15 @@ const variables = () => {
         <g id="g13472">
           <g
             id="g4211"
+            className={gen3.color_gen3}
             transform="matrix(.27234 0 0 .28717 28.943 25.983)"
             opacity={0.999}
           >
             <g id="g4023" transform="translate(-341.25 -93.544)">
               <g id="g363" transform="matrix(-1 0 0 1 495.88 85.312)">
-                <g id="shape-4" fill="#999">
+                <g id="shape-4"
+                className={gen3.color_gen3}
+                fill="#999">
                   <path id="rect4" d="M0 74.984H100V82.35799999999999H0z" />
                   <path
                     id="polygon6"
@@ -4094,7 +4150,9 @@ const variables = () => {
                     d="M24.444 33.692c0-1.339 1.93-2.424 4.31-2.424s4.31 1.085 4.31 2.424"
                   />
                 </g>
-                <g id="light-2" fill="#ccc">
+                <g id="light-2" 
+                className={gen3.color_gen3}
+                fill="#ccc">
                   <path id="rect49" d="M65.387 52.646H98.114V58.69H65.387z" />
                   <path id="rect51" d="M26.465 39.483H31.044V45.14H26.465z" />
                   <path id="rect53" d="M26.465 33.692H31.044V37.867H26.465z" />
@@ -4579,7 +4637,7 @@ const variables = () => {
               fontSize="2.9807px"
               strokeWidth={0.1242}
             >
-              {"425.5"}
+              {gen3.volt_gen3}
             </tspan>
           </text>
           <text
@@ -4606,7 +4664,7 @@ const variables = () => {
               fontSize="2.9807px"
               strokeWidth={0.1242}
             >
-              {"300.5"}
+              {gen3.amp_gen3}
             </tspan>
           </text>
           <text
@@ -4633,7 +4691,7 @@ const variables = () => {
               fontSize="2.9807px"
               strokeWidth={0.1242}
             >
-              {"200.5"}
+              {gen3.kw_gen3}
             </tspan>
           </text>
           <text
@@ -4660,10 +4718,12 @@ const variables = () => {
               fontSize="2.9807px"
               strokeWidth={0.1242}
             >
-              {"80.8"}
+              {gen3.carga_gen3}
             </tspan>
           </text>
-          <g id="g8295" opacity={0.999}>
+          <g id="g8295" 
+                className={gen3.barra2_gen3}
+                opacity={0.999}>
             <g id="g7909">
               <g
                 id="g6502-5-2-1-6-5-9"
@@ -4680,7 +4740,9 @@ const variables = () => {
                       d="M0 0H100V100H0z"
                     />
                   </g>
-                  <g id="shape-3-0-6-6-6-1-3-9-0-8" fill="#0ff">
+                  <g id="shape-3-0-6-6-6-1-3-9-0-8" 
+                        className={gen3.contacto_gen3}
+                        fill="#0ff">
                     <path
                       id="rect7-4-1-8-4-3-3-4-3-4"
                       fill="#0ff"
@@ -4797,7 +4859,7 @@ const variables = () => {
               fontSize="2.9807px"
               strokeWidth={0.1242}
             >
-              {"90.0"}
+              {gen3.diesel_gen3}
             </tspan>
           </text>
           <text
@@ -4959,10 +5021,12 @@ const variables = () => {
               fontSize="2.699px"
               strokeWidth={0.20001}
             >
-              {"AUTO"}
+              {gen3.modo_gen3}
             </tspan>
           </text>
-          <g id="g7895" opacity={0.999}>
+          <g id="g7895" 
+          className={gen3.barra1_gen3}
+          opacity={0.999}>
             <g
               id="g6485"
               transform="matrix(.0867 0 0 .8143 39.475 -16.363) matrix(.39463 0 0 .06066 16.589 68.304)"
@@ -5033,6 +5097,7 @@ const variables = () => {
           </g>
           <path
             id="estado_eq-4-7"
+            className={gen3.boton_gen3}
             fillRule="evenodd"
             fill="url(#linearGradient4474-7-3-2)"
             opacity={0.999}
@@ -5070,13 +5135,16 @@ const variables = () => {
         <g id="g14294">
           <g
             id="g5606"
+            className={gen2.color_gen2}
             transform="matrix(.83717 0 0 .8143 .45 -4.433)"
             opacity={0.999}
           >
             <g id="g4211-7" transform="matrix(.32531 0 0 .35265 79.204 37.372)">
               <g id="g4023-2" transform="translate(-341.25 -93.544)">
                 <g id="g363-6" transform="matrix(-1 0 0 1 495.88 85.312)">
-                  <g id="shape-4-3" fill="#999">
+                  <g id="shape-4-3" 
+                  className={gen2.color_gen2}
+                  fill="#999">
                     <path
                       id="rect4-58"
                       d="M0 74.984H100V82.35799999999999H0z"
@@ -5163,7 +5231,9 @@ const variables = () => {
                       d="M24.444 33.692c0-1.339 1.93-2.424 4.31-2.424s4.31 1.085 4.31 2.424"
                     />
                   </g>
-                  <g id="light-2-8" fill="#ccc">
+                  <g id="light-2-8"
+                  className={gen2.color_gen2}
+                  fill="#ccc">
                     <path
                       id="rect49-6"
                       d="M65.387 52.646H98.114V58.69H65.387z"
@@ -5833,7 +5903,7 @@ const variables = () => {
               fontSize="2.9807px"
               strokeWidth={0.1242}
             >
-              {"425.5"}
+              {gen2.volt_gen2}
             </tspan>
           </text>
           <text
@@ -5860,7 +5930,7 @@ const variables = () => {
               fontSize="2.9807px"
               strokeWidth={0.1242}
             >
-              {"300.5"}
+              {gen2.amp_gen2}
             </tspan>
           </text>
           <text
@@ -5887,7 +5957,7 @@ const variables = () => {
               fontSize="2.9807px"
               strokeWidth={0.1242}
             >
-              {"200.5"}
+              {gen2.kw_gen2}
             </tspan>
           </text>
           <text
@@ -5914,7 +5984,7 @@ const variables = () => {
               fontSize="2.9807px"
               strokeWidth={0.1242}
             >
-              {"80.8"}
+              {gen2.carga_gen2}
             </tspan>
           </text>
           <text
@@ -5941,7 +6011,7 @@ const variables = () => {
               fontSize="2.9807px"
               strokeWidth={0.1242}
             >
-              {"90.0"}
+              {gen2.diesel_gen2}
             </tspan>
           </text>
           <text
@@ -6103,10 +6173,13 @@ const variables = () => {
               fontSize="2.699px"
               strokeWidth={0.20001}
             >
-              {"AUTO"}
+              {gen2.modo_gen2}
             </tspan>
           </text>
-          <g id="g7945-8" transform="translate(37.814 .016)" opacity={0.999}>
+          <g id="g7945-8"
+          className={gen2.barra2_gen2}
+           transform="translate(37.814 .016)" 
+           opacity={0.999}>
             <g id="g7909-3">
               <g
                 id="g6502-5-2-1-6-5-9-1"
@@ -6123,7 +6196,9 @@ const variables = () => {
                       d="M0 0H100V100H0z"
                     />
                   </g>
-                  <g id="shape-3-0-6-6-6-1-3-9-0-8-1" fill="#0ff">
+                  <g id="shape-3-0-6-6-6-1-3-9-0-8-1" 
+                        className={gen2.contacto_gen2}
+                        fill="#0ff">
                     <path
                       id="rect7-4-1-8-4-3-3-4-3-4-8"
                       fill="#0ff"
@@ -6216,7 +6291,10 @@ const variables = () => {
               </g>
             </g>
           </g>
-          <g id="g7895-7" transform="translate(37.814 .016)" opacity={0.999}>
+          <g id="g7895-7" 
+          className={gen2.barra1_gen2}
+          transform="translate(37.814 .016)"
+           opacity={0.999}>
             <g
               id="g6485-7"
               transform="matrix(.0867 0 0 .8143 39.475 -16.363) matrix(.39463 0 0 .06066 16.589 68.304)"
@@ -6293,6 +6371,7 @@ const variables = () => {
           </g>
           <path
             id="estado_eq-4-74"
+            className = {gen2.boton_gen2}
             fillRule="evenodd"
             fill="url(#linearGradient4474-7-3-8)"
             opacity={0.999}
@@ -6330,6 +6409,8 @@ const variables = () => {
         <g id="g15117">
           <g
             id="g5795"
+            fill= "red"
+            className ={gen1.color_gen1}
             transform="matrix(.83717 0 0 .8143 -1.52 -4.433)"
             opacity={0.999}
           >
@@ -6339,7 +6420,9 @@ const variables = () => {
             >
               <g id="g4023-2-0" transform="translate(-341.25 -93.544)">
                 <g id="g363-6-4" transform="matrix(-1 0 0 1 495.88 85.312)">
-                  <g id="shape-4-3-8" fill="#999">
+                  <g id="shape-4-3-8" 
+                    className ={gen1.color_gen1}               
+                    fill="#999">
                     <path
                       id="rect4-58-5"
                       d="M0 74.984H100V82.35799999999999H0z"
@@ -6431,7 +6514,9 @@ const variables = () => {
                       d="M24.444 33.692c0-1.339 1.93-2.424 4.31-2.424s4.31 1.085 4.31 2.424"
                     />
                   </g>
-                  <g id="light-2-8-5" fill="#ccc">
+                  <g id="light-2-8-5" 
+                  className={gen1.color_gen1}
+                  fill="#ccc">
                     <path
                       id="rect49-6-4"
                       d="M65.387 52.646H98.114V58.69H65.387z"
@@ -7109,7 +7194,7 @@ const variables = () => {
               fontSize="2.9807px"
               strokeWidth={0.1242}
             >
-              {"425.5"}
+              {gen1.volt_gen1}
             </tspan>
           </text>
           <text
@@ -7136,7 +7221,7 @@ const variables = () => {
               fontSize="2.9807px"
               strokeWidth={0.1242}
             >
-              {"300.5"}
+              {gen1.amp_gen1}
             </tspan>
           </text>
           <text
@@ -7163,7 +7248,7 @@ const variables = () => {
               fontSize="2.9807px"
               strokeWidth={0.1242}
             >
-              {"200.5"}
+              {gen1.kw_gen1}
             </tspan>
           </text>
           <text
@@ -7190,7 +7275,7 @@ const variables = () => {
               fontSize="2.9807px"
               strokeWidth={0.1242}
             >
-              {"80.8"}
+              {gen1.carga_gen1}
             </tspan>
           </text>
           <text
@@ -7217,7 +7302,7 @@ const variables = () => {
               fontSize="2.9807px"
               strokeWidth={0.1242}
             >
-              {"90.0"}
+              {gen1.diesel_gen1}
             </tspan>
           </text>
           <text
@@ -7379,7 +7464,7 @@ const variables = () => {
               fontSize="2.699px"
               strokeWidth={0.20001}
             >
-              {"AUTO"}
+              {gen1.modo_gen1}
             </tspan>
           </text>
           <g id="g7945-6" transform="translate(76.158 .065)" opacity={0.999}>
@@ -7399,7 +7484,9 @@ const variables = () => {
                       d="M0 0H100V100H0z"
                     />
                   </g>
-                  <g id="shape-3-0-6-6-6-1-3-9-0-8-3" fill="#0ff">
+                  <g id="shape-3-0-6-6-6-1-3-9-0-8-3" 
+                  className={gen1.contacto_gen1}
+                  fill="#0ff">
                     <path
                       id="rect7-4-1-8-4-3-3-4-3-4-7"
                       fill="#0ff"
@@ -7492,7 +7579,10 @@ const variables = () => {
               </g>
             </g>
           </g>
-          <g id="g7895-79" transform="translate(76.158 .065)" opacity={0.999}>
+          <g id="g7895-79" 
+          transform="translate(76.158 .065)"
+          className={gen1.barra1_gen1}
+           opacity={0.999}>
             <g
               id="g6485-3"
               transform="matrix(.0867 0 0 .8143 39.475 -16.363) matrix(.39463 0 0 .06066 16.589 68.304)"
@@ -7569,6 +7659,7 @@ const variables = () => {
           </g>
           <path
             id="estado_eq-4-6"
+            className={gen1.boton_gen1}
             fillRule="evenodd"
             fill="url(#linearGradient4474-7-3-7)"
             opacity={0.999}
@@ -7614,6 +7705,7 @@ const variables = () => {
           />
           <g
             id="gen_off_mode-5-4-0-5"
+            className={tableros.piloto2_ats3a}
             transform="matrix(.71939 0 0 .55677 -284.86 51.66)"
             opacity={0.999}
             fillRule="evenodd"
@@ -7642,6 +7734,7 @@ const variables = () => {
           </g>
           <g
             id="gen_off_mode-5-4-6"
+            className={tableros.piloto1_ats3a}
             transform="matrix(.71939 0 0 .55677 -294.37 51.709)"
             opacity={0.999}
             fillRule="evenodd"
@@ -7783,6 +7876,7 @@ const variables = () => {
           />
           <g
             id="gen_off_mode-5-4-0-5-0"
+            className={tableros.piloto2_ats4a}
             transform="matrix(.71939 0 0 .55677 -284.77 68.593)"
             opacity={0.999}
             fillRule="evenodd"
@@ -7811,6 +7905,7 @@ const variables = () => {
           </g>
           <g
             id="gen_off_mode-5-4-6-9"
+            className={tableros.piloto1_ats4a}
             transform="matrix(.71939 0 0 .55677 -294.29 68.643)"
             opacity={0.999}
             fillRule="evenodd"
@@ -7937,7 +8032,7 @@ const variables = () => {
               fontSize="2.71px"
               strokeWidth={0.087412}
             >
-              {"ATS - 3A"}
+              {"ATS - 4A"}
             </tspan>
           </text>
         </g>
@@ -7952,6 +8047,7 @@ const variables = () => {
           />
           <g
             id="gen_off_mode-5-4-0-5-3"
+            className={tableros.piloto2_tpdu1a}
             transform="matrix(.71939 0 0 .55677 -245.23 51.675)"
             opacity={0.999}
             fillRule="evenodd"
@@ -7980,6 +8076,7 @@ const variables = () => {
           </g>
           <g
             id="gen_off_mode-5-4-6-8"
+            className={tableros.piloto1_tpdu1a}
             transform="matrix(.71939 0 0 .55677 -254.75 51.725)"
             opacity={0.999}
             fillRule="evenodd"
@@ -8121,6 +8218,7 @@ const variables = () => {
           />
           <g
             id="gen_off_mode-5-4-0-5-0-3"
+            className={tableros.piloto2_tpdu2a}
             transform="matrix(.71939 0 0 .55677 -245.15 68.608)"
             opacity={0.999}
             fillRule="evenodd"
@@ -8149,6 +8247,7 @@ const variables = () => {
           </g>
           <g
             id="gen_off_mode-5-4-6-9-9"
+            className={tableros.piloto1_tpdu2a}
             transform="matrix(.71939 0 0 .55677 -254.67 68.658)"
             opacity={0.999}
             fillRule="evenodd"
@@ -8281,11 +8380,14 @@ const variables = () => {
         </g>
         <g id="g10652" opacity={0.999}>
           <g id="g10539">
-            <g id="g26" transform="matrix(.24078 0 0 .15914 174.13 116.74)">
+            <g id="g26" 
+            className={tdlow_A0.color_tdlow_A0_indust}
+            transform="matrix(.24078 0 0 .15914 174.13 116.74)">
               <g id="shape">
                 <path
+                  className={tdlow_A0.color_tdlow_A0_indust}
                   id="polygon4"
-                  fill="#666"
+                  
                   d="M100 100L100 58 93.745 58 91.639 3.5 85.861 3.5 83.755 58 78.875 58 67 48.5 67 58 63.438 58 51.563 48.5 51.563 58 48 58 36.125 48.5 36.125 58 32.563 58 20.688 48.5 20.688 58 17.125 58 5.25 48.5 5.25 58 0 58 0 100z"
                 />
               </g>
@@ -8312,12 +8414,14 @@ const variables = () => {
             </g>
             <g
               id="g104"
+              className={tdlow_A0.color_tdlow_A0_torre}
               transform="matrix(.2988 0 0 .22337 188.48 116.13)"
               fill="gray"
             >
               <g id="shape-2">
                 <path
                   id="path4-2"
+                  className={tdlow_A0.color_tdlow_A0_torre}
                   d="M67.419 21.663l-15.101-3.972V6.97h10.081a.372.372 0 00.129-.723L52.34 2.475a.383.383 0 00-.13-.023h-.067L50.246.162a.45.45 0 00-.691 0l-1.897 2.29h-.067a.387.387 0 00-.13.023L37.272 6.247a.374.374 0 00.129.723h10.081v10.722l-15.101 3.972a.374.374 0 00.095.734h15.006v11.456a.745.745 0 00-.023.006L37.27 37.7a.374.374 0 00.131.722h10.044l-7.703 61.149-.055.429h1.967a.37.37 0 00.271-.117l7.975-8.429 7.975 8.429a.375.375 0 00.271.117h1.968l-.056-.429-7.7-61.126.015-.023h10.026a.373.373 0 00.131-.722l-10.188-3.84-.023-.006V22.397h15.006a.373.373 0 00.094-.734zM44.502 68.955H55.3l.011.088-5.38 5.56-5.433-5.615zm.58-.746l4.848-6.203 4.848 6.203zm-.434-.414l1.361-10.805 3.543 4.532zm4.867 7.238l-6.644 6.866 1.531-12.151zm.415.429l6.557 6.777H43.373zm6.957 7.523L49.9 90.369l-6.986-7.384zm-6.541-7.952l5.06-5.23 1.515 12.025zm-.037-13.511l3.491-4.466 1.341 10.648zm-.379-.485l-3.816-4.882.004-.035h7.564l.013.101zm-.374-10.4l-3.296 4.357.941-7.471zm-2.188-3.883h5.125l-2.563 3.388zm2.562 4.377l3.209 4.242h-6.417zm.375-.494l2.304-3.046.921 7.308zm2.104-4.629h-5.017l.009-.072 2.529-3.822 2.455 3.71zM47.57 44.6l.641-5.085 1.362 2.058zm.755-5.994l.023-.184h3.105l.033.26-1.556 2.351zm.331-8.548l1.325-1.325 1.325 1.325zm2.484.447l-1.159 1.159-1.159-1.159zm-2.762-.803v-2.573l1.286 1.287zm0 .992l1.286 1.286-1.286 1.286zm1.287 5.425l-1.286 1.286v-2.573zm-.904-1.536h2.441l-1.22 1.22zm1.22 1.853l1.24 1.24h-2.479zm1.442-1.441v2.25l-1.125-1.125zm0-1.159h-2.98l1.539-1.539 1.441 1.441zm-1.125-1.855l1.125-1.125v2.249zm1.125-2.44l-1.125-1.125 1.125-1.125zm0-2.883l-1.441 1.441-1.603-1.603v-.049h3.044zm-2.721-.659l1.279-1.279 1.279 1.279zm-.324-.31v-2.573l1.286 1.286zm3.045-.161l-1.125-1.125 1.125-1.125zm-1.442-1.442l-1.603-1.603v-.086h3.044v.248zm-8.989-3.916l.97 1.481h-2.573l1.575-1.473zm.457-.12l2.692-.708-1.684 2.246zm3.258-.717l2.318 2.318h-4.056zM54.724 4.154l1.416 2.07h-3.672l2.246-2.073zm-3.301 14.833v2.25l-1.125-1.125zm-1.442.808l-1.373-1.373h2.746zm.317-3.602l1.125-1.125v2.25zm.849 1.483h-2.332l1.166-1.166zm.178-3.143l-1.344 1.344-1.344-1.344zm-2.669-.447l1.325-1.325 1.325 1.325zm2.767-.517l-1.125-1.125 1.125-1.125zm-1.442-1.442l-1.325-1.325h2.65zm-1.325-1.773l1.325-1.325 1.325 1.325zm1.009 2.09l-1.286 1.286v-2.573zm0 3.749l-1.286 1.286v-2.573zm0 3.919l-1.286 1.286v-2.573zm.316.317l1.223 1.223h-2.445zm1.442-10.592l-1.125-1.125 1.125-1.125zm-1.442-1.441L48.555 6.97h2.852zm1.442-2.644L48.87 3.198h2.553v2.554zM48.378 3.34l2.883 2.883h-2.883zm1.287 5.372l-1.286 1.286V7.426zm7.292 12.939h-4.056l2.318-2.318zm-1.142-2.268l2.643.695-.989 1.51zm3.1.815l.095.025 1.526 1.428h-2.573zm-4.113-1.081L52.318 21.6v-3.137zm1.881-12.893l-1.232-1.801 4.866 1.801zm-2.44-2.248l-1.925 1.777v-2.49zM49.9 1.15l1.079 1.303H48.82zm-2.417 2.113v2.578L45.601 3.96zm-.251 2.961h-3.507l1.437-2.07zm-2.775-1.841l-1.278 1.84h-3.694zm3.026 17.093l-2.385-2.385 2.385-.627zm-7.43-1.058l-1.319 1.234h-3.371zm7.43 14.231v2.573l-1.869-1.869zm-.18 3.027h-3.628l1.487-2.141zm-2.87-1.878l-1.304 1.878H39.45zm-2.939 63.456h-.809l1.95-15.478 6.752 7.136zm8.92-8.342l6.752-7.136 1.95 15.478h-.809zm1.803-46.424l-1.929-2.915L51.6 39.59zm.281-6.812l2.22-2.106 1.404 2.106zm4.163 0l-1.238-1.857 4.928 1.857zm-2.396-2.294l-1.947 1.847v-2.58zm6.926-13.731l-1.27-1.188 4.517 1.188z"
                   fill="gray"
                 />
@@ -8446,7 +8550,7 @@ const variables = () => {
               fontSize="3.7095px"
               strokeWidth={0.15456}
             >
-              {"425.5"}
+              {tdlow_A0.voltff_tdlow_A0}
             </tspan>
           </text>
           <text
@@ -8473,7 +8577,7 @@ const variables = () => {
               fontSize="3.7095px"
               strokeWidth={0.15456}
             >
-              {"300.5"}
+              {tdlow_A0.amp_tdlow_A0}
             </tspan>
           </text>
           <text
@@ -8500,7 +8604,7 @@ const variables = () => {
               fontSize="3.7095px"
               strokeWidth={0.15456}
             >
-              {"200.5"}
+              {tdlow_A0.kw_tdlow_A0}
             </tspan>
           </text>
           <text
@@ -8527,7 +8631,7 @@ const variables = () => {
               fontSize="3.7095px"
               strokeWidth={0.15456}
             >
-              {"80.8"}
+              {tdlow_A0.carga_tdlow_A0}
             </tspan>
           </text>
           <text
@@ -8554,7 +8658,7 @@ const variables = () => {
               fontSize="3.3663px"
               strokeWidth={0.14026}
             >
-              {"7"}
+              {tdlow_A0.kvar_tdlow_A0}
             </tspan>
           </text>
           <text
@@ -8695,6 +8799,7 @@ const variables = () => {
           <text
             id="text10992-9-0-1-1-3-7-6-4"
             transform="scale(1.0976 .9111)"
+            className={tdlow_A0.modo_tdlow_A0}
             x={169.22263}
             y={87.197449}
             style={{ lineHeight: 1.25 }}
@@ -8746,6 +8851,7 @@ const variables = () => {
           <path
             id="rect4837-8-8-7-9-6-4-9-3"
             fill="none"
+            className={tdlow_A0.boton_tdlow_A0}
             opacity={0.25}
             paintOrder="markers stroke fill"
             strokeDashoffset={5.65}
@@ -8779,7 +8885,7 @@ const variables = () => {
               fontSize="5.466px"
               strokeWidth={0.1763}
             >
-              {"TD-LOW-A-0"}
+              {"TDLOW-A0"}
             </tspan>
           </text>
           <text
@@ -8806,7 +8912,7 @@ const variables = () => {
               fontSize="3.7095px"
               strokeWidth={0.15456}
             >
-              {"251.1"}
+              {tdlow_A0.voltfn_tdlow_A0}
             </tspan>
           </text>
           <text
@@ -9074,6 +9180,7 @@ const variables = () => {
           </g>
           <g
             id="gen_off_mode-5-7"
+            className={tdlow_A1.piloto_tdlow_A1}
             transform="matrix(1.5861 0 0 1.4278 -494.71 -65.311)"
             opacity={0.998}
             fillRule="evenodd"
@@ -9126,6 +9233,7 @@ const variables = () => {
           </g>
           <path
             id="rect4837-8-8-7-9-6-4-9"
+            className={tdlow_A1.boton_tdlow_A1}
             fill="none"
             opacity={0.24975}
             paintOrder="markers stroke fill"
@@ -9189,7 +9297,7 @@ const variables = () => {
               fontWeight={700}
               strokeWidth={0.19973}
             >
-              {"253"}
+              {tdlow_A1.volt_tdlow_A1}
             </tspan>
           </text>
           <text
@@ -9247,7 +9355,7 @@ const variables = () => {
               fontWeight={700}
               strokeWidth={0.19973}
             >
-              {"500"}
+              {tdlow_A1.amp_tdlow_A1}
             </tspan>
           </text>
           <text
@@ -9305,7 +9413,7 @@ const variables = () => {
               fontWeight={700}
               strokeWidth={0.19973}
             >
-              {"400"}
+              {tdlow_A1.kw_tdlow_A1}
             </tspan>
           </text>
           <text
@@ -9363,7 +9471,7 @@ const variables = () => {
               fontWeight={700}
               strokeWidth={0.19973}
             >
-              {"300"}
+              {tdlow_A1.kva_tdlow_A1}
             </tspan>
           </text>
           <text
@@ -9811,6 +9919,7 @@ const variables = () => {
           </g>
           <g
             id="gen_off_mode-5-7-3"
+            className={tdlow_A2.piloto_tdlow_A2}
             transform="matrix(1.5861 0 0 1.4278 -494.31 38.358)"
             opacity={0.998}
             fillRule="evenodd"
@@ -9839,6 +9948,7 @@ const variables = () => {
           </g>
           <path
             id="estado_eq-4-3-56-1"
+            className={tdlow_A2.boton_tdlow_A2}
             fillRule="evenodd"
             fill="url(#linearGradient4474-7-3-67-3-8)"
             opacity={0.998}
@@ -9926,7 +10036,7 @@ const variables = () => {
               fontWeight={700}
               strokeWidth={0.19973}
             >
-              {"252"}
+              {tdlow_A2.volt_tdlow_A2}
             </tspan>
           </text>
           <text
@@ -9984,7 +10094,7 @@ const variables = () => {
               fontWeight={700}
               strokeWidth={0.19973}
             >
-              {"502"}
+              {tdlow_A2.amp_tdlow_A2}
             </tspan>
           </text>
           <text
@@ -10042,7 +10152,7 @@ const variables = () => {
               fontWeight={700}
               strokeWidth={0.19973}
             >
-              {"402"}
+              {tdlow_A2.kw_tdlow_A2}
             </tspan>
           </text>
           <text
@@ -10100,7 +10210,7 @@ const variables = () => {
               fontWeight={700}
               strokeWidth={0.19973}
             >
-              {"302"}
+              {tdlow_A2.kva_tdlow_A2}
             </tspan>
           </text>
           <text
@@ -10300,4 +10410,4 @@ const variables = () => {
     )
 }
 
-export default variables
+//export default variables

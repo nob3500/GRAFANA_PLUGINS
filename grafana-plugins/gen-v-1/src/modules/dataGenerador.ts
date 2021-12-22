@@ -12,7 +12,7 @@ const dataGenerador = (data: PanelData, options: SimpleOptions, replaceVariables
   console.log('options: ', options);
   console.log(replaceVariables)
 
-    let OFF_MODE = data.series.find(({ name }) => name?.includes('DATA.OFF_MODE.VALUE'))?.fields[1].state?.calcs
+  let OFF_MODE = data.series.find(({ name }) => name?.includes('DATA.OFF_MODE.VALUE'))?.fields[1].state?.calcs
     ?.lastNotNull;
   let L1L2_VOL = data.series.find(({ name }) => name?.includes('DATA.L1L2_VOL.VALUE'))?.fields[1].state?.calcs
     ?.lastNotNull;

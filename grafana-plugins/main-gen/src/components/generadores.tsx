@@ -1,7 +1,21 @@
 import React from 'react'
-import Variables from 'components/variables/variables';
+import {Variables, DataGeneradores} from 'components/variables/variables';
 
-const Generadores = () => {
+const Generadores = ({
+    gen1 ,
+    gen2 ,
+    gen3 ,
+    gen4 ,
+    gen5 ,
+    gen6 ,
+    tdlow_A0 ,
+    tdlow_A1 ,
+    tdlow_A2 ,
+    tableros ,
+
+
+
+}:DataGeneradores) => {
     return (
                   
     <svg
@@ -452,7 +466,19 @@ const Generadores = () => {
 
       
 
-      <Variables/>
+      <Variables
+        gen1 = {gen1}
+        gen2 = {gen2}
+        gen3 = {gen3}
+        gen4 = {gen4}
+        gen5 = {gen5}
+        gen6 = {gen6}
+        tdlow_A0 = {tdlow_A0}
+        tdlow_A1 = {tdlow_A1}
+        tdlow_A2 = {tdlow_A2}
+        tableros = {tableros}
+      
+      />
 
     </svg>
 
