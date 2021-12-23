@@ -51,7 +51,7 @@ if (st_gen[i] === 1) {
 
 //VARIABLES DEL GENERADOR 
 
-/*let t_wats_gen = [];
+let t_wats_gen = [];
 let t_va_gen = [];
 let kva_h_gen = [];
 let kvar_h_gen = [];
@@ -123,7 +123,7 @@ for (let i = 1; i <= 6; i++) {
          
     }
 
-*/
+
  
 
 //-----------------------------------------------------ALARMAS----------------------------------------------------//
@@ -135,7 +135,7 @@ for (let i = 1; i <= 6; i++) {
 
     gen1:{
         boton_gen1: estadoStyles.sinConexion,
-        color_gen1: estadoStyles.alarma,
+        color_gen1: estadoStyles.sinConexion,
         barra1_gen1:estadoStyles.sinConexion,
         contacto_gen1: estadoStyles.sinConexion,
         barra2_gen1: estadoStyles.sinConexion,
@@ -149,7 +149,7 @@ for (let i = 1; i <= 6; i++) {
 
     gen2:{
       boton_gen2: estadoStyles.sinConexion,
-      color_gen2: estadoStyles.alarma,
+      color_gen2: estadoStyles.sinConexion,
       barra1_gen2:estadoStyles.sinConexion,
       contacto_gen2: estadoStyles.sinConexion,
       barra2_gen2: estadoStyles.sinConexion,
@@ -163,7 +163,7 @@ for (let i = 1; i <= 6; i++) {
 
   gen3:{
     boton_gen3: estadoStyles.sinConexion,
-    color_gen3: estadoStyles.alarma,
+    color_gen3: estadoStyles.sinConexion,
     barra1_gen3:estadoStyles.sinConexion,
     contacto_gen3: estadoStyles.sinConexion,
     barra2_gen3: estadoStyles.sinConexion,
@@ -177,7 +177,7 @@ for (let i = 1; i <= 6; i++) {
 
 gen4:{
   boton_gen4: estadoStyles.sinConexion,
-  color_gen4: estadoStyles.alarma,
+  color_gen4: estadoStyles.sinConexion,
   barra1_gen4:estadoStyles.sinConexion,
   contacto_gen4: estadoStyles.sinConexion,
   barra2_gen4: estadoStyles.sinConexion,
@@ -191,7 +191,7 @@ gen4:{
 
 gen5:{
   boton_gen5: estadoStyles.sinConexion,
-  color_gen5: estadoStyles.alarma,
+  color_gen5: estadoStyles.sinConexion,
   barra1_gen5:estadoStyles.sinConexion,
   contacto_gen5: estadoStyles.sinConexion,
   barra2_gen5: estadoStyles.sinConexion,
@@ -205,7 +205,7 @@ gen5:{
 
 gen6:{
   boton_gen6: estadoStyles.sinConexion,
-  color_gen6: estadoStyles.alarma,
+  color_gen6: estadoStyles.sinConexion,
   barra1_gen6:estadoStyles.sinConexion,
   contacto_gen6: estadoStyles.sinConexion,
   barra2_gen6: estadoStyles.sinConexion,
@@ -219,8 +219,8 @@ gen6:{
 
 tdlow_A0:{
     boton_tdlow_A0: estadoStyles.sinConexion,
-    color_tdlow_A0_torre: estadoStyles.alarma,
-    color_tdlow_A0_indust: estadoStyles.ok,
+    color_tdlow_A0_torre: estadoStyles.sinConexion,
+    color_tdlow_A0_indust: estadoStyles.sinConexion,
     modo_tdlow_A0:'',
     voltff_tdlow_A0: 0,
     voltfn_tdlow_A0: 0,
@@ -232,7 +232,7 @@ tdlow_A0:{
 
 tdlow_A1:{
     boton_tdlow_A1: estadoStyles.sinConexion,
-    piloto_tdlow_A1: estadoStyles.ok,
+    piloto_tdlow_A1: estadoStyles.sinConexion,
     volt_tdlow_A1: 0,
     amp_tdlow_A1: 0,
     kw_tdlow_A1: 0,
@@ -241,7 +241,7 @@ tdlow_A1:{
 
 tdlow_A2:{
     boton_tdlow_A2: estadoStyles.sinConexion,
-    piloto_tdlow_A2: estadoStyles.ok,
+    piloto_tdlow_A2: estadoStyles.sinConexion,
     volt_tdlow_A2: 0,
     amp_tdlow_A2: 0,
     kw_tdlow_A2: 0,
@@ -250,13 +250,13 @@ tdlow_A2:{
 
 tableros:{
     piloto1_ats3a: estadoStyles.sinConexion,
-    piloto2_ats3a: estadoStyles.ok,
+    piloto2_ats3a: estadoStyles.sinConexion,
     piloto1_ats4a: estadoStyles.sinConexion,
-    piloto2_ats4a: estadoStyles.ok,
+    piloto2_ats4a: estadoStyles.sinConexion,
     piloto1_tpdu1a: estadoStyles.sinConexion,
-    piloto2_tpdu1a: estadoStyles.ok,
+    piloto2_tpdu1a: estadoStyles.sinConexion,
     piloto1_tpdu2a: estadoStyles.sinConexion,
-    piloto2_tpdu2a: estadoStyles.ok,
+    piloto2_tpdu2a: estadoStyles.sinConexion,
 },
     
 }

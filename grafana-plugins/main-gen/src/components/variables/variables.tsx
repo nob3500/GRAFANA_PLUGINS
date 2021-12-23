@@ -98,7 +98,7 @@ type Gen6 = {
 };
 
 type Tdlow_A0 = {
-    boton_tdlow_A0: string; //rect4837-8-8-7-9-6-4-9-3
+    boton_tdlow_A0: string; // estado_eq-4-3-56-3
    // nombre_tdlow_A0: string;//gen_nom_on-1-5-1-0-6-1
     color_tdlow_A0_torre: string;//g104,path4-2
     color_tdlow_A0_indust: string;//g26,shape
@@ -113,9 +113,9 @@ type Tdlow_A0 = {
 };
 
 type Tdlow_A1 = {
-    boton_tdlow_A1: string;// rect4837-8-8-7-9-6-4-9
+    boton_tdlow_A1: string;// estado_eq-4-3-56
     //nombre_tdlow_A1: string;//gen_nom_on-1-5-1-0-6
-    piloto_tdlow_A1: string; //gen_off_mode-5-7
+    piloto_tdlow_A1: string; //gen5_off_mode-8-7
     volt_tdlow_A1: number;//temp_retagua-7-0-6-8-1-6
     amp_tdlow_A1: number;//temp_retagua-7-0-6-8-1-6-88
     kw_tdlow_A1: number;//temp_retagua-7-0-6-8-1-6-88-2
@@ -127,7 +127,7 @@ type Tdlow_A1 = {
 type Tdlow_A2 = {
     boton_tdlow_A2: string; //estado_eq-4-3-56-1
     //nombre_tdlow_A2: string;//gen_nom_on-1-5-1-0-6-5
-    piloto_tdlow_A2: string;//gen_off_mode-5-7-3
+    piloto_tdlow_A2: string;//gen5_off_mode-8-7-6
     volt_tdlow_A2: number;//temp_retagua-7-0-6-8-1-6-7
     amp_tdlow_A2: number;//temp_retagua-7-0-6-8-1-6-88-8
     kw_tdlow_A2: number;//temp_retagua-7-0-6-8-1-6-88-2-5
@@ -136,14 +136,14 @@ type Tdlow_A2 = {
 };
 
 type Tableros = {
-    piloto1_ats3a: string;//gen_off_mode-5-4-6
-    piloto2_ats3a: string;//gen_off_mode-5-4-0-5
-    piloto1_ats4a: string;//gen_off_mode-5-4-6-9
-    piloto2_ats4a: string;//gen_off_mode-5-4-0-5-0
-    piloto1_tpdu1a: string;//gen_off_mode-5-4-6-8
-    piloto2_tpdu1a: string;//gen_off_mode-5-4-0-5-3
-    piloto1_tpdu2a: string;//gen_off_mode-5-4-6-9-9
-    piloto2_tpdu2a: string;//gen_off_mode-5-4-0-5-0-3
+    piloto1_ats3a: string;//gen5_off_mode-8-4-5
+    piloto2_ats3a: string;//gen5_off_mode-8-4-6-3
+    piloto1_ats4a: string;//gen5_off_mode-8-4-5-0
+    piloto2_ats4a: string;//gen5_off_mode-8-4-6-3-0
+    piloto1_tpdu1a: string;//gen5_off_mode-8-4-5-4
+    piloto2_tpdu1a: string;//gen5_off_mode-8-4-6-3-5
+    piloto1_tpdu2a: string;//gen5_off_mode-8-4-5-0-2
+    piloto2_tpdu2a: string;//gen5_off_mode-8-4-6-3-0-1
     
 };
 
@@ -7705,7 +7705,7 @@ export const Variables = ({
           />
           <g
             id="gen_off_mode-5-4-0-5"
-            className={tableros.piloto2_ats3a}
+           
             transform="matrix(.71939 0 0 .55677 -284.86 51.66)"
             opacity={0.999}
             fillRule="evenodd"
@@ -7713,6 +7713,7 @@ export const Variables = ({
           >
             <ellipse
               id="gen5_off_mode-8-4-6-3"
+              className={tableros.piloto2_ats3a}
               cx={481.73}
               cy={77.784}
               rx={2.3902}
@@ -7734,7 +7735,7 @@ export const Variables = ({
           </g>
           <g
             id="gen_off_mode-5-4-6"
-            className={tableros.piloto1_ats3a}
+            
             transform="matrix(.71939 0 0 .55677 -294.37 51.709)"
             opacity={0.999}
             fillRule="evenodd"
@@ -7742,6 +7743,7 @@ export const Variables = ({
           >
             <ellipse
               id="gen5_off_mode-8-4-5"
+              className={tableros.piloto1_ats3a}
               cx={481.73}
               cy={77.784}
               rx={2.3902}
@@ -7876,7 +7878,7 @@ export const Variables = ({
           />
           <g
             id="gen_off_mode-5-4-0-5-0"
-            className={tableros.piloto2_ats4a}
+            
             transform="matrix(.71939 0 0 .55677 -284.77 68.593)"
             opacity={0.999}
             fillRule="evenodd"
@@ -7884,6 +7886,7 @@ export const Variables = ({
           >
             <ellipse
               id="gen5_off_mode-8-4-6-3-0"
+              className={tableros.piloto2_ats4a}
               cx={481.73}
               cy={77.784}
               rx={2.3902}
@@ -7904,8 +7907,7 @@ export const Variables = ({
             />
           </g>
           <g
-            id="gen_off_mode-5-4-6-9"
-            className={tableros.piloto1_ats4a}
+            id="gen_off_mode-5-4-6-9"            
             transform="matrix(.71939 0 0 .55677 -294.29 68.643)"
             opacity={0.999}
             fillRule="evenodd"
@@ -7913,6 +7915,7 @@ export const Variables = ({
           >
             <ellipse
               id="gen5_off_mode-8-4-5-0"
+              className={tableros.piloto1_ats4a}
               cx={481.73}
               cy={77.784}
               rx={2.3902}
@@ -8047,7 +8050,7 @@ export const Variables = ({
           />
           <g
             id="gen_off_mode-5-4-0-5-3"
-            className={tableros.piloto2_tpdu1a}
+            
             transform="matrix(.71939 0 0 .55677 -245.23 51.675)"
             opacity={0.999}
             fillRule="evenodd"
@@ -8055,6 +8058,7 @@ export const Variables = ({
           >
             <ellipse
               id="gen5_off_mode-8-4-6-3-5"
+              className={tableros.piloto2_tpdu1a}
               cx={481.73}
               cy={77.784}
               rx={2.3902}
@@ -8076,7 +8080,7 @@ export const Variables = ({
           </g>
           <g
             id="gen_off_mode-5-4-6-8"
-            className={tableros.piloto1_tpdu1a}
+            
             transform="matrix(.71939 0 0 .55677 -254.75 51.725)"
             opacity={0.999}
             fillRule="evenodd"
@@ -8084,6 +8088,7 @@ export const Variables = ({
           >
             <ellipse
               id="gen5_off_mode-8-4-5-4"
+              className={tableros.piloto1_tpdu1a}
               cx={481.73}
               cy={77.784}
               rx={2.3902}
@@ -8218,7 +8223,7 @@ export const Variables = ({
           />
           <g
             id="gen_off_mode-5-4-0-5-0-3"
-            className={tableros.piloto2_tpdu2a}
+            
             transform="matrix(.71939 0 0 .55677 -245.15 68.608)"
             opacity={0.999}
             fillRule="evenodd"
@@ -8226,6 +8231,7 @@ export const Variables = ({
           >
             <ellipse
               id="gen5_off_mode-8-4-6-3-0-1"
+              className={tableros.piloto2_tpdu2a}
               cx={481.73}
               cy={77.784}
               rx={2.3902}
@@ -8247,7 +8253,7 @@ export const Variables = ({
           </g>
           <g
             id="gen_off_mode-5-4-6-9-9"
-            className={tableros.piloto1_tpdu2a}
+            
             transform="matrix(.71939 0 0 .55677 -254.67 68.658)"
             opacity={0.999}
             fillRule="evenodd"
@@ -8255,6 +8261,7 @@ export const Variables = ({
           >
             <ellipse
               id="gen5_off_mode-8-4-5-0-2"
+              className={tableros.piloto1_tpdu2a}
               cx={481.73}
               cy={77.784}
               rx={2.3902}
@@ -8387,7 +8394,7 @@ export const Variables = ({
                 <path
                   className={tdlow_A0.color_tdlow_A0_indust}
                   id="polygon4"
-                  
+                  fill="#666"
                   d="M100 100L100 58 93.745 58 91.639 3.5 85.861 3.5 83.755 58 78.875 58 67 48.5 67 58 63.438 58 51.563 48.5 51.563 58 48 58 36.125 48.5 36.125 58 32.563 58 20.688 48.5 20.688 58 17.125 58 5.25 48.5 5.25 58 0 58 0 100z"
                 />
               </g>
@@ -8798,8 +8805,7 @@ export const Variables = ({
           </text>
           <text
             id="text10992-9-0-1-1-3-7-6-4"
-            transform="scale(1.0976 .9111)"
-            className={tdlow_A0.modo_tdlow_A0}
+            transform="scale(1.0976 .9111)"            
             x={169.22263}
             y={87.197449}
             style={{ lineHeight: 1.25 }}
@@ -8821,11 +8827,12 @@ export const Variables = ({
               fontSize="3.3589px"
               strokeWidth={0.24891}
             >
-              {"AUTO"}
+              {tdlow_A0.modo_tdlow_A0}
             </tspan>
           </text>
           <path
             id="estado_eq-4-3-56-3"
+            className={tdlow_A0.boton_tdlow_A0}
             fillRule="evenodd"
             fill="url(#linearGradient4474-7-3-67-3-0)"
             opacity={0.999}
@@ -9188,6 +9195,7 @@ export const Variables = ({
           >
             <ellipse
               id="gen5_off_mode-8-7"
+              className={tdlow_A1.piloto_tdlow_A1}
               cx={481.73}
               cy={77.784}
               rx={2.3902}
@@ -9209,6 +9217,7 @@ export const Variables = ({
           </g>
           <path
             id="estado_eq-4-3-56"
+            className={tdlow_A1.boton_tdlow_A1}
             fillRule="evenodd"
             fill="url(#linearGradient4474-7-3-67-3)"
             opacity={0.998}
@@ -9232,8 +9241,7 @@ export const Variables = ({
             />
           </g>
           <path
-            id="rect4837-8-8-7-9-6-4-9"
-            className={tdlow_A1.boton_tdlow_A1}
+            id="rect4837-8-8-7-9-6-4-9"            
             fill="none"
             opacity={0.24975}
             paintOrder="markers stroke fill"
@@ -9927,6 +9935,7 @@ export const Variables = ({
           >
             <ellipse
               id="gen5_off_mode-8-7-6"
+              className={tdlow_A2.piloto_tdlow_A2}
               cx={481.73}
               cy={77.784}
               rx={2.3902}
