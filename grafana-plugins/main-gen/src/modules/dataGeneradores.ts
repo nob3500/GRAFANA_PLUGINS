@@ -3,7 +3,7 @@ import { SimpleOptions } from 'types';
 
 import { DataGeneradores } from 'components/variables/variables';
 //import modo_controlStyles from 'styles/modoControlStyles';
-import alarmasStyles from 'styles/alarmsStyles';
+//import alarmasStyles from 'styles/alarmsStyles';
 import estadoStyles from 'styles/estadoStyles';
 //import { QueryField } from '@grafana/ui';
 
@@ -15,13 +15,15 @@ const dataGeneradores = (data: PanelData, options: SimpleOptions, ): DataGenerad
 
 //-------------------------------------------VARIABLES DE ESTADOS----------------------------------------------    
 //ESTADOS
-
+/*
 let st_on = estadoStyles.ok;
 let st_off = estadoStyles.sinConexion;
 
 //ALARMS
+/*
 let alarm_on = alarmasStyles.off;
 let alarm_off = alarmasStyles.warn;
+*/
 
 
 //WARNINGS
@@ -31,65 +33,199 @@ let warning_off = alarmasStyles.sinconexion;*/
 //-----------------------------------------------------------------------------------------------------------
 //----------------------------------------ESTADOS Y ALARMAS DE GENERADORES------------------------------------
 
-let st_gen = [];
-let al_gen = [];
+//let st_gen = [];
+
+/*let ala_stop_gen= [];
+let f_start_gen= [];
+let ala_hv_gen= [];
+let ala_lv_gen= [];
+let ala_oil_p_gen= [];
+let ala_o_spd_gen= [];
+let ala_u_spd_gen= [];
+let ala_temp_gen= [];
+let ala_rest_gen= [];
+let ala_loss_spd_gen= [];
+let ala_lf_gen= [];
+let ala_hcur_gen= [];*/
+
+/*
 for (let i = 1; i <= 6; i++) {
-st_gen[i] = data.series.find(({ name }) => name?.includes('st_gen' + i))?.fields[1].state?.calcs?.lastNotNull;
-al_gen[i] = data.series.find(({ name }) => name?.includes('al_gen' + i))?.fields[1].state?.calcs?.lastNotNull;
-if (st_gen[i] === 1) {
-    st_gen[i] = st_on;
-    }   else {
-    st_gen[i] = st_off;
+//---------------------------------------------------ESTADO---------------------------------------------------------//
+//st_gen[i] =   data.series.find(({ name }) => name?.includes('ST_GEN' + i))?.fields[1].state?.calcs?.lastNotNull;
+
+/*
+//---------------------------------------------------ALARMAS---------------------------------------------------------//
+ala_stop_gen[i] = data.series.find(({ name }) => name?.includes('ALA_STOP_GEN' + i))?.fields[1].state?.calcs?.lastNotNull;
+f_start_gen[i] = data.series.find(({ name }) => name?.includes('F_START_GEN' + i))?.fields[1].state?.calcs?.lastNotNull;
+ala_hv_gen[i] = data.series.find(({ name }) => name?.includes('ALA_HV_GEN' + i))?.fields[1].state?.calcs?.lastNotNull;
+ala_lv_gen[i] = data.series.find(({ name }) => name?.includes('ALA_LV_GEN' + i))?.fields[1].state?.calcs?.lastNotNull;
+ala_oil_p_gen[i] = data.series.find(({ name }) => name?.includes('ALA_OIL_P_GEN' + i))?.fields[1].state?.calcs?.lastNotNull;
+ala_o_spd_gen[i] = data.series.find(({ name }) => name?.includes('ALA_O_SPD_GEN' + i))?.fields[1].state?.calcs?.lastNotNull;
+ala_u_spd_gen[i] = data.series.find(({ name }) => name?.includes('ALA_U_SPD_GEN' + i))?.fields[1].state?.calcs?.lastNotNull;
+ala_temp_gen[i] = data.series.find(({ name }) => name?.includes('ALA_TEMP_GEN' + i))?.fields[1].state?.calcs?.lastNotNull;
+ala_rest_gen[i] = data.series.find(({ name }) => name?.includes('ALA_REST_GEN' + i))?.fields[1].state?.calcs?.lastNotNull;
+ala_loss_spd_gen[i] = data.series.find(({ name }) => name?.includes('ALA_LOSS_SPD_GEN' + i))?.fields[1].state?.calcs?.lastNotNull;
+ala_lf_gen[i] = data.series.find(({ name }) => name?.includes('ALA_LF_GEN' + i))?.fields[1].state?.calcs?.lastNotNull;
+ala_hcur_gen[i] = data.series.find(({ name }) => name?.includes('ALA_HCUR_GEN' + i))?.fields[1].state?.calcs?.lastNotNull;
+
+*/
+ /* 
+  if (st_gen[i] === 1) {
+      st_gen[i] = st_on;
+      }   else {
+      st_gen[i] = st_off;
+      }
     }
-    if (al_gen[i] === 1) {
-        al_gen[i] = alarm_on;
+    */
+    
+      
+/*
+  if (ala_stop_gen[i] === 1) {
+        ala_stop_gen[i] = alarm_on;
         }   else {
-        al_gen[i] = alarm_off;
+          ala_stop_gen[i] = alarm_off;
         }
+
+  if (f_start_gen[i] === 1) {
+      f_start_gen[i] = alarm_on;
+       }   else {
+      f_start_gen[i] = alarm_off;
+      }    
+
+  if (ala_hv_gen[i] === 1) {
+      ala_hv_gen[i] = alarm_on;
+      }   else {
+        ala_hv_gen[i] = alarm_off;
+      }
+
+  if (ala_lv_gen[i] === 1) {
+      ala_lv_gen[i] = alarm_on;
+      }   else {
+        ala_lv_gen[i] = alarm_off;
+      }
+
+  if (ala_oil_p_gen[i] === 1) {
+      ala_oil_p_gen[i] = alarm_on;
+      }   else {
+        ala_oil_p_gen[i] = alarm_off;
+      }
+
+  if (ala_o_spd_gen[i] === 1) {
+      ala_o_spd_gen[i] = alarm_on;
+      }   else {
+        ala_o_spd_gen[i] = alarm_off;
+      }
+
+  if (ala_u_spd_gen[i] === 1) {
+      ala_u_spd_gen[i] = alarm_on;
+      }  else {
+        ala_u_spd_gen[i] = alarm_off;
+      }
+
+  if (ala_temp_gen[i] === 1) {
+      ala_temp_gen[i] = alarm_on;
+      }  else {
+        ala_temp_gen[i] = alarm_off;
+      }
+
+  if (ala_rest_gen[i] === 1) {
+    ala_rest_gen[i] = alarm_on;
+      }  else {
+        ala_rest_gen[i] = alarm_off;
+      }
+
+  if (ala_loss_spd_gen[i] === 1) {
+      ala_loss_spd_gen[i] = alarm_on;
+      }  else {
+        ala_loss_spd_gen[i] = alarm_off;
+      }
+  
+  if (ala_lf_gen[i] === 1) {
+      ala_lf_gen[i] = alarm_on;
+      }  else {
+        ala_lf_gen[i] = alarm_off;
+      }
+
+  if (ala_hcur_gen[i] === 1) {
+      ala_hcur_gen[i] = alarm_on;
+      }  else {
+        ala_hcur_gen[i] = alarm_off;
+      }
+
+  if (ala_lf_gen[i] === 1) {
+      ala_lf_gen[i] = alarm_on;
+      }  else {
+        ala_lf_gen[i] = alarm_off;
+      }
+
 }
 
+*/
 
 //VARIABLES DEL GENERADOR 
 
+/*
+let freq_gen = [];
+let control_m_gen = [];
 let t_wats_gen = [];
 let t_va_gen = [];
 let kva_h_gen = [];
 let kvar_h_gen = [];
+
 let fuel_l_gen = [];
+
 let cur_avg_gen = [];
+
+*/
 let vol_avg_gen = [];
-
-
 
 
 
 for (let i = 1; i <= 6; i++) {
 
-    t_wats_gen[i] = data.series.find(({ name }) => name?.includes('DATA.TOT_WATTS.VALUE'))?.fields[1].state?.calcs?.lastNotNull; 
+  /*
+    freq_gen[i] = data.series.find(({ name }) => name?.includes('FREQ_GEN'))?.fields[1].state?.calcs?.lastNotNull;
 
-    t_va_gen[i] = data.series.find(({ name }) => name?.includes('DATA.TOT_VA.VALUE' + i))?.fields[1].state?.calcs?.lastNotNull;  
+    control_m_gen[i] = data.series.find(({ name }) => name?.includes('CONTROL_M_GEN'))?.fields[1].state?.calcs?.lastNotNull;
+
+    t_wats_gen[i] = data.series.find(({ name }) => name?.includes('TOT_WATS_GEN'))?.fields[1].state?.calcs?.lastNotNull;     
+
+    t_va_gen[i] = data.series.find(({ name }) => name?.includes('TOT_VA_GEN' + i))?.fields[1].state?.calcs?.lastNotNull;  
     
-    kva_h_gen[i] = data.series.find(({ name }) => name?.includes('DATA.KVA_HOURS.VALUE' + i))?.fields[1].state?.calcs?.lastNotNull; 
+    kva_h_gen[i] = data.series.find(({ name }) => name?.includes('HOURS_KVA_GEN' + i))?.fields[1].state?.calcs?.lastNotNull; 
 
-    kvar_h_gen[i] = data.series.find(({ name }) => name?.includes('DATA.KVAR_HOURS.VALUE' + i))?.fields[1].state?.calcs?.lastNotNull; 
+    kvar_h_gen[i] = data.series.find(({ name }) => name?.includes('HOURS_KVAR_GEN' + i))?.fields[1].state?.calcs?.lastNotNull; 
+    
 
-    fuel_l_gen[i] = data.series.find(({ name }) => name?.includes('DATA.FUEL_LEV.VALUE' + i))?.fields[1].state?.calcs?.lastNotNull; 
+    fuel_l_gen[i] = data.series.find(({ name }) => name?.includes('FUEL_LVL_GEN' + i))?.fields[1].state?.calcs?.lastNotNull; 
+    
 
-    cur_avg_gen[i] = data.series.find(({ name }) => name?.includes('DATA.CUR_AVG.VALUE' + i))?.fields[1].state?.calcs?.lastNotNull; 
+    cur_avg_gen[i] = data.series.find(({ name }) => name?.includes('CUR_AVG_GEN' + i))?.fields[1].state?.calcs?.lastNotNull; 
+*/
+    vol_avg_gen[i] = data.series.find(({ name }) => name?.includes('LLVOL_AVG_GEN'+ i))?.fields[1].state?.calcs?.lastNotNull;     
+    /*  
 
-    vol_avg_gen[i] = data.series.find(({ name }) => name?.includes('DATA.LL_VOL_AVG.VALUE'+ i))?.fields[1].state?.calcs?.lastNotNull;     
-      
-
-    if (t_wats_gen[i] === null || t_wats_gen[i] === 0) {
-        t_wats_gen[i] = 0;
+    if (freq_gen[i] === null || freq_gen[i] === 0) {
+      freq_gen[i] = 0;
         }   else {
-            t_wats_gen[i] = parseFloat(t_wats_gen[i]).toFixed(1);
+          freq_gen[i] = parseFloat(freq_gen[i]).toFixed(1);
         } 
-    if (t_va_gen[i] === null || t_va_gen[i] === 0) {
-        t_va_gen[i] = 0;
+    if (control_m_gen[i] === null || control_m_gen[i] === 0) {
+      control_m_gen[i] = 0;
         }   else {
-            t_va_gen[i] = parseFloat(t_va_gen[i]).toFixed(1);
+          control_m_gen[i] = parseFloat(control_m_gen[i]).toFixed(1);
         } 
+    
+        if (t_wats_gen[i] === null || t_wats_gen[i] === 0) {
+          t_wats_gen[i] = 0;
+          }   else {
+              t_wats_gen[i] = parseFloat(t_wats_gen[i]).toFixed(1);
+          } 
+      if (t_va_gen[i] === null || t_va_gen[i] === 0) {
+          t_va_gen[i] = 0;
+          }   else {
+              t_va_gen[i] = parseFloat(t_va_gen[i]).toFixed(1);
+          } 
 
     if (kva_h_gen[i] === null || kva_h_gen[i] === 0) {
       kva_h_gen[i] = 0;
@@ -113,7 +249,7 @@ for (let i = 1; i <= 6; i++) {
           }   else {
             cur_avg_gen[i] = parseFloat(cur_avg_gen[i]).toFixed(1);
           }        
-          
+    */      
     if (vol_avg_gen[i] === null || vol_avg_gen[i] === 0) {
       vol_avg_gen[i] = 0;
           }   else {
@@ -256,13 +392,97 @@ tableros:{
     piloto1_tpdu1a: estadoStyles.sinConexion,
     piloto2_tpdu1a: estadoStyles.sinConexion,
     piloto1_tpdu2a: estadoStyles.sinConexion,
-    piloto2_tpdu2a: estadoStyles.sinConexion,
+    piloto2_tpdu2a: estadoStyles.ok,
 },
     
 }
+
+//-----------------------------------------------------ESTADO DEL SISTEMA----------------------------------------------------//
+
+//generadores.gen1.boton_gen1= st_gen[1];
+/*
+generadores.gen2.boton_gen2= st_gen[2];
+generadores.gen3.boton_gen3= st_gen[3];
+generadores.gen4.boton_gen4= st_gen[4];
+generadores.gen5.boton_gen5= st_gen[5];
+generadores.gen6.boton_gen6= st_gen[6];
   
+//-----------------------------------------------------ALARMAS----------------------------------------------------//
 
+generadores.gen1.color_gen1= st_gen[1];
+generadores.gen2.color_gen2= st_gen[2];
+generadores.gen3.color_gen3= st_gen[3];
+generadores.gen4.color_gen4= st_gen[4];
+generadores.gen5.color_gen5= st_gen[5];
+generadores.gen6.color_gen6= st_gen[6];
 
+generadores.gen1.barra1_gen1= st_gen[1];
+generadores.gen2.barra1_gen2= st_gen[2];
+generadores.gen3.barra1_gen3= st_gen[3];
+generadores.gen4.barra1_gen4= st_gen[4];
+generadores.gen5.barra1_gen5= st_gen[5];
+generadores.gen6.barra1_gen6= st_gen[6];
+
+generadores.gen1.contacto_gen1= st_gen[1];
+generadores.gen2.contacto_gen2= st_gen[2];
+generadores.gen3.contacto_gen3= st_gen[3];
+generadores.gen4.contacto_gen4= st_gen[4];
+generadores.gen5.contacto_gen5= st_gen[5];
+generadores.gen6.contacto_gen6= st_gen[6];
+
+generadores.gen1.barra2_gen1= st_gen[1];
+generadores.gen2.barra2_gen2= st_gen[2];
+generadores.gen3.barra2_gen3= st_gen[3];
+generadores.gen4.barra2_gen4= st_gen[4];
+generadores.gen5.barra2_gen5= st_gen[5];
+generadores.gen6.barra2_gen6= st_gen[6];
+
+generadores.gen1.modo_gen1= st_gen[1];
+generadores.gen2.modo_gen2= st_gen[2];
+generadores.gen3.modo_gen3= st_gen[3];
+generadores.gen4.modo_gen4= st_gen[4];
+generadores.gen5.modo_gen5= st_gen[5];
+generadores.gen6.modo_gen6= st_gen[6];
+
+*/
+generadores.gen1.volt_gen1= vol_avg_gen[1];
+generadores.gen2.volt_gen2= vol_avg_gen[2];
+generadores.gen3.volt_gen3= vol_avg_gen[3];
+generadores.gen4.volt_gen4= vol_avg_gen[4];
+generadores.gen5.volt_gen5= vol_avg_gen[5];
+generadores.gen6.volt_gen6= vol_avg_gen[6];
+
+/*
+generadores.gen1.amp_gen1= st_gen[1];
+generadores.gen2.amp_gen2= st_gen[2];
+generadores.gen3.amp_gen3= st_gen[3];
+generadores.gen4.amp_gen4= st_gen[4];
+generadores.gen5.amp_gen5= st_gen[5];
+generadores.gen6.amp_gen6= st_gen[6];
+
+generadores.gen1.kw_gen1= st_gen[1];
+generadores.gen2.kw_gen2= st_gen[2];
+generadores.gen3.kw_gen3= st_gen[3];
+generadores.gen4.kw_gen4= st_gen[4];
+generadores.gen5.kw_gen5= st_gen[5];
+generadores.gen6.kw_gen6= st_gen[6];
+
+generadores.gen1.carga_gen1= st_gen[1];
+generadores.gen2.carga_gen2= st_gen[2];
+generadores.gen3.carga_gen3= st_gen[3];
+generadores.gen4.carga_gen4= st_gen[4];
+generadores.gen5.carga_gen5= st_gen[5];
+generadores.gen6.carga_gen6= st_gen[6];
+*/
+/*
+generadores.gen1.diesel_gen1= st_gen[1];
+generadores.gen2.diesel_gen2= st_gen[2];
+generadores.gen3.diesel_gen3= st_gen[3];
+generadores.gen4.diesel_gen4= st_gen[4];
+generadores.gen5.diesel_gen5= st_gen[5];
+generadores.gen6.diesel_gen6= st_gen[6];
+
+*/
 
   console.log(generadores);
 
@@ -272,5 +492,6 @@ tableros:{
 
     return generadores;
 };
+
 
 export default dataGeneradores;
