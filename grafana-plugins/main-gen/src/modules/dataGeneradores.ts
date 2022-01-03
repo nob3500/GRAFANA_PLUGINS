@@ -164,7 +164,7 @@ ala_hcur_gen[i] = data.series.find(({ name }) => name?.includes('ALA_HCUR_GEN' +
 
 //VARIABLES DEL GENERADOR 
 
-/*
+
 let freq_gen = [];
 let control_m_gen = [];
 let t_wats_gen = [];
@@ -176,14 +176,14 @@ let fuel_l_gen = [];
 
 let cur_avg_gen = [];
 
-*/
+
 let vol_avg_gen = [];
 
 
 
 for (let i = 1; i <= 6; i++) {
 
-  /*
+  
     freq_gen[i] = data.series.find(({ name }) => name?.includes('FREQ_GEN'))?.fields[1].state?.calcs?.lastNotNull;
 
     control_m_gen[i] = data.series.find(({ name }) => name?.includes('CONTROL_M_GEN'))?.fields[1].state?.calcs?.lastNotNull;
@@ -201,9 +201,9 @@ for (let i = 1; i <= 6; i++) {
     
 
     cur_avg_gen[i] = data.series.find(({ name }) => name?.includes('CUR_AVG_GEN' + i))?.fields[1].state?.calcs?.lastNotNull; 
-*/
+
     vol_avg_gen[i] = data.series.find(({ name }) => name?.includes('LLVOL_AVG_GEN'+ i))?.fields[1].state?.calcs?.lastNotNull;     
-    /*  
+     
 
     if (freq_gen[i] === null || freq_gen[i] === 0) {
       freq_gen[i] = 0;
@@ -249,7 +249,7 @@ for (let i = 1; i <= 6; i++) {
           }   else {
             cur_avg_gen[i] = parseFloat(cur_avg_gen[i]).toFixed(1);
           }        
-    */      
+         
     if (vol_avg_gen[i] === null || vol_avg_gen[i] === 0) {
       vol_avg_gen[i] = 0;
           }   else {
@@ -406,8 +406,33 @@ generadores.gen3.boton_gen3= st_gen[3];
 generadores.gen4.boton_gen4= st_gen[4];
 generadores.gen5.boton_gen5= st_gen[5];
 generadores.gen6.boton_gen6= st_gen[6];
-  
+*/
 //-----------------------------------------------------ALARMAS----------------------------------------------------//
+
+/*let ala_stop_gen= [];
+let f_start_gen= [];
+let ala_hv_gen= [];
+let ala_lv_gen= [];
+let ala_oil_p_gen= [];
+let ala_o_spd_gen= [];
+let ala_u_spd_gen= [];
+let ala_temp_gen= [];
+let ala_rest_gen= [];
+let ala_loss_spd_gen= [];
+let ala_lf_gen= [];
+let ala_hcur_gen= [];*/
+
+/*
+if (EMERG_STOP === 2||FAIL_START === 2 || HIGH_VOLTAGE === 2 || LOW_VOLTAGE === 2 || LOW_OIL_P === 2 ||OVER_SPEED === 2 || UNDER_SPEED === 2 || HIGH_COOL_T === 2 || FAIL_REST === 2 || LOSS_OF_SPEED === 2 || LOW_FREQ === 2 ||HIGH_CURRENT === 2 || EMERG_STOP === 3 ||FAIL_START === 3 || HIGH_VOLTAGE === 3 || LOW_VOLTAGE === 3 || LOW_OIL_P === 3 ||OVER_SPEED === 3 || UNDER_SPEED === 3 || HIGH_COOL_T === 3 || FAIL_REST === 3 || LOSS_OF_SPEED === 3 || LOW_FREQ === 3 ||HIGH_CURRENT === 3 || EMERG_STOP === 4 ||FAIL_START === 4 || HIGH_VOLTAGE === 4 || LOW_VOLTAGE === 4 || LOW_OIL_P === 4 ||OVER_SPEED === 4 || UNDER_SPEED === 4 || HIGH_COOL_T === 4 || FAIL_REST === 4 || LOSS_OF_SPEED === 4 || LOW_FREQ === 4 ||HIGH_CURRENT === 4 )
+{
+  generador.datos_principales.rectan_gen = estadoStyles.alarma,
+  generador.datos_principales.boton_estado = estadoStyles.alarma,
+  generador.datos_principales.text_estado = 'ALARMADO'
+  
+} 
+else(generador.datos_principales.rectan_gen = FREQ === 0 ? estadoStyles.sinConexion : estadoStyles.ok ,generador.datos_principales.boton_estado = FREQ === 0 ? estadoStyles.sinConexion : estadoStyles.ok, generador.datos_principales.text_estado = FREQ === 0 ? 'APAGADO' : 'ENCENDIDO')
+*/
+/*
 
 generadores.gen1.color_gen1= st_gen[1];
 generadores.gen2.color_gen2= st_gen[2];
@@ -436,15 +461,14 @@ generadores.gen3.barra2_gen3= st_gen[3];
 generadores.gen4.barra2_gen4= st_gen[4];
 generadores.gen5.barra2_gen5= st_gen[5];
 generadores.gen6.barra2_gen6= st_gen[6];
-
-generadores.gen1.modo_gen1= st_gen[1];
-generadores.gen2.modo_gen2= st_gen[2];
-generadores.gen3.modo_gen3= st_gen[3];
-generadores.gen4.modo_gen4= st_gen[4];
-generadores.gen5.modo_gen5= st_gen[5];
-generadores.gen6.modo_gen6= st_gen[6];
-
 */
+generadores.gen1.modo_gen1= control_m_gen[1];
+generadores.gen2.modo_gen2= control_m_gen[2];
+generadores.gen3.modo_gen3= control_m_gen[3];
+generadores.gen4.modo_gen4= control_m_gen[4];
+generadores.gen5.modo_gen5= control_m_gen[5];
+generadores.gen6.modo_gen6= control_m_gen[6];
+
 generadores.gen1.volt_gen1= vol_avg_gen[1];
 generadores.gen2.volt_gen2= vol_avg_gen[2];
 generadores.gen3.volt_gen3= vol_avg_gen[3];
@@ -452,37 +476,35 @@ generadores.gen4.volt_gen4= vol_avg_gen[4];
 generadores.gen5.volt_gen5= vol_avg_gen[5];
 generadores.gen6.volt_gen6= vol_avg_gen[6];
 
-/*
-generadores.gen1.amp_gen1= st_gen[1];
-generadores.gen2.amp_gen2= st_gen[2];
-generadores.gen3.amp_gen3= st_gen[3];
-generadores.gen4.amp_gen4= st_gen[4];
-generadores.gen5.amp_gen5= st_gen[5];
-generadores.gen6.amp_gen6= st_gen[6];
+generadores.gen1.amp_gen1= cur_avg_gen[1];
+generadores.gen2.amp_gen2= cur_avg_gen[2];
+generadores.gen3.amp_gen3= cur_avg_gen[3];
+generadores.gen4.amp_gen4= cur_avg_gen[4];
+generadores.gen5.amp_gen5= cur_avg_gen[5];
+generadores.gen6.amp_gen6= cur_avg_gen[6];
 
-generadores.gen1.kw_gen1= st_gen[1];
-generadores.gen2.kw_gen2= st_gen[2];
-generadores.gen3.kw_gen3= st_gen[3];
-generadores.gen4.kw_gen4= st_gen[4];
-generadores.gen5.kw_gen5= st_gen[5];
-generadores.gen6.kw_gen6= st_gen[6];
+generadores.gen1.kw_gen1= t_wats_gen[1];
+generadores.gen2.kw_gen2= t_wats_gen[2];
+generadores.gen3.kw_gen3= t_wats_gen[3];
+generadores.gen4.kw_gen4= t_wats_gen[4];
+generadores.gen5.kw_gen5= t_wats_gen[5];
+generadores.gen6.kw_gen6= t_wats_gen[6];
 
-generadores.gen1.carga_gen1= st_gen[1];
-generadores.gen2.carga_gen2= st_gen[2];
-generadores.gen3.carga_gen3= st_gen[3];
-generadores.gen4.carga_gen4= st_gen[4];
-generadores.gen5.carga_gen5= st_gen[5];
-generadores.gen6.carga_gen6= st_gen[6];
-*/
-/*
-generadores.gen1.diesel_gen1= st_gen[1];
-generadores.gen2.diesel_gen2= st_gen[2];
-generadores.gen3.diesel_gen3= st_gen[3];
-generadores.gen4.diesel_gen4= st_gen[4];
-generadores.gen5.diesel_gen5= st_gen[5];
-generadores.gen6.diesel_gen6= st_gen[6];
+generadores.gen1.carga_gen1= t_va_gen[1];
+generadores.gen2.carga_gen2= t_va_gen[2];
+generadores.gen3.carga_gen3= t_va_gen[3];
+generadores.gen4.carga_gen4= t_va_gen[4];
+generadores.gen5.carga_gen5= t_va_gen[5];
+generadores.gen6.carga_gen6= t_va_gen[6];
 
-*/
+generadores.gen1.diesel_gen1= fuel_l_gen[1];
+generadores.gen2.diesel_gen2= fuel_l_gen[2];
+generadores.gen3.diesel_gen3= fuel_l_gen[3];
+generadores.gen4.diesel_gen4= fuel_l_gen[4];
+generadores.gen5.diesel_gen5= fuel_l_gen[5];
+generadores.gen6.diesel_gen6= fuel_l_gen[6];
+
+
 
   console.log(generadores);
 
