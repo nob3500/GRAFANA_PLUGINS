@@ -3,7 +3,7 @@ import { SimpleOptions } from 'types';
 
 import { DataGeneradores } from 'components/variables/variables';
 //import modo_controlStyles from 'styles/modoControlStyles';
-//import alarmasStyles from 'styles/alarmsStyles';
+import alarmasStyles from 'styles/alarmsStyles';
 import estadoStyles from 'styles/estadoStyles';
 //import { QueryField } from '@grafana/ui';
 
@@ -18,12 +18,12 @@ const dataGeneradores = (data: PanelData, options: SimpleOptions, ): DataGenerad
 /*
 let st_on = estadoStyles.ok;
 let st_off = estadoStyles.sinConexion;
-
-//ALARMS
-/*
-let alarm_on = alarmasStyles.off;
-let alarm_off = alarmasStyles.warn;
 */
+//ALARMS
+
+let alarm_on = alarmasStyles.trip;
+let alarm_off = alarmasStyles.warn;
+
 
 
 //WARNINGS
@@ -35,7 +35,7 @@ let warning_off = alarmasStyles.sinconexion;*/
 
 //let st_gen = [];
 
-/*let ala_stop_gen= [];
+let ala_stop_gen= [];
 let f_start_gen= [];
 let ala_hv_gen= [];
 let ala_lv_gen= [];
@@ -46,14 +46,14 @@ let ala_temp_gen= [];
 let ala_rest_gen= [];
 let ala_loss_spd_gen= [];
 let ala_lf_gen= [];
-let ala_hcur_gen= [];*/
+let ala_hcur_gen= [];
 
-/*
+
 for (let i = 1; i <= 6; i++) {
 //---------------------------------------------------ESTADO---------------------------------------------------------//
 //st_gen[i] =   data.series.find(({ name }) => name?.includes('ST_GEN' + i))?.fields[1].state?.calcs?.lastNotNull;
 
-/*
+
 //---------------------------------------------------ALARMAS---------------------------------------------------------//
 ala_stop_gen[i] = data.series.find(({ name }) => name?.includes('ALA_STOP_GEN' + i))?.fields[1].state?.calcs?.lastNotNull;
 f_start_gen[i] = data.series.find(({ name }) => name?.includes('F_START_GEN' + i))?.fields[1].state?.calcs?.lastNotNull;
@@ -68,8 +68,8 @@ ala_loss_spd_gen[i] = data.series.find(({ name }) => name?.includes('ALA_LOSS_SP
 ala_lf_gen[i] = data.series.find(({ name }) => name?.includes('ALA_LF_GEN' + i))?.fields[1].state?.calcs?.lastNotNull;
 ala_hcur_gen[i] = data.series.find(({ name }) => name?.includes('ALA_HCUR_GEN' + i))?.fields[1].state?.calcs?.lastNotNull;
 
-*/
- /* 
+
+ /*
   if (st_gen[i] === 1) {
       st_gen[i] = st_on;
       }   else {
@@ -79,7 +79,7 @@ ala_hcur_gen[i] = data.series.find(({ name }) => name?.includes('ALA_HCUR_GEN' +
     */
     
       
-/*
+
   if (ala_stop_gen[i] === 1) {
         ala_stop_gen[i] = alarm_on;
         }   else {
@@ -160,7 +160,7 @@ ala_hcur_gen[i] = data.series.find(({ name }) => name?.includes('ALA_HCUR_GEN' +
 
 }
 
-*/
+
 
 //VARIABLES DEL GENERADOR 
 
@@ -260,7 +260,28 @@ for (let i = 1; i <= 6; i++) {
     }
 
 
- 
+    //VARIABLES DE LOS TDLOWS
+
+    
+    
+      
+      let volt_ff_td0 = data.series.find(({ name }) => name?.includes('TDLOW_VFF0'))?.fields[1].state?.calcs?.lastNotNull;    
+      let volt_fn_td0 = data.series.find(({ name }) => name?.includes('TDLOW_VFN0'))?.fields[1].state?.calcs?.lastNotNull;
+      let cur_td0 = data.series.find(({ name }) => name?.includes('TDLOW_AMP0'))?.fields[1].state?.calcs?.lastNotNull;
+      let kw_td0 = data.series.find(({ name }) => name?.includes('TDLOW_KW0'))?.fields[1].state?.calcs?.lastNotNull;
+      let carga_td0 = data.series.find(({ name }) => name?.includes('TDLOW_CARGA0'))?.fields[1].state?.calcs?.lastNotNull;
+      let kvar_td0 = data.series.find(({ name }) => name?.includes('TDLOW_KVAR0'))?.fields[1].state?.calcs?.lastNotNull;
+
+      let volt_ff_td1 = data.series.find(({ name }) => name?.includes('TDLOW_1_VFF'))?.fields[1].state?.calcs?.lastNotNull; 
+      let cur_td1 = data.series.find(({ name }) => name?.includes('TDLOW_1_AMP'))?.fields[1].state?.calcs?.lastNotNull;
+      let kw_td1 = data.series.find(({ name }) => name?.includes('TDLOW_1_KW'))?.fields[1].state?.calcs?.lastNotNull;
+      let kva_td1 = data.series.find(({ name }) => name?.includes('TDLOW_1_KVA'))?.fields[1].state?.calcs?.lastNotNull;
+
+      let volt_ff_td2 = data.series.find(({ name }) => name?.includes('TDLOW_2_VFF'))?.fields[1].state?.calcs?.lastNotNull; 
+      let cur_td2 = data.series.find(({ name }) => name?.includes('TDLOW_2_AMP'))?.fields[1].state?.calcs?.lastNotNull;
+      let kw_td2 = data.series.find(({ name }) => name?.includes('TDLOW_2_KW'))?.fields[1].state?.calcs?.lastNotNull;
+      let kva_td2 = data.series.find(({ name }) => name?.includes('TDLOW_2_KVA'))?.fields[1].state?.calcs?.lastNotNull;
+      
 
 //-----------------------------------------------------ALARMAS----------------------------------------------------//
 
@@ -399,69 +420,121 @@ tableros:{
 
 //-----------------------------------------------------ESTADO DEL SISTEMA----------------------------------------------------//
 
-//generadores.gen1.boton_gen1= st_gen[1];
-/*
-generadores.gen2.boton_gen2= st_gen[2];
-generadores.gen3.boton_gen3= st_gen[3];
-generadores.gen4.boton_gen4= st_gen[4];
-generadores.gen5.boton_gen5= st_gen[5];
-generadores.gen6.boton_gen6= st_gen[6];
-*/
+//
+generadores.gen1.boton_gen1= vol_avg_gen[1] === 0 ? estadoStyles.sinConexion : estadoStyles.ok;
+generadores.gen2.boton_gen2= vol_avg_gen[2] === 0 ? estadoStyles.sinConexion : estadoStyles.ok;
+generadores.gen3.boton_gen3= vol_avg_gen[3] === 0 ? estadoStyles.sinConexion : estadoStyles.ok;
+generadores.gen4.boton_gen4= vol_avg_gen[4] === 0 ? estadoStyles.sinConexion : estadoStyles.ok;
+generadores.gen5.boton_gen5= vol_avg_gen[5] === 0 ? estadoStyles.sinConexion : estadoStyles.ok;
+generadores.gen6.boton_gen6= vol_avg_gen[6] === 0 ? estadoStyles.sinConexion : estadoStyles.ok;
+
 //-----------------------------------------------------ALARMAS----------------------------------------------------//
 
-/*let ala_stop_gen= [];
-let f_start_gen= [];
-let ala_hv_gen= [];
-let ala_lv_gen= [];
-let ala_oil_p_gen= [];
-let ala_o_spd_gen= [];
-let ala_u_spd_gen= [];
-let ala_temp_gen= [];
-let ala_rest_gen= [];
-let ala_loss_spd_gen= [];
-let ala_lf_gen= [];
-let ala_hcur_gen= [];*/
 
-/*
-if (EMERG_STOP === 2||FAIL_START === 2 || HIGH_VOLTAGE === 2 || LOW_VOLTAGE === 2 || LOW_OIL_P === 2 ||OVER_SPEED === 2 || UNDER_SPEED === 2 || HIGH_COOL_T === 2 || FAIL_REST === 2 || LOSS_OF_SPEED === 2 || LOW_FREQ === 2 ||HIGH_CURRENT === 2 || EMERG_STOP === 3 ||FAIL_START === 3 || HIGH_VOLTAGE === 3 || LOW_VOLTAGE === 3 || LOW_OIL_P === 3 ||OVER_SPEED === 3 || UNDER_SPEED === 3 || HIGH_COOL_T === 3 || FAIL_REST === 3 || LOSS_OF_SPEED === 3 || LOW_FREQ === 3 ||HIGH_CURRENT === 3 || EMERG_STOP === 4 ||FAIL_START === 4 || HIGH_VOLTAGE === 4 || LOW_VOLTAGE === 4 || LOW_OIL_P === 4 ||OVER_SPEED === 4 || UNDER_SPEED === 4 || HIGH_COOL_T === 4 || FAIL_REST === 4 || LOSS_OF_SPEED === 4 || LOW_FREQ === 4 ||HIGH_CURRENT === 4 )
+
+if (
+  
+  // ALARMAS GEN1 
+  ala_stop_gen[1] === 2||f_start_gen[1] === 2 || ala_hv_gen[1] === 2 || ala_lv_gen[1] === 2 || ala_oil_p_gen[1] === 2 ||ala_o_spd_gen[1] === 2 || ala_u_spd_gen[1] === 2 || ala_temp_gen[1] === 2 || ala_rest_gen[1] === 2 || ala_loss_spd_gen[1] === 2 || ala_lf_gen[1] === 2 || ala_hcur_gen[1]  === 2 || 
+
+  ala_stop_gen[1] === 3||f_start_gen[1] === 3 || ala_hv_gen[1] === 3 || ala_lv_gen[1] === 3 || ala_oil_p_gen[1] === 3 ||ala_o_spd_gen[1] === 3 || ala_u_spd_gen[1] === 3 || ala_temp_gen[1] === 3 || ala_rest_gen[1] === 3 || ala_loss_spd_gen[1] === 3 || ala_lf_gen[1] === 3 || ala_hcur_gen[1]  === 3 || 
+
+  ala_stop_gen[1] === 4||f_start_gen[1] === 4 || ala_hv_gen[1] === 4 || ala_lv_gen[1] === 4 || ala_oil_p_gen[1] === 4 ||ala_o_spd_gen[1] === 4 || ala_u_spd_gen[1] === 4 || ala_temp_gen[1] === 4 || ala_rest_gen[1] === 4 || ala_loss_spd_gen[1] === 4 || ala_lf_gen[1] === 4 || ala_hcur_gen[1]  === 4 || 
+
+  // ALARMAS GEN12
+  ala_stop_gen[2] === 2||f_start_gen[2] === 2 || ala_hv_gen[2] === 2 || ala_lv_gen[2] === 2 || ala_oil_p_gen[2] === 2 ||ala_o_spd_gen[2] === 2 || ala_u_spd_gen[2] === 2 || ala_temp_gen[2] === 2 || ala_rest_gen[2] === 2 || ala_loss_spd_gen[2] === 2 || ala_lf_gen[2] === 2 || ala_hcur_gen[2]  === 2 || 
+
+  ala_stop_gen[2] === 3||f_start_gen[2] === 3 || ala_hv_gen[2] === 3 || ala_lv_gen[2] === 3 || ala_oil_p_gen[2] === 3 ||ala_o_spd_gen[2] === 3 || ala_u_spd_gen[2] === 3 || ala_temp_gen[2] === 3 || ala_rest_gen[2] === 3 || ala_loss_spd_gen[2] === 3 || ala_lf_gen[2] === 3 || ala_hcur_gen[2]  === 3 || 
+
+  ala_stop_gen[2] === 4||f_start_gen[2] === 4 || ala_hv_gen[2] === 4 || ala_lv_gen[2] === 4 || ala_oil_p_gen[2] === 4 ||ala_o_spd_gen[2] === 4 || ala_u_spd_gen[2] === 4 || ala_temp_gen[2] === 4 || ala_rest_gen[2] === 4 || ala_loss_spd_gen[2] === 4 || ala_lf_gen[2] === 4 || ala_hcur_gen[2]  === 4 || 
+
+  // ALARMAS GEN3
+  ala_stop_gen[3] === 2||f_start_gen[3] === 2 || ala_hv_gen[3] === 2 || ala_lv_gen[3] === 2 || ala_oil_p_gen[3] === 2 ||ala_o_spd_gen[3] === 2 || ala_u_spd_gen[3] === 2 || ala_temp_gen[3] === 2 || ala_rest_gen[3] === 2 || ala_loss_spd_gen[3] === 2 || ala_lf_gen[3] === 2 || ala_hcur_gen[3]  === 2 || 
+
+  ala_stop_gen[3] === 3||f_start_gen[3] === 3 || ala_hv_gen[3] === 3 || ala_lv_gen[3] === 3 || ala_oil_p_gen[3] === 3 ||ala_o_spd_gen[3] === 3 || ala_u_spd_gen[3] === 3 || ala_temp_gen[3] === 3 || ala_rest_gen[3] === 3 || ala_loss_spd_gen[3] === 3 || ala_lf_gen[3] === 3 || ala_hcur_gen[3]  === 3 || 
+
+  ala_stop_gen[3] === 4||f_start_gen[3] === 4 || ala_hv_gen[3] === 4 || ala_lv_gen[3] === 4 || ala_oil_p_gen[3] === 4 ||ala_o_spd_gen[3] === 4 || ala_u_spd_gen[3] === 4 || ala_temp_gen[3] === 4 || ala_rest_gen[3] === 4 || ala_loss_spd_gen[3] === 4 || ala_lf_gen[3] === 4 || ala_hcur_gen[3]  === 4 || 
+
+  // ALARMAS GEN4
+  ala_stop_gen[4] === 2||f_start_gen[4] === 2 || ala_hv_gen[4] === 2 || ala_lv_gen[4] === 2 || ala_oil_p_gen[4] === 2 ||ala_o_spd_gen[4] === 2 || ala_u_spd_gen[4] === 2 || ala_temp_gen[4] === 2 || ala_rest_gen[4] === 2 || ala_loss_spd_gen[4] === 2 || ala_lf_gen[4] === 2 || ala_hcur_gen[4]  === 2 || 
+
+  ala_stop_gen[4] === 3||f_start_gen[4] === 3 || ala_hv_gen[4] === 3 || ala_lv_gen[4] === 3 || ala_oil_p_gen[4] === 3 ||ala_o_spd_gen[4] === 3 || ala_u_spd_gen[4] === 3 || ala_temp_gen[4] === 3 || ala_rest_gen[4] === 3 || ala_loss_spd_gen[4] === 3 || ala_lf_gen[4] === 3 || ala_hcur_gen[4]  === 3 || 
+
+  ala_stop_gen[4] === 4||f_start_gen[4] === 4 || ala_hv_gen[4] === 4 || ala_lv_gen[4] === 4 || ala_oil_p_gen[4] === 4 ||ala_o_spd_gen[4] === 4 || ala_u_spd_gen[4] === 4 || ala_temp_gen[4] === 4 || ala_rest_gen[4] === 4 || ala_loss_spd_gen[4] === 4 || ala_lf_gen[4] === 4 || ala_hcur_gen[4]  === 4 || 
+
+  // ALARMAS GEN5
+  ala_stop_gen[5] === 2||f_start_gen[5] === 2 || ala_hv_gen[5] === 2 || ala_lv_gen[5] === 2 || ala_oil_p_gen[5] === 2 ||ala_o_spd_gen[5] === 2 || ala_u_spd_gen[5] === 2 || ala_temp_gen[5] === 2 || ala_rest_gen[5] === 2 || ala_loss_spd_gen[5] === 2 || ala_lf_gen[5] === 2 || ala_hcur_gen[5]  === 2 || 
+
+  ala_stop_gen[5] === 3||f_start_gen[5] === 3 || ala_hv_gen[5] === 3 || ala_lv_gen[5] === 3 || ala_oil_p_gen[5] === 3 ||ala_o_spd_gen[5] === 3 || ala_u_spd_gen[5] === 3 || ala_temp_gen[5] === 3 || ala_rest_gen[5] === 3 || ala_loss_spd_gen[5] === 3 || ala_lf_gen[5] === 3 || ala_hcur_gen[5]  === 3 || 
+
+  ala_stop_gen[5] === 4||f_start_gen[5] === 4 || ala_hv_gen[5] === 4 || ala_lv_gen[5] === 4 || ala_oil_p_gen[5] === 4 ||ala_o_spd_gen[5] === 4 || ala_u_spd_gen[5] === 4 || ala_temp_gen[5] === 4 || ala_rest_gen[5] === 4 || ala_loss_spd_gen[5] === 4 || ala_lf_gen[5] === 4 || ala_hcur_gen[5]  === 4 || 
+
+  // ALARMAS GEN6
+  ala_stop_gen[6] === 2||f_start_gen[6] === 2 || ala_hv_gen[6] === 2 || ala_lv_gen[6] === 2 || ala_oil_p_gen[6] === 2 ||ala_o_spd_gen[6] === 2 || ala_u_spd_gen[6] === 2 || ala_temp_gen[6] === 2 || ala_rest_gen[6] === 2 || ala_loss_spd_gen[6] === 2 || ala_lf_gen[6] === 2 || ala_hcur_gen[6]  === 2 || 
+
+  ala_stop_gen[6] === 3||f_start_gen[6] === 3 || ala_hv_gen[6] === 3 || ala_lv_gen[6] === 3 || ala_oil_p_gen[6] === 3 ||ala_o_spd_gen[6] === 3 || ala_u_spd_gen[6] === 3 || ala_temp_gen[6] === 3 || ala_rest_gen[6] === 3 || ala_loss_spd_gen[6] === 3 || ala_lf_gen[6] === 3 || ala_hcur_gen[6]  === 3 || 
+
+  ala_stop_gen[6] === 4||f_start_gen[6] === 4 || ala_hv_gen[6] === 4 || ala_lv_gen[6] === 4 || ala_oil_p_gen[6] === 4 ||ala_o_spd_gen[6] === 4 || ala_u_spd_gen[6] === 4 || ala_temp_gen[6] === 4 || ala_rest_gen[6] === 4 || ala_loss_spd_gen[6] === 4 || ala_lf_gen[6] === 4 || ala_hcur_gen[6]  === 4 
+  
+  )
+
 {
-  generador.datos_principales.rectan_gen = estadoStyles.alarma,
-  generador.datos_principales.boton_estado = estadoStyles.alarma,
-  generador.datos_principales.text_estado = 'ALARMADO'
+  //generadores.datos_principales.rectan_gen = estadoStyles.alarma,
+  //generadores.datos_principales.text_estado = 'ALARMADO'
+
+  generadores.gen1.color_gen1= estadoStyles.alarma,
+  generadores.gen2.color_gen2= estadoStyles.alarma,
+  generadores.gen3.color_gen3= estadoStyles.alarma,
+  generadores.gen4.color_gen4= estadoStyles.alarma,
+  generadores.gen5.color_gen5= estadoStyles.alarma,
+  generadores.gen6.color_gen6= estadoStyles.alarma,
+  
+  generadores.gen1.barra1_gen1= estadoStyles.alarma,
+  generadores.gen2.barra1_gen2= estadoStyles.alarma,
+  generadores.gen3.barra1_gen3= estadoStyles.alarma,
+  generadores.gen4.barra1_gen4= estadoStyles.alarma,
+  generadores.gen5.barra1_gen5= estadoStyles.alarma,
+  generadores.gen6.barra1_gen6= estadoStyles.alarma,
+  
+  generadores.gen1.contacto_gen1= estadoStyles.alarma,
+  generadores.gen2.contacto_gen2= estadoStyles.alarma,
+  generadores.gen3.contacto_gen3= estadoStyles.alarma,
+  generadores.gen4.contacto_gen4= estadoStyles.alarma,
+  generadores.gen5.contacto_gen5= estadoStyles.alarma,
+  generadores.gen6.contacto_gen6= estadoStyles.alarma,
+  
+  generadores.gen1.barra2_gen1= estadoStyles.alarma,
+  generadores.gen2.barra2_gen2= estadoStyles.alarma,
+  generadores.gen3.barra2_gen3= estadoStyles.alarma,
+  generadores.gen4.barra2_gen4= estadoStyles.alarma,
+  generadores.gen5.barra2_gen5= estadoStyles.alarma,
+  generadores.gen6.barra2_gen6= estadoStyles.alarma
+  
   
 } 
-else(generador.datos_principales.rectan_gen = FREQ === 0 ? estadoStyles.sinConexion : estadoStyles.ok ,generador.datos_principales.boton_estado = FREQ === 0 ? estadoStyles.sinConexion : estadoStyles.ok, generador.datos_principales.text_estado = FREQ === 0 ? 'APAGADO' : 'ENCENDIDO')
-*/
-/*
 
-generadores.gen1.color_gen1= st_gen[1];
-generadores.gen2.color_gen2= st_gen[2];
-generadores.gen3.color_gen3= st_gen[3];
-generadores.gen4.color_gen4= st_gen[4];
-generadores.gen5.color_gen5= st_gen[5];
-generadores.gen6.color_gen6= st_gen[6];
 
-generadores.gen1.barra1_gen1= st_gen[1];
-generadores.gen2.barra1_gen2= st_gen[2];
-generadores.gen3.barra1_gen3= st_gen[3];
-generadores.gen4.barra1_gen4= st_gen[4];
-generadores.gen5.barra1_gen5= st_gen[5];
-generadores.gen6.barra1_gen6= st_gen[6];
+else (
 
-generadores.gen1.contacto_gen1= st_gen[1];
-generadores.gen2.contacto_gen2= st_gen[2];
-generadores.gen3.contacto_gen3= st_gen[3];
-generadores.gen4.contacto_gen4= st_gen[4];
-generadores.gen5.contacto_gen5= st_gen[5];
-generadores.gen6.contacto_gen6= st_gen[6];
+   generadores.gen1.color_gen1 = vol_avg_gen[1] === 0 ? estadoStyles.sinConexion : estadoStyles.ok,
+   generadores.gen2.color_gen2 = vol_avg_gen[2] === 0 ? estadoStyles.sinConexion : estadoStyles.ok, 
+   generadores.gen3.color_gen3 = vol_avg_gen[3] === 0 ? estadoStyles.sinConexion : estadoStyles.ok, 
+   generadores.gen4.color_gen4 = vol_avg_gen[4] === 0 ? estadoStyles.sinConexion : estadoStyles.ok, 
+   generadores.gen5.color_gen5 = vol_avg_gen[5] === 0 ? estadoStyles.sinConexion : estadoStyles.ok, 
+   generadores.gen6.color_gen6 = vol_avg_gen[6] === 0 ? estadoStyles.sinConexion : estadoStyles.ok
+   
+   )
 
-generadores.gen1.barra2_gen1= st_gen[1];
-generadores.gen2.barra2_gen2= st_gen[2];
-generadores.gen3.barra2_gen3= st_gen[3];
-generadores.gen4.barra2_gen4= st_gen[4];
-generadores.gen5.barra2_gen5= st_gen[5];
-generadores.gen6.barra2_gen6= st_gen[6];
-*/
+
+
+
+
+
+//-----------------------------------------------------FUNCIONABILIDAD----------------------------------------------------//
+
+
+
+
 generadores.gen1.modo_gen1= control_m_gen[1];
 generadores.gen2.modo_gen2= control_m_gen[2];
 generadores.gen3.modo_gen3= control_m_gen[3];
@@ -503,6 +576,27 @@ generadores.gen3.diesel_gen3= fuel_l_gen[3];
 generadores.gen4.diesel_gen4= fuel_l_gen[4];
 generadores.gen5.diesel_gen5= fuel_l_gen[5];
 generadores.gen6.diesel_gen6= fuel_l_gen[6];
+
+
+// DATOS DE LOS TDLOWS 
+
+generadores.tdlow_A0.voltff_tdlow_A0 = Number.parseFloat(volt_ff_td0?.toFixed(2));
+generadores.tdlow_A0.voltfn_tdlow_A0 = Number.parseFloat(volt_fn_td0?.toFixed(2));
+generadores.tdlow_A0.amp_tdlow_A0 = Number.parseFloat(cur_td0?.toFixed(2));
+generadores.tdlow_A0.kw_tdlow_A0 = Number.parseFloat(kw_td0?.toFixed(2));
+generadores.tdlow_A0.carga_tdlow_A0 = Number.parseFloat(carga_td0?.toFixed(2));
+generadores.tdlow_A0.kvar_tdlow_A0 = Number.parseFloat(kvar_td0?.toFixed(2));
+
+generadores.tdlow_A1.volt_tdlow_A1 = Number.parseFloat(volt_ff_td1?.toFixed(2));
+generadores.tdlow_A1.amp_tdlow_A1 = Number.parseFloat(cur_td1?.toFixed(2));
+generadores.tdlow_A1.kw_tdlow_A1 = Number.parseFloat(kw_td1?.toFixed(2));
+generadores.tdlow_A1.kva_tdlow_A1 = Number.parseFloat(kva_td1?.toFixed(2));
+
+generadores.tdlow_A2.volt_tdlow_A2 = Number.parseFloat(volt_ff_td2?.toFixed(2));
+generadores.tdlow_A2.amp_tdlow_A2 = Number.parseFloat(cur_td2?.toFixed(2));
+generadores.tdlow_A2.kw_tdlow_A2 = Number.parseFloat(kw_td2?.toFixed(2));
+generadores.tdlow_A2.kva_tdlow_A2 = Number.parseFloat(kva_td2?.toFixed(2));
+
 
 
 

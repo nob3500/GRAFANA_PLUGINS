@@ -379,43 +379,7 @@ if (EMERG_STOP === 2||FAIL_START === 2 || HIGH_VOLTAGE === 2 || LOW_VOLTAGE === 
   
 } 
 else(generador.datos_principales.rectan_gen = FREQ === 0 ? estadoStyles.sinConexion : estadoStyles.ok ,generador.datos_principales.boton_estado = FREQ === 0 ? estadoStyles.sinConexion : estadoStyles.ok, generador.datos_principales.text_estado = FREQ === 0 ? 'APAGADO' : 'ENCENDIDO')
-
-
-
-
-  // ----------------------------------ALARMAS BOTONES ANTERIOR------------------------------------//
-  /* ---------------------------------------------------------------------------------------------//
-  generador.alarmas.emerg_stop.trip = ES_ELTRIP_ALM === 1 ? alarmasStyles.trip : alarmasStyles.off;
-  generador.alarmas.emerg_stop.sht = ES_SHUTD_ALM === 1 ? alarmasStyles.shut : alarmasStyles.off;
-  generador.alarmas.emerg_stop.war = ES_WARN_ALM === 1 ? alarmasStyles.warn : alarmasStyles.off;
-  // -------------------------------------------------------------------
-  generador.alarmas.fail_start.trip = FS_ELTRIP_ALM === 1 ? alarmasStyles.trip : alarmasStyles.off;
-  generador.alarmas.fail_start.sht = FS_SHUTD_ALM === 1 ? alarmasStyles.shut : alarmasStyles.off;
-  generador.alarmas.fail_start.war = FS_WARN_ALM === 1 ? alarmasStyles.warn : alarmasStyles.off;
-  // -------------------------------------------------------------------
-  generador.alarmas.gen_high_volt.trip = GHV_ELTRIP_ALM === 1 ? alarmasStyles.trip : alarmasStyles.off;
-  generador.alarmas.gen_high_volt.sht = GHV_SHUTD_ALM === 1 ? alarmasStyles.shut : alarmasStyles.off;
-  generador.alarmas.gen_high_volt.war = GHV_WARN_ALM === 1 ? alarmasStyles.warn : alarmasStyles.off;
-  // -------------------------------------------------------------------
-  generador.alarmas.gen_low_volt.trip = GLV_ELTRIP_ALM === 1 ? alarmasStyles.trip : alarmasStyles.off;
-  generador.alarmas.gen_low_volt.sht = GLV_SHUTD_ALM === 1 ? alarmasStyles.shut : alarmasStyles.off;
-  generador.alarmas.gen_low_volt.war = GLV_WARN_ALM === 1 ? alarmasStyles.warn : alarmasStyles.off;
-  // -------------------------------------------------------------------
-  generador.alarmas.low_oil_press.trip = LOP_ELTRIP_ALM === 1 ? alarmasStyles.trip : alarmasStyles.off;
-  generador.alarmas.low_oil_press.sht = LOP_SHUTD_ALM === 1 ? alarmasStyles.shut : alarmasStyles.off;
-  generador.alarmas.low_oil_press.war = LOP_WARN_ALM === 1 ? alarmasStyles.warn : alarmasStyles.off;
-  // -------------------------------------------------------------------
-  generador.alarmas.over_speed.trip = OS_ELTRIP_ALM === 1 ? alarmasStyles.trip : alarmasStyles.off;
-  generador.alarmas.over_speed.war = OS_WARN_ALM === 1 ? alarmasStyles.shut : alarmasStyles.off;
-  generador.alarmas.over_speed.sht = OS_SHUTD_ALM === 1 ? alarmasStyles.warn : alarmasStyles.off;
-  // -------------------------------------------------------------------
-  generador.alarmas.under_speed.trip = US_ELTRIP_ALM === 1 ? alarmasStyles.trip : alarmasStyles.off;
-  generador.alarmas.under_speed.sht = US_SHUTD_ALM === 1 ? alarmasStyles.shut : alarmasStyles.off;
-  generador.alarmas.under_speed.war = US_WARN_ALM === 1 ? alarmasStyles.warn : alarmasStyles.off;
-  // -------------------------------------------------------------------
-  generador.alarmas.high_cool_temp.trip = HCT_ELTRIP_ALM === 1 ? alarmasStyles.trip : alarmasStyles.off;
-  generador.alarmas.high_cool_temp.war = HCT_WARN_ALM === 1 ? alarmasStyles.shut : alarmasStyles.off;
-  generador.alarmas.high_cool_temp.sht = HCT_SHUTD_ALM === 1 ? alarmasStyles.warn : alarmasStyles.off;*/
+  
 
   console.log(generador);
 
