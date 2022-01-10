@@ -8658,7 +8658,7 @@ export const Variables = ({
           >
             <tspan
               id="tspan2620-6-3-1-2-8-2"
-              x={195.11404}
+              x={191.12682}
               y={109.83671}
               fill="#fff"
               fontFamily="Franklin Gothic Medium"
@@ -8800,7 +8800,7 @@ export const Variables = ({
               fontSize="3.7095px"
               strokeWidth={0.27489}
             >
-              {"KVAR"}
+              {"KVA"}
             </tspan>
           </text>
           <text

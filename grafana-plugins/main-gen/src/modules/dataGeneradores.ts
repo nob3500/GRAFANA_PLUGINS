@@ -185,23 +185,13 @@ for (let i = 1; i <= 6; i++) {
 
   
     freq_gen[i] = data.series.find(({ name }) => name?.includes('FREQ_GEN'))?.fields[1].state?.calcs?.lastNotNull;
-
     control_m_gen[i] = data.series.find(({ name }) => name?.includes('CONTROL_M_GEN'))?.fields[1].state?.calcs?.lastNotNull;
-
-    t_wats_gen[i] = data.series.find(({ name }) => name?.includes('TOT_WATS_GEN'))?.fields[1].state?.calcs?.lastNotNull;     
-
-    t_va_gen[i] = data.series.find(({ name }) => name?.includes('TOT_VA_GEN' + i))?.fields[1].state?.calcs?.lastNotNull;  
-    
-    kva_h_gen[i] = data.series.find(({ name }) => name?.includes('HOURS_KVA_GEN' + i))?.fields[1].state?.calcs?.lastNotNull; 
-
-    kvar_h_gen[i] = data.series.find(({ name }) => name?.includes('HOURS_KVAR_GEN' + i))?.fields[1].state?.calcs?.lastNotNull; 
-    
-
-    fuel_l_gen[i] = data.series.find(({ name }) => name?.includes('FUEL_LVL_GEN' + i))?.fields[1].state?.calcs?.lastNotNull; 
-    
-
-    cur_avg_gen[i] = data.series.find(({ name }) => name?.includes('CUR_AVG_GEN' + i))?.fields[1].state?.calcs?.lastNotNull; 
-
+    t_wats_gen[i] = data.series.find(({ name }) => name?.includes('TOT_WATS_GEN'))?.fields[1].state?.calcs?.lastNotNull;
+    t_va_gen[i] = data.series.find(({ name }) => name?.includes('TOT_VA_GEN' + i))?.fields[1].state?.calcs?.lastNotNull;    
+    kva_h_gen[i] = data.series.find(({ name }) => name?.includes('HOURS_KVA_GEN' + i))?.fields[1].state?.calcs?.lastNotNull;
+    kvar_h_gen[i] = data.series.find(({ name }) => name?.includes('HOURS_KVAR_GEN' + i))?.fields[1].state?.calcs?.lastNotNull;
+    fuel_l_gen[i] = data.series.find(({ name }) => name?.includes('FUEL_LVL_GEN' + i))?.fields[1].state?.calcs?.lastNotNull;
+    cur_avg_gen[i] = data.series.find(({ name }) => name?.includes('CUR_AVG_GEN' + i))?.fields[1].state?.calcs?.lastNotNull;
     vol_avg_gen[i] = data.series.find(({ name }) => name?.includes('LLVOL_AVG_GEN'+ i))?.fields[1].state?.calcs?.lastNotNull;     
      
 
@@ -265,21 +255,54 @@ for (let i = 1; i <= 6; i++) {
     
     
       
-      let volt_ff_td0 = data.series.find(({ name }) => name?.includes('TDLOW_VFF0'))?.fields[1].state?.calcs?.lastNotNull;    
-      let volt_fn_td0 = data.series.find(({ name }) => name?.includes('TDLOW_VFN0'))?.fields[1].state?.calcs?.lastNotNull;
-      let cur_td0 = data.series.find(({ name }) => name?.includes('TDLOW_AMP0'))?.fields[1].state?.calcs?.lastNotNull;
-      let kw_td0 = data.series.find(({ name }) => name?.includes('TDLOW_KW0'))?.fields[1].state?.calcs?.lastNotNull;
-      let carga_td0 = data.series.find(({ name }) => name?.includes('TDLOW_CARGA0'))?.fields[1].state?.calcs?.lastNotNull;
-      let kvar_td0 = data.series.find(({ name }) => name?.includes('TDLOW_KVAR0'))?.fields[1].state?.calcs?.lastNotNull;
+      //let volt_ff_td0 = data.series.find(({ name }) => name?.includes('TDLOW_VFF0'))?.fields[1].state?.calcs?.lastNotNull;
+      let volt_a_td0 = data.series.find(({ name }) => name?.includes('TDLOW_VA0'))?.fields[1].state?.calcs?.lastNotNull;
+      let volt_b_td0 = data.series.find(({ name }) => name?.includes('TDLOW_VB0'))?.fields[1].state?.calcs?.lastNotNull;
+      let volt_c_td0 = data.series.find(({ name }) => name?.includes('TDLOW_VC0'))?.fields[1].state?.calcs?.lastNotNull;
 
-      let volt_ff_td1 = data.series.find(({ name }) => name?.includes('TDLOW_1_VFF'))?.fields[1].state?.calcs?.lastNotNull; 
-      let cur_td1 = data.series.find(({ name }) => name?.includes('TDLOW_1_AMP'))?.fields[1].state?.calcs?.lastNotNull;
-      let kw_td1 = data.series.find(({ name }) => name?.includes('TDLOW_1_KW'))?.fields[1].state?.calcs?.lastNotNull;
+      //let volt_fn_td0 = data.series.find(({ name }) => name?.includes('TDLOW_VFN0'))?.fields[1].state?.calcs?.lastNotNull;
+      //let cur_td0 = data.series.find(({ name }) => name?.includes('TDLOW_AMP0'))?.fields[1].state?.calcs?.lastNotNull;
+      let cur_a_td0 = data.series.find(({ name }) => name?.includes('TDLOW_CURA'))?.fields[1].state?.calcs?.lastNotNull;
+      let cur_b_td0 = data.series.find(({ name }) => name?.includes('TDLOW_CURB'))?.fields[1].state?.calcs?.lastNotNull;
+      let cur_c_td0 = data.series.find(({ name }) => name?.includes('TDLOW_CURC'))?.fields[1].state?.calcs?.lastNotNull;
+
+      let kw_td0 = data.series.find(({ name }) => name?.includes('TDLOW_KW0'))?.fields[1].state?.calcs?.lastNotNull;
+      //let carga_td0 = data.series.find(({ name }) => name?.includes('TDLOW_CARGA0'))?.fields[1].state?.calcs?.lastNotNull;
+      let kva_td0 = data.series.find(({ name }) => name?.includes('TDLOW_KVA0'))?.fields[1].state?.calcs?.lastNotNull;
+
+
+
+      //let volt_ff_td1 = data.series.find(({ name }) => name?.includes('TDLOW_1_VFF'))?.fields[1].state?.calcs?.lastNotNull; 
+      let volt_a_td1 = data.series.find(({ name }) => name?.includes('TDLOW_1_VA'))?.fields[1].state?.calcs?.lastNotNull; 
+      let volt_b_td1 = data.series.find(({ name }) => name?.includes('TDLOW_1_VB'))?.fields[1].state?.calcs?.lastNotNull;
+      let volt_c_td1 = data.series.find(({ name }) => name?.includes('TDLOW_1_VC'))?.fields[1].state?.calcs?.lastNotNull;
+
+      //let cur_td1 = data.series.find(({ name }) => name?.includes('TDLOW_1_AMP'))?.fields[1].state?.calcs?.lastNotNull;
+      let cur_a_td1 = data.series.find(({ name }) => name?.includes('TDLOW_1_CURA'))?.fields[1].state?.calcs?.lastNotNull;
+      let cur_b_td1 = data.series.find(({ name }) => name?.includes('TDLOW_1_CURB'))?.fields[1].state?.calcs?.lastNotNull;
+      let cur_c_td1 = data.series.find(({ name }) => name?.includes('TDLOW_1_CURC'))?.fields[1].state?.calcs?.lastNotNull;
+
+
+      //let kw_td1 = data.series.find(({ name }) => name?.includes('TDLOW_1_KW'))?.fields[1].state?.calcs?.lastNotNull;
+      let kw_td1 = data.series.find(({ name }) => name?.includes('TDLOW_KW1'))?.fields[1].state?.calcs?.lastNotNull;
+
       let kva_td1 = data.series.find(({ name }) => name?.includes('TDLOW_1_KVA'))?.fields[1].state?.calcs?.lastNotNull;
 
-      let volt_ff_td2 = data.series.find(({ name }) => name?.includes('TDLOW_2_VFF'))?.fields[1].state?.calcs?.lastNotNull; 
-      let cur_td2 = data.series.find(({ name }) => name?.includes('TDLOW_2_AMP'))?.fields[1].state?.calcs?.lastNotNull;
-      let kw_td2 = data.series.find(({ name }) => name?.includes('TDLOW_2_KW'))?.fields[1].state?.calcs?.lastNotNull;
+      //let volt_ff_td2 = data.series.find(({ name }) => name?.includes('TDLOW_2_VFF'))?.fields[1].state?.calcs?.lastNotNull;
+      let volt_a_td2 = data.series.find(({ name }) => name?.includes('TDLOW_2_VA'))?.fields[1].state?.calcs?.lastNotNull; 
+      let volt_b_td2 = data.series.find(({ name }) => name?.includes('TDLOW_2_VB'))?.fields[1].state?.calcs?.lastNotNull;
+      let volt_c_td2 = data.series.find(({ name }) => name?.includes('TDLOW_2_VC'))?.fields[1].state?.calcs?.lastNotNull;
+
+      //let cur_td2 = data.series.find(({ name }) => name?.includes('TDLOW_2_AMP'))?.fields[1].state?.calcs?.lastNotNull;
+      let cur_a_td2 = data.series.find(({ name }) => name?.includes('TDLOW_2_CURA'))?.fields[1].state?.calcs?.lastNotNull;
+      let cur_b_td2 = data.series.find(({ name }) => name?.includes('TDLOW_2_CURB'))?.fields[1].state?.calcs?.lastNotNull;
+      let cur_c_td2 = data.series.find(({ name }) => name?.includes('TDLOW_2_CURC'))?.fields[1].state?.calcs?.lastNotNull;
+
+
+      //let kw_td2 = data.series.find(({ name }) => name?.includes('TDLOW_2_KW'))?.fields[1].state?.calcs?.lastNotNull;
+      let kw_td2 = data.series.find(({ name }) => name?.includes('TDLOW_KW2'))?.fields[1].state?.calcs?.lastNotNull;
+
+
       let kva_td2 = data.series.find(({ name }) => name?.includes('TDLOW_2_KVA'))?.fields[1].state?.calcs?.lastNotNull;
       
 
@@ -449,7 +472,7 @@ if (
   ala_stop_gen[2] === 4||f_start_gen[2] === 4 || ala_hv_gen[2] === 4 || ala_lv_gen[2] === 4 || ala_oil_p_gen[2] === 4 ||ala_o_spd_gen[2] === 4 || ala_u_spd_gen[2] === 4 || ala_temp_gen[2] === 4 || ala_rest_gen[2] === 4 || ala_loss_spd_gen[2] === 4 || ala_lf_gen[2] === 4 || ala_hcur_gen[2]  === 4 || 
 
   // ALARMAS GEN3
-  ala_stop_gen[3] === 2||f_start_gen[3] === 2 || ala_hv_gen[3] === 2 || ala_lv_gen[3] === 2 || ala_oil_p_gen[3] === 2 ||ala_o_spd_gen[3] === 2 || ala_u_spd_gen[3] === 2 || ala_temp_gen[3] === 2 || ala_rest_gen[3] === 2 || ala_loss_spd_gen[3] === 2 || ala_lf_gen[3] === 2 || ala_hcur_gen[3]  === 2 || 
+  ala_stop_gen[3] === 3||f_start_gen[3] === 2 || ala_hv_gen[3] === 2 || ala_lv_gen[3] === 2 || ala_oil_p_gen[3] === 2 ||ala_o_spd_gen[3] === 2 || ala_u_spd_gen[3] === 2 || ala_temp_gen[3] === 2 || ala_rest_gen[3] === 2 || ala_loss_spd_gen[3] === 2 || ala_lf_gen[3] === 2 || ala_hcur_gen[3]  === 2 || 
 
   ala_stop_gen[3] === 3||f_start_gen[3] === 3 || ala_hv_gen[3] === 3 || ala_lv_gen[3] === 3 || ala_oil_p_gen[3] === 3 ||ala_o_spd_gen[3] === 3 || ala_u_spd_gen[3] === 3 || ala_temp_gen[3] === 3 || ala_rest_gen[3] === 3 || ala_loss_spd_gen[3] === 3 || ala_lf_gen[3] === 3 || ala_hcur_gen[3]  === 3 || 
 
@@ -580,24 +603,117 @@ generadores.gen6.diesel_gen6= fuel_l_gen[6];
 
 // DATOS DE LOS TDLOWS 
 
-generadores.tdlow_A0.voltff_tdlow_A0 = Number.parseFloat(volt_ff_td0?.toFixed(2));
-generadores.tdlow_A0.voltfn_tdlow_A0 = Number.parseFloat(volt_fn_td0?.toFixed(2));
-generadores.tdlow_A0.amp_tdlow_A0 = Number.parseFloat(cur_td0?.toFixed(2));
-generadores.tdlow_A0.kw_tdlow_A0 = Number.parseFloat(kw_td0?.toFixed(2));
-generadores.tdlow_A0.carga_tdlow_A0 = Number.parseFloat(carga_td0?.toFixed(2));
-generadores.tdlow_A0.kvar_tdlow_A0 = Number.parseFloat(kvar_td0?.toFixed(2));
+//------------------------------------------------------------------------------------------------------//
+//---------------------------------------TDLOW0 INGESTA DE DATOS ---------------------------------------//
+//------------------------------------------------------------------------------------------------------//
 
-generadores.tdlow_A1.volt_tdlow_A1 = Number.parseFloat(volt_ff_td1?.toFixed(2));
-generadores.tdlow_A1.amp_tdlow_A1 = Number.parseFloat(cur_td1?.toFixed(2));
-generadores.tdlow_A1.kw_tdlow_A1 = Number.parseFloat(kw_td1?.toFixed(2));
-generadores.tdlow_A1.kva_tdlow_A1 = Number.parseFloat(kva_td1?.toFixed(2));
+//generadores.tdlow_A0.voltff_tdlow_A0 = Number.parseFloat(volt_ff_td0?.toFixed(2));
+let voltaje_avg_ff = ((volt_a_td0 + volt_b_td0)+(volt_a_td0 + volt_c_td0) + (volt_b_td0 + volt_c_td0)) / 3;
+  if (volt_a_td0 !== undefined && volt_b_td0 !== undefined && volt_c_td0 !== undefined) {
+    generadores.tdlow_A0.voltff_tdlow_A0 = Number.parseFloat(voltaje_avg_ff.toFixed(1));
+  }
 
-generadores.tdlow_A2.volt_tdlow_A2 = Number.parseFloat(volt_ff_td2?.toFixed(2));
-generadores.tdlow_A2.amp_tdlow_A2 = Number.parseFloat(cur_td2?.toFixed(2));
-generadores.tdlow_A2.kw_tdlow_A2 = Number.parseFloat(kw_td2?.toFixed(2));
-generadores.tdlow_A2.kva_tdlow_A2 = Number.parseFloat(kva_td2?.toFixed(2));
+//generadores.tdlow_A0.voltfn_tdlow_A0 = Number.parseFloat(volt_fn_td0?.toFixed(2));
+let voltaje_avg_fn = (volt_a_td0 + volt_b_td0 + volt_c_td0) / 3;
+  if (volt_a_td0 !== undefined && volt_b_td0 !== undefined && volt_c_td0 !== undefined) {
+    generadores.tdlow_A0.voltfn_tdlow_A0= Number.parseFloat(voltaje_avg_fn.toFixed(1));
+  }
+
+//generadores.tdlow_A0.amp_tdlow_A0 = Number.parseFloat(cur_td0?.toFixed(2));
+let corriente_avg = (cur_a_td0 + cur_b_td0 + cur_c_td0) / 3;
+  if (cur_a_td0 !== undefined && cur_b_td0 !== undefined && cur_c_td0 !== undefined) {
+    generadores.tdlow_A0.amp_tdlow_A0 = Number.parseFloat(corriente_avg.toFixed(1));
+  }
+
+//generadores.tdlow_A0.kw_tdlow_A0 = Number.parseFloat(kw_td0?.toFixed(2));
+  let potencia_kw = (kw_td0 )/10 ;
+  if (kw_td0 !== undefined ) {
+    generadores.tdlow_A0.kw_tdlow_A0 = Number.parseFloat(potencia_kw.toFixed(0));
+  }
+
+//generadores.tdlow_A0.carga_tdlow_A0 = Number.parseFloat(carga_td0?.toFixed(2));
+let carga_td = ((kva_td0 )* 10)/1500 ;
+  if (kva_td0 !== undefined ) {
+    generadores.tdlow_A0.carga_tdlow_A0  = Number.parseFloat(carga_td.toFixed(0));
+  }
+
+//generadores.tdlow_A0.kvar_tdlow_A0 = Number.parseFloat(kva_td0?.toFixed(0));
+let potencia_kva = (kva_td0 )/10 ;
+  if (kva_td0 !== undefined ) {
+    generadores.tdlow_A0.kvar_tdlow_A0  = Number.parseFloat(potencia_kva.toFixed(0));
+  }
+
+generadores.tdlow_A0.boton_tdlow_A0 = voltaje_avg_ff === 0 ? estadoStyles.sinConexion : estadoStyles.ok ;
+generadores.tdlow_A0.color_tdlow_A0_indust = voltaje_avg_ff === 0 ? estadoStyles.sinConexion : estadoStyles.ok ;
+generadores.tdlow_A0.color_tdlow_A0_torre = voltaje_avg_ff === 0 ? estadoStyles.sinConexion : estadoStyles.ok ;
 
 
+//------------------------------------------------------------------------------------------------------//
+//---------------------------------------TDLOW1 INGESTA DE DATOS  ---------------------------------------//
+//------------------------------------------------------------------------------------------------------//
+
+//generadores.tdlow_A1.volt_tdlow_A1 = Number.parseFloat(volt_ff_td1?.toFixed(2));
+let voltaje_avg_ff_td1 = ((volt_a_td1 + volt_b_td1)+(volt_a_td1 + volt_c_td1) + (volt_b_td1 + volt_c_td1)) / 3;
+  if (volt_a_td1 !== undefined && volt_b_td1 !== undefined && volt_c_td1 !== undefined) {
+    generadores.tdlow_A1.volt_tdlow_A1 = Number.parseFloat(voltaje_avg_ff_td1.toFixed(1));
+  }
+
+//generadores.tdlow_A1.amp_tdlow_A1 = Number.parseFloat(cur_td1?.toFixed(2));
+let corriente_avg_td1 = (cur_a_td1 + cur_b_td1 + cur_c_td1) / 3;
+  if (cur_a_td1 !== undefined && cur_b_td1 !== undefined && cur_c_td1 !== undefined) {
+    generadores.tdlow_A1.amp_tdlow_A1  = Number.parseFloat(corriente_avg_td1.toFixed(1));
+  }
+
+//generadores.tdlow_A1.kw_tdlow_A1 = Number.parseFloat(kw_td1?.toFixed(2));
+let potencia_kw1 = (kw_td1 )/10 ;
+  if (kw_td1 !== undefined ) {
+    generadores.tdlow_A1.kw_tdlow_A1 = Number.parseFloat(potencia_kw1.toFixed(1));
+  }
+
+
+//generadores.tdlow_A1.kva_tdlow_A1 = Number.parseFloat(kva_td1?.toFixed(2));
+let potencia_kva_td1 = (kva_td1 )/10 ;
+  if (kva_td1 !== undefined ) {
+    generadores.tdlow_A1.kva_tdlow_A1 = Number.parseFloat(potencia_kva_td1.toFixed(1));
+  }
+
+  generadores.tdlow_A1.boton_tdlow_A1 = voltaje_avg_ff_td1 === 0 ? estadoStyles.sinConexion : estadoStyles.ok ;
+  generadores.tdlow_A1.piloto_tdlow_A1 = voltaje_avg_ff_td1 === 0 ? estadoStyles.sinConexion : estadoStyles.ok ;
+
+//------------------------------------------------------------------------------------------------------//
+//---------------------------------------TDLOW2 INGESTA DE DATOS ---------------------------------------//
+//------------------------------------------------------------------------------------------------------//
+
+//generadores.tdlow_A2.volt_tdlow_A2 = Number.parseFloat(volt_ff_td2?.toFixed(2));
+let voltaje_avg_ff_td2 = ((volt_a_td2 + volt_b_td2)+(volt_a_td2 + volt_c_td2) + (volt_b_td2 + volt_c_td2)) / 3;
+  if (volt_a_td2 !== undefined && volt_b_td2 !== undefined && volt_c_td2 !== undefined) {
+    generadores.tdlow_A2.volt_tdlow_A2 = Number.parseFloat(voltaje_avg_ff_td2.toFixed(1));
+  }
+
+
+//generadores.tdlow_A2.amp_tdlow_A2 = Number.parseFloat(cur_td2?.toFixed(2));
+let corriente_avg_td2 = (cur_a_td2 + cur_b_td2 + cur_c_td2) / 3;
+  if (cur_a_td2 !== undefined && cur_b_td2 !== undefined && cur_c_td2 !== undefined) {
+    generadores.tdlow_A2.amp_tdlow_A2  = Number.parseFloat(corriente_avg_td2.toFixed(1));
+  }
+
+
+//generadores.tdlow_A2.kw_tdlow_A2 = Number.parseFloat(kw_td2?.toFixed(2));
+let potencia_kw2 = (kw_td2 )/10 ;
+  if (kw_td2 !== undefined ) {
+    generadores.tdlow_A2.kw_tdlow_A2 = Number.parseFloat(potencia_kw2.toFixed(1));
+  }
+
+
+//generadores.tdlow_A2.kva_tdlow_A2 = Number.parseFloat(kva_td2?.toFixed(2));
+let potencia_kva_td2 = (kva_td2 )/10 ;
+  if (kva_td2 !== undefined ) {
+    generadores.tdlow_A2.kva_tdlow_A2 = Number.parseFloat(potencia_kva_td2.toFixed(1));
+  }
+
+
+  generadores.tdlow_A2.boton_tdlow_A2 = voltaje_avg_ff_td2 === 0 ? estadoStyles.sinConexion : estadoStyles.ok ;
+  generadores.tdlow_A2.piloto_tdlow_A2 = voltaje_avg_ff_td2 === 0 ? estadoStyles.sinConexion : estadoStyles.ok ;
 
 
   console.log(generadores);
