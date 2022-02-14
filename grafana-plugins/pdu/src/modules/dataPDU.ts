@@ -271,16 +271,16 @@ const DataPDU = (data: PanelData, options: SimpleOptions, replaceVariables: Inte
 
   // --------------------------ESTADOS----------------------------------// 
 
-  pdu.estados.in1_AB =  Number.parseFloat (IN1_AB_VOL?.toFixed(2));
-  pdu.estados.in1_BC =  Number.parseFloat (IN1_BC_VOL?.toFixed(2));
-  pdu.estados.in1_CA =  Number.parseFloat (IN1_CA_VOL?.toFixed(2));
-  pdu.estados.out1_AB=  Number.parseFloat (OUT1_AB_VOL?.toFixed(2));
-  pdu.estados.out1_BC = Number.parseFloat(OUT1_BC_VOL?.toFixed(2));
-  pdu.estados.out1_CA = Number.parseFloat(OUT1_CA_VOL?.toFixed(2));
-  pdu.estados.out1_A = Number.parseFloat(OUT1_A_CUR?.toFixed(2));
-  pdu.estados.out1_B = Number.parseFloat(OUT1_B_CUR?.toFixed(2));
-  pdu.estados.out1_C = Number.parseFloat(OUT1_C_CUR?.toFixed(2));
-  pdu.estados.corriente_N = Number.parseFloat(NEUT_CUR?.toFixed(2));
+  pdu.estados.in1_AB =  Number.parseFloat (IN1_AB_VOL?.toFixed(2))/10;
+  pdu.estados.in1_BC =  Number.parseFloat (IN1_BC_VOL?.toFixed(2))/10;
+  pdu.estados.in1_CA =  Number.parseFloat (IN1_CA_VOL?.toFixed(2))/10;
+  pdu.estados.out1_AB=  Number.parseFloat (OUT1_AB_VOL?.toFixed(2))/10;
+  pdu.estados.out1_BC = Number.parseFloat(OUT1_BC_VOL?.toFixed(2))/10;
+  pdu.estados.out1_CA = Number.parseFloat(OUT1_CA_VOL?.toFixed(2))/10;
+  pdu.estados.out1_A = Number.parseFloat(OUT1_A_CUR?.toFixed(2))/10;
+  pdu.estados.out1_B = Number.parseFloat(OUT1_B_CUR?.toFixed(2))/10;
+  pdu.estados.out1_C = Number.parseFloat(OUT1_C_CUR?.toFixed(2))/10;
+  pdu.estados.corriente_N = Number.parseFloat(NEUT_CUR?.toFixed(2))/10;
 
   //pdu.estados.ventilador = EVAP_FAN_SPEED === 0? 'OFF': 'ON'
  
@@ -318,12 +318,12 @@ const DataPDU = (data: PanelData, options: SimpleOptions, replaceVariables: Inte
 
   let in_volt = (IN1_AB_VOL + IN1_BC_VOL + IN1_CA_VOL) / 3;
   if (IN1_AB_VOL !== undefined && IN1_BC_VOL !== undefined && IN1_CA_VOL !== undefined) {
-    pdu.datos_principales.in_volt = Number.parseFloat(in_volt.toFixed(2));
+    pdu.datos_principales.in_volt = Number.parseFloat(in_volt.toFixed(1))/10;
   }
 
   let out_volt = (OUT1_AB_VOL + OUT1_BC_VOL + OUT1_CA_VOL) / 3;
   if (OUT1_AB_VOL !== undefined && OUT1_BC_VOL !== undefined && OUT1_CA_VOL !== undefined) {
-    pdu.datos_principales.out_volt = Number.parseFloat(out_volt.toFixed(2));
+    pdu.datos_principales.out_volt = Number.parseFloat(out_volt.toFixed(0))/10;
   }
 
   let corr_total = (OUT1_TOTAL_KVA*1000 ) / (out_volt * Math.sqrt (3));

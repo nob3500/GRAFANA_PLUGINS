@@ -3,7 +3,7 @@ import { SimpleOptions } from 'types';
 
 import { DataGeneradores } from 'components/variables/variables';
 //import modo_controlStyles from 'styles/modoControlStyles';
-import alarmasStyles from 'styles/alarmsStyles';
+//import alarmasStyles from 'styles/alarmsStyles';
 import estadoStyles from 'styles/estadoStyles';
 //import { QueryField } from '@grafana/ui';
 
@@ -18,12 +18,12 @@ const dataGeneradores = (data: PanelData, options: SimpleOptions, ): DataGenerad
 /*
 let st_on = estadoStyles.ok;
 let st_off = estadoStyles.sinConexion;
-*/
+
 //ALARMS
 
 let alarm_on = alarmasStyles.trip;
 let alarm_off = alarmasStyles.warn;
-
+*/
 
 
 //WARNINGS
@@ -69,22 +69,24 @@ ala_lf_gen[i] = data.series.find(({ name }) => name?.includes('ALA_LF_GEN' + i))
 ala_hcur_gen[i] = data.series.find(({ name }) => name?.includes('ALA_HCUR_GEN' + i))?.fields[1].state?.calcs?.lastNotNull;
 
 
- /*
+/*
+if (ala_stop_gen[i] === 3) {
+  ala_stop_gen[i] = estadoStyles.alarma;
+  }   else {
+    ala_stop_gen[i] = estadoStyles.sinConexion;
+  }
+ 
   if (st_gen[i] === 1) {
       st_gen[i] = st_on;
       }   else {
       st_gen[i] = st_off;
       }
     }
-    */
     
-      
+    
+    
 
-  if (ala_stop_gen[i] === 1) {
-        ala_stop_gen[i] = alarm_on;
-        }   else {
-          ala_stop_gen[i] = alarm_off;
-        }
+  
 
   if (f_start_gen[i] === 1) {
       f_start_gen[i] = alarm_on;
@@ -156,17 +158,22 @@ ala_hcur_gen[i] = data.series.find(({ name }) => name?.includes('ALA_HCUR_GEN' +
       ala_lf_gen[i] = alarm_on;
       }  else {
         ala_lf_gen[i] = alarm_off;
-      }
+      }*/
 
 }
 
 
 
-//VARIABLES DEL GENERADOR 
+//-----------------------------------------------------VARIABLES DEL GENERADOR--------------------------------------------------//
+
+// ESTADOS MARCHA , OFF , STOP
+
+
+
 
 
 let freq_gen = [];
-let control_m_gen = [];
+//let control_m_gen = [];
 let t_wats_gen = [];
 let t_va_gen = [];
 let kva_h_gen = [];
@@ -185,7 +192,7 @@ for (let i = 1; i <= 6; i++) {
 
   
     freq_gen[i] = data.series.find(({ name }) => name?.includes('FREQ_GEN'))?.fields[1].state?.calcs?.lastNotNull;
-    control_m_gen[i] = data.series.find(({ name }) => name?.includes('CONTROL_M_GEN'))?.fields[1].state?.calcs?.lastNotNull;
+    //control_m_gen[i] = data.series.find(({ name }) => name?.includes('CONTROL_M_GEN'))?.fields[1].state?.calcs?.lastNotNull;
     t_wats_gen[i] = data.series.find(({ name }) => name?.includes('TOT_WATS_GEN'))?.fields[1].state?.calcs?.lastNotNull;
     t_va_gen[i] = data.series.find(({ name }) => name?.includes('TOT_VA_GEN' + i))?.fields[1].state?.calcs?.lastNotNull;    
     kva_h_gen[i] = data.series.find(({ name }) => name?.includes('HOURS_KVA_GEN' + i))?.fields[1].state?.calcs?.lastNotNull;
@@ -200,11 +207,16 @@ for (let i = 1; i <= 6; i++) {
         }   else {
           freq_gen[i] = parseFloat(freq_gen[i]).toFixed(1);
         } 
-    if (control_m_gen[i] === null || control_m_gen[i] === 0) {
+        
+   
+        /*
+        if (control_m_gen[i] === null || control_m_gen[i] === 0) {
       control_m_gen[i] = 0;
         }   else {
           control_m_gen[i] = parseFloat(control_m_gen[i]).toFixed(1);
         } 
+    
+        */
     
         if (t_wats_gen[i] === null || t_wats_gen[i] === 0) {
           t_wats_gen[i] = 0;
@@ -250,11 +262,19 @@ for (let i = 1; i <= 6; i++) {
     }
 
 
-    //VARIABLES DE LOS TDLOWS
+      // MODO DE CONTROL
+    /*
+      let control_m_gen1 = data.series.find(({ name }) => name?.includes('CONTROL_M_GEN1'))?.fields[1].state?.calcs?.lastNotNull;     
+      let control_m_gen2 = data.series.find(({ name }) => name?.includes('CONTROL_M_GEN2'))?.fields[1].state?.calcs?.lastNotNull;     
+      let control_m_gen3 = data.series.find(({ name }) => name?.includes('CONTROL_M_GEN3'))?.fields[1].state?.calcs?.lastNotNull;
+      let control_m_gen4 = data.series.find(({ name }) => name?.includes('CONTROL_M_GEN4'))?.fields[1].state?.calcs?.lastNotNull;
+      let control_m_gen5 = data.series.find(({ name }) => name?.includes('CONTROL_M_GEN5'))?.fields[1].state?.calcs?.lastNotNull;
+      let control_m_gen6 = data.series.find(({ name }) => name?.includes('CONTROL_M_GEN6'))?.fields[1].state?.calcs?.lastNotNull;
+*/
+       //VARIABLES DE LOS TDLOWS
 
-    
-    
-      
+
+
       //let volt_ff_td0 = data.series.find(({ name }) => name?.includes('TDLOW_VFF0'))?.fields[1].state?.calcs?.lastNotNull;
       let volt_a_td0 = data.series.find(({ name }) => name?.includes('TDLOW_VA0'))?.fields[1].state?.calcs?.lastNotNull;
       let volt_b_td0 = data.series.find(({ name }) => name?.includes('TDLOW_VB0'))?.fields[1].state?.calcs?.lastNotNull;
@@ -441,58 +461,158 @@ tableros:{
     
 }
 
-//-----------------------------------------------------ESTADO DEL SISTEMA----------------------------------------------------//
+//-----------------------------------------------------ESTADO DEL SISTEMA boton ----------------------------------------------------//
 
 //
-generadores.gen1.boton_gen1= vol_avg_gen[1] === 0 ? estadoStyles.sinConexion : estadoStyles.ok;
-generadores.gen2.boton_gen2= vol_avg_gen[2] === 0 ? estadoStyles.sinConexion : estadoStyles.ok;
-generadores.gen3.boton_gen3= vol_avg_gen[3] === 0 ? estadoStyles.sinConexion : estadoStyles.ok;
-generadores.gen4.boton_gen4= vol_avg_gen[4] === 0 ? estadoStyles.sinConexion : estadoStyles.ok;
-generadores.gen5.boton_gen5= vol_avg_gen[5] === 0 ? estadoStyles.sinConexion : estadoStyles.ok;
-generadores.gen6.boton_gen6= vol_avg_gen[6] === 0 ? estadoStyles.sinConexion : estadoStyles.ok;
+generadores.gen1.boton_gen1= freq_gen[1] === 1 ? estadoStyles.sinConexion : estadoStyles.ok;
+generadores.gen2.boton_gen2= freq_gen[2] === 0 ? estadoStyles.sinConexion : estadoStyles.ok;
+generadores.gen3.boton_gen3= freq_gen[3] === 0 ? estadoStyles.sinConexion : estadoStyles.ok;
+generadores.gen4.boton_gen4= freq_gen[4] === 0 ? estadoStyles.sinConexion : estadoStyles.ok;
+generadores.gen5.boton_gen5= freq_gen[5] === 0 ? estadoStyles.sinConexion : estadoStyles.ok;
+generadores.gen6.boton_gen6= freq_gen[6] === 0 ? estadoStyles.sinConexion : estadoStyles.ok;
+
+
+//-----------------------------------------------------Estado MANUAL , AUTO , STOP----------------------------------------------------//
+
+
+generadores.gen1.modo_gen1= freq_gen[1] === 0 ? 'STAND BY':'ENCENDIDO';
+generadores.gen2.modo_gen2= freq_gen[2] === 0 ? 'STAND BY':'ENCENDIDO';
+generadores.gen3.modo_gen3= freq_gen[3] === 0 ? 'STAND BY':'ENCENDIDO';
+generadores.gen4.modo_gen4= freq_gen[4] === 0 ? 'STAND BY':'ENCENDIDO';
+generadores.gen5.modo_gen5= freq_gen[5] === 0 ? 'STAND BY':'ENCENDIDO';
+generadores.gen6.modo_gen6= freq_gen[6] === 0 ? 'STAND BY':'ENCENDIDO';
+
+
+
+// ESTADO DE LA LINEA DEL INTERRUPTOR
+
+generadores.gen1.barra1_gen1= vol_avg_gen[1] === 0 ? estadoStyles.sinConexion : estadoStyles.ok;
+generadores.gen2.barra1_gen2= vol_avg_gen[2] === 0 ? estadoStyles.sinConexion : estadoStyles.ok;
+generadores.gen3.barra1_gen3= vol_avg_gen[3] === 0 ? estadoStyles.sinConexion : estadoStyles.ok;
+generadores.gen4.barra1_gen4= vol_avg_gen[4] === 0 ? estadoStyles.sinConexion : estadoStyles.ok;
+generadores.gen5.barra1_gen5= vol_avg_gen[5] === 0 ? estadoStyles.sinConexion : estadoStyles.ok;
+generadores.gen6.barra1_gen6= vol_avg_gen[6] === 0 ? estadoStyles.sinConexion : estadoStyles.ok;
+
+
+
+
+
+
 
 //-----------------------------------------------------ALARMAS----------------------------------------------------//
 
 
+// ALARMAS GEN1 
+if(
+  ala_stop_gen[1] === 2||f_start_gen[1] === 2 || ala_hv_gen[1] === 2 || ala_lv_gen[1] === 2 || ala_oil_p_gen[1] === 2 ||ala_o_spd_gen[1] === 2 || ala_u_spd_gen[1] === 2 || ala_temp_gen[1] === 2 || ala_rest_gen[1] === 2 || ala_loss_spd_gen[1] === 2 || ala_lf_gen[1] === 2 || ala_hcur_gen[1]  === 2 || ala_stop_gen[1] === 3||f_start_gen[1] === 3 || ala_hv_gen[1] === 3 || ala_lv_gen[1] === 3 || ala_oil_p_gen[1] === 3 ||ala_o_spd_gen[1] === 3 || ala_u_spd_gen[1] === 3 || ala_temp_gen[1] === 3 || ala_rest_gen[1] === 3 || ala_loss_spd_gen[1] === 3 || ala_lf_gen[1] === 3 || ala_hcur_gen[1]  === 3 || ala_stop_gen[1] === 4||f_start_gen[1] === 4 || ala_hv_gen[1] === 4 || ala_lv_gen[1] === 4 || ala_oil_p_gen[1] === 4 ||ala_o_spd_gen[1] === 4 || ala_u_spd_gen[1] === 4 || ala_temp_gen[1] === 4 || ala_rest_gen[1] === 4 || ala_loss_spd_gen[1] === 4 || ala_lf_gen[1] === 4 || ala_hcur_gen[1]  === 4
+)
+{
+  generadores.gen1.color_gen1= estadoStyles.alarma,
+  generadores.gen1.boton_gen1= estadoStyles.alarma,
+  generadores.gen1.barra1_gen1= estadoStyles.alarma,
+  generadores.gen1.contacto_gen1= estadoStyles.alarma,
+  generadores.gen1.barra2_gen1= estadoStyles.alarma
+}else(
+  generadores.gen1.color_gen1= vol_avg_gen[1] === 0 ? estadoStyles.sinConexion : estadoStyles.ok , 
+  generadores.gen1.boton_gen1= vol_avg_gen[1] === 0 ? estadoStyles.sinConexion : estadoStyles.ok,
+  generadores.gen1.barra1_gen1= vol_avg_gen[1] === 0 ? estadoStyles.sinConexion : estadoStyles.ok,
+  generadores.gen1.contacto_gen1= vol_avg_gen[1] === 0 ? estadoStyles.sinConexion : estadoStyles.ok,
+  generadores.gen1.barra2_gen1= vol_avg_gen[1] === 0 ? estadoStyles.sinConexion : estadoStyles.ok    
+    );
 
-if (
-  
-  // ALARMAS GEN1 
-  ala_stop_gen[1] === 2||f_start_gen[1] === 2 || ala_hv_gen[1] === 2 || ala_lv_gen[1] === 2 || ala_oil_p_gen[1] === 2 ||ala_o_spd_gen[1] === 2 || ala_u_spd_gen[1] === 2 || ala_temp_gen[1] === 2 || ala_rest_gen[1] === 2 || ala_loss_spd_gen[1] === 2 || ala_lf_gen[1] === 2 || ala_hcur_gen[1]  === 2 || 
-
-  ala_stop_gen[1] === 3||f_start_gen[1] === 3 || ala_hv_gen[1] === 3 || ala_lv_gen[1] === 3 || ala_oil_p_gen[1] === 3 ||ala_o_spd_gen[1] === 3 || ala_u_spd_gen[1] === 3 || ala_temp_gen[1] === 3 || ala_rest_gen[1] === 3 || ala_loss_spd_gen[1] === 3 || ala_lf_gen[1] === 3 || ala_hcur_gen[1]  === 3 || 
-
-  ala_stop_gen[1] === 4||f_start_gen[1] === 4 || ala_hv_gen[1] === 4 || ala_lv_gen[1] === 4 || ala_oil_p_gen[1] === 4 ||ala_o_spd_gen[1] === 4 || ala_u_spd_gen[1] === 4 || ala_temp_gen[1] === 4 || ala_rest_gen[1] === 4 || ala_loss_spd_gen[1] === 4 || ala_lf_gen[1] === 4 || ala_hcur_gen[1]  === 4 || 
-
-  // ALARMAS GEN12
+// ALARMAS GEN2
+if( 
   ala_stop_gen[2] === 2||f_start_gen[2] === 2 || ala_hv_gen[2] === 2 || ala_lv_gen[2] === 2 || ala_oil_p_gen[2] === 2 ||ala_o_spd_gen[2] === 2 || ala_u_spd_gen[2] === 2 || ala_temp_gen[2] === 2 || ala_rest_gen[2] === 2 || ala_loss_spd_gen[2] === 2 || ala_lf_gen[2] === 2 || ala_hcur_gen[2]  === 2 || 
 
   ala_stop_gen[2] === 3||f_start_gen[2] === 3 || ala_hv_gen[2] === 3 || ala_lv_gen[2] === 3 || ala_oil_p_gen[2] === 3 ||ala_o_spd_gen[2] === 3 || ala_u_spd_gen[2] === 3 || ala_temp_gen[2] === 3 || ala_rest_gen[2] === 3 || ala_loss_spd_gen[2] === 3 || ala_lf_gen[2] === 3 || ala_hcur_gen[2]  === 3 || 
 
-  ala_stop_gen[2] === 4||f_start_gen[2] === 4 || ala_hv_gen[2] === 4 || ala_lv_gen[2] === 4 || ala_oil_p_gen[2] === 4 ||ala_o_spd_gen[2] === 4 || ala_u_spd_gen[2] === 4 || ala_temp_gen[2] === 4 || ala_rest_gen[2] === 4 || ala_loss_spd_gen[2] === 4 || ala_lf_gen[2] === 4 || ala_hcur_gen[2]  === 4 || 
+  ala_stop_gen[2] === 4||f_start_gen[2] === 4 || ala_hv_gen[2] === 4 || ala_lv_gen[2] === 4 || ala_oil_p_gen[2] === 4 ||ala_o_spd_gen[2] === 4 || ala_u_spd_gen[2] === 4 || ala_temp_gen[2] === 4 || ala_rest_gen[2] === 4 || ala_loss_spd_gen[2] === 4 || ala_lf_gen[2] === 4 || ala_hcur_gen[2]  === 4 
+)
+{
+  generadores.gen2.color_gen2= estadoStyles.alarma,
+  generadores.gen2.boton_gen2= estadoStyles.alarma,
+  generadores.gen2.barra1_gen2= estadoStyles.alarma,
+  generadores.gen2.contacto_gen2= estadoStyles.alarma,
+  generadores.gen2.barra2_gen2= estadoStyles.alarma
+}else(
+  generadores.gen2.color_gen2= vol_avg_gen[2] === 0 ? estadoStyles.sinConexion : estadoStyles.ok , 
+  generadores.gen2.boton_gen2= vol_avg_gen[2] === 0 ? estadoStyles.sinConexion : estadoStyles.ok,
+  generadores.gen2.barra1_gen2= vol_avg_gen[2] === 0 ? estadoStyles.sinConexion : estadoStyles.ok,
+  generadores.gen2.contacto_gen2= vol_avg_gen[2] === 0 ? estadoStyles.sinConexion : estadoStyles.ok,
+  generadores.gen2.barra2_gen2= vol_avg_gen[2] === 0 ? estadoStyles.sinConexion : estadoStyles.ok    
+    );
 
-  // ALARMAS GEN3
-  ala_stop_gen[3] === 3||f_start_gen[3] === 2 || ala_hv_gen[3] === 2 || ala_lv_gen[3] === 2 || ala_oil_p_gen[3] === 2 ||ala_o_spd_gen[3] === 2 || ala_u_spd_gen[3] === 2 || ala_temp_gen[3] === 2 || ala_rest_gen[3] === 2 || ala_loss_spd_gen[3] === 2 || ala_lf_gen[3] === 2 || ala_hcur_gen[3]  === 2 || 
+// ALARMAS GEN3
+
+if(
+  ala_stop_gen[3] === 2||f_start_gen[3] === 2 || ala_hv_gen[3] === 2 || ala_lv_gen[3] === 2 || ala_oil_p_gen[3] === 2 ||ala_o_spd_gen[3] === 2 || ala_u_spd_gen[3] === 2 || ala_temp_gen[3] === 2 || ala_rest_gen[3] === 2 || ala_loss_spd_gen[3] === 2 || ala_lf_gen[3] === 2 || ala_hcur_gen[3]  === 2 || 
 
   ala_stop_gen[3] === 3||f_start_gen[3] === 3 || ala_hv_gen[3] === 3 || ala_lv_gen[3] === 3 || ala_oil_p_gen[3] === 3 ||ala_o_spd_gen[3] === 3 || ala_u_spd_gen[3] === 3 || ala_temp_gen[3] === 3 || ala_rest_gen[3] === 3 || ala_loss_spd_gen[3] === 3 || ala_lf_gen[3] === 3 || ala_hcur_gen[3]  === 3 || 
 
-  ala_stop_gen[3] === 4||f_start_gen[3] === 4 || ala_hv_gen[3] === 4 || ala_lv_gen[3] === 4 || ala_oil_p_gen[3] === 4 ||ala_o_spd_gen[3] === 4 || ala_u_spd_gen[3] === 4 || ala_temp_gen[3] === 4 || ala_rest_gen[3] === 4 || ala_loss_spd_gen[3] === 4 || ala_lf_gen[3] === 4 || ala_hcur_gen[3]  === 4 || 
+  ala_stop_gen[3] === 4||f_start_gen[3] === 4 || ala_hv_gen[3] === 4 || ala_lv_gen[3] === 4 || ala_oil_p_gen[3] === 4 ||ala_o_spd_gen[3] === 4 || ala_u_spd_gen[3] === 4 || ala_temp_gen[3] === 4 || ala_rest_gen[3] === 4 || ala_loss_spd_gen[3] === 4 || ala_lf_gen[3] === 4 || ala_hcur_gen[3]  === 4 
+)
+{
+  generadores.gen3.color_gen3= estadoStyles.alarma,
+  generadores.gen3.boton_gen3= estadoStyles.alarma,
+  generadores.gen3.barra1_gen3= estadoStyles.alarma,
+  generadores.gen3.contacto_gen3= estadoStyles.alarma,
+  generadores.gen3.barra2_gen3= estadoStyles.alarma
+}else(
+  generadores.gen3.color_gen3= vol_avg_gen[3] === 0 ? estadoStyles.sinConexion : estadoStyles.ok , 
+  generadores.gen3.boton_gen3= vol_avg_gen[3] === 0 ? estadoStyles.sinConexion : estadoStyles.ok,
+  generadores.gen3.barra1_gen3= vol_avg_gen[3] === 0 ? estadoStyles.sinConexion : estadoStyles.ok,
+  generadores.gen3.contacto_gen3= vol_avg_gen[3] === 0 ? estadoStyles.sinConexion : estadoStyles.ok,
+  generadores.gen3.barra2_gen3= vol_avg_gen[3] === 0 ? estadoStyles.sinConexion : estadoStyles.ok    
+    );
 
-  // ALARMAS GEN4
-  ala_stop_gen[4] === 2||f_start_gen[4] === 2 || ala_hv_gen[4] === 2 || ala_lv_gen[4] === 2 || ala_oil_p_gen[4] === 2 ||ala_o_spd_gen[4] === 2 || ala_u_spd_gen[4] === 2 || ala_temp_gen[4] === 2 || ala_rest_gen[4] === 2 || ala_loss_spd_gen[4] === 2 || ala_lf_gen[4] === 2 || ala_hcur_gen[4]  === 2 || 
+// ALARMAS GEN4
+if(
+ala_stop_gen[4] === 2||f_start_gen[4] === 2 || ala_hv_gen[4] === 2 || ala_lv_gen[4] === 2 || ala_oil_p_gen[4] === 2 ||ala_o_spd_gen[4] === 2 || ala_u_spd_gen[4] === 2 || ala_temp_gen[4] === 2 || ala_rest_gen[4] === 2 || ala_loss_spd_gen[4] === 2 || ala_lf_gen[4] === 2 || ala_hcur_gen[4]  === 2 || 
 
-  ala_stop_gen[4] === 3||f_start_gen[4] === 3 || ala_hv_gen[4] === 3 || ala_lv_gen[4] === 3 || ala_oil_p_gen[4] === 3 ||ala_o_spd_gen[4] === 3 || ala_u_spd_gen[4] === 3 || ala_temp_gen[4] === 3 || ala_rest_gen[4] === 3 || ala_loss_spd_gen[4] === 3 || ala_lf_gen[4] === 3 || ala_hcur_gen[4]  === 3 || 
+ala_stop_gen[4] === 3||f_start_gen[4] === 3 || ala_hv_gen[4] === 3 || ala_lv_gen[4] === 3 || ala_oil_p_gen[4] === 3 ||ala_o_spd_gen[4] === 3 || ala_u_spd_gen[4] === 3 || ala_temp_gen[4] === 3 || ala_rest_gen[4] === 3 || ala_loss_spd_gen[4] === 3 || ala_lf_gen[4] === 3 || ala_hcur_gen[4]  === 3 || 
 
-  ala_stop_gen[4] === 4||f_start_gen[4] === 4 || ala_hv_gen[4] === 4 || ala_lv_gen[4] === 4 || ala_oil_p_gen[4] === 4 ||ala_o_spd_gen[4] === 4 || ala_u_spd_gen[4] === 4 || ala_temp_gen[4] === 4 || ala_rest_gen[4] === 4 || ala_loss_spd_gen[4] === 4 || ala_lf_gen[4] === 4 || ala_hcur_gen[4]  === 4 || 
+ala_stop_gen[4] === 4||f_start_gen[4] === 4 || ala_hv_gen[4] === 4 || ala_lv_gen[4] === 4 || ala_oil_p_gen[4] === 4 ||ala_o_spd_gen[4] === 4 || ala_u_spd_gen[4] === 4 || ala_temp_gen[4] === 4 || ala_rest_gen[4] === 4 || ala_loss_spd_gen[4] === 4 || ala_lf_gen[4] === 4 || ala_hcur_gen[4]  === 4 
+)
+{
+  generadores.gen4.color_gen4= estadoStyles.alarma,
+  generadores.gen4.boton_gen4= estadoStyles.alarma,
+  generadores.gen4.barra1_gen4= estadoStyles.alarma,
+  generadores.gen4.contacto_gen4= estadoStyles.alarma,
+  generadores.gen4.barra2_gen4= estadoStyles.alarma
+}else(
+  generadores.gen4.color_gen4= vol_avg_gen[4] === 0 ? estadoStyles.sinConexion : estadoStyles.ok , 
+  generadores.gen4.boton_gen4= vol_avg_gen[4] === 0 ? estadoStyles.sinConexion : estadoStyles.ok,
+  generadores.gen4.barra1_gen4= vol_avg_gen[4] === 0 ? estadoStyles.sinConexion : estadoStyles.ok,
+  generadores.gen4.contacto_gen4= vol_avg_gen[4] === 0 ? estadoStyles.sinConexion : estadoStyles.ok,
+  generadores.gen4.barra2_gen4= vol_avg_gen[4] === 0 ? estadoStyles.sinConexion : estadoStyles.ok    
+    );
 
-  // ALARMAS GEN5
-  ala_stop_gen[5] === 2||f_start_gen[5] === 2 || ala_hv_gen[5] === 2 || ala_lv_gen[5] === 2 || ala_oil_p_gen[5] === 2 ||ala_o_spd_gen[5] === 2 || ala_u_spd_gen[5] === 2 || ala_temp_gen[5] === 2 || ala_rest_gen[5] === 2 || ala_loss_spd_gen[5] === 2 || ala_lf_gen[5] === 2 || ala_hcur_gen[5]  === 2 || 
+// ALARMAS GEN5
+if(
+ala_stop_gen[5] === 2||f_start_gen[5] === 2 || ala_hv_gen[5] === 2 || ala_lv_gen[5] === 2 || ala_oil_p_gen[5] === 2 ||ala_o_spd_gen[5] === 2 || ala_u_spd_gen[5] === 2 || ala_temp_gen[5] === 2 || ala_rest_gen[5] === 2 || ala_loss_spd_gen[5] === 2 || ala_lf_gen[5] === 2 || ala_hcur_gen[5]  === 2 || 
 
-  ala_stop_gen[5] === 3||f_start_gen[5] === 3 || ala_hv_gen[5] === 3 || ala_lv_gen[5] === 3 || ala_oil_p_gen[5] === 3 ||ala_o_spd_gen[5] === 3 || ala_u_spd_gen[5] === 3 || ala_temp_gen[5] === 3 || ala_rest_gen[5] === 3 || ala_loss_spd_gen[5] === 3 || ala_lf_gen[5] === 3 || ala_hcur_gen[5]  === 3 || 
+ala_stop_gen[5] === 3||f_start_gen[5] === 3 || ala_hv_gen[5] === 3 || ala_lv_gen[5] === 3 || ala_oil_p_gen[5] === 3 ||ala_o_spd_gen[5] === 3 || ala_u_spd_gen[5] === 3 || ala_temp_gen[5] === 3 || ala_rest_gen[5] === 3 || ala_loss_spd_gen[5] === 3 || ala_lf_gen[5] === 3 || ala_hcur_gen[5]  === 3 || 
 
-  ala_stop_gen[5] === 4||f_start_gen[5] === 4 || ala_hv_gen[5] === 4 || ala_lv_gen[5] === 4 || ala_oil_p_gen[5] === 4 ||ala_o_spd_gen[5] === 4 || ala_u_spd_gen[5] === 4 || ala_temp_gen[5] === 4 || ala_rest_gen[5] === 4 || ala_loss_spd_gen[5] === 4 || ala_lf_gen[5] === 4 || ala_hcur_gen[5]  === 4 || 
+ala_stop_gen[5] === 4||f_start_gen[5] === 4 || ala_hv_gen[5] === 4 || ala_lv_gen[5] === 4 || ala_oil_p_gen[5] === 4 ||ala_o_spd_gen[5] === 4 || ala_u_spd_gen[5] === 4 || ala_temp_gen[5] === 4 || ala_rest_gen[5] === 4 || ala_loss_spd_gen[5] === 4 || ala_lf_gen[5] === 4 || ala_hcur_gen[5]  === 4  
+)
+{
+  generadores.gen5.color_gen5= estadoStyles.alarma,
+  generadores.gen5.boton_gen5= estadoStyles.alarma,
+  generadores.gen5.barra1_gen5= estadoStyles.alarma,
+  generadores.gen5.contacto_gen5= estadoStyles.alarma,
+  generadores.gen5.barra2_gen5= estadoStyles.alarma
+}else(
+  generadores.gen5.color_gen5= vol_avg_gen[5] === 0 ? estadoStyles.sinConexion : estadoStyles.ok , 
+  generadores.gen5.boton_gen5= vol_avg_gen[5] === 0 ? estadoStyles.sinConexion : estadoStyles.ok,
+  generadores.gen5.barra1_gen5= vol_avg_gen[5] === 0 ? estadoStyles.sinConexion : estadoStyles.ok,
+  generadores.gen5.contacto_gen5= vol_avg_gen[5] === 0 ? estadoStyles.sinConexion : estadoStyles.ok,
+  generadores.gen5.barra2_gen5= vol_avg_gen[5] === 0 ? estadoStyles.sinConexion : estadoStyles.ok    
+    );
 
-  // ALARMAS GEN6
+
+// ALARMAS GEN6
+
+if (   
   ala_stop_gen[6] === 2||f_start_gen[6] === 2 || ala_hv_gen[6] === 2 || ala_lv_gen[6] === 2 || ala_oil_p_gen[6] === 2 ||ala_o_spd_gen[6] === 2 || ala_u_spd_gen[6] === 2 || ala_temp_gen[6] === 2 || ala_rest_gen[6] === 2 || ala_loss_spd_gen[6] === 2 || ala_lf_gen[6] === 2 || ala_hcur_gen[6]  === 2 || 
 
   ala_stop_gen[6] === 3||f_start_gen[6] === 3 || ala_hv_gen[6] === 3 || ala_lv_gen[6] === 3 || ala_oil_p_gen[6] === 3 ||ala_o_spd_gen[6] === 3 || ala_u_spd_gen[6] === 3 || ala_temp_gen[6] === 3 || ala_rest_gen[6] === 3 || ala_loss_spd_gen[6] === 3 || ala_lf_gen[6] === 3 || ala_hcur_gen[6]  === 3 || 
@@ -500,70 +620,27 @@ if (
   ala_stop_gen[6] === 4||f_start_gen[6] === 4 || ala_hv_gen[6] === 4 || ala_lv_gen[6] === 4 || ala_oil_p_gen[6] === 4 ||ala_o_spd_gen[6] === 4 || ala_u_spd_gen[6] === 4 || ala_temp_gen[6] === 4 || ala_rest_gen[6] === 4 || ala_loss_spd_gen[6] === 4 || ala_lf_gen[6] === 4 || ala_hcur_gen[6]  === 4 
   
   )
-
-{
-  //generadores.datos_principales.rectan_gen = estadoStyles.alarma,
-  //generadores.datos_principales.text_estado = 'ALARMADO'
-
-  generadores.gen1.color_gen1= estadoStyles.alarma,
-  generadores.gen2.color_gen2= estadoStyles.alarma,
-  generadores.gen3.color_gen3= estadoStyles.alarma,
-  generadores.gen4.color_gen4= estadoStyles.alarma,
-  generadores.gen5.color_gen5= estadoStyles.alarma,
-  generadores.gen6.color_gen6= estadoStyles.alarma,
+  {
+    generadores.gen6.color_gen6= estadoStyles.alarma,
+    generadores.gen6.boton_gen6= estadoStyles.alarma,
+    generadores.gen6.barra1_gen6= estadoStyles.alarma,
+    generadores.gen6.contacto_gen6= estadoStyles.alarma,
+    generadores.gen6.barra2_gen6= estadoStyles.alarma
+  }
   
-  generadores.gen1.barra1_gen1= estadoStyles.alarma,
-  generadores.gen2.barra1_gen2= estadoStyles.alarma,
-  generadores.gen3.barra1_gen3= estadoStyles.alarma,
-  generadores.gen4.barra1_gen4= estadoStyles.alarma,
-  generadores.gen5.barra1_gen5= estadoStyles.alarma,
-  generadores.gen6.barra1_gen6= estadoStyles.alarma,
-  
-  generadores.gen1.contacto_gen1= estadoStyles.alarma,
-  generadores.gen2.contacto_gen2= estadoStyles.alarma,
-  generadores.gen3.contacto_gen3= estadoStyles.alarma,
-  generadores.gen4.contacto_gen4= estadoStyles.alarma,
-  generadores.gen5.contacto_gen5= estadoStyles.alarma,
-  generadores.gen6.contacto_gen6= estadoStyles.alarma,
-  
-  generadores.gen1.barra2_gen1= estadoStyles.alarma,
-  generadores.gen2.barra2_gen2= estadoStyles.alarma,
-  generadores.gen3.barra2_gen3= estadoStyles.alarma,
-  generadores.gen4.barra2_gen4= estadoStyles.alarma,
-  generadores.gen5.barra2_gen5= estadoStyles.alarma,
-  generadores.gen6.barra2_gen6= estadoStyles.alarma
-  
-  
-} 
-
-
-else (
-
-   generadores.gen1.color_gen1 = vol_avg_gen[1] === 0 ? estadoStyles.sinConexion : estadoStyles.ok,
-   generadores.gen2.color_gen2 = vol_avg_gen[2] === 0 ? estadoStyles.sinConexion : estadoStyles.ok, 
-   generadores.gen3.color_gen3 = vol_avg_gen[3] === 0 ? estadoStyles.sinConexion : estadoStyles.ok, 
-   generadores.gen4.color_gen4 = vol_avg_gen[4] === 0 ? estadoStyles.sinConexion : estadoStyles.ok, 
-   generadores.gen5.color_gen5 = vol_avg_gen[5] === 0 ? estadoStyles.sinConexion : estadoStyles.ok, 
-   generadores.gen6.color_gen6 = vol_avg_gen[6] === 0 ? estadoStyles.sinConexion : estadoStyles.ok
-   
-   )
-
+  else(
+    generadores.gen6.color_gen6= vol_avg_gen[6] === 0 ? estadoStyles.sinConexion : estadoStyles.ok , 
+    generadores.gen6.boton_gen6= vol_avg_gen[6] === 0 ? estadoStyles.sinConexion : estadoStyles.ok,
+    generadores.gen6.barra1_gen6= vol_avg_gen[6] === 0 ? estadoStyles.sinConexion : estadoStyles.ok,
+    generadores.gen6.contacto_gen6= vol_avg_gen[6] === 0 ? estadoStyles.sinConexion : estadoStyles.ok,
+    generadores.gen6.barra2_gen6= vol_avg_gen[6] === 0 ? estadoStyles.sinConexion : estadoStyles.ok    
+      );
 
 
 
 
 
 //-----------------------------------------------------FUNCIONABILIDAD----------------------------------------------------//
-
-
-
-
-generadores.gen1.modo_gen1= control_m_gen[1];
-generadores.gen2.modo_gen2= control_m_gen[2];
-generadores.gen3.modo_gen3= control_m_gen[3];
-generadores.gen4.modo_gen4= control_m_gen[4];
-generadores.gen5.modo_gen5= control_m_gen[5];
-generadores.gen6.modo_gen6= control_m_gen[6];
 
 generadores.gen1.volt_gen1= vol_avg_gen[1];
 generadores.gen2.volt_gen2= vol_avg_gen[2];
@@ -599,6 +676,13 @@ generadores.gen3.diesel_gen3= fuel_l_gen[3];
 generadores.gen4.diesel_gen4= fuel_l_gen[4];
 generadores.gen5.diesel_gen5= fuel_l_gen[5];
 generadores.gen6.diesel_gen6= fuel_l_gen[6];
+
+
+
+
+
+
+
 
 
 // DATOS DE LOS TDLOWS 

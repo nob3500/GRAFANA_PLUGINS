@@ -95,9 +95,9 @@ const dataPQM = (data: PanelData, options: SimpleOptions): DataPqm => {
 
   pqm.estados.cur_c = Number.parseFloat (CURR_C?.toFixed(2));
   
-  pqm.estados.p_real_t = Number.parseFloat (ENY_POS_REAL?.toFixed(2));
+  pqm.estados.p_real_t = Number.parseFloat (ENY_POS_REAL?.toFixed(0))/100;
 
-  pqm.estados.p_apt_t = Number.parseFloat (APPPOW_3PHAS?.toFixed(2));
+  pqm.estados.p_apt_t = Number.parseFloat (APPPOW_3PHAS?.toFixed(0))/100;
   
  /*
   let p_apt_t = APPPOW_3PHAS ; //pqm.estados.p_apt_t = APPPOW_3PHAS
@@ -118,9 +118,9 @@ const dataPQM = (data: PanelData, options: SimpleOptions): DataPqm => {
   pqm.botones_alarmas.red_modbus = MODBUS_ST === 1 ? estadoStyles.alarma : estadoStyles.ok
   
   // ---------------------- DATOS PRINCIPALES---------------------------//
-  pqm.datos_principales.frecuencia = Number.parseFloat(FREQ?.toFixed(2));
-  pqm.datos_principales.pot_real = Number.parseFloat(REALPOW_3PHAS?.toFixed(2));
-  pqm.datos_principales.factor_p = Number.parseFloat(POWFAC_3PHAS?.toFixed(2));
+  pqm.datos_principales.frecuencia = Number.parseFloat(FREQ?.toFixed(1))/100;
+  pqm.datos_principales.pot_real = Number.parseFloat(REALPOW_3PHAS?.toFixed(0))/100;
+  pqm.datos_principales.factor_p = Number.parseFloat(POWFAC_3PHAS?.toFixed(0))/100;
   pqm.datos_principales.boton_estado = MODBUS_ST === 1? estadoStyles.sinConexion : estadoStyles.ok;
   pqm.datos_principales.boton_pqm = MODBUS_ST === 1? estadoStyles.sinConexion : estadoStyles.ok;
   pqm.datos_principales.text_estado = MODBUS_ST === 1? 'ALARMADO':'ENCENDIDO' // Disponible , Alarmado
