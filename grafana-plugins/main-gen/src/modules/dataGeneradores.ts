@@ -461,15 +461,7 @@ tableros:{
     
 }
 
-//-----------------------------------------------------ESTADO DEL SISTEMA boton ----------------------------------------------------//
 
-//
-generadores.gen1.boton_gen1= freq_gen[1] === 1 ? estadoStyles.sinConexion : estadoStyles.ok;
-generadores.gen2.boton_gen2= freq_gen[2] === 0 ? estadoStyles.sinConexion : estadoStyles.ok;
-generadores.gen3.boton_gen3= freq_gen[3] === 0 ? estadoStyles.sinConexion : estadoStyles.ok;
-generadores.gen4.boton_gen4= freq_gen[4] === 0 ? estadoStyles.sinConexion : estadoStyles.ok;
-generadores.gen5.boton_gen5= freq_gen[5] === 0 ? estadoStyles.sinConexion : estadoStyles.ok;
-generadores.gen6.boton_gen6= freq_gen[6] === 0 ? estadoStyles.sinConexion : estadoStyles.ok;
 
 
 //-----------------------------------------------------Estado MANUAL , AUTO , STOP----------------------------------------------------//
@@ -510,14 +502,14 @@ if(
   generadores.gen1.color_gen1= estadoStyles.alarma,
   generadores.gen1.boton_gen1= estadoStyles.alarma,
   generadores.gen1.barra1_gen1= estadoStyles.alarma,
-  generadores.gen1.contacto_gen1= estadoStyles.alarma,
-  generadores.gen1.barra2_gen1= estadoStyles.alarma
+  generadores.gen1.contacto_gen1= estadoStyles.open
+  generadores.gen1.barra2_gen1= estadoStyles.open_int
 }else(
   generadores.gen1.color_gen1= vol_avg_gen[1] === 0 ? estadoStyles.sinConexion : estadoStyles.ok , 
   generadores.gen1.boton_gen1= vol_avg_gen[1] === 0 ? estadoStyles.sinConexion : estadoStyles.ok,
   generadores.gen1.barra1_gen1= vol_avg_gen[1] === 0 ? estadoStyles.sinConexion : estadoStyles.ok,
-  generadores.gen1.contacto_gen1= vol_avg_gen[1] === 0 ? estadoStyles.sinConexion : estadoStyles.ok,
-  generadores.gen1.barra2_gen1= vol_avg_gen[1] === 0 ? estadoStyles.sinConexion : estadoStyles.ok    
+  generadores.gen1.contacto_gen1= vol_avg_gen[1] === 0 ? estadoStyles.open : estadoStyles.ok,
+  generadores.gen1.barra2_gen1= cur_avg_gen[1] === 0 ? estadoStyles.open_int : estadoStyles.close_int    
     );
 
 // ALARMAS GEN2
@@ -532,14 +524,14 @@ if(
   generadores.gen2.color_gen2= estadoStyles.alarma,
   generadores.gen2.boton_gen2= estadoStyles.alarma,
   generadores.gen2.barra1_gen2= estadoStyles.alarma,
-  generadores.gen2.contacto_gen2= estadoStyles.alarma,
-  generadores.gen2.barra2_gen2= estadoStyles.alarma
+  generadores.gen2.contacto_gen2= estadoStyles.open,
+  generadores.gen2.barra2_gen2= estadoStyles.open_int
 }else(
-  generadores.gen2.color_gen2= vol_avg_gen[2] === 0 ? estadoStyles.sinConexion : estadoStyles.ok , 
+  generadores.gen2.color_gen2= vol_avg_gen[2] === 0? estadoStyles.sinConexion : estadoStyles.ok , 
   generadores.gen2.boton_gen2= vol_avg_gen[2] === 0 ? estadoStyles.sinConexion : estadoStyles.ok,
   generadores.gen2.barra1_gen2= vol_avg_gen[2] === 0 ? estadoStyles.sinConexion : estadoStyles.ok,
-  generadores.gen2.contacto_gen2= vol_avg_gen[2] === 0 ? estadoStyles.sinConexion : estadoStyles.ok,
-  generadores.gen2.barra2_gen2= vol_avg_gen[2] === 0 ? estadoStyles.sinConexion : estadoStyles.ok    
+  generadores.gen2.contacto_gen2= vol_avg_gen[2] === 0 ? estadoStyles.open : estadoStyles.ok,
+  generadores.gen2.barra2_gen2= cur_avg_gen[2] === 0 ? estadoStyles.open_int : estadoStyles.close_int    
     );
 
 // ALARMAS GEN3
@@ -555,14 +547,14 @@ if(
   generadores.gen3.color_gen3= estadoStyles.alarma,
   generadores.gen3.boton_gen3= estadoStyles.alarma,
   generadores.gen3.barra1_gen3= estadoStyles.alarma,
-  generadores.gen3.contacto_gen3= estadoStyles.alarma,
-  generadores.gen3.barra2_gen3= estadoStyles.alarma
+  generadores.gen3.contacto_gen3= estadoStyles.open,
+  generadores.gen3.barra2_gen3= estadoStyles.open_int
 }else(
   generadores.gen3.color_gen3= vol_avg_gen[3] === 0 ? estadoStyles.sinConexion : estadoStyles.ok , 
   generadores.gen3.boton_gen3= vol_avg_gen[3] === 0 ? estadoStyles.sinConexion : estadoStyles.ok,
   generadores.gen3.barra1_gen3= vol_avg_gen[3] === 0 ? estadoStyles.sinConexion : estadoStyles.ok,
-  generadores.gen3.contacto_gen3= vol_avg_gen[3] === 0 ? estadoStyles.sinConexion : estadoStyles.ok,
-  generadores.gen3.barra2_gen3= vol_avg_gen[3] === 0 ? estadoStyles.sinConexion : estadoStyles.ok    
+  generadores.gen3.contacto_gen3= vol_avg_gen[3] === 0 ? estadoStyles.open : estadoStyles.ok,
+  generadores.gen3.barra2_gen3= cur_avg_gen[3] === 0 ? estadoStyles.open_int : estadoStyles.close_int    
     );
 
 // ALARMAS GEN4
@@ -577,14 +569,14 @@ ala_stop_gen[4] === 4||f_start_gen[4] === 4 || ala_hv_gen[4] === 4 || ala_lv_gen
   generadores.gen4.color_gen4= estadoStyles.alarma,
   generadores.gen4.boton_gen4= estadoStyles.alarma,
   generadores.gen4.barra1_gen4= estadoStyles.alarma,
-  generadores.gen4.contacto_gen4= estadoStyles.alarma,
-  generadores.gen4.barra2_gen4= estadoStyles.alarma
+  generadores.gen4.contacto_gen4= estadoStyles.open,
+  generadores.gen4.barra2_gen4= estadoStyles.open_int
 }else(
   generadores.gen4.color_gen4= vol_avg_gen[4] === 0 ? estadoStyles.sinConexion : estadoStyles.ok , 
   generadores.gen4.boton_gen4= vol_avg_gen[4] === 0 ? estadoStyles.sinConexion : estadoStyles.ok,
   generadores.gen4.barra1_gen4= vol_avg_gen[4] === 0 ? estadoStyles.sinConexion : estadoStyles.ok,
-  generadores.gen4.contacto_gen4= vol_avg_gen[4] === 0 ? estadoStyles.sinConexion : estadoStyles.ok,
-  generadores.gen4.barra2_gen4= vol_avg_gen[4] === 0 ? estadoStyles.sinConexion : estadoStyles.ok    
+  generadores.gen4.contacto_gen4= vol_avg_gen[4] === 0 ? estadoStyles.open : estadoStyles.ok,
+  generadores.gen4.barra2_gen4= cur_avg_gen[4] === 0 ? estadoStyles.open_int : estadoStyles.close_int    
     );
 
 // ALARMAS GEN5
@@ -599,14 +591,14 @@ ala_stop_gen[5] === 4||f_start_gen[5] === 4 || ala_hv_gen[5] === 4 || ala_lv_gen
   generadores.gen5.color_gen5= estadoStyles.alarma,
   generadores.gen5.boton_gen5= estadoStyles.alarma,
   generadores.gen5.barra1_gen5= estadoStyles.alarma,
-  generadores.gen5.contacto_gen5= estadoStyles.alarma,
-  generadores.gen5.barra2_gen5= estadoStyles.alarma
+  generadores.gen5.contacto_gen5= estadoStyles.open,
+  generadores.gen5.barra2_gen5= estadoStyles.open_int
 }else(
   generadores.gen5.color_gen5= vol_avg_gen[5] === 0 ? estadoStyles.sinConexion : estadoStyles.ok , 
   generadores.gen5.boton_gen5= vol_avg_gen[5] === 0 ? estadoStyles.sinConexion : estadoStyles.ok,
   generadores.gen5.barra1_gen5= vol_avg_gen[5] === 0 ? estadoStyles.sinConexion : estadoStyles.ok,
-  generadores.gen5.contacto_gen5= vol_avg_gen[5] === 0 ? estadoStyles.sinConexion : estadoStyles.ok,
-  generadores.gen5.barra2_gen5= vol_avg_gen[5] === 0 ? estadoStyles.sinConexion : estadoStyles.ok    
+  generadores.gen5.contacto_gen5= vol_avg_gen[5] === 0 ? estadoStyles.open : estadoStyles.ok,
+  generadores.gen5.barra2_gen5= cur_avg_gen[5] === 0 ? estadoStyles.open_int : estadoStyles.close_int    
     );
 
 
@@ -624,16 +616,16 @@ if (
     generadores.gen6.color_gen6= estadoStyles.alarma,
     generadores.gen6.boton_gen6= estadoStyles.alarma,
     generadores.gen6.barra1_gen6= estadoStyles.alarma,
-    generadores.gen6.contacto_gen6= estadoStyles.alarma,
-    generadores.gen6.barra2_gen6= estadoStyles.alarma
+    generadores.gen6.contacto_gen6= estadoStyles.open,
+    generadores.gen6.barra2_gen6= estadoStyles.open_int
   }
   
   else(
     generadores.gen6.color_gen6= vol_avg_gen[6] === 0 ? estadoStyles.sinConexion : estadoStyles.ok , 
     generadores.gen6.boton_gen6= vol_avg_gen[6] === 0 ? estadoStyles.sinConexion : estadoStyles.ok,
     generadores.gen6.barra1_gen6= vol_avg_gen[6] === 0 ? estadoStyles.sinConexion : estadoStyles.ok,
-    generadores.gen6.contacto_gen6= vol_avg_gen[6] === 0 ? estadoStyles.sinConexion : estadoStyles.ok,
-    generadores.gen6.barra2_gen6= vol_avg_gen[6] === 0 ? estadoStyles.sinConexion : estadoStyles.ok    
+    generadores.gen6.contacto_gen6= vol_avg_gen[6] === 0 ? estadoStyles.open : estadoStyles.ok,
+    generadores.gen6.barra2_gen6= cur_avg_gen[6] === 0 ? estadoStyles.open_int : estadoStyles.close_int    
       );
 
 

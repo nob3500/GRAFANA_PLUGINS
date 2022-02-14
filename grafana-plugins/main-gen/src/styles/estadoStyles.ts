@@ -18,6 +18,16 @@ const getStyles = stylesFactory(() => {
     ok: css`
       fill: green;
     `,
+    open: css`
+      fill: black;
+    `,
+    open_int: css`
+      stroke: #fc0;
+    `,
+    close_int: css`
+      stroke: black;
+    `,
+    
   };
 });
 

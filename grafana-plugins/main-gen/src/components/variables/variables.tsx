@@ -169,7 +169,7 @@ export const Variables = ({
     <g id="layer4">
         <g id="g11377">
           <g id="g8319" 
-              className={gen6.barra2_gen6}
+              //className={gen6.barra2_gen6}
               opacity={0.999}>
             <g
               id="g6502-5-2-1-6-2-3"
@@ -220,11 +220,12 @@ export const Variables = ({
                     />
                   </g>
                   <g id="shape-3-0-6-6-6-1-3-9-0-8-19"
-                        className={gen6.contacto_gen6}
+                        
                         fill="#0ff">
                     <path
                       id="rect7-4-1-8-4-3-3-4-3-4-1"
                       fill="#0ff"
+                      className={gen6.contacto_gen6}
                       d="M0 38.5H100V63.5H0z"
                     />
                   </g>
@@ -243,10 +244,11 @@ export const Variables = ({
               <path
                 id="path18021-7-5-86"
                 d="M37.232 65.163l-3.013-5.524z"
-                fill="#00f"
+                //fill="#00f"                
                 strokeOpacity={0.99216}
                 strokeWidth={0.49047}
                 stroke="#fc0"
+                className={gen6.barra2_gen6}
               />
               <ellipse
                 id="path17699-3-27-2-6"
@@ -295,8 +297,9 @@ export const Variables = ({
                   </g>
                   <g id="shape-3-0-6-6-6-1" fill="#fc0">
                     <path
-                      id="rect7-4-1-8-4-3"
+                      id="rect7-4-1-8-4-3"                      
                       fill="#fc0"
+                      className={gen6.barra1_gen6}
                       d="M0 37.5H100V62.5H0z"
                     />
                   </g>
@@ -331,6 +334,7 @@ export const Variables = ({
                       id="path7-0-9-2-6-0-2-1"
                       d="M25 37.5H0v25h25c6.904 0 12.5 5.596 12.5 12.5v25h25V75c0-20.711-16.789-37.5-37.5-37.5z"
                       fill="#fc0"
+                      className={gen5.barra1_gen5}
                       strokeWidth={0.99927}
                       stroke="#fc0"
                     />
@@ -356,6 +360,7 @@ export const Variables = ({
                   <path
                     id="rect7-5-0-2-6"
                     fill="#fc0"
+                    className={gen6.barra1_gen6}
                     d="M0 37.5H100V62.5H0z"
                   />
                 </g>
@@ -1780,6 +1785,7 @@ export const Variables = ({
                   <path
                     id="rect7-4-1-8-4-3-7"
                     fill="#fc0"
+                    className={gen5.barra1_gen5}
                     d="M0 37.5H100V62.5H0z"
                   />
                 </g>
@@ -1814,6 +1820,7 @@ export const Variables = ({
                     id="path7-0-9-2-6-0-2-1-8"
                     d="M25 37.5H0v25h25c6.904 0 12.5 5.596 12.5 12.5v25h25V75c0-20.711-16.789-37.5-37.5-37.5z"
                     fill="#fc0"
+                    className={gen5.barra1_gen5}
                     strokeWidth={0.99927}
                     stroke="#fc0"
                   />
@@ -1839,6 +1846,7 @@ export const Variables = ({
                 <path
                   id="rect7-5-0-2-6-7"
                   fill="#fc0"
+                  className={gen5.barra1_gen5}
                   d="M0 37.5H100V62.5H0z"
                 />
               </g>
@@ -1849,7 +1857,7 @@ export const Variables = ({
             </g>
           </g>
           <g id="g8319-4" 
-          className={gen5.barra2_gen5}
+          //className={gen5.barra2_gen5}
           transform="translate(37.814 .016)"
            opacity={0.999}>
             <g
@@ -1910,12 +1918,12 @@ export const Variables = ({
                       d="M0 0H100V100H0z"
                     />
                   </g>
-                  <g id="shape-3-0-6-6-6-1-3-9-0-8-19-7" 
-                    className={gen5.contacto_gen5}
+                  <g id="shape-3-0-6-6-6-1-3-9-0-8-19-7"                     
                     fill="#0ff">
                     <path
                       id="rect7-4-1-8-4-3-3-4-3-4-1-4"
                       fill="#0ff"
+                      className={gen5.contacto_gen5}
                       d="M0 38.5H100V63.5H0z"
                     />
                   </g>
@@ -1934,10 +1942,11 @@ export const Variables = ({
               <path
                 id="path18021-7-5-86-6"
                 d="M37.232 65.163l-3.013-5.524z"
-                fill="#00f"
+                //fill="#00f"                
                 strokeOpacity={0.99216}
                 strokeWidth={0.49047}
                 stroke="#fc0"
+                className={gen5.barra2_gen5}
               />
               <ellipse
                 id="path17699-3-27-2-6-9"
@@ -3087,6 +3096,7 @@ export const Variables = ({
                   <path
                     id="rect7-4-1-8-4-3-9"
                     fill="#fc0"
+                    className={gen4.barra1_gen4}
                     d="M0 37.5H100V62.5H0z"
                   />
                 </g>
@@ -3121,6 +3131,7 @@ export const Variables = ({
                     id="path7-0-9-2-6-0-2-1-6"
                     d="M25 37.5H0v25h25c6.904 0 12.5 5.596 12.5 12.5v25h25V75c0-20.711-16.789-37.5-37.5-37.5z"
                     fill="#fc0"
+                    className={gen4.barra1_gen4}
                     strokeWidth={0.99927}
                     stroke="#fc0"
                   />
@@ -3146,6 +3157,7 @@ export const Variables = ({
                 <path
                   id="rect7-5-0-2-6-0"
                   fill="#fc0"
+                  className={gen4.barra1_gen4}
                   d="M0 37.5H100V62.5H0z"
                 />
               </g>
@@ -3156,7 +3168,7 @@ export const Variables = ({
             </g>
           </g>
           <g id="g8319-9"
-          className={gen4.barra2_gen4}
+          //className={gen4.barra2_gen4}
            transform="translate(76.158 .065)" 
            opacity={0.999}>
             <g
@@ -3218,11 +3230,12 @@ export const Variables = ({
                     />
                   </g>
                   <g id="shape-3-0-6-6-6-1-3-9-0-8-19-2" 
-                        className={gen4.contacto_gen4}
+                        
                         fill="#0ff">
                     <path
                       id="rect7-4-1-8-4-3-3-4-3-4-1-5"
                       fill="#0ff"
+                      className={gen4.contacto_gen4}
                       d="M0 38.5H100V63.5H0z"
                     />
                   </g>
@@ -3241,10 +3254,11 @@ export const Variables = ({
               <path
                 id="path18021-7-5-86-8"
                 d="M37.232 65.163l-3.013-5.524z"
-                fill="#00f"
+                //fill="#00f"                
                 strokeOpacity={0.99216}
                 strokeWidth={0.49047}
                 stroke="#fc0"
+                className={gen4.barra2_gen4}
               />
               <ellipse
                 id="path17699-3-27-2-6-4"
@@ -4722,7 +4736,7 @@ export const Variables = ({
             </tspan>
           </text>
           <g id="g8295" 
-                className={gen3.barra2_gen3}
+                //className={gen3.barra2_gen3}
                 opacity={0.999}>
             <g id="g7909">
               <g
@@ -4741,11 +4755,12 @@ export const Variables = ({
                     />
                   </g>
                   <g id="shape-3-0-6-6-6-1-3-9-0-8" 
-                        className={gen3.contacto_gen3}
+                        
                         fill="#0ff">
                     <path
                       id="rect7-4-1-8-4-3-3-4-3-4"
                       fill="#0ff"
+                      className={gen3.contacto_gen3}
                       d="M0 38.5H100V63.5H0z"
                     />
                   </g>
@@ -4764,10 +4779,11 @@ export const Variables = ({
               <path
                 id="path18021-7-5"
                 d="M37.232 65.163l-3.013-5.524z"
-                fill="#00f"
+                //fill="#00f"                
                 strokeOpacity={0.99216}
                 strokeWidth={0.49047}
                 stroke="#fc0"
+                className={gen3.barra2_gen3}
               />
               <ellipse
                 id="path17699-3-27-2"
@@ -5033,7 +5049,10 @@ export const Variables = ({
               fill="#fc0"
             >
               <g id="shape-3-7">
-                <path id="rect7-5" fill="#fc0" d="M0 37.5H100V62.5H0z" />
+                <path id="rect7-5"
+                 fill="#fc0" 
+                 className={gen3.barra1_gen3}
+                 d="M0 37.5H100V62.5H0z" />
               </g>
               <g id="dark-1-8">
                 <path id="rect10-3-3" d="M0 37.5H100V38.5H0z" />
@@ -5050,6 +5069,7 @@ export const Variables = ({
                   id="path7-0-7"
                   d="M25 37.5H0v25h25c6.904 0 12.5 5.596 12.5 12.5v25h25V75c0-20.711-16.789-37.5-37.5-37.5z"
                   fill="#fc0"
+                  className={gen3.barra1_gen3}
                 />
               </g>
               <g id="dark-81-46">
@@ -5085,6 +5105,7 @@ export const Variables = ({
                       <path
                         id="rect7-4-1-8-4-3-0"
                         fill="#fc0"
+                        className={gen3.barra1_gen3}
                         d="M0 37.5H100V62.5H0z"
                       />
                     </g>
@@ -6177,7 +6198,7 @@ export const Variables = ({
             </tspan>
           </text>
           <g id="g7945-8"
-          className={gen2.barra2_gen2}
+          //className={gen2.barra2_gen2}
            transform="translate(37.814 .016)" 
            opacity={0.999}>
             <g id="g7909-3">
@@ -6197,11 +6218,12 @@ export const Variables = ({
                     />
                   </g>
                   <g id="shape-3-0-6-6-6-1-3-9-0-8-1" 
-                        className={gen2.contacto_gen2}
+                        
                         fill="#0ff">
                     <path
                       id="rect7-4-1-8-4-3-3-4-3-4-8"
                       fill="#0ff"
+                      className={gen2.contacto_gen2}
                       d="M0 38.5H100V63.5H0z"
                     />
                   </g>
@@ -6220,10 +6242,12 @@ export const Variables = ({
               <path
                 id="path18021-7-5-6"
                 d="M37.232 65.163l-3.013-5.524z"
-                fill="#00f"
+                //fill="#00f"                
                 strokeOpacity={0.99216}
                 strokeWidth={0.49047}
+                //opacity={0}
                 stroke="#fc0"
+                className={gen2.barra2_gen2}
               />
               <ellipse
                 id="path17699-3-27-2-0"
@@ -6301,7 +6325,10 @@ export const Variables = ({
               fill="#fc0"
             >
               <g id="shape-3-7-1">
-                <path id="rect7-5-8" fill="#fc0" d="M0 37.5H100V62.5H0z" />
+                <path id="rect7-5-8" 
+                fill="#fc0" 
+                className={gen2.barra1_gen2}
+                d="M0 37.5H100V62.5H0z" />
               </g>
               <g id="dark-1-8-5">
                 <path id="rect10-3-3-5" d="M0 37.5H100V38.5H0z" />
@@ -6318,6 +6345,7 @@ export const Variables = ({
                   id="path7-0-7-8"
                   d="M25 37.5H0v25h25c6.904 0 12.5 5.596 12.5 12.5v25h25V75c0-20.711-16.789-37.5-37.5-37.5z"
                   fill="#fc0"
+                  className={gen2.barra1_gen2}
                 />
               </g>
               <g id="dark-81-46-1">
@@ -6353,6 +6381,7 @@ export const Variables = ({
                       <path
                         id="rect7-4-1-8-4-3-0-4"
                         fill="#fc0"
+                        className={gen2.barra1_gen2}
                         d="M0 37.5H100V62.5H0z"
                       />
                     </g>
@@ -7485,11 +7514,12 @@ export const Variables = ({
                     />
                   </g>
                   <g id="shape-3-0-6-6-6-1-3-9-0-8-3" 
-                  className={gen1.contacto_gen1}
+                  
                   fill="#0ff">
                     <path
                       id="rect7-4-1-8-4-3-3-4-3-4-7"
                       fill="#0ff"
+                      className={gen1.contacto_gen1}
                       d="M0 38.5H100V63.5H0z"
                     />
                   </g>
@@ -7508,10 +7538,11 @@ export const Variables = ({
               <path
                 id="path18021-7-5-8"
                 d="M37.232 65.163l-3.013-5.524z"
-                fill="#00f"
+                //fill="#00f"
                 strokeOpacity={0.99216}
                 strokeWidth={0.49047}
-                stroke="#fc0"
+                stroke="#fc0"                
+                className={gen1.barra2_gen1}
               />
               <ellipse
                 id="path17699-3-27-2-2"
@@ -7562,6 +7593,7 @@ export const Variables = ({
                       id="rect7-4-1-8-4-3-3-4-9-0-3-7"
                       d="M0 38.5h100v25H0z"
                       fill="#fc0"
+
                       strokeWidth={10.227}
                     />
                   </g>
@@ -7580,16 +7612,19 @@ export const Variables = ({
             </g>
           </g>
           <g id="g7895-79" 
-          transform="translate(76.158 .065)"
-          className={gen1.barra1_gen1}
+          transform="translate(76.158 .065)"          
            opacity={0.999}>
             <g
               id="g6485-3"
               transform="matrix(.0867 0 0 .8143 39.475 -16.363) matrix(.39463 0 0 .06066 16.589 68.304)"
               fill="#fc0"
+              className={gen1.barra1_gen1}
             >
               <g id="shape-3-7-7">
-                <path id="rect7-5-87" fill="#fc0" d="M0 37.5H100V62.5H0z" />
+                <path id="rect7-5-87" 
+                fill="#fc0"
+                className={gen1.barra1_gen1}
+                 d="M0 37.5H100V62.5H0z" />
               </g>
               <g id="dark-1-8-9">
                 <path id="rect10-3-3-2" d="M0 37.5H100V38.5H0z" />
@@ -7606,6 +7641,7 @@ export const Variables = ({
                   id="path7-0-7-4"
                   d="M25 37.5H0v25h25c6.904 0 12.5 5.596 12.5 12.5v25h25V75c0-20.711-16.789-37.5-37.5-37.5z"
                   fill="#fc0"
+                  className={gen1.barra1_gen1}
                 />
               </g>
               <g id="dark-81-46-16">
@@ -7641,6 +7677,7 @@ export const Variables = ({
                       <path
                         id="rect7-4-1-8-4-3-0-3"
                         fill="#fc0"
+                        className={gen1.barra1_gen1}
                         d="M0 37.5H100V62.5H0z"
                       />
                     </g>
