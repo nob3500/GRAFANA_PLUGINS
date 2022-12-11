@@ -509,7 +509,7 @@ if(
   generadores.gen1.boton_gen1= vol_avg_gen[1] === 0 ? estadoStyles.sinConexion : estadoStyles.ok,
   generadores.gen1.barra1_gen1= vol_avg_gen[1] === 0 ? estadoStyles.sinConexion : estadoStyles.ok,
   generadores.gen1.contacto_gen1= vol_avg_gen[1] === 0 ? estadoStyles.open : estadoStyles.ok,
-  generadores.gen1.barra2_gen1= cur_avg_gen[1] === 0 ? estadoStyles.open_int : estadoStyles.close_int    
+  generadores.gen1.barra2_gen1= cur_avg_gen[1] === 0 ? estadoStyles.alarma : estadoStyles.close_int    
     );
 
 // ALARMAS GEN2
