@@ -9,7 +9,7 @@ const Generador = ({
   datos_generales,
   datos_principales, 
 
-}:DataGenerador) =>{
+}: DataGenerador) =>{
   return(
     <svg
       id="svg1181"      

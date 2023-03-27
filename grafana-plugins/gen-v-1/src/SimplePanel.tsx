@@ -14,7 +14,7 @@ export const SimplePanel: React.FC<Props> = ({ options, data, width, height,repl
   //const theme = useTheme();
   const styles = getStyles();
 
-  let generador:DataGenerador = dataGenerador(data, options,replaceVariables);
+  let generador: DataGenerador = dataGenerador(data, options,replaceVariables);
 
   return (
     <div

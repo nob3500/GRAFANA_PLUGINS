@@ -1,0 +1,765 @@
+{
+  "annotations": {
+    "list": [
+      {
+        "builtIn": 1,
+        "datasource": "-- Grafana --",
+        "enable": true,
+        "hide": true,
+        "iconColor": "rgba(0, 211, 255, 1)",
+        "name": "Annotations & Alerts",
+        "type": "dashboard"
+      }
+    ]
+  },
+  "editable": true,
+  "gnetId": null,
+  "graphTooltip": 0,
+  "id": 57,
+  "links": [],
+  "panels": [
+    {
+      "datasource": null,
+      "fieldConfig": {
+        "defaults": {
+          "custom": {}
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 4,
+        "w": 24,
+        "x": 0,
+        "y": 0
+      },
+      "id": 7,
+      "options": {
+        "seriesCountSize": "sm",
+        "showSeriesCount": false,
+        "text": "Default value of text input option"
+      },
+      "pluginVersion": "7.4.5",
+      "targets": [
+        {
+          "queryType": "randomWalk",
+          "refId": "A"
+        }
+      ],
+      "timeFrom": null,
+      "timeShift": null,
+      "title": "",
+      "transparent": true,
+      "type": "telconet-menu"
+    },
+    {
+      "datasource": "PQM",
+      "fieldConfig": {
+        "defaults": {
+          "custom": {}
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 16,
+        "w": 24,
+        "x": 0,
+        "y": 4
+      },
+      "id": 2,
+      "options": {
+        "fase": "A",
+        "marca": "GENERAL ELECTRIC",
+        "modelo": "AXSDC012",
+        "nombre": "PQM II",
+        "sistema": "1 y 2",
+        "ubicacion": "PATIO GEN S1"
+      },
+      "pluginVersion": "7.4.5",
+      "targets": [
+        {
+          "alias": "",
+          "bucketAggs": [
+            {
+              "id": "2",
+              "settings": {
+                "interval": "auto"
+              },
+              "type": "date_histogram"
+            }
+          ],
+          "metrics": [
+            {
+              "field": "DATA.APPPOW_3PHAS.VALUE",
+              "id": "1",
+              "type": "avg"
+            },
+            {
+              "field": "DATA.CURR_A.VALUE",
+              "id": "3",
+              "type": "avg"
+            },
+            {
+              "field": "DATA.CURR_AVG.VALUE",
+              "id": "4",
+              "type": "avg"
+            },
+            {
+              "field": "DATA.CURR_B.VALUE",
+              "id": "5",
+              "type": "avg"
+            },
+            {
+              "field": "DATA.CURR_C.VALUE",
+              "id": "6",
+              "type": "avg"
+            },
+            {
+              "field": "DATA.CURR_UNB.VALUE",
+              "id": "7",
+              "type": "avg"
+            },
+            {
+              "field": "DATA.ENY_APP.VALUE",
+              "id": "8",
+              "type": "avg"
+            },
+            {
+              "field": "DATA.ENY_NEG_REACT.VALUE",
+              "id": "9",
+              "type": "avg"
+            },
+            {
+              "field": "DATA.ENY_NEG_REAL.VALUE",
+              "hide": false,
+              "id": "10",
+              "type": "avg"
+            },
+            {
+              "field": "DATA.ENY_POS_REACT.VALUE",
+              "id": "11",
+              "settings": {},
+              "type": "avg"
+            },
+            {
+              "field": "DATA.ENY_POS_REAL.VALUE",
+              "hide": false,
+              "id": "12",
+              "settings": {
+                "script": "_value*100"
+              },
+              "type": "avg"
+            },
+            {
+              "field": "DATA.FREQ.VALUE",
+              "id": "13",
+              "type": "avg"
+            },
+            {
+              "field": "DATA.MODBUS_ST.VALUE",
+              "id": "14",
+              "type": "avg"
+            },
+            {
+              "field": "DATA.POWFAC_3PHAS.VALUE",
+              "id": "15",
+              "type": "avg"
+            },
+            {
+              "field": "DATA.REACTPOW_3PHAS.VALUE",
+              "id": "16",
+              "type": "avg"
+            },
+            {
+              "field": "DATA.REALPOW_3PHAS.VALUE",
+              "id": "17",
+              "type": "avg"
+            },
+            {
+              "field": "DATA.VOL_UNB.VALUE",
+              "id": "18",
+              "type": "avg"
+            },
+            {
+              "field": "DATA.VOL_VAB.VALUE",
+              "hide": false,
+              "id": "19",
+              "type": "avg"
+            },
+            {
+              "field": "DATA.VOL_VAN.VALUE",
+              "hide": false,
+              "id": "20",
+              "type": "avg"
+            },
+            {
+              "field": "DATA.VOL_VBC.VALUE",
+              "hide": false,
+              "id": "21",
+              "type": "avg"
+            },
+            {
+              "field": "DATA.VOL_VBN.VALUE",
+              "id": "22",
+              "type": "avg"
+            },
+            {
+              "field": "DATA.VOL_VCA.VALUE",
+              "hide": false,
+              "id": "23",
+              "type": "avg"
+            },
+            {
+              "field": "DATA.VOL_VCN.VALUE",
+              "id": "24",
+              "type": "avg"
+            }
+          ],
+          "query": "EQUIPO:\"TDLOW_PQMII\"",
+          "queryType": "randomWalk",
+          "refId": "A",
+          "timeField": "@timestamp"
+        }
+      ],
+      "timeFrom": null,
+      "timeShift": null,
+      "title": "",
+      "transparent": true,
+      "type": "telconet-pqm"
+    },
+    {
+      "aliasColors": {},
+      "bars": false,
+      "dashLength": 10,
+      "dashes": false,
+      "datasource": "PQM",
+      "fieldConfig": {
+        "defaults": {
+          "custom": {}
+        },
+        "overrides": []
+      },
+      "fill": 1,
+      "fillGradient": 0,
+      "gridPos": {
+        "h": 8,
+        "w": 12,
+        "x": 0,
+        "y": 20
+      },
+      "hiddenSeries": false,
+      "id": 12,
+      "legend": {
+        "avg": false,
+        "current": false,
+        "max": true,
+        "min": false,
+        "show": true,
+        "total": false,
+        "values": true
+      },
+      "lines": true,
+      "linewidth": 1,
+      "nullPointMode": "connected",
+      "options": {
+        "alertThreshold": true
+      },
+      "percentage": false,
+      "pluginVersion": "7.4.5",
+      "pointradius": 2,
+      "points": false,
+      "renderer": "flot",
+      "seriesOverrides": [],
+      "spaceLength": 10,
+      "stack": false,
+      "steppedLine": false,
+      "targets": [
+        {
+          "alias": "",
+          "bucketAggs": [
+            {
+              "id": "2",
+              "settings": {
+                "interval": "auto"
+              },
+              "type": "date_histogram"
+            }
+          ],
+          "metrics": [
+            {
+              "field": "DATA.REALPOW_3PHAS.VALUE",
+              "id": "1",
+              "settings": {
+                "script": "_value / 100"
+              },
+              "type": "avg"
+            }
+          ],
+          "query": "EQUIPO:\"TDLOW_PQMII\"",
+          "queryType": "randomWalk",
+          "refId": "A",
+          "timeField": "@timestamp"
+        }
+      ],
+      "thresholds": [],
+      "timeFrom": null,
+      "timeRegions": [],
+      "timeShift": null,
+      "title": "POTENCIA REAL",
+      "tooltip": {
+        "shared": true,
+        "sort": 0,
+        "value_type": "individual"
+      },
+      "transparent": true,
+      "type": "graph",
+      "xaxis": {
+        "buckets": null,
+        "mode": "time",
+        "name": null,
+        "show": true,
+        "values": []
+      },
+      "yaxes": [
+        {
+          "$$hashKey": "object:147",
+          "format": "kwatt",
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": true
+        },
+        {
+          "$$hashKey": "object:148",
+          "format": "short",
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": true
+        }
+      ],
+      "yaxis": {
+        "align": false,
+        "alignLevel": null
+      }
+    },
+    {
+      "aliasColors": {},
+      "bars": false,
+      "dashLength": 10,
+      "dashes": false,
+      "datasource": "PQM",
+      "fieldConfig": {
+        "defaults": {
+          "custom": {}
+        },
+        "overrides": []
+      },
+      "fill": 1,
+      "fillGradient": 0,
+      "gridPos": {
+        "h": 8,
+        "w": 12,
+        "x": 12,
+        "y": 20
+      },
+      "hiddenSeries": false,
+      "id": 10,
+      "legend": {
+        "avg": true,
+        "current": false,
+        "max": false,
+        "min": false,
+        "show": true,
+        "total": false,
+        "values": true
+      },
+      "lines": true,
+      "linewidth": 1,
+      "nullPointMode": "connected",
+      "options": {
+        "alertThreshold": true
+      },
+      "percentage": false,
+      "pluginVersion": "7.4.5",
+      "pointradius": 2,
+      "points": false,
+      "renderer": "flot",
+      "seriesOverrides": [],
+      "spaceLength": 10,
+      "stack": false,
+      "steppedLine": false,
+      "targets": [
+        {
+          "alias": "",
+          "bucketAggs": [
+            {
+              "id": "2",
+              "settings": {
+                "interval": "auto"
+              },
+              "type": "date_histogram"
+            }
+          ],
+          "metrics": [
+            {
+              "field": "DATA.CURR_A.VALUE",
+              "id": "3",
+              "type": "max"
+            },
+            {
+              "field": "DATA.CURR_B.VALUE",
+              "id": "4",
+              "type": "max"
+            },
+            {
+              "field": "DATA.CURR_C.VALUE",
+              "id": "5",
+              "type": "max"
+            }
+          ],
+          "query": "EQUIPO:\"TDLOW_PQMII\"",
+          "queryType": "randomWalk",
+          "refId": "A",
+          "timeField": "@timestamp"
+        }
+      ],
+      "thresholds": [],
+      "timeFrom": null,
+      "timeRegions": [],
+      "timeShift": null,
+      "title": "CORRIENTES",
+      "tooltip": {
+        "shared": true,
+        "sort": 0,
+        "value_type": "individual"
+      },
+      "transparent": true,
+      "type": "graph",
+      "xaxis": {
+        "buckets": null,
+        "mode": "time",
+        "name": null,
+        "show": true,
+        "values": []
+      },
+      "yaxes": [
+        {
+          "$$hashKey": "object:98",
+          "format": "amp",
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": true
+        },
+        {
+          "$$hashKey": "object:99",
+          "format": "short",
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": true
+        }
+      ],
+      "yaxis": {
+        "align": false,
+        "alignLevel": null
+      }
+    },
+    {
+      "aliasColors": {},
+      "bars": false,
+      "dashLength": 10,
+      "dashes": false,
+      "datasource": "PQM",
+      "fieldConfig": {
+        "defaults": {
+          "custom": {}
+        },
+        "overrides": []
+      },
+      "fill": 1,
+      "fillGradient": 0,
+      "gridPos": {
+        "h": 8,
+        "w": 12,
+        "x": 0,
+        "y": 28
+      },
+      "hiddenSeries": false,
+      "id": 13,
+      "legend": {
+        "avg": true,
+        "current": false,
+        "max": false,
+        "min": false,
+        "show": true,
+        "total": false,
+        "values": true
+      },
+      "lines": true,
+      "linewidth": 1,
+      "nullPointMode": "connected",
+      "options": {
+        "alertThreshold": true
+      },
+      "percentage": false,
+      "pluginVersion": "7.4.5",
+      "pointradius": 2,
+      "points": false,
+      "renderer": "flot",
+      "seriesOverrides": [],
+      "spaceLength": 10,
+      "stack": false,
+      "steppedLine": false,
+      "targets": [
+        {
+          "alias": "",
+          "bucketAggs": [
+            {
+              "id": "2",
+              "settings": {
+                "interval": "auto"
+              },
+              "type": "date_histogram"
+            }
+          ],
+          "metrics": [
+            {
+              "field": "DATA.ENY_POS_REAL.VALUE",
+              "id": "3",
+              "settings": {},
+              "type": "max"
+            }
+          ],
+          "query": "EQUIPO:\"TDLOW_PQMII\"",
+          "queryType": "randomWalk",
+          "refId": "A",
+          "timeField": "@timestamp"
+        }
+      ],
+      "thresholds": [],
+      "timeFrom": null,
+      "timeRegions": [],
+      "timeShift": null,
+      "title": "ENERGIA",
+      "tooltip": {
+        "shared": true,
+        "sort": 0,
+        "value_type": "individual"
+      },
+      "transparent": true,
+      "type": "graph",
+      "xaxis": {
+        "buckets": null,
+        "mode": "time",
+        "name": null,
+        "show": true,
+        "values": []
+      },
+      "yaxes": [
+        {
+          "$$hashKey": "object:98",
+          "format": "kwatth",
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": true
+        },
+        {
+          "$$hashKey": "object:99",
+          "format": "short",
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": true
+        }
+      ],
+      "yaxis": {
+        "align": false,
+        "alignLevel": null
+      }
+    },
+    {
+      "aliasColors": {},
+      "bars": false,
+      "dashLength": 10,
+      "dashes": false,
+      "datasource": "TDLOW",
+      "fieldConfig": {
+        "defaults": {
+          "color": {},
+          "custom": {},
+          "thresholds": {
+            "mode": "absolute",
+            "steps": []
+          },
+          "unit": "volt"
+        },
+        "overrides": []
+      },
+      "fill": 1,
+      "fillGradient": 0,
+      "gridPos": {
+        "h": 8,
+        "w": 12,
+        "x": 12,
+        "y": 28
+      },
+      "hiddenSeries": false,
+      "id": 15,
+      "legend": {
+        "alignAsTable": true,
+        "avg": true,
+        "current": false,
+        "max": true,
+        "min": true,
+        "show": true,
+        "total": false,
+        "values": true
+      },
+      "lines": true,
+      "linewidth": 1,
+      "nullPointMode": "connected",
+      "options": {
+        "alertThreshold": true
+      },
+      "percentage": false,
+      "pluginVersion": "7.4.5",
+      "pointradius": 2,
+      "points": false,
+      "renderer": "flot",
+      "seriesOverrides": [
+        {
+          "$$hashKey": "object:305"
+        }
+      ],
+      "spaceLength": 10,
+      "stack": false,
+      "steppedLine": false,
+      "targets": [
+        {
+          "alias": "",
+          "bucketAggs": [
+            {
+              "id": "2",
+              "settings": {
+                "interval": "auto"
+              },
+              "type": "date_histogram"
+            }
+          ],
+          "metrics": [
+            {
+              "field": "DATA.VOL_VAB.VALUE",
+              "id": "1",
+              "type": "max"
+            },
+            {
+              "field": "DATA.VOL_VBC.VALUE",
+              "id": "3",
+              "type": "max"
+            },
+            {
+              "field": "DATA.VOL_VCA.VALUE",
+              "id": "4",
+              "type": "max"
+            }
+          ],
+          "query": "EQUIPO:\"TDLOW_PQMII\"",
+          "queryType": "randomWalk",
+          "refId": "A",
+          "timeField": "@timestamp"
+        }
+      ],
+      "thresholds": [
+        {
+          "$$hashKey": "object:269",
+          "colorMode": "critical",
+          "fill": true,
+          "line": true,
+          "op": "gt",
+          "yaxis": "left"
+        }
+      ],
+      "timeFrom": null,
+      "timeRegions": [
+        {
+          "$$hashKey": "object:275",
+          "colorMode": "background6",
+          "fill": true,
+          "fillColor": "rgba(234, 112, 112, 0.12)",
+          "line": false,
+          "lineColor": "rgba(237, 46, 24, 0.60)",
+          "op": "time"
+        }
+      ],
+      "timeShift": null,
+      "title": "VOLTAJE TDLOW PQM 2",
+      "tooltip": {
+        "shared": true,
+        "sort": 0,
+        "value_type": "individual"
+      },
+      "transparent": true,
+      "type": "graph",
+      "xaxis": {
+        "buckets": null,
+        "mode": "time",
+        "name": null,
+        "show": true,
+        "values": []
+      },
+      "yaxes": [
+        {
+          "$$hashKey": "object:63",
+          "decimals": null,
+          "format": "volt",
+          "label": null,
+          "logBase": 1,
+          "max": "480",
+          "min": "400",
+          "show": true
+        },
+        {
+          "$$hashKey": "object:64",
+          "format": "short",
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": true
+        }
+      ],
+      "yaxis": {
+        "align": false,
+        "alignLevel": 1
+      }
+    }
+  ],
+  "refresh": "5s",
+  "schemaVersion": 27,
+  "style": "dark",
+  "tags": [
+    "ELECTRICO",
+    "PQM",
+    "UNI"
+  ],
+  "templating": {
+    "list": []
+  },
+  "time": {
+    "from": "now-1h",
+    "to": "now"
+  },
+  "timepicker": {},
+  "timezone": "",
+  "title": "PQM",
+  "uid": "4nyCaCD7k",
+  "version": 207
+}

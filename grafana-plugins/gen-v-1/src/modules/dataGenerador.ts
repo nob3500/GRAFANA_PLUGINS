@@ -378,7 +378,7 @@ if (EMERG_STOP === 2||FAIL_START === 2 || HIGH_VOLTAGE === 2 || LOW_VOLTAGE === 
   generador.datos_principales.text_estado = 'ALARMADO'
   
 } 
-else(generador.datos_principales.rectan_gen = FREQ === 0 ? estadoStyles.sinConexion : estadoStyles.ok ,generador.datos_principales.boton_estado = FREQ === 0 ? estadoStyles.sinConexion : estadoStyles.ok, generador.datos_principales.text_estado = FREQ === 0 ? 'APAGADO' : 'ENCENDIDO')
+else{(generador.datos_principales.rectan_gen = FREQ === 0 ? estadoStyles.sinConexion : estadoStyles.ok ,generador.datos_principales.boton_estado = FREQ === 0 ? estadoStyles.sinConexion : estadoStyles.ok, generador.datos_principales.text_estado = FREQ === 0 ? 'APAGADO' : 'ENCENDIDO')}
   
 
   console.log(generador);
