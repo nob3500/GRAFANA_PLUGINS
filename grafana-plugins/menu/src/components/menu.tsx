@@ -26,7 +26,7 @@ let url_grup_uma1 = '';
 let url_grup_uma2 = '';
 let url_grup_chiller = '';
 let url_grup_gen = '';
-let url_scada = '';
+//let url_scada = '';
 let url_niveles = '';
 
 //Principales
@@ -68,7 +68,7 @@ url_grup_ups1 = 'https://bmscloudgye.i.telconet.net/d/9Dl-MNOnz/grupal-ups-siste
 url_grup_ups2 = 'https://bmscloudgye.i.telconet.net/d/05MgX7K7z/grupal-ups-sistema-2?orgId=1&refresh=5s';
 url_grup_chiller = 'https://bmscloudgye.i.telconet.net/d/nxqbTCD7z/grupales-chillers?orgId=1&refresh=5s';
 url_grup_gen = 'https://bmscloudgye.i.telconet.net/d/-FlIdiAnz/grupal-generadores?orgId=1&refresh=5s';
-url_scada = 'https://bmscloudgye.i.telconet.net/d/v8PnZBJnk/scada_generadores?orgId=1&refresh=5s';
+//url_scada = 'https://bmscloudgye.i.telconet.net/d/v8PnZBJnk/scada_generadores?orgId=1&refresh=5s';
 url_niveles = 'https://bmscloudgye.i.telconet.net/d/Pe3pt-Fnz/full-lvl-gen?orgId=1&refresh=5s';
 url_grup_uma1 = 'https://bmscloudgye.i.telconet.net/d/YzqGZB1nk/grupal-uma-sistema-1?orgId=1&refresh=5s';
 url_grup_uma2 = 'https://bmscloudgye.i.telconet.net/d/7PV-ZB17k/grupal-uma-sistema-2?orgId=1&refresh=5s';
@@ -846,11 +846,11 @@ return (
             strokeWidth={0.72989}
           >
             <a href={url_grup_gen} target="_self" style={{ fill: '#00aad4' }}>
-              {"GEN "}
+              {"GEN / "}
               </a>
             <tspan id="tspan1242" fontSize="6.8409px">
-            <a href={url_scada} target="_self" style={{ fill: '#00aad4' }}>
-              {"SCADA /"}
+            <a href={url_niveles} target="_self" style={{ fill: '#00aad4' }}>
+              {"NIVELES "}
               </a>
             </tspan>
           </tspan>
@@ -1092,24 +1092,7 @@ return (
           fontSize="3.175px"
           strokeWidth={0.33876}
         >
-          <tspan
-            id="tspan18521-4-8-4-1-2-2"
-            x={448.2897}
-            y={19.57128}
-            style={{
-              fontVariantCaps: "normal",
-              fontVariantEastAsian: "normal",
-              fontVariantLigatures: "normal",
-              fontVariantNumeric: "normal"
-            }}
-            fontFamily="sans-serif"
-            fontSize="3.175px"
-            strokeWidth={0.33876}
-          >
-             <a href={url_niveles} target="_self" style={{ fill: '#00aad4' }}>
-              {"NIVELES"}
-              </a>
-          </tspan>
+          
         </text>
         <text
           id="text_BREAKERS"
