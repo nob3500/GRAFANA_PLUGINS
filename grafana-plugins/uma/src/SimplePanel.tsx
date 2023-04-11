@@ -9,6 +9,7 @@ import { DataUma} from 'components/variables/variables'
 import dataUMA from 'modules/dataUMA';
 
 
+
 interface Props extends PanelProps<SimpleOptions> {}
 
 export const SimplePanel: React.FC<Props> = ({ options, data, width, height,replaceVariables }) => {

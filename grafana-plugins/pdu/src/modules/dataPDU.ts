@@ -1,10 +1,43 @@
 import { PanelData, InterpolateFunction } from '@grafana/data';
 import { SimpleOptions } from 'types';
-
+import 'css/stylesPop.css';
+import estadoStyles from 'styles/estadoStyles';
 import { DataPdu } from 'components/variables/variables';
 //import alarmaStyles from 'styles/alarmsStyles';
-import estadoStyles from 'styles/estadoStyles';
 
+const imgPopUp=require.context('../img/imgalarmas/',true);
+const swal = require('sweetalert');
+
+
+
+//popup
+let audioAlm = 'http://172.30.128.202:1880/uimedia/audio/alarma.mp4';
+let msgEstado = '';
+let colorEstado = '';
+let variableNombre =  '';
+let imgEquipo = '';
+
+function reproducir(sonido: any) {
+  const audio = new Audio(sonido);
+  audio.play();
+}
+
+function PopUp(cookieVar: any, equipo: any, variable: any, nomCookie: any) {
+  if (cookieVar === null) {
+    localStorage.setItem('gyecookie_'+nomCookie, variable);
+  } else {
+      if (cookieVar !== ''+ variable) {
+       reproducir(audioAlm);
+        swal({
+          className: colorEstado,
+          title: equipo,
+          text: 'EQUIPO' + msgEstado,
+          icon: imgEquipo,
+        }).then((value: any) => {
+          localStorage.setItem('gyecookie_'+nomCookie,variable);
+        });
+              //console.log("alarma")
+        localStorage.setItem('gyecookie_'+nomCookie,variable);}}}
 
 
 const DataPDU = (data: PanelData, options: SimpleOptions, replaceVariables: InterpolateFunction): DataPdu => {
@@ -12,178 +45,10 @@ const DataPDU = (data: PanelData, options: SimpleOptions, replaceVariables: Inte
   console.log(data)
   console.log(replaceVariables)
 
-  //------------------------------------ASIGNACION DE VARIABLES-------------------------------//
-/*
-{variable:'PDU_1.KVA_1.CH1',detalle:'POTENCIA APARENTE 1 CH 1'},
-{variable:'PDU_1.KVA_1.CH2',detalle:'POTENCIA APARENTE 1 CH 2'},
-{variable:'PDU_1.KVA_1.CH3',detalle:'POTENCIA APARENTE 1 CH 3'},
-{variable:'PDU_1.KVA_1.CH4',detalle:'POTENCIA APARENTE 1 CH 4'},
-{variable:'PDU_1.KVA_1.CH5',detalle:'POTENCIA APARENTE 1 CH 5'},
-{variable:'PDU_1.KVA_1.CH6',detalle:'POTENCIA APARENTE 1 CH 6'},
-{variable:'PDU_1.KVA_1.CH7',detalle:'POTENCIA APARENTE 1 CH 7'},
-{variable:'PDU_1.KVA_1.CH8',detalle:'POTENCIA APARENTE 1 CH 8'},
-{variable:'PDU_1.KVA_1.CH9',detalle:'POTENCIA APARENTE 1 CH 9'},
-{variable:'PDU_1.KVA_1.CH10',detalle:'POTENCIA APARENTE 1 CH 10'},
-{variable:'PDU_1.KVA_1.CH11',detalle:'POTENCIA APARENTE 1 CH 11'},
-{variable:'PDU_1.KVA_1.CH12',detalle:'POTENCIA APARENTE 1 CH 12'},
-{variable:'PDU_1.KVA_1.CH13',detalle:'POTENCIA APARENTE 1 CH 13'},
-{variable:'PDU_1.KVA_1.CH14',detalle:'POTENCIA APARENTE 1 CH 14'},
-{variable:'PDU_1.KVA_1.CH15',detalle:'POTENCIA APARENTE 1 CH 15'},
-{variable:'PDU_1.KVA_1.CH16',detalle:'POTENCIA APARENTE 1 CH 16'},
-{variable:'PDU_1.KVA_1.CH17',detalle:'POTENCIA APARENTE 1 CH 17'},
-{variable:'PDU_1.KVA_1.CH18',detalle:'POTENCIA APARENTE 1 CH 18'},
-{variable:'PDU_1.KVA_1.CH19',detalle:'POTENCIA APARENTE 1 CH 19'},
-{variable:'PDU_1.KVA_1.CH20',detalle:'POTENCIA APARENTE 1 CH 20'},
-{variable:'PDU_1.KVA_1.CH21',detalle:'POTENCIA APARENTE 1 CH 21'},
-{variable:'PDU_1.KVA_1.CH22',detalle:'POTENCIA APARENTE 1 CH 22'},
-{variable:'PDU_1.KVA_1.CH23',detalle:'POTENCIA APARENTE 1 CH 23'},
-{variable:'PDU_1.KVA_1.CH24',detalle:'POTENCIA APARENTE 1 CH 24'},
-{variable:'PDU_1.KVA_1.CH25',detalle:'POTENCIA APARENTE 1 CH 25'},
-{variable:'PDU_1.KVA_1.CH26',detalle:'POTENCIA APARENTE 1 CH 26'},
-{variable:'PDU_1.KVA_1.CH27',detalle:'POTENCIA APARENTE 1 CH 27'},
-{variable:'PDU_1.KVA_1.CH28',detalle:'POTENCIA APARENTE 1 CH 28'},
-{variable:'PDU_1.KVA_1.CH29',detalle:'POTENCIA APARENTE 1 CH 29'},
-{variable:'PDU_1.KVA_1.CH30',detalle:'POTENCIA APARENTE 1 CH 30'},
-{variable:'PDU_1.KVA_1.CH31',detalle:'POTENCIA APARENTE 1 CH 31'},
-{variable:'PDU_1.KVA_1.CH32',detalle:'POTENCIA APARENTE 1 CH 32'},
-{variable:'PDU_1.KVA_1.CH33',detalle:'POTENCIA APARENTE 1 CH 33'},
-{variable:'PDU_1.KVA_1.CH34',detalle:'POTENCIA APARENTE 1 CH 34'},
-{variable:'PDU_1.KVA_1.CH35',detalle:'POTENCIA APARENTE 1 CH 35'},
-{variable:'PDU_1.KVA_1.CH36',detalle:'POTENCIA APARENTE 1 CH 36'},
-{variable:'PDU_1.KVA_1.CH37',detalle:'POTENCIA APARENTE 1 CH 37'},
-{variable:'PDU_1.KVA_1.CH38',detalle:'POTENCIA APARENTE 1 CH 38'},
-{variable:'PDU_1.KVA_1.CH39',detalle:'POTENCIA APARENTE 1 CH 39'},
-{variable:'PDU_1.KVA_1.CH40',detalle:'POTENCIA APARENTE 1 CH 40'},
-{variable:'PDU_1.KVA_1.CH41',detalle:'POTENCIA APARENTE 1 CH 41'},
-{variable:'PDU_1.KVA_1.CH42',detalle:'POTENCIA APARENTE 1 CH 42'},
-{variable:'PDU_1.KWH_1.CH1',detalle:'ENERGÍA 1 CH 1'},
-{variable:'PDU_1.KWH_1.CH2',detalle:'ENERGÍA 1 CH 2'},
-{variable:'PDU_1.KWH_1.CH3',detalle:'ENERGÍA 1 CH 3'},
-{variable:'PDU_1.KWH_1.CH4',detalle:'ENERGÍA 1 CH 4'},
-{variable:'PDU_1.KWH_1.CH5',detalle:'ENERGÍA 1 CH 5'},
-{variable:'PDU_1.KWH_1.CH6',detalle:'ENERGÍA 1 CH 6'},
-{variable:'PDU_1.KWH_1.CH7',detalle:'ENERGÍA 1 CH 7'},
-{variable:'PDU_1.KWH_1.CH8',detalle:'ENERGÍA 1 CH 8'},
-{variable:'PDU_1.KWH_1.CH9',detalle:'ENERGÍA 1 CH 9'},
-{variable:'PDU_1.KWH_1.CH10',detalle:'ENERGÍA 1 CH 10'},
-{variable:'PDU_1.KWH_1.CH11',detalle:'ENERGÍA 1 CH 11'},
-{variable:'PDU_1.KWH_1.CH12',detalle:'ENERGÍA 1 CH 12'},
-{variable:'PDU_1.KWH_1.CH13',detalle:'ENERGÍA 1 CH 13'},
-{variable:'PDU_1.KWH_1.CH14',detalle:'ENERGÍA 1 CH 14'},
-{variable:'PDU_1.KWH_1.CH15',detalle:'ENERGÍA 1 CH 15'},
-{variable:'PDU_1.KWH_1.CH16',detalle:'ENERGÍA 1 CH 16'},
-{variable:'PDU_1.KWH_1.CH17',detalle:'ENERGÍA 1 CH 17'},
-{variable:'PDU_1.KWH_1.CH18',detalle:'ENERGÍA 1 CH 18'},
-{variable:'PDU_1.KWH_1.CH19',detalle:'ENERGÍA 1 CH 19'},
-{variable:'PDU_1.KWH_1.CH20',detalle:'ENERGÍA 1 CH 20'},
-{variable:'PDU_1.KWH_1.CH21',detalle:'ENERGÍA 1 CH 21'},
-{variable:'PDU_1.KWH_1.CH22',detalle:'ENERGÍA 1 CH 22'},
-{variable:'PDU_1.KWH_1.CH23',detalle:'ENERGÍA 1 CH 23'},
-{variable:'PDU_1.KWH_1.CH24',detalle:'ENERGÍA 1 CH 24'},
-{variable:'PDU_1.KWH_1.CH25',detalle:'ENERGÍA 1 CH 25'},
-{variable:'PDU_1.KWH_1.CH26',detalle:'ENERGÍA 1 CH 26'},
-{variable:'PDU_1.KWH_1.CH27',detalle:'ENERGÍA 1 CH 27'},
-{variable:'PDU_1.KWH_1.CH28',detalle:'ENERGÍA 1 CH 28'},
-{variable:'PDU_1.KWH_1.CH29',detalle:'ENERGÍA 1 CH 29'},
-{variable:'PDU_1.KWH_1.CH30',detalle:'ENERGÍA 1 CH 30'},
-{variable:'PDU_1.KWH_1.CH31',detalle:'ENERGÍA 1 CH 31'},
-{variable:'PDU_1.KWH_1.CH32',detalle:'ENERGÍA 1 CH 32'},
-{variable:'PDU_1.KWH_1.CH33',detalle:'ENERGÍA 1 CH 33'},
-{variable:'PDU_1.KWH_1.CH34',detalle:'ENERGÍA 1 CH 34'},
-{variable:'PDU_1.KWH_1.CH35',detalle:'ENERGÍA 1 CH 35'},
-{variable:'PDU_1.KWH_1.CH36',detalle:'ENERGÍA 1 CH 36'},
-{variable:'PDU_1.KWH_1.CH37',detalle:'ENERGÍA 1 CH 37'},
-{variable:'PDU_1.KWH_1.CH38',detalle:'ENERGÍA 1 CH 38'},
-{variable:'PDU_1.KWH_1.CH39',detalle:'ENERGÍA 1 CH 39'},
-{variable:'PDU_1.KWH_1.CH40',detalle:'ENERGÍA 1 CH 40'},
-{variable:'PDU_1.KWH_1.CH41',detalle:'ENERGÍA 1 CH 41'},
-{variable:'PDU_1.KWH_1.CH42',detalle:'ENERGÍA 1 CH 42'},
-{variable:'PDU_1.KVA_2.CH1',detalle:'POTENCIA APARENTE 2 CH 1'},
-{variable:'PDU_1.KVA_2.CH2',detalle:'POTENCIA APARENTE 2 CH 2'},
-{variable:'PDU_1.KVA_2.CH3',detalle:'POTENCIA APARENTE 2 CH 3'},
-{variable:'PDU_1.KVA_2.CH4',detalle:'POTENCIA APARENTE 2 CH 4'},
-{variable:'PDU_1.KVA_2.CH5',detalle:'POTENCIA APARENTE 2 CH 5'},
-{variable:'PDU_1.KVA_2.CH6',detalle:'POTENCIA APARENTE 2 CH 6'},
-{variable:'PDU_1.KVA_2.CH7',detalle:'POTENCIA APARENTE 2 CH 7'},
-{variable:'PDU_1.KVA_2.CH8',detalle:'POTENCIA APARENTE 2 CH 8'},
-{variable:'PDU_1.KVA_2.CH9',detalle:'POTENCIA APARENTE 2 CH 9'},
-{variable:'PDU_1.KVA_2.CH10',detalle:'POTENCIA APARENTE 2 CH 10'},
-{variable:'PDU_1.KVA_2.CH11',detalle:'POTENCIA APARENTE 2 CH 11'},
-{variable:'PDU_1.KVA_2.CH12',detalle:'POTENCIA APARENTE 2 CH 12'},
-{variable:'PDU_1.KVA_2.CH13',detalle:'POTENCIA APARENTE 2 CH 13'},
-{variable:'PDU_1.KVA_2.CH14',detalle:'POTENCIA APARENTE 2 CH 14'},
-{variable:'PDU_1.KVA_2.CH15',detalle:'POTENCIA APARENTE 2 CH 15'},
-{variable:'PDU_1.KVA_2.CH16',detalle:'POTENCIA APARENTE 2 CH 16'},
-{variable:'PDU_1.KVA_2.CH17',detalle:'POTENCIA APARENTE 2 CH 17'},
-{variable:'PDU_1.KVA_2.CH18',detalle:'POTENCIA APARENTE 2 CH 18'},
-{variable:'PDU_1.KVA_2.CH19',detalle:'POTENCIA APARENTE 2 CH 19'},
-{variable:'PDU_1.KVA_2.CH20',detalle:'POTENCIA APARENTE 2 CH 20'},
-{variable:'PDU_1.KVA_2.CH21',detalle:'POTENCIA APARENTE 2 CH 21'},
-{variable:'PDU_1.KVA_2.CH22',detalle:'POTENCIA APARENTE 2 CH 22'},
-{variable:'PDU_1.KVA_2.CH23',detalle:'POTENCIA APARENTE 2 CH 23'},
-{variable:'PDU_1.KVA_2.CH24',detalle:'POTENCIA APARENTE 2 CH 24'},
-{variable:'PDU_1.KVA_2.CH25',detalle:'POTENCIA APARENTE 2 CH 25'},
-{variable:'PDU_1.KVA_2.CH26',detalle:'POTENCIA APARENTE 2 CH 26'},
-{variable:'PDU_1.KVA_2.CH27',detalle:'POTENCIA APARENTE 2 CH 27'},
-{variable:'PDU_1.KVA_2.CH28',detalle:'POTENCIA APARENTE 2 CH 28'},
-{variable:'PDU_1.KVA_2.CH29',detalle:'POTENCIA APARENTE 2 CH 29'},
-{variable:'PDU_1.KVA_2.CH30',detalle:'POTENCIA APARENTE 2 CH 30'},
-{variable:'PDU_1.KVA_2.CH31',detalle:'POTENCIA APARENTE 2 CH 31'},
-{variable:'PDU_1.KVA_2.CH32',detalle:'POTENCIA APARENTE 2 CH 32'},
-{variable:'PDU_1.KVA_2.CH33',detalle:'POTENCIA APARENTE 2 CH 33'},
-{variable:'PDU_1.KVA_2.CH34',detalle:'POTENCIA APARENTE 2 CH 34'},
-{variable:'PDU_1.KVA_2.CH35',detalle:'POTENCIA APARENTE 2 CH 35'},
-{variable:'PDU_1.KVA_2.CH36',detalle:'POTENCIA APARENTE 2 CH 36'},
-{variable:'PDU_1.KVA_2.CH37',detalle:'POTENCIA APARENTE 2 CH 37'},
-{variable:'PDU_1.KVA_2.CH38',detalle:'POTENCIA APARENTE 2 CH 38'},
-{variable:'PDU_1.KVA_2.CH39',detalle:'POTENCIA APARENTE 2 CH 39'},
-{variable:'PDU_1.KVA_2.CH40',detalle:'POTENCIA APARENTE 2 CH 40'},
-{variable:'PDU_1.KVA_2.CH41',detalle:'POTENCIA APARENTE 2 CH 41'},
-{variable:'PDU_1.KVA_2.CH42',detalle:'POTENCIA APARENTE 2 CH 42'},
-{variable:'PDU_1.KWH_2.CH1',detalle:'ENERGÍA 2 CH 1'},
-{variable:'PDU_1.KWH_2.CH2',detalle:'ENERGÍA 2 CH 2'},
-{variable:'PDU_1.KWH_2.CH3',detalle:'ENERGÍA 2 CH 3'},
-{variable:'PDU_1.KWH_2.CH4',detalle:'ENERGÍA 2 CH 4'},
-{variable:'PDU_1.KWH_2.CH5',detalle:'ENERGÍA 2 CH 5'},
-{variable:'PDU_1.KWH_2.CH6',detalle:'ENERGÍA 2 CH 6'},
-{variable:'PDU_1.KWH_2.CH7',detalle:'ENERGÍA 2 CH 7'},
-{variable:'PDU_1.KWH_2.CH8',detalle:'ENERGÍA 2 CH 8'},
-{variable:'PDU_1.KWH_2.CH9',detalle:'ENERGÍA 2 CH 9'},
-{variable:'PDU_1.KWH_2.CH10',detalle:'ENERGÍA 2 CH 10'},
-{variable:'PDU_1.KWH_2.CH11',detalle:'ENERGÍA 2 CH 11'},
-{variable:'PDU_1.KWH_2.CH12',detalle:'ENERGÍA 2 CH 12'},
-{variable:'PDU_1.KWH_2.CH13',detalle:'ENERGÍA 2 CH 13'},
-{variable:'PDU_1.KWH_2.CH14',detalle:'ENERGÍA 2 CH 14'},
-{variable:'PDU_1.KWH_2.CH15',detalle:'ENERGÍA 2 CH 15'},
-{variable:'PDU_1.KWH_2.CH16',detalle:'ENERGÍA 2 CH 16'},
-{variable:'PDU_1.KWH_2.CH17',detalle:'ENERGÍA 2 CH 17'},
-{variable:'PDU_1.KWH_2.CH18',detalle:'ENERGÍA 2 CH 18'},
-{variable:'PDU_1.KWH_2.CH19',detalle:'ENERGÍA 2 CH 19'},
-{variable:'PDU_1.KWH_2.CH20',detalle:'ENERGÍA 2 CH 20'},
-{variable:'PDU_1.KWH_2.CH21',detalle:'ENERGÍA 2 CH 21'},
-{variable:'PDU_1.KWH_2.CH22',detalle:'ENERGÍA 2 CH 22'},
-{variable:'PDU_1.KWH_2.CH23',detalle:'ENERGÍA 2 CH 23'},
-{variable:'PDU_1.KWH_2.CH24',detalle:'ENERGÍA 2 CH 24'},
-{variable:'PDU_1.KWH_2.CH25',detalle:'ENERGÍA 2 CH 25'},
-{variable:'PDU_1.KWH_2.CH26',detalle:'ENERGÍA 2 CH 26'},
-{variable:'PDU_1.KWH_2.CH27',detalle:'ENERGÍA 2 CH 27'},
-{variable:'PDU_1.KWH_2.CH28',detalle:'ENERGÍA 2 CH 28'},
-{variable:'PDU_1.KWH_2.CH29',detalle:'ENERGÍA 2 CH 29'},
-{variable:'PDU_1.KWH_2.CH30',detalle:'ENERGÍA 2 CH 30'},
-{variable:'PDU_1.KWH_2.CH31',detalle:'ENERGÍA 2 CH 31'},
-{variable:'PDU_1.KWH_2.CH32',detalle:'ENERGÍA 2 CH 32'},
-{variable:'PDU_1.KWH_2.CH33',detalle:'ENERGÍA 2 CH 33'},
-{variable:'PDU_1.KWH_2.CH34',detalle:'ENERGÍA 2 CH 34'},
-{variable:'PDU_1.KWH_2.CH35',detalle:'ENERGÍA 2 CH 35'},
-{variable:'PDU_1.KWH_2.CH36',detalle:'ENERGÍA 2 CH 36'},
-{variable:'PDU_1.KWH_2.CH37',detalle:'ENERGÍA 2 CH 37'},
-{variable:'PDU_1.KWH_2.CH38',detalle:'ENERGÍA 2 CH 38'},
-{variable:'PDU_1.KWH_2.CH39',detalle:'ENERGÍA 2 CH 39'},
-{variable:'PDU_1.KWH_2.CH40',detalle:'ENERGÍA 2 CH 40'},
-{variable:'PDU_1.KWH_2.CH41',detalle:'ENERGÍA 2 CH 41'},
-{variable:'PDU_1.KWH_2.CH42',detalle:'ENERGÍA 2 CH 42'},
-*/
+  variableNombre = replaceVariables('$EQUIPO')
 
+  
+ 
   let IN1_AB_VOL = data.series.find(({ name }) => name?.includes('DATA.IN1_AB_VOL.VALUE'))?.fields[1].state?.calcs?.lastNotNull
   let IN1_BC_VOL = data.series.find(({ name }) => name?.includes('DATA.IN1_BC_VOL.VALUE'))?.fields[1].state?.calcs?.lastNotNull
   let IN1_CA_VOL= data.series.find(({ name }) => name?.includes('DATA.IN1_CA_VOL.VALUE'))?.fields[1].state?.calcs?.lastNotNull
@@ -208,6 +73,31 @@ const DataPDU = (data: PanelData, options: SimpleOptions, replaceVariables: Inte
   let OUT1_B_COS_FI = data.series.find(({ name }) => name?.includes('DATA.OUT1_B_COS_FI.VALUE'))?.fields[1].state?.calcs?.lastNotNull
   let OUT1_C_COS_FI = data.series.find(({ name }) => name?.includes('DATA.OUT1_C_COS_FI.VALUE'))?.fields[1].state?.calcs?.lastNotNull*/
   
+  let imgAlm= imgPopUp('./pdu_alm.png')
+  //let imgUpsAdv= imgPopUp('./ups_adv.png')
+  let cookieEstado = localStorage.getItem('gyecookie_'+variableNombre);
+  let cookieAlm = localStorage.getItem('gyecookie_'+variableNombre+'alm');
+  //let cookieAdv = localStorage.getItem('gyecookie_'+variableNombre+'adv');
+  if (DOOR_OPEN_ALM === 1 || GEN_ALM===1 || MODBUS_ST===0 || MAIN_TRIP_ALM===1) {
+      msgEstado=" ALARMA"
+      imgEquipo=imgAlm;
+      colorEstado='alarma'
+          PopUp(cookieAlm, variableNombre, 1, variableNombre + 'alm');
+      }  else {
+          localStorage.setItem('gyecookie_'+variableNombre+'alm','0')
+  }
+  
+  if(IN1_AB_VOL>0){
+    msgEstado=" ENCENDIDO"
+    imgEquipo=imgAlm;
+    colorEstado='advertencia'
+    PopUp(cookieEstado, variableNombre, 1, variableNombre);
+  }else{
+    msgEstado=" APAGADO"
+    imgEquipo=imgAlm;
+    colorEstado='alarma'
+    PopUp(cookieEstado, variableNombre, 0, variableNombre);
+  }
   
   
   //-------------------------------------------------------------------------------------------//
@@ -263,7 +153,7 @@ const DataPDU = (data: PanelData, options: SimpleOptions, replaceVariables: Inte
   }
 
    // ------------------------INTERPOLACION DE VARIABLES-------------
-   let variableNombre = replaceVariables('$EQUIPO')
+  
 
    pdu.datos_principales.nombre_pdu = variableNombre !== '' ? variableNombre : options.nombre
 
@@ -271,7 +161,7 @@ const DataPDU = (data: PanelData, options: SimpleOptions, replaceVariables: Inte
 
   // --------------------------ESTADOS----------------------------------// 
 
-  pdu.estados.in1_AB =  Number.parseFloat (IN1_AB_VOL?.toFixed(2))/10;
+  pdu.estados.in1_AB =  Number.parseFloat ((IN1_AB_VOL/10)?.toFixed(2));
   pdu.estados.in1_BC =  Number.parseFloat (IN1_BC_VOL?.toFixed(2))/10;
   pdu.estados.in1_CA =  Number.parseFloat (IN1_CA_VOL?.toFixed(2))/10;
   pdu.estados.out1_AB=  Number.parseFloat (OUT1_AB_VOL?.toFixed(2))/10;
@@ -318,7 +208,7 @@ const DataPDU = (data: PanelData, options: SimpleOptions, replaceVariables: Inte
 
   let in_volt = (IN1_AB_VOL + IN1_BC_VOL + IN1_CA_VOL) / 3;
   if (IN1_AB_VOL !== undefined && IN1_BC_VOL !== undefined && IN1_CA_VOL !== undefined) {
-    pdu.datos_principales.in_volt = Number.parseFloat(in_volt.toFixed(1))/10;
+    pdu.datos_principales.in_volt = Number.parseFloat((in_volt/10).toFixed(1));
   }
 
   let out_volt = (OUT1_AB_VOL + OUT1_BC_VOL + OUT1_CA_VOL) / 3;
@@ -332,12 +222,15 @@ const DataPDU = (data: PanelData, options: SimpleOptions, replaceVariables: Inte
   }
   
   //pdu.datos_principales.nombre_pdu = options.nombre  
-  pdu.datos_principales.boton_estado = MODBUS_ST === 1? estadoStyles.sinConexion : estadoStyles.ok;
-  pdu.datos_principales.estado = GEN_ALM === 1? 'ALARMADO':'ENCENDIDO'
-  pdu.datos_principales.boton_pdu= MODBUS_ST === 1? estadoStyles.sinConexion : estadoStyles.ok;
+  pdu.datos_principales.boton_estado = IN1_AB_VOL > 0? estadoStyles.ok : estadoStyles.sinConexion
+  pdu.datos_principales.estado =IN1_AB_VOL > 0? 'ENCENDIDO':'APAGADO'
+  pdu.datos_principales.boton_pdu= IN1_AB_VOL > 0? estadoStyles.ok : estadoStyles.sinConexion
   
   
   return pdu
+
+
+  
 }
 
 export default DataPDU
