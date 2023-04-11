@@ -78,11 +78,12 @@ const DataPDU = (data: PanelData, options: SimpleOptions, replaceVariables: Inte
   let cookieEstado = localStorage.getItem('gyecookie_'+variableNombre);
   let cookieAlm = localStorage.getItem('gyecookie_'+variableNombre+'alm');
   //let cookieAdv = localStorage.getItem('gyecookie_'+variableNombre+'adv');
-  if (DOOR_OPEN_ALM === 1 || GEN_ALM===1 || MODBUS_ST===0 || MAIN_TRIP_ALM===1) {
+  console.log(DOOR_OPEN_ALM , GEN_ALM,MODBUS_ST,MAIN_TRIP_ALM)
+  if (DOOR_OPEN_ALM === 1 || GEN_ALM===1 || MODBUS_ST===1 || MAIN_TRIP_ALM===1) {
       msgEstado=" ALARMA"
       imgEquipo=imgAlm;
       colorEstado='alarma'
-          PopUp(cookieAlm, variableNombre, 1, variableNombre + 'alm');
+      PopUp(cookieAlm, variableNombre, 1, variableNombre + 'alm');
       }  else {
           localStorage.setItem('gyecookie_'+variableNombre+'alm','0')
   }
