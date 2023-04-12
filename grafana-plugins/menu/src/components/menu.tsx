@@ -36,6 +36,7 @@ let url_home = '';
 let url_resumen = '';
 let url_unifilar = '';
 let url_sci = '';
+let url_reportacc = '';
 
 //Breakers
 let url_psg = '';
@@ -47,7 +48,6 @@ let url_tups = '';
 let url_tpdu = '';
 let url_tchi = '';
 let url_tsg = '';
-let url_reportacc= '';
 
 
 //url_cmt = '';
@@ -221,9 +221,8 @@ return (
             fontFamily="sans-serif"
             fontSize="5.6444px"
             strokeWidth={0.33875}
-          >
-           <a href={url_reportacc} target="_self" style={{ fill: '#00aad4' }}>
-            {"REPORTE AACC"}
+          ><a href={url_principal} target="_self" style={{ fill: '#00aad4' }}>
+            {"REPORTE ACC"}
             </a>
           </tspan>
         </text>
