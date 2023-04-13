@@ -430,49 +430,7 @@ const Ups = ({DatosGenerales, Parametros, Alarmas, Principal, }: DataUps) => {
         <g id="g1539" transform="matrix(1 0 0 .90875 -9.43 4.252)">
           <g id="layer2-0">
             <g id="g805" transform="translate(-608.09 -253.54)">
-              <g
-                id="g893"
-                transform="matrix(.99511 0 0 1.1263 698.43 -14.395)"
-              >
-                <g
-                  id="g699"
-                  transform="translate(-53.606 -208.6) scale(1.0002)"
-                >
-                  <g
-                    id="layer1-8"
-                    transform="matrix(1 0 0 .67486 -26.86 442.19)"
-                  >
-                    <g
-                      id="layer1-7"
-                      transform="matrix(1 0 0 .98732 -5.896 -19.421)"
-                      strokeWidth={0.83933}
-                    >
-                      <rect
-                        id="rect10510"
-                        x={5.0649}
-                        y={19.754}
-                        width={510.27}
-                        height={290.17}
-                        rx={0.21864}
-                        ry={0.15403}
-                        opacity={0.95}
-                      />
-                    </g>
-                  </g>
-                  <g
-                    id="layer2-1"
-                    transform="matrix(1 0 0 .68151 -108.06 237.74)"
-                  >
-                    <path
-                      id="rect818"
-                      fillRule="evenodd"
-                      fill="black"//"url(#linearGradient701)"
-                      paintOrder="markers stroke fill"
-                      d="M80.369 300.08H590.749V584.5H80.369z"
-                    />
-                  </g>
-                </g>
-              </g>
+              
             </g>
           </g>
           <g id="layer1" opacity={0.999} fontFamily="sans-serif">

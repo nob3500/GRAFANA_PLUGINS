@@ -1,15 +1,50 @@
 import { SimpleOptions } from 'types';
 import { PanelData, InterpolateFunction} from '@grafana/data';
 import { DataUps } from 'components/variables';
+import 'css/stylesPop.css';
 import modoControlStyles from 'styles/modoControlStyles';
 import alarmsStyles from 'styles/alarmsStyles';
 import estadoStyles from 'styles/estadoStyles';
+
+const imgPopUp=require.context('../img/imgalarmas/',true);
+const swal = require('sweetalert');
+
+//popup
+let audioAlm = 'http://172.30.128.202:1880/uimedia/audio/alarma.mp4';
+let msgEstado = '';
+let colorEstado = '';
+let variableNombre =  '';
+let imgEquipo = '';
+
+function reproducir(sonido: any) {
+  const audio = new Audio(sonido);
+  audio.play();
+}
+
+function PopUp(cookieVar: any, equipo: any, variable: any, nomCookie: any) {
+  if (cookieVar === null) {
+    localStorage.setItem('gyecookie_'+nomCookie, variable);
+  } else {
+      if (cookieVar !== ''+ variable) {
+       reproducir(audioAlm);
+        swal({
+          className: colorEstado,
+          title: equipo,
+          text: 'EQUIPO' + msgEstado,
+          icon: imgEquipo,
+        }).then((value: any) => {
+          localStorage.setItem('gyecookie_'+nomCookie,variable);
+        });
+              //console.log("alarma")
+        localStorage.setItem('gyecookie_'+nomCookie,variable);}}}
 
 
 const dataUps = (data: PanelData, options:SimpleOptions, replaceVariables:InterpolateFunction): DataUps => {  
     console.log('data: ', data);
     console.log('options: ', options);
     console.log(replaceVariables);
+
+    variableNombre = replaceVariables('$EQUIPO')
        
 
     let INPUT_VOLTAGE_MAX = data.series.find(({ name }) => name?.includes('DATA.INPUT_VOLTAGE_MAX.VALUE'))?.fields[1].state?.calcs
@@ -50,6 +85,37 @@ const dataUps = (data: PanelData, options:SimpleOptions, replaceVariables:Interp
     ?.lastNotNull;
     let RECTIFIER_ON_OFF  = data.series.find(({ name }) => name?.includes('DATA.RECTIFIER_ON_OFF'))?.fields[1].state?.calcs
     ?.lastNotNull;
+
+
+    let imgAlm= imgPopUp('./ups_alm.png')
+  //let imgUpsAdv= imgPopUp('./ups_adv.png')
+  let cookieEstado = localStorage.getItem('gyecookie_'+variableNombre);
+  let cookieAlm = localStorage.getItem('gyecookie_'+variableNombre+'alm');
+  //let cookieAdv = localStorage.getItem('gyecookie_'+variableNombre+'adv');
+  console.log(ALARMS_PRESENT , BYPASS_ON_OFF ,RECTIFIER_ON_OFF , INVERTER_ON_OFF )
+  if (ALARMS_PRESENT === 1 || BYPASS_ON_OFF === 1 || RECTIFIER_ON_OFF === 0 || INVERTER_ON_OFF === 0) {
+      msgEstado=" ALARMA"
+      imgEquipo=imgAlm;
+      colorEstado='alarma'
+      PopUp(cookieAlm, variableNombre, 1, variableNombre + 'alm');
+      }  else {
+          localStorage.setItem('gyecookie_'+variableNombre+'alm','0')
+  }
+  
+  if(INPUT_VOLTAGE_MAX>0){
+    msgEstado=" ENCENDIDO"
+    imgEquipo=imgAlm;
+    colorEstado='advertencia'
+    PopUp(cookieEstado, variableNombre, 1, variableNombre);
+  }else{
+    msgEstado=" APAGADO"
+    imgEquipo=imgAlm;
+    colorEstado='alarma'
+    PopUp(cookieEstado, variableNombre, 0, variableNombre);
+  }
+  
+
+  //-------------------------------------------------------------------------------------------------------------------------------------------//
         
    
 let ups: DataUps ={
@@ -92,13 +158,14 @@ let ups: DataUps ={
 
 //INTERPOLACION DE VARIABLES
 
-let variableNombre = replaceVariables('$EQUIPO')
+
 ups.DatosGenerales.Nombre = variableNombre !==''? variableNombre: options.nombre
 
 //PARAMETROS
 ups.Principal.InVolmax = ups.Parametros.InVoltmax = Number.parseFloat(INPUT_VOLTAGE_MAX?.toFixed(2));
 ups.Principal.OutVolt = Number.parseFloat(OUTPUT_VOLTAGE?.toFixed(2));
-ups.Principal.Estado = INVERTER_ON_OFF === 1? 'ENCENDIDO' : 'APAGADO';
+//ups.Principal.Estado = INVERTER_ON_OFF === 1? 'ENCENDIDO' : 'APAGADO';
+ups.Principal.Estado = INPUT_VOLTAGE_MAX > 0? 'ENCENDIDO':'APAGADO'
 ups.Parametros.MinEstimados = Number.parseFloat(ESTIMATED_MINUTES_REMAINING?.toFixed(2));
 ups.Parametros.CargaEstimada = Number.parseFloat(ESTIMATED_CHARGE_REMAINING?.toFixed(2));
 ups.Parametros.InVoltmin = Number.parseFloat(INPUT_VOLTAGE_MIN?.toFixed(2)); 
@@ -123,10 +190,16 @@ if (BATTERY_VOLTAGE !== undefined) {
 //ALARMAS
 ups.Alarmas.Presente = ALARMS_PRESENT > 0? alarmsStyles.on : alarmsStyles.off;
 ups.Alarmas.Bypass = BYPASS_ON_OFF === 1? alarmsStyles.on : alarmsStyles.off;
-ups.Alarmas.Inversor = INVERTER_ON_OFF === 1? modoControlStyles.On : modoControlStyles.SinConexion;
-ups.Alarmas.Rectificador = RECTIFIER_ON_OFF === 1? modoControlStyles.On : modoControlStyles.SinConexion;
-ups.Principal.Estado_class = INVERTER_ON_OFF === 1? estadoStyles.ok1 : estadoStyles.sinConexion;
-ups.Principal.Botón = INVERTER_ON_OFF === 1? modoControlStyles.On : estadoStyles.sinConexion;
+ups.Alarmas.Inversor = INVERTER_ON_OFF === 1? modoControlStyles.On : alarmsStyles.on;
+ups.Alarmas.Rectificador = RECTIFIER_ON_OFF === 1? modoControlStyles.On : alarmsStyles.on;
+
+// Estado encendido apagado
+//ups.Principal.Estado_class = INPUT_VOLTAGE_MAX > 0? estadoStyles.ok1 : alarmsStyles.on;
+ups.Principal.Estado_class = ALARMS_PRESENT === 1? alarmsStyles.on : estadoStyles.ok1;
+ups.Principal.Botón = INPUT_VOLTAGE_MAX > 0? modoControlStyles.On : alarmsStyles.on;
+
+
+
 
 console.log(ups);
 return ups;
